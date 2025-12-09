@@ -1,0 +1,7 @@
+project_id = "yrbknyiqsttnleiyfawv"
+
+[functions.chat]
+verify_jwt = false
+
+[functions.save-booking]
+verify_jwt = false
