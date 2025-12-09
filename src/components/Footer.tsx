@@ -90,7 +90,7 @@ export function Footer() {
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <span>
                   Industriveien 42<br />
-                  6003 Ålesund
+                  6413 Molde
                 </span>
               </li>
             </ul>

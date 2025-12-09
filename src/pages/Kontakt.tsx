@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Adresse",
-    value: "Industriveien 42, 6003 Ålesund",
-    href: "https://maps.google.com",
+    value: "Industriveien 42, 6413 Molde",
+    href: "https://maps.google.com/?q=Industriveien+42+Molde",
   },
   {
     icon: Clock,
@@ -127,8 +127,8 @@ const Kontakt = () => {
                   Vi betjener kunder i hele Møre og Romsdal, inkludert:
                 </p>
                 <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
-                  <li>• Ålesund</li>
                   <li>• Molde</li>
+                  <li>• Ålesund</li>
                   <li>• Kristiansund</li>
                   <li>• Volda</li>
                   <li>• Ørsta</li>
