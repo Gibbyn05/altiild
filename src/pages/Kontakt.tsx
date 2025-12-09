@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/Layout";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const contactInfo = [
   {
@@ -48,15 +49,36 @@ const Kontakt = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Melding sendt!",
-      description: "Vi tar kontakt med deg så snart som mulig.",
-    });
+    try {
+      const { error } = await supabase
+        .from("customer_inquiries")
+        .insert({
+          name: formData.name,
+          phone: formData.phone || "Ikke oppgitt",
+          email: formData.email || null,
+          inquiry_type: "kontakt",
+          desired_solution: `${formData.subject}: ${formData.message}`,
+          source: "form",
+          status: "new"
+        });
+
+      if (error) throw error;
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      toast({
+        title: "Melding sendt!",
+        description: "Vi tar kontakt med deg så snart som mulig.",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setIsSubmitting(false);
+      toast({
+        title: "Feil",
+        description: "Kunne ikke sende meldingen. Prøv igjen.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
