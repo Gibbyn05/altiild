@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Flame } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Hjem" },
@@ -43,20 +44,16 @@ export function Navigation() {
       <nav className="container-wide flex items-center justify-between">
         <Link
           to="/"
-          className="flex items-center gap-2 text-2xl font-display font-semibold"
+          className="flex items-center gap-2"
         >
-          <Flame
+          <img 
+            src={logo} 
+            alt="Alt i Ild - Peis, Ovn og Pipe" 
             className={cn(
-              "h-8 w-8 transition-colors",
-              isScrolled ? "text-primary" : "text-warm-cream"
+              "transition-all duration-300",
+              isScrolled ? "h-10" : "h-12"
             )}
           />
-          <span className={cn(
-            "transition-colors",
-            isScrolled ? "text-foreground" : "text-warm-cream"
-          )}>
-            Alt i Ild
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
