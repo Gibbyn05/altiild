@@ -10,7 +10,9 @@ import Galleri from "./pages/Galleri";
 import Kundeomtaler from "./pages/Kundeomtaler";
 import FAQ from "./pages/FAQ";
 import Kontakt from "./pages/Kontakt";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import { Chatbot } from "./components/Chatbot";
 
 const queryClient = new QueryClient();
 
@@ -28,8 +30,10 @@ const App = () => (
           <Route path="/kundeomtaler" element={<Kundeomtaler />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Chatbot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
