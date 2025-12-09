@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Flame, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const footerLinks = {
   tjenester: [
@@ -23,9 +24,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 text-2xl font-display font-semibold mb-4">
-              <Flame className="h-8 w-8 text-primary" />
-              <span>Alt i Ild</span>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src={logo} 
+                alt="Alt i Ild - Peis, Ovn og Pipe" 
+                className="h-16 brightness-0 invert"
+              />
             </Link>
             <p className="text-secondary-foreground/80 mb-6">
               Din lokale ekspert på peis og ovn. Vi skaper varme hjem med kvalitet og håndverk.
