@@ -39,6 +39,7 @@ const Kontakt = () => {
     name: "",
     email: "",
     phone: "",
+    address: "",
     subject: "",
     message: "",
   });
@@ -56,6 +57,7 @@ const Kontakt = () => {
           name: formData.name,
           phone: formData.phone || "Ikke oppgitt",
           email: formData.email || null,
+          address: formData.address || null,
           inquiry_type: "kontakt",
           desired_solution: `${formData.subject}: ${formData.message}`,
           source: "form",
@@ -184,7 +186,7 @@ const Kontakt = () => {
                       variant="outline" 
                       onClick={() => {
                         setIsSubmitted(false);
-                        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+                        setFormData({ name: "", email: "", phone: "", address: "", subject: "", message: "" });
                       }}
                     >
                       Send ny melding
@@ -253,6 +255,20 @@ const Kontakt = () => {
                           className="h-12"
                         />
                       </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="address" className="block text-sm font-medium mb-2">
+                        Adresse
+                      </label>
+                      <Input
+                        id="address"
+                        name="address"
+                        value={formData.address}
+                        onChange={handleChange}
+                        placeholder="Gateadresse, postnummer og sted"
+                        className="h-12"
+                      />
                     </div>
 
                     <div>
