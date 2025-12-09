@@ -1,0 +1,121 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Flame } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+  { href: "/", label: "Hjem" },
+  { href: "/om-oss", label: "Om oss" },
+  { href: "/tjenester", label: "Tjenester" },
+  { href: "/galleri", label: "Galleri" },
+  { href: "/kundeomtaler", label: "Kundeomtaler" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/kontakt", label: "Kontakt" },
+];
+
+export function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+  return (
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-sm py-3"
+          : "bg-transparent py-5"
+      )}
+    >
+      <nav className="container-wide flex items-center justify-between">
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-2xl font-display font-semibold"
+        >
+          <Flame
+            className={cn(
+              "h-8 w-8 transition-colors",
+              isScrolled ? "text-primary" : "text-primary"
+            )}
+          />
+          <span className={cn(isScrolled ? "text-foreground" : "text-foreground")}>
+            Alt i Ild
+          </span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className={cn(
+                "text-sm font-medium transition-colors link-underline",
+                location.pathname === link.href
+                  ? "text-primary"
+                  : isScrolled
+                  ? "text-foreground hover:text-primary"
+                  : "text-foreground hover:text-primary"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Button variant="hero" size="lg" asChild>
+            <Link to="/kontakt">Be om tilbud</Link>
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="lg:hidden p-2 text-foreground"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </nav>
+
+      {/* Mobile Navigation */}
+      <div
+        className={cn(
+          "lg:hidden fixed inset-x-0 top-[72px] bg-background/98 backdrop-blur-lg shadow-lg transition-all duration-300 overflow-hidden",
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <div className="container-wide py-6 flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className={cn(
+                "text-lg font-medium py-2 transition-colors",
+                location.pathname === link.href
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Button variant="hero" size="lg" className="mt-4" asChild>
+            <Link to="/kontakt">Be om tilbud</Link>
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+}
