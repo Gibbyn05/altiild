@@ -15,7 +15,7 @@
     --popover: 35 30% 97%;
     --popover-foreground: 20 10% 15%;
 
-    --primary: 24 85% 52%;
+    --primary: 355 68% 41%;
     --primary-foreground: 35 30% 97%;
 
     --secondary: 20 8% 25%;
@@ -24,7 +24,7 @@
     --muted: 30 15% 90%;
     --muted-foreground: 20 8% 45%;
 
-    --accent: 15 70% 45%;
+    --accent: 355 60% 35%;
     --accent-foreground: 35 30% 97%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,25 +32,25 @@
 
     --border: 30 15% 85%;
     --input: 30 15% 85%;
-    --ring: 24 85% 52%;
+    --ring: 355 68% 41%;
 
     --radius: 0.5rem;
 
     /* Custom colors */
-    --ember: 24 85% 52%;
-    --ember-glow: 30 90% 60%;
+    --ember: 355 68% 41%;
+    --ember-glow: 355 75% 50%;
     --charcoal: 20 10% 15%;
     --warm-cream: 35 30% 97%;
     --stone: 30 10% 75%;
-    --copper: 15 70% 45%;
+    --copper: 355 60% 35%;
 
     /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(24 85% 52%) 0%, hsl(15 70% 45%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(355 68% 41%) 0%, hsl(355 60% 35%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(20 10% 15% / 0.7) 0%, hsl(20 10% 15% / 0.3) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(35 30% 97%) 0%, hsl(30 15% 90%) 100%);
 
     /* Shadows */
-    --shadow-warm: 0 10px 40px -10px hsl(24 85% 52% / 0.3);
+    --shadow-warm: 0 10px 40px -10px hsl(355 68% 41% / 0.3);
     --shadow-soft: 0 4px 20px -4px hsl(20 10% 15% / 0.1);
     --shadow-card: 0 8px 30px -8px hsl(20 10% 15% / 0.08);
 
@@ -74,7 +74,7 @@
     --popover: 20 10% 12%;
     --popover-foreground: 35 25% 95%;
 
-    --primary: 24 85% 55%;
+    --primary: 355 68% 45%;
     --primary-foreground: 20 10% 10%;
 
     --secondary: 30 15% 25%;
@@ -83,7 +83,7 @@
     --muted: 20 10% 20%;
     --muted-foreground: 30 15% 65%;
 
-    --accent: 15 70% 50%;
+    --accent: 355 60% 40%;
     --accent-foreground: 20 10% 10%;
 
     --destructive: 0 62.8% 30.6%;
@@ -91,7 +91,7 @@
 
     --border: 20 10% 20%;
     --input: 20 10% 20%;
-    --ring: 24 85% 55%;
+    --ring: 355 68% 45%;
   }
 }
 
