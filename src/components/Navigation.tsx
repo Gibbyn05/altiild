@@ -48,10 +48,13 @@ export function Navigation() {
           <Flame
             className={cn(
               "h-8 w-8 transition-colors",
-              isScrolled ? "text-primary" : "text-primary"
+              isScrolled ? "text-primary" : "text-warm-cream"
             )}
           />
-          <span className={cn(isScrolled ? "text-foreground" : "text-foreground")}>
+          <span className={cn(
+            "transition-colors",
+            isScrolled ? "text-foreground" : "text-warm-cream"
+          )}>
             Alt i Ild
           </span>
         </Link>
@@ -65,16 +68,16 @@ export function Navigation() {
               className={cn(
                 "text-sm font-medium transition-colors link-underline",
                 location.pathname === link.href
-                  ? "text-primary"
+                  ? isScrolled ? "text-primary" : "text-warm-cream"
                   : isScrolled
                   ? "text-foreground hover:text-primary"
-                  : "text-foreground hover:text-primary"
+                  : "text-warm-cream/90 hover:text-warm-cream"
               )}
             >
               {link.label}
             </Link>
           ))}
-          <Button variant="hero" size="lg" asChild>
+          <Button variant={isScrolled ? "hero" : "heroOutline"} size="lg" asChild>
             <Link to="/kontakt">Be om tilbud</Link>
           </Button>
         </div>
@@ -82,7 +85,10 @@ export function Navigation() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-foreground"
+          className={cn(
+            "lg:hidden p-2 transition-colors",
+            isScrolled ? "text-foreground" : "text-warm-cream"
+          )}
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
