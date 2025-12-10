@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,6 +12,7 @@ export function Layout({ children }: LayoutProps) {
       <Navigation />
       <main className="flex-1">{children}</main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
