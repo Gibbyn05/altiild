@@ -82,7 +82,7 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild>
+              <Button variant="heroOutlineLight" size="xl" asChild>
                 <Link to="/galleri">Se våre prosjekter</Link>
               </Button>
             </div>
