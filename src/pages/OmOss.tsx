@@ -33,16 +33,22 @@ const OmOss = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-muted">
-        <div className="container-wide">
+      <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${stoveImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
+        </div>
+        <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
               Om oss
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6 text-primary-foreground">
               Din lokale ekspert på peis og ovn
             </h1>
-            <p className="text-muted-foreground text-xl leading-relaxed">
+            <p className="text-primary-foreground/90 text-xl leading-relaxed">
               Alt i Ild har siden 2008 levert kvalitetsløsninger for peiser, ovner og ildsteder 
               til privatkunder i Møre og Romsdal. Vi kombinerer tradisjonelt håndverk med 
               moderne teknologi.
