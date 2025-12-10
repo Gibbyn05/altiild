@@ -150,7 +150,7 @@ const OmOss = () => {
                   </li>
                 ))}
               </ul>
-              <Button variant="default" size="lg" asChild>
+              <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
                 <Link to="/kontakt">
                   Kontakt oss
                   <ArrowRight className="ml-2 h-4 w-4" />

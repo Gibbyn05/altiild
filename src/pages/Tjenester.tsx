@@ -192,7 +192,7 @@ const Tjenester = () => {
           <p className="text-xl text-primary-foreground/90 mb-10 max-w-xl mx-auto">
             Kontakt oss i dag for en gratis og uforpliktende befaring.
           </p>
-          <Button variant="hero" size="xl" asChild>
+          <Button variant="hero" size="xl" className="animate-gentle-pulse" asChild>
             <Link to="/kontakt">
               Be om gratis befaring
               <ArrowRight className="ml-2 h-5 w-5" />
