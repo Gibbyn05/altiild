@@ -25,8 +25,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Adresse",
-    value: "Industriveien 42, 6413 Molde",
-    href: "https://maps.google.com/?q=Industriveien+42+Molde",
+    value: "Barvegen 16, 6411 Molde, Norway",
+    href: "https://maps.google.com/?q=Barvegen+16+6411+Molde+Norway",
   },
   {
     icon: Clock,
