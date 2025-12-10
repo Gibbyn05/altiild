@@ -9,7 +9,9 @@ import {
   MessageCircle, 
   Settings,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Construction,
+  Cylinder
 } from "lucide-react";
 
 import installationImage from "@/assets/installation-work.jpg";
@@ -36,6 +38,28 @@ const services = [
       "Montering på forskriftsmessig underlag",
       "Tilkobling til pipe",
       "Oppstart og brukerveiledning",
+    ],
+  },
+  {
+    icon: Construction,
+    title: "Piperehabilitering",
+    description: "Oppgradering og rehabilitering av eksisterende piper for bedre ytelse og sikkerhet. Vi utbedrer skader og tilpasser pipen til moderne krav.",
+    features: [
+      "Inspeksjon og tilstandsvurdering",
+      "Foring av eksisterende pipe",
+      "Reparasjon av sprekker og skader",
+      "Etterisolering og tetting",
+    ],
+  },
+  {
+    icon: Cylinder,
+    title: "Isolerte stålpiper",
+    description: "Montering av moderne isolerte stålpiper for effektiv og sikker røykavledning. Ideelt for nybygg eller der tradisjonell pipe ikke er mulig.",
+    features: [
+      "Planlegging og dimensjonering",
+      "Montering innvendig eller utvendig",
+      "Brannsikker gjennomføring",
+      "Komplett med beslag og tilbehør",
     ],
   },
   {
