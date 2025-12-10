@@ -9,6 +9,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import heroImage from "@/assets/hero-fireplace.jpg";
+
 const faqCategories = [
   {
     title: "Generelt",
@@ -96,17 +98,24 @@ const faqCategories = [
 const FAQ = () => {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="pt-32 pb-20 bg-muted">
-        <div className="container-wide">
+      {/* Hero with background image */}
+      <section className="relative pt-32 pb-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/80 to-charcoal/60" />
+        </div>
+        
+        <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
               FAQ
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6 text-primary-foreground">
               Vanlige spørsmål
             </h1>
-            <p className="text-muted-foreground text-xl leading-relaxed">
+            <p className="text-primary-foreground/90 text-xl leading-relaxed">
               Finn svar på de vanligste spørsmålene om våre tjenester, sikkerhet, 
               vedlikehold og priser. Finner du ikke det du leter etter? Kontakt oss!
             </p>
