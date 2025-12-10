@@ -90,15 +90,21 @@ const Index = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <button 
+          onClick={() => {
+            document.getElementById('benefits-section')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
+          aria-label="Scroll ned"
+        >
           <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex justify-center pt-2">
             <div className="w-1.5 h-3 bg-primary-foreground/50 rounded-full" />
           </div>
-        </div>
+        </button>
       </section>
 
       {/* Benefits Bar */}
-      <section className="bg-primary py-6">
+      <section id="benefits-section" className="bg-primary py-6">
         <div className="container-wide">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
             {benefits.map((benefit) => (
@@ -145,7 +151,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="hover:animate-gentle-pulse" asChild>
               <Link to="/tjenester">
                 Se alle tjenester
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -188,7 +194,7 @@ const Index = () => {
                 Vår filosofi er enkel: kvalitet, sikkerhet og kundetilfredshet 
                 i alt vi gjør.
               </p>
-              <Button variant="default" size="lg" asChild>
+              <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
                 <Link to="/om-oss">
                   Les mer om oss
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -235,7 +241,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="default" size="lg" asChild>
+            <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
               <Link to="/galleri">
                 Se hele galleriet
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -289,7 +295,7 @@ const Index = () => {
           <p className="text-xl text-primary-foreground/90 mb-10 max-w-xl mx-auto">
             Kontakt oss i dag for en uforpliktende prat om hvordan vi kan hjelpe deg.
           </p>
-          <Button variant="hero" size="xl" asChild>
+          <Button variant="hero" size="xl" className="animate-gentle-pulse" asChild>
             <Link to="/kontakt">
               Be om gratis tilbud
               <ArrowRight className="ml-2 h-5 w-5" />

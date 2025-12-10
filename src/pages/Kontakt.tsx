@@ -352,6 +352,7 @@ const Kontakt = () => {
                         variant="hero" 
                         size="lg" 
                         disabled={isSubmitting}
+                        className={isSubmitting ? "" : "animate-gentle-pulse"}
                       >
                         {isSubmitting ? (
                           <>
