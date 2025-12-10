@@ -120,43 +120,62 @@ const Index = () => {
       {/* Services Section */}
       <section className="section-padding bg-background">
         <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
-              Våre tjenester
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Alt du trenger for et varmere hjem
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Fra rådgivning til ferdig installert peis – vi tar hånd om hele prosessen.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={service.title}
-                className="group p-8 rounded-2xl bg-card hover:bg-primary transition-all duration-300 hover-lift"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <service.icon className="h-12 w-12 text-primary group-hover:text-primary-foreground mb-6 transition-colors" />
-                <h3 className="font-display text-xl font-semibold mb-3 group-hover:text-primary-foreground transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground group-hover:text-primary-foreground/80 transition-colors">
-                  {service.description}
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <img
+                src={installationImage}
+                alt="Profesjonell peis- og ovnsinstallasjon"
+                className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-xl hidden md:block border border-border">
+                <div className="flex items-center gap-3">
+                  <Shield className="h-8 w-8 text-primary" />
+                  <div>
+                    <p className="font-display text-lg font-semibold">Sertifisert</p>
+                    <p className="text-sm text-muted-foreground">montør og kontrollør</p>
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg" className="hover:animate-gentle-pulse" asChild>
-              <Link to="/tjenester">
-                Se alle tjenester
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <div>
+              <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+                Våre tjenester
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+                Alt du trenger for et varmere hjem
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                Fra rådgivning til ferdig installert peis – vi tar hånd om hele prosessen.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                {services.map((service, index) => (
+                  <div
+                    key={service.title}
+                    className="group flex items-start gap-4 p-4 rounded-xl bg-card hover:bg-primary/5 transition-all duration-300"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <service.icon className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-display text-lg font-semibold mb-1">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
+                <Link to="/tjenester">
+                  Se alle tjenester
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
