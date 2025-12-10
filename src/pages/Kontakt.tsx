@@ -387,7 +387,7 @@ const Kontakt = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1798.4!2d7.16!3d62.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjLCsDQzJzQ4LjAiTiA3wrAwOScyMi4wIkU!5e0!3m2!1sno!2sno!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1798.4!2d7.1619!3d62.7347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x461168a5a5a5a5a5%3A0x0!2sBarvegen%2016%2C%206411%20Molde%2C%20Norway!5e0!3m2!1sno!2sno!4v1702000000000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
