@@ -183,4 +183,17 @@
       transform: scale(1);
     }
   }
+
+  @keyframes gentle-pulse {
+    0%, 100% {
+      box-shadow: 0 4px 15px -3px hsl(355 68% 41% / 0.4);
+    }
+    50% {
+      box-shadow: 0 4px 25px -3px hsl(355 68% 41% / 0.6);
+    }
+  }
+
+  .animate-gentle-pulse {
+    animation: gentle-pulse 2.5s ease-in-out infinite;
+  }
 }

@@ -76,7 +76,7 @@ const Index = () => {
               det perfekte ildstedet for deg.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="hero" size="xl" className="animate-gentle-pulse" asChild>
                 <Link to="/kontakt">
                   Be om gratis tilbud
                   <ArrowRight className="ml-2 h-5 w-5" />
