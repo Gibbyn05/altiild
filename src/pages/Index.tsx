@@ -67,9 +67,10 @@ const Index = () => {
             muted
             loop
             playsInline
+            poster={stoveImage}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="https://videos.pexels.com/video-files/3994018/3994018-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+            <source src="https://cdn.coverr.co/videos/coverr-fireplace-with-fire-6151/1080p.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/50 to-transparent" />
         </div>
