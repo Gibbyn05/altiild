@@ -97,12 +97,29 @@ const faqCategories = [
 ];
 
 const FAQ = () => {
+  // Generate FAQ JSON-LD structured data
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqCategories.flatMap((category) =>
+      category.questions.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      }))
+    ),
+  };
+
   return (
     <Layout>
       <SEO 
         title="FAQ | Ofte stilte spørsmål om peis og ovn"
         description="Finn svar på vanlige spørsmål om peisinstallasjon, sikkerhet, vedlikehold og priser. Alt du trenger å vite før du kjøper peis eller ovn."
         canonical="/faq"
+        jsonLd={faqJsonLd}
       />
       {/* Hero with background image */}
       <section className="relative pt-32 pb-24 overflow-hidden">
