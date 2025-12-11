@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { ArrowRight, Award, Users, Heart, Target } from "lucide-react";
 
 import teamImage from "@/assets/team.jpg";
@@ -32,6 +33,11 @@ const values = [
 const OmOss = () => {
   return (
     <Layout>
+      <SEO 
+        title="Om oss | Alt i Ild - Din lokale peis og ovn ekspert"
+        description="Alt i Ild har siden 2008 levert kvalitetsløsninger for peiser og ovner i Møre og Romsdal. Møt teamet og les om våre verdier."
+        canonical="/om-oss"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
         <div 

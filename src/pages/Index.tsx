@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { 
   Flame, 
   Wrench, 
@@ -53,6 +54,11 @@ const benefits = [
 const Index = () => {
   return (
     <Layout>
+      <SEO 
+        title="Alt i Ild | Peis og ovn spesialister i Møre og Romsdal"
+        description="Alt i Ild leverer profesjonell installasjon av peiser og ovner i Møre og Romsdal. Gratis befaring, sertifiserte montører, og garanti på alt arbeid."
+        canonical="/"
+      />
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center">
         <div 

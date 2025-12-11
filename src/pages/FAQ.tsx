@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { ArrowRight } from "lucide-react";
 import {
   Accordion,
@@ -98,6 +99,11 @@ const faqCategories = [
 const FAQ = () => {
   return (
     <Layout>
+      <SEO 
+        title="FAQ | Ofte stilte spørsmål om peis og ovn"
+        description="Finn svar på vanlige spørsmål om peisinstallasjon, sikkerhet, vedlikehold og priser. Alt du trenger å vite før du kjøper peis eller ovn."
+        canonical="/faq"
+      />
       {/* Hero with background image */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { ArrowRight, X } from "lucide-react";
 
 import gallery1 from "@/assets/gallery-1.jpg";
@@ -74,6 +75,11 @@ const Galleri = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Galleri | Se våre peis- og ovnsprosjekter"
+        description="Bli inspirert av våre tidligere peis- og ovnsinstallasjoner i Møre og Romsdal. Se bilder fra prosjekter i Molde, Ålesund, Kristiansund og mer."
+        canonical="/galleri"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
         <div 
