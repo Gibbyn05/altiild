@@ -13,7 +13,7 @@ import {
   CheckCircle
 } from "lucide-react";
 
-
+import heroImage from "@/assets/hero-fireplace.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
@@ -61,17 +61,10 @@ const Index = () => {
       />
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center">
-        <div className="absolute inset-0 overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={stoveImage}
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="https://cdn.coverr.co/videos/coverr-fireplace-with-fire-6151/1080p.mp4" type="video/mp4" />
-          </video>
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/50 to-transparent" />
         </div>
         
