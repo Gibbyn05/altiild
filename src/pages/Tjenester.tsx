@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { 
   Flame, 
   Wrench, 
@@ -111,6 +112,12 @@ const services = [
 const Tjenester = () => {
   return (
     <Layout>
+      <SEO 
+        title="Tjenester | Peisinstallasjon, ovnsmontering og vedlikehold"
+        description="Alt i Ild tilbyr profesjonell peisinstallasjon, ovnsmontering, piperehabilitering og vedlikehold. Gratis befaring i Møre og Romsdal."
+        canonical="/tjenester"
+        keywords="peisinstallasjon, ovnsmontering, piperehabilitering, vedlikehold peis, stålpipe, Molde, Ålesund"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
         <div 

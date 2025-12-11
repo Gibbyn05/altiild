@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, ArrowRight } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -94,6 +95,11 @@ const Kontakt = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Kontakt oss | Alt i Ild - Gratis befaring"
+        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Vi betjener Molde, Ålesund og hele Møre og Romsdal."
+        canonical="/kontakt"
+      />
       {/* Hero with background image */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div 

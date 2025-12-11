@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Star, ArrowRight, Quote } from "lucide-react";
 
 import testimonial1 from "@/assets/testimonial-1.jpg";
@@ -48,6 +49,11 @@ const stats = [
 const Kundeomtaler = () => {
   return (
     <Layout>
+      <SEO 
+        title="Kundeomtaler | Hva kundene sier om Alt i Ild"
+        description="Les hva våre fornøyde kunder sier om peis- og ovnsinstallasjon fra Alt i Ild. Over 1000 fornøyde kunder i Møre og Romsdal."
+        canonical="/kundeomtaler"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
         <div 
