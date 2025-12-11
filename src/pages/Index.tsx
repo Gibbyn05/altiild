@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
+import { OptimizedImage } from "@/components/OptimizedImage";
 import { 
   Flame, 
   Wrench, 
@@ -128,10 +129,10 @@ const Index = () => {
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={installationImage}
                 alt="Profesjonell peis- og ovnsinstallasjon"
-                className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
+                className="rounded-2xl shadow-2xl w-full aspect-[4/5]"
               />
               <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-xl hidden md:block border border-border">
                 <div className="flex items-center gap-3">
@@ -191,10 +192,10 @@ const Index = () => {
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={stoveImage}
                 alt="Koselig vedovn i skandinavisk interiør"
-                className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
+                className="rounded-2xl shadow-2xl w-full aspect-[4/5]"
               />
               <div className="absolute -bottom-8 -right-8 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl hidden md:block">
                 <p className="font-display text-4xl font-bold">15+</p>
@@ -250,11 +251,12 @@ const Index = () => {
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl aspect-square"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <img
+                <OptimizedImage
                   src={img}
                   alt={`Peisprosjekt ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/40 transition-colors duration-300 flex items-center justify-center">
                   <span className="text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -290,10 +292,10 @@ const Index = () => {
               installert peis – alt gikk knirkefritt. Nå koser vi oss foran peisen hver kveld!"
             </blockquote>
             <div className="flex items-center justify-center gap-4">
-              <img
+              <OptimizedImage
                 src={testimonial1}
                 alt="Fornøyde kunder"
-                className="w-16 h-16 rounded-full object-cover"
+                className="w-16 h-16 rounded-full"
               />
               <div className="text-left">
                 <p className="font-semibold text-secondary-foreground">Kari og Ola Nordmann</p>
