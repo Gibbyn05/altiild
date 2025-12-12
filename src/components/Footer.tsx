@@ -12,8 +12,6 @@ const footerLinks = {
   selskap: [
     { label: "Om oss", href: "/om-oss" },
     { label: "Galleri", href: "/galleri" },
-    { label: "Kundeomtaler", href: "/kundeomtaler" },
-    { label: "FAQ", href: "/faq" },
   ],
 };
 

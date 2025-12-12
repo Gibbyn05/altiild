@@ -9,8 +9,6 @@ import Index from "./pages/Index";
 import OmOss from "./pages/OmOss";
 import Tjenester from "./pages/Tjenester";
 import Galleri from "./pages/Galleri";
-import Kundeomtaler from "./pages/Kundeomtaler";
-import FAQ from "./pages/FAQ";
 import Kontakt from "./pages/Kontakt";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
@@ -33,8 +31,6 @@ const App = () => (
             <Route path="/om-oss" element={<OmOss />} />
             <Route path="/tjenester" element={<Tjenester />} />
             <Route path="/galleri" element={<Galleri />} />
-            <Route path="/kundeomtaler" element={<Kundeomtaler />} />
-            <Route path="/faq" element={<FAQ />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/login" element={<Login />} />
             <Route 
