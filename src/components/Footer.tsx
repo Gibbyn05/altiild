@@ -101,6 +101,17 @@ export function Footer() {
           <p className="text-secondary-foreground/60 text-sm">
             © {new Date().getFullYear()} Alt i Ild. Alle rettigheter reservert.
           </p>
+          <p className="text-secondary-foreground/60 text-sm">
+            Laget av{" "}
+            <a 
+              href="https://nexra.no" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline transition-colors"
+            >
+              NEXRA
+            </a>
+          </p>
           <div className="flex gap-6 text-sm text-secondary-foreground/60">
             <Link to="/personvern" className="hover:text-primary transition-colors">
               Personvern
