@@ -114,7 +114,7 @@ const Kontakt = () => {
             <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
               Kontakt oss
             </p>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 leading-tight">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-6 leading-tight">
               La oss skape varme sammen
             </h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
