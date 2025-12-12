@@ -10,8 +10,6 @@ const navLinks = [
   { href: "/om-oss", label: "Om oss" },
   { href: "/tjenester", label: "Tjenester" },
   { href: "/galleri", label: "Galleri" },
-  { href: "/kundeomtaler", label: "Kundeomtaler" },
-  { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
