@@ -10,6 +10,7 @@ const footerLinks = {
     { label: "Rådgivning", href: "/tjenester" },
   ],
   selskap: [
+    { label: "Tjenester", href: "/tjenester" },
     { label: "Om oss", href: "/om-oss" },
     { label: "Galleri", href: "/galleri" },
   ],

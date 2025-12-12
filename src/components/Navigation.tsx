@@ -7,8 +7,8 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Hjem" },
-  { href: "/om-oss", label: "Om oss" },
   { href: "/tjenester", label: "Tjenester" },
+  { href: "/om-oss", label: "Om oss" },
   { href: "/galleri", label: "Galleri" },
   { href: "/kontakt", label: "Kontakt" },
 ];
