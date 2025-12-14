@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, ArrowRight, ImagePlus, X } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -46,14 +46,86 @@ const Kontakt = () => {
     subject: "",
     message: "",
   });
+  const [images, setImages] = useState<File[]>([]);
+  const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    if (files.length + images.length > 5) {
+      toast({
+        title: "Maks 5 bilder",
+        description: "Du kan laste opp maksimalt 5 bilder.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    const validFiles = files.filter(file => {
+      if (!file.type.startsWith("image/")) {
+        toast({
+          title: "Ugyldig filtype",
+          description: `${file.name} er ikke et bilde.`,
+          variant: "destructive",
+        });
+        return false;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        toast({
+          title: "Filen er for stor",
+          description: `${file.name} er større enn 10MB.`,
+          variant: "destructive",
+        });
+        return false;
+      }
+      return true;
+    });
+
+    setImages(prev => [...prev, ...validFiles]);
+    
+    validFiles.forEach(file => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImagePreviews(prev => [...prev, e.target?.result as string]);
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const removeImage = (index: number) => {
+    setImages(prev => prev.filter((_, i) => i !== index));
+    setImagePreviews(prev => prev.filter((_, i) => i !== index));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
+      // Upload images first
+      const imageUrls: string[] = [];
+      for (const image of images) {
+        const fileExt = image.name.split('.').pop();
+        const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
+        
+        const { error: uploadError } = await supabase.storage
+          .from("contact-images")
+          .upload(fileName, image);
+
+        if (uploadError) {
+          console.error("Upload error:", uploadError);
+          continue;
+        }
+
+        const { data: urlData } = supabase.storage
+          .from("contact-images")
+          .getPublicUrl(fileName);
+        
+        imageUrls.push(urlData.publicUrl);
+      }
+
       // Save to database
       const { error: dbError } = await supabase
         .from("customer_inquiries")
@@ -63,7 +135,7 @@ const Kontakt = () => {
           email: formData.email || null,
           address: formData.address || null,
           inquiry_type: "kontakt",
-          desired_solution: `${formData.subject}: ${formData.message}`,
+          desired_solution: `${formData.subject}: ${formData.message}${imageUrls.length > 0 ? `\n\nBilder: ${imageUrls.join(", ")}` : ""}`,
           source: "form",
           status: "new"
         });
@@ -79,16 +151,18 @@ const Kontakt = () => {
           address: formData.address,
           subject: formData.subject,
           message: formData.message,
+          imageUrls,
         },
       });
 
       if (emailError) {
         console.error("Email error:", emailError);
-        // Don't throw - form submission was successful even if email fails
       }
 
       setIsSubmitting(false);
       setIsSubmitted(true);
+      setImages([]);
+      setImagePreviews([]);
       toast({
         title: "Melding sendt!",
         description: "Vi tar kontakt med deg så snart som mulig.",
@@ -365,6 +439,55 @@ const Kontakt = () => {
                         rows={6}
                         className="resize-none bg-background border-border/50 focus:border-primary"
                       />
+                    </div>
+
+                    {/* Image upload */}
+                    <div>
+                      <label className="block text-sm font-medium mb-2">
+                        Bilder (valgfritt)
+                      </label>
+                      <p className="text-xs text-muted-foreground mb-3">
+                        Last opp bilder av din peis, skorstein eller prosjekt (maks 5 bilder, 10MB per bilde)
+                      </p>
+                      
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={handleImageChange}
+                        className="hidden"
+                      />
+                      
+                      <div className="flex flex-wrap gap-3">
+                        {imagePreviews.map((preview, index) => (
+                          <div key={index} className="relative group">
+                            <img
+                              src={preview}
+                              alt={`Opplastet bilde ${index + 1}`}
+                              className="w-20 h-20 object-cover rounded-lg border border-border"
+                            />
+                            <button
+                              type="button"
+                              onClick={() => removeImage(index)}
+                              className="absolute -top-2 -right-2 w-6 h-6 bg-destructive text-destructive-foreground rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                            >
+                              <X className="h-4 w-4" />
+                            </button>
+                          </div>
+                        ))}
+                        
+                        {images.length < 5 && (
+                          <button
+                            type="button"
+                            onClick={() => fileInputRef.current?.click()}
+                            className="w-20 h-20 border-2 border-dashed border-border rounded-lg flex flex-col items-center justify-center gap-1 hover:border-primary hover:bg-primary/5 transition-colors"
+                          >
+                            <ImagePlus className="h-5 w-5 text-muted-foreground" />
+                            <span className="text-xs text-muted-foreground">Legg til</span>
+                          </button>
+                        )}
+                      </div>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between pt-2">
