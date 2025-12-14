@@ -128,6 +128,22 @@ export function Navigation() {
             : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
+        {/* Close Button */}
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-6 right-6 p-2 rounded-lg text-foreground hover:bg-muted transition-colors z-[60]"
+          aria-label="Lukk meny"
+          style={{
+            opacity: isOpen ? 1 : 0,
+            transform: isOpen ? "scale(1)" : "scale(0.8)",
+            transition: "opacity 300ms ease-out 200ms, transform 300ms ease-out 200ms",
+          }}
+        >
+          <div className="relative w-6 h-6">
+            <span className="absolute left-0 top-3 w-6 h-0.5 bg-current rotate-45" />
+            <span className="absolute left-0 top-3 w-6 h-0.5 bg-current -rotate-45" />
+          </div>
+        </button>
         {/* Menu Content */}
         <div className={cn(
           "flex flex-col justify-center items-center h-full px-8",
