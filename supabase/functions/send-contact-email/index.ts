@@ -35,7 +35,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Alt i Ild <onboarding@resend.dev>",
-        to: ["post@altiild.no"],
+        to: ["Nexracontact@gmail.com"],
         subject: `Ny henvendelse: ${subject}`,
         html: `
           <h2>Ny henvendelse fra kontaktskjema</h2>
