@@ -54,7 +54,8 @@ const Kontakt = () => {
     setIsSubmitting(true);
     
     try {
-      const { error } = await supabase
+      // Save to database
+      const { error: dbError } = await supabase
         .from("customer_inquiries")
         .insert({
           name: formData.name,
@@ -67,7 +68,24 @@ const Kontakt = () => {
           status: "new"
         });
 
-      if (error) throw error;
+      if (dbError) throw dbError;
+
+      // Send email notification
+      const { error: emailError } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          subject: formData.subject,
+          message: formData.message,
+        },
+      });
+
+      if (emailError) {
+        console.error("Email error:", emailError);
+        // Don't throw - form submission was successful even if email fails
+      }
 
       setIsSubmitting(false);
       setIsSubmitted(true);
