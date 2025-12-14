@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/tjenester", label: "Tjenester" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/galleri", label: "Galleri" },
-  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export function Navigation() {
