@@ -7,6 +7,11 @@ import { ArrowRight, Award, Users, Heart, Target } from "lucide-react";
 import teamImage from "@/assets/team.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 
+// Real business images
+import hvitOvn from "@/assets/hvit-ovn.jpg";
+import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
+import takInnside from "@/assets/tak-innside.jpg";
+
 const values = [
   {
     icon: Award,
@@ -42,7 +47,7 @@ const OmOss = () => {
       <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${stoveImage})` }}
+          style={{ backgroundImage: `url(${hvitOvn2})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
         </div>
@@ -136,8 +141,8 @@ const OmOss = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <img
-                src={stoveImage}
-                alt="Koselig vedovn"
+                src={hvitOvn}
+                alt="Hvit peis installert av Alt i Ild"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>

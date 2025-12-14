@@ -18,6 +18,10 @@ import {
 import installationImage from "@/assets/installation-work.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 
+// Real business images
+import funkisOvn from "@/assets/funkis-ovn.jpg";
+import pipeTak from "@/assets/pipe-tak.jpg";
+
 const services = [
   {
     icon: Flame,
@@ -122,7 +126,7 @@ const Tjenester = () => {
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${installationImage})` }}
+          style={{ backgroundImage: `url(${funkisOvn})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
         </div>
@@ -217,7 +221,7 @@ const Tjenester = () => {
       <section className="relative py-32">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${installationImage})` }}
+          style={{ backgroundImage: `url(${pipeTak})` }}
         >
           <div className="absolute inset-0 bg-charcoal/80" />
         </div>
