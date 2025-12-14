@@ -50,7 +50,16 @@ const Kontakt = () => {
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [addressError, setAddressError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Validate address has street number (e.g., "Storgata 15" or "Gata 2B")
+  const validateAddress = (address: string): boolean => {
+    if (!address.trim()) return true; // Address is optional, but if filled must have number
+    // Check if address contains at least one number
+    const hasNumber = /\d/.test(address);
+    return hasNumber;
+  };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
@@ -101,6 +110,19 @@ const Kontakt = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate address if provided
+    if (formData.address && !validateAddress(formData.address)) {
+      setAddressError("Vennligst inkluder gatenummer (f.eks. Storgata 15)");
+      toast({
+        title: "Ugyldig adresse",
+        description: "Adressen må inneholde gatenummer.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setAddressError(null);
     setIsSubmitting(true);
     
     try {
@@ -419,10 +441,16 @@ const Kontakt = () => {
                         id="address"
                         name="address"
                         value={formData.address}
-                        onChange={handleChange}
-                        placeholder="Gateadresse, postnummer og sted"
-                        className="h-12 bg-background border-border/50 focus:border-primary"
+                        onChange={(e) => {
+                          handleChange(e);
+                          if (addressError) setAddressError(null);
+                        }}
+                        placeholder="Gatenavn og nummer (f.eks. Storgata 15)"
+                        className={`h-12 bg-background border-border/50 focus:border-primary ${addressError ? 'border-destructive' : ''}`}
                       />
+                      {addressError && (
+                        <p className="text-destructive text-sm mt-1">{addressError}</p>
+                      )}
                     </div>
 
                     <div>
