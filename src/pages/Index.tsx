@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
@@ -11,7 +12,8 @@ import {
   MessageCircle, 
   Star,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  X
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-fireplace.jpg";
@@ -60,7 +62,21 @@ const benefits = [
   "Gratis befaring",
 ];
 
+const galleryImages = [
+  { src: null, alt: "Funkis ovn", title: "Funkis Ovn" },
+  { src: null, alt: "Hvit ovn", title: "Hvit Ovn" },
+  { src: null, alt: "Ovn i sollys", title: "Ovn i Sollys" },
+];
+
 const Index = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; title: string } | null>(null);
+
+  const galleryImagesWithSrc = [
+    { src: funkisOvn, alt: "Funkis ovn", title: "Funkis Ovn" },
+    { src: hvitOvn2, alt: "Hvit ovn", title: "Hvit Ovn" },
+    { src: ovnSolrik, alt: "Ovn i sollys", title: "Ovn i Sollys" },
+  ];
+
   return (
     <Layout>
       <SEO 
@@ -254,26 +270,56 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[funkisOvn, hvitOvn2, ovnSolrik].map((img, index) => (
-              <div
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+            {galleryImagesWithSrc.map((image, index) => (
+              <button
                 key={index}
-                className="group relative overflow-hidden rounded-2xl aspect-square"
+                onClick={() => setSelectedImage(image)}
+                className="group relative overflow-hidden rounded-xl md:rounded-2xl aspect-square cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <OptimizedImage
-                  src={img}
-                  alt={`Peisprosjekt ${index + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   className="w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/40 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-primary-foreground font-medium text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Se mer
                   </span>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
+
+          {/* Image Modal */}
+          {selectedImage && (
+            <div 
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/90 backdrop-blur-sm animate-fade-in"
+              onClick={() => setSelectedImage(null)}
+            >
+              <div 
+                className="relative max-w-4xl max-h-[90vh] w-full animate-scale-in"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-12 right-0 md:top-4 md:right-4 z-10 p-2 bg-background/80 backdrop-blur-sm rounded-full hover:bg-background transition-colors"
+                  aria-label="Lukk bilde"
+                >
+                  <X className="h-5 w-5 md:h-6 md:w-6" />
+                </button>
+                <OptimizedImage
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  className="w-full h-auto max-h-[80vh] object-contain rounded-xl md:rounded-2xl"
+                />
+                <p className="text-center text-primary-foreground mt-3 md:mt-4 font-display text-lg md:text-xl">
+                  {selectedImage.title}
+                </p>
+              </div>
+            </div>
+          )}
 
           <div className="text-center mt-12">
             <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
