@@ -135,13 +135,13 @@ const Index = () => {
       </section>
 
       {/* Benefits Bar */}
-      <section id="benefits-section" className="bg-primary py-6">
+      <section id="benefits-section" className="bg-primary py-6 md:py-8">
         <div className="container-wide">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-12">
             {benefits.map((benefit) => (
-              <div key={benefit} className="flex items-center gap-2 text-primary-foreground">
-                <CheckCircle className="h-5 w-5" />
-                <span className="font-medium">{benefit}</span>
+              <div key={benefit} className="flex items-center justify-center gap-2 text-primary-foreground text-center">
+                <CheckCircle className="h-4 w-4 md:h-5 md:w-5 flex-shrink-0" />
+                <span className="font-medium text-sm md:text-base">{benefit}</span>
               </div>
             ))}
           </div>
