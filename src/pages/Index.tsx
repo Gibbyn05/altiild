@@ -22,6 +22,14 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 
+// Real business images
+import funkisOvn from "@/assets/funkis-ovn.jpg";
+import hvitOvn from "@/assets/hvit-ovn.jpg";
+import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
+import ovnSolrik from "@/assets/ovn-solrik.jpg";
+import pipeTak from "@/assets/pipe-tak.jpg";
+import takInnside from "@/assets/tak-innside.jpg";
+
 const services = [
   {
     icon: Flame,
@@ -247,7 +255,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[gallery1, gallery2, gallery3].map((img, index) => (
+            {[funkisOvn, hvitOvn2, ovnSolrik].map((img, index) => (
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl aspect-square"

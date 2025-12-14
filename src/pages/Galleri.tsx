@@ -12,54 +12,71 @@ import heroImage from "@/assets/hero-fireplace.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 
+// Real business images
+import funkisOvn from "@/assets/funkis-ovn.jpg";
+import hvitOvn from "@/assets/hvit-ovn.jpg";
+import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
+import ovnSolrik from "@/assets/ovn-solrik.jpg";
+import pipeTak from "@/assets/pipe-tak.jpg";
+import takInnside from "@/assets/tak-innside.jpg";
+import takUtside from "@/assets/tak-utside.jpg";
+
 const projects = [
   {
     id: 1,
-    image: gallery1,
-    title: "Moderne hjørnepeis",
-    location: "Ålesund",
+    image: funkisOvn,
+    title: "Funkis-peis i moderne stue",
+    location: "Molde",
     category: "Peis",
-    description: "Svevende hjørnepeis med 360-graders glass gir panoramautsikt til flammene fra hele rommet.",
+    description: "Elegant svart peis med dobbeltsidig glass, integrert i moderne bolig med spiletak og naturlig lys.",
   },
   {
     id: 2,
-    image: gallery2,
-    title: "Rustikk steinpeis",
+    image: hvitOvn2,
+    title: "Hvit hjørnepeis med glass",
     location: "Molde",
     category: "Peis",
-    description: "Tradisjonell steinpeis med naturstein og massiv tremantel – hygge på gamlemåten.",
+    description: "Moderne hvit peis med treveis glass som gir utsikt til flammene fra flere vinkler.",
   },
   {
     id: 3,
-    image: gallery3,
-    title: "Dobbeltsidig peis",
-    location: "Kristiansund",
+    image: hvitOvn,
+    title: "Hvit frittstående peis",
+    location: "Ålesund",
     category: "Peis",
-    description: "Elegant dobbeltsidig peis som deler stue og spisestue, synlig fra begge rom.",
+    description: "Stilren hvit peis med hjørneglassløsning, perfekt plassert i overgangen mellom rom.",
   },
   {
     id: 4,
-    image: heroImage,
-    title: "Skandinavisk stue",
-    location: "Volda",
-    category: "Peis",
-    description: "Moderne integrert peis og frittstående vedovn i lyst, skandinavisk interiør.",
+    image: ovnSolrik,
+    title: "Vedovn i hagestue",
+    location: "Kristiansund",
+    category: "Ovn",
+    description: "Klassisk vedovn installert i lys hagestue med panoramautsikt og naturlige omgivelser.",
   },
   {
     id: 5,
-    image: stoveImage,
-    title: "Klassisk vedovn",
-    location: "Ørsta",
-    category: "Ovn",
-    description: "Tradisjonell støpejernsvn med høy virkningsgrad og tidløs design.",
+    image: pipeTak,
+    title: "Piperehabilitering",
+    location: "Molde",
+    category: "Installasjon",
+    description: "Profesjonell pipearbeid på tak med ny pipehatt og beslag – med utsikt mot Molde by.",
   },
   {
     id: 6,
-    image: installationImage,
-    title: "Under installasjon",
-    location: "Ålesund",
+    image: takInnside,
+    title: "Hagestue med ovn",
+    location: "Molde",
     category: "Installasjon",
-    description: "Profesjonell montering av moderne peisinnstats i steinvegg.",
+    description: "Integrert ovnsløsning i spektakulær glasstilbygg med utsikt.",
+  },
+  {
+    id: 7,
+    image: takUtside,
+    title: "Glasstak installasjon",
+    location: "Molde",
+    category: "Installasjon",
+    description: "Moderne glasstilbygg med brannsikker gjennomføring for ovnsrør.",
   },
 ];
 
