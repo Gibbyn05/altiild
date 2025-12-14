@@ -145,25 +145,26 @@ const Galleri = () => {
       {/* Gallery Grid */}
       <section className="section-padding bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {filteredProjects.map((project) => (
               <button
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group relative overflow-hidden rounded-2xl aspect-square text-left"
+                className="group relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[4/5] sm:aspect-square text-left"
               >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-primary text-sm font-medium mb-1">{project.category}</p>
-                    <h3 className="text-primary-foreground font-display text-xl font-semibold mb-1">
+                {/* Always visible overlay on mobile, hover on desktop */}
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6">
+                    <p className="text-primary text-xs sm:text-sm font-medium mb-0.5 sm:mb-1">{project.category}</p>
+                    <h3 className="text-primary-foreground font-display text-sm sm:text-xl font-semibold mb-0.5 sm:mb-1 line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-primary-foreground/80 text-sm">{project.location}</p>
+                    <p className="text-primary-foreground/80 text-xs sm:text-sm">{project.location}</p>
                   </div>
                 </div>
               </button>
@@ -175,30 +176,30 @@ const Galleri = () => {
       {/* Modal */}
       {selectedProject && (
         <div 
-          className="fixed inset-0 bg-charcoal/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-charcoal/90 z-50 flex items-center justify-center p-2 sm:p-4"
           onClick={() => setSelectedProject(null)}
         >
           <div 
-            className="bg-background rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            className="bg-background rounded-xl sm:rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
-                className="w-full aspect-video object-cover"
+                className="w-full aspect-[4/3] sm:aspect-video object-cover"
               />
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-charcoal/50 text-primary-foreground flex items-center justify-center hover:bg-charcoal/70 transition-colors"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-charcoal/50 text-primary-foreground flex items-center justify-center hover:bg-charcoal/70 transition-colors"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
             </div>
-            <div className="p-8">
-              <p className="text-primary text-sm font-medium mb-2">{selectedProject.category} • {selectedProject.location}</p>
-              <h3 className="font-display text-2xl font-semibold mb-4">{selectedProject.title}</h3>
-              <p className="text-muted-foreground">{selectedProject.description}</p>
+            <div className="p-4 sm:p-8">
+              <p className="text-primary text-xs sm:text-sm font-medium mb-1 sm:mb-2">{selectedProject.category} • {selectedProject.location}</p>
+              <h3 className="font-display text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">{selectedProject.title}</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">{selectedProject.description}</p>
             </div>
           </div>
         </div>

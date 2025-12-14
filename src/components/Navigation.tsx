@@ -49,7 +49,7 @@ export function Navigation() {
             alt="Alt i Ild - Peis, Ovn og Pipe" 
             className={cn(
               "transition-all duration-300",
-              isScrolled ? "h-14" : "h-20"
+              isScrolled ? "h-20" : "h-28"
             )}
           />
         </Link>

@@ -27,7 +27,7 @@ export function Footer() {
               <img 
                 src={logo} 
                 alt="Alt i Ild - Peis, Ovn og Pipe" 
-                className="h-16 brightness-0 invert"
+                className="h-32 brightness-0 invert"
               />
             </Link>
             <p className="text-secondary-foreground/80 mb-6">
