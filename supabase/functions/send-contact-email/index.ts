@@ -14,6 +14,7 @@ interface ContactEmailRequest {
   address?: string;
   subject: string;
   message: string;
+  imageUrls?: string[];
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -22,9 +23,20 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, phone, address, subject, message }: ContactEmailRequest = await req.json();
+    const { name, email, phone, address, subject, message, imageUrls }: ContactEmailRequest = await req.json();
 
-    console.log("Sending contact email for:", { name, email, subject });
+    console.log("Sending contact email for:", { name, email, subject, imageCount: imageUrls?.length || 0 });
+
+    // Build images HTML
+    const imagesHtml = imageUrls && imageUrls.length > 0 
+      ? `
+        <hr />
+        <h3>Vedlagte bilder:</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          ${imageUrls.map((url, i) => `<a href="${url}" target="_blank"><img src="${url}" alt="Bilde ${i + 1}" style="max-width: 200px; max-height: 200px; border-radius: 8px;" /></a>`).join('')}
+        </div>
+      `
+      : '';
 
     // Send notification to business
     const businessEmailRes = await fetch("https://api.resend.com/emails", {
@@ -47,6 +59,7 @@ const handler = async (req: Request): Promise<Response> => {
           <hr />
           <h3>Melding:</h3>
           <p>${message.replace(/\n/g, "<br>")}</p>
+          ${imagesHtml}
         `,
       }),
     });
