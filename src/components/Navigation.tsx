@@ -128,6 +128,23 @@ export function Navigation() {
             : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
+        {/* Logo */}
+        <Link
+          to="/"
+          className="absolute top-5 left-6 z-[60]"
+          style={{
+            opacity: isOpen ? 1 : 0,
+            transform: isOpen ? "scale(1)" : "scale(0.5)",
+            transition: "opacity 400ms cubic-bezier(0.34, 1.56, 0.64, 1) 150ms, transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1) 150ms",
+          }}
+        >
+          <img 
+            src={logo} 
+            alt="Alt i Ild" 
+            className="h-20"
+          />
+        </Link>
+
         {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
@@ -135,8 +152,8 @@ export function Navigation() {
           aria-label="Lukk meny"
           style={{
             opacity: isOpen ? 1 : 0,
-            transform: isOpen ? "scale(1)" : "scale(0.8)",
-            transition: "opacity 300ms ease-out 200ms, transform 300ms ease-out 200ms",
+            transform: isOpen ? "scale(1) rotate(0deg)" : "scale(0.5) rotate(-90deg)",
+            transition: "opacity 400ms cubic-bezier(0.34, 1.56, 0.64, 1) 200ms, transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1) 200ms",
           }}
         >
           <div className="relative w-6 h-6">
