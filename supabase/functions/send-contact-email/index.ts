@@ -46,7 +46,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Alt i Ild <onboarding@resend.dev>",
+        from: "Alt i Ild <noreply@altiild.no>",
         to: ["post@altiild.no"],
         subject: `Ny henvendelse: ${subject}`,
         html: `
@@ -80,7 +80,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Alt i Ild <onboarding@resend.dev>",
+        from: "Alt i Ild <noreply@altiild.no>",
         to: [email],
         subject: "Vi har mottatt din henvendelse - Alt i Ild",
         html: `
