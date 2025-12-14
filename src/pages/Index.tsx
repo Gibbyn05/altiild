@@ -120,12 +120,12 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - desktop only */}
         <button 
           onClick={() => {
             document.getElementById('benefits-section')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
+          className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
           aria-label="Scroll ned"
         >
           <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex justify-center pt-2">
