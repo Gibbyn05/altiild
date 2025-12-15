@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { 
   Flame, 
   Wrench, 
@@ -68,6 +70,103 @@ const galleryImages = [
   { src: null, alt: "Hvit ovn", title: "Hvit Ovn" },
   { src: null, alt: "Ovn i sollys", title: "Ovn i Sollys" },
 ];
+
+const testimonials = [
+  {
+    name: "Anette Lien",
+    source: "Google",
+    text: "Bedre enn bestilt! Alt i Ild leverer håndverk på et nivå som imponerer. Lars ga oss gode og treffsikre råd, la en klar plan som ble utført ryddig og strukturert.",
+  },
+  {
+    name: "Ida K. Johansen",
+    source: "Google",
+    text: "Vi er kjempefornøyde med arbeidet fra Lars. Han kom på gratis befaring samme dag, tok seg god tid til å finne en god løsning. Anbefaler på det sterkeste!",
+  },
+  {
+    name: "Cornelia Fischer",
+    source: "Google",
+    text: "Lars ga oss gode råd helt fra starten av. Han jobbet veldig rent og profesjonelt. Anbefales på det sterkeste!",
+  },
+  {
+    name: "Cato Stranden Bergseth",
+    source: "Google",
+    text: "Alt i Ild AS leverte en svært god opplevelse ved montering av ny Contura-peis. De håndterte utfordringer profesjonelt.",
+  },
+  {
+    name: "Christian D",
+    source: "Google",
+    text: "Konkurransedyktig på pris, hurtig, god kommunikasjon og en mann som brenner for faget. Meget godt fornøyd!",
+  },
+  {
+    name: "Kjetil Avset",
+    source: "Facebook",
+    text: "Lars yter service og er fleksibel. Utrolig hyggelig kar å ha med å gjøre. Ingenting å si på arbeidet, tip top!",
+  },
+  {
+    name: "Arne Gussiås",
+    source: "Google",
+    text: "Arbeidet ble gjennomført med svært bra kvalitet, effektivt og ryddig! Kan trygt anbefale Alt i Ild!",
+  },
+  {
+    name: "Arne Enge Jeremiassen",
+    source: "Facebook",
+    text: "Fikk montert ny stålpipe i hytte på fjellet. Meget god oppfølging og alt har gått på skinner. Anbefaler på det sterkeste.",
+  },
+  {
+    name: "Svein Jarle Garseth",
+    source: "Google",
+    text: "Lars Klemm monterte nytt ildsted med pipe på vårt sommerhus. Veldig ryddig utført, og god informasjon underveis.",
+  },
+  {
+    name: "Trond Haukebø",
+    source: "Google",
+    text: "Alt er nå kontrollert og godkjent av Brannvesenet. Profesjonelt og effektivt utført. Meget fornøyd!",
+  },
+  {
+    name: "Roar Markussen",
+    source: "Facebook",
+    text: "Dette er yrkesfaglig perfeksjonisme på sitt beste. Service langt utover det vanlige. Anbefales sterkt!",
+  },
+];
+
+const TestimonialsCarousel = () => {
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, align: "start", dragFree: true },
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+  );
+
+  return (
+    <div className="overflow-hidden" ref={emblaRef}>
+      <div className="flex gap-4 px-4 md:px-8">
+        {testimonials.map((review, index) => (
+          <div
+            key={index}
+            className="flex-none w-[280px] md:w-[320px] bg-background ring-foreground/10 rounded-xl border border-transparent p-4 ring-1"
+          >
+            <div className="flex gap-0.5 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-3 w-3 text-primary fill-primary" />
+              ))}
+            </div>
+            <p className="text-foreground text-sm leading-relaxed line-clamp-4">
+              {review.text}
+            </p>
+            <div className="mt-3 flex items-center gap-2">
+              <Avatar className="size-6">
+                <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-semibold">
+                  {review.name.split(" ").map(n => n[0]).join("")}
+                </AvatarFallback>
+              </Avatar>
+              <span className="text-foreground text-xs font-medium">{review.name}</span>
+              <span aria-hidden className="bg-foreground/25 size-1 rounded-full"></span>
+              <span className="text-muted-foreground text-xs">{review.source}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Index = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; title: string } | null>(null);
@@ -333,106 +432,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-padding bg-muted">
-        <div className="container-wide">
-          <div className="mb-12">
+      {/* Testimonials Carousel */}
+      <section className="section-padding bg-muted overflow-hidden">
+        <div className="container-wide mb-8">
+          <div className="text-center max-w-2xl mx-auto">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
               Kundeomtaler
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
               Hva kundene sier
             </h2>
-            <p className="text-muted-foreground text-lg text-balance max-w-2xl">
-              Les hva våre kunder synes om arbeidet vårt. Vi er stolte av å levere kvalitet og service som overgår forventningene.
-            </p>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Anette Lien",
-                source: "Google",
-                text: "Bedre enn bestilt! Alt i Ild leverer håndverk på et nivå som imponerer. Lars ga oss gode og treffsikre råd, la en klar plan som ble utført ryddig og strukturert, med all dokumentasjon i orden. Resultatet var nøyaktig, pent utført og akkurat slik vi ønsket oss. Virkelig valuta for pengene!",
-              },
-              {
-                name: "Ida K. Johansen",
-                source: "Google",
-                text: "Vi er kjempefornøyde med arbeidet fra Lars. Vi hadde lenge forsøkt å få hjelp med en utfordring med ildstedet vårt. Lars kom på gratis befaring samme dag, tok seg god tid til å finne en god løsning. Arbeidet ble igangsatt kjapt, og han var effektiv, men samtidig nøye. Anbefaler på det sterkeste!",
-              },
-              {
-                name: "Cornelia Fischer",
-                source: "Google",
-                text: "Lars ga oss gode råd helt fra starten av. Vi fikk et detaljert kostnadsoverslag. Han jobbet veldig rent og profesjonelt. Lars installerte peisen vår, forklarte alt grundig, og tente til og med opp peisen for første gang. Anbefales på det sterkeste!",
-              },
-              {
-                name: "Cato Stranden Bergseth",
-                source: "Google",
-                text: "Alt i Ild AS leverte en svært god opplevelse ved montering av ny Contura-peis. Til tross for noen utfordringer med eksisterende pipe, håndterte de dette profesjonelt – nødvendige deler ble skaffet raskt, og både montering og utbedring ble utført på en ryddig måte.",
-              },
-              {
-                name: "Christian D",
-                source: "Google",
-                text: "Konkurransedyktig på pris, hurtig, god kommunikasjon og en mann som brenner for faget. Meget godt fornøyd!",
-              },
-              {
-                name: "Kjetil Avset",
-                source: "Facebook",
-                text: "Alt i Ild har gjort det igjen! Fikk montert ovn i stua med ny stålpipe på yttervegg. Lars yter service og er fleksibel. Utrolig hyggelig kar å ha med å gjøre. Ingenting å si på arbeidet som er gjort, tip top!",
-              },
-              {
-                name: "Arne Gussiås",
-                source: "Google",
-                text: "Alt I Ild As monterte pipevifte og gjorde vedlikehold på peisovn. Arbeidet ble gjennomført med svært bra kvalitet, effektivt og ryddig! Kan trygt anbefale Alt i Ild!",
-              },
-              {
-                name: "Arne Enge Jeremiassen",
-                source: "Facebook",
-                text: "Fikk montert ny stålpipe i hytte på fjellet. Lars kom på befaring og ga ett godt tilbud. Meget god oppfølging og alt har gått på skinner. Meget fornøyd og anbefaler Alt i Ild på det sterkeste.",
-              },
-              {
-                name: "Svein Jarle Garseth",
-                source: "Google",
-                text: "Lars Klemm monterte nytt ildsted med pipe på vårt sommerhus. Veldig ryddig utført, og god informasjon underveis.",
-              },
-              {
-                name: "Trond Haukebø",
-                source: "Google",
-                text: "Alt I Ild har hos meg rehabilitert en gammel pipe. Montert ny feieluke og to nye ovner. Alt er nå kontrollert og godkjent av Brannvesenet. Profesjonelt og effektivt utført. Meget fornøyd!",
-              },
-              {
-                name: "Roar Markussen",
-                source: "Facebook",
-                text: "Dette er yrkesfaglig perfeksjonisme på sitt beste. Service langt utover det vanlige. Anbefales sterkt!",
-              },
-            ].map((review, index) => (
-              <div
-                key={index}
-                className="bg-background ring-foreground/10 rounded-2xl border border-transparent px-5 py-4 ring-1 hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="flex gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-primary fill-primary" />
-                  ))}
-                </div>
-                <p className="text-foreground leading-relaxed">
-                  {review.text}
-                </p>
-                <div className="mt-4 flex items-center gap-2">
-                  <Avatar className="ring-foreground/10 size-8 border border-transparent shadow ring-1">
-                    <AvatarFallback className="bg-primary/10 text-primary text-xs font-semibold">
-                      {review.name.split(" ").map(n => n[0]).join("")}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div className="text-foreground text-sm font-medium">{review.name}</div>
-                  <span aria-hidden className="bg-foreground/25 size-1 rounded-full"></span>
-                  <span className="text-muted-foreground text-sm">{review.source}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+        <TestimonialsCarousel />
 
-          <div className="text-center mt-10 flex flex-wrap justify-center gap-4">
+        <div className="container-wide">
+          <div className="text-center mt-8 flex flex-wrap justify-center gap-4">
             <a
               href="https://maps.app.goo.gl/3T9BK5YwkqHvH2iA8"
               target="_blank"
