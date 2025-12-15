@@ -4,7 +4,7 @@ import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { ArrowRight, Award, Users, Heart, Target } from "lucide-react";
 
-import teamImage from "@/assets/team.jpg";
+import larsKlemmImage from "@/assets/lars-klemm.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 
 // Real business images
@@ -77,24 +77,22 @@ const OmOss = () => {
                 Vår historie
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Alt i Ild ble grunnlagt i 2008 av Hans Erik Solheim, en ildsjel med bakgrunn 
-                som murer og brenner for ekte varme i norske hjem. Det som startet som en 
-                liten virksomhet, har vokst til å bli en anerkjent aktør i regionen.
+                Alt i Ild ble grunnlagt av Lars Klemm, en ildsjel med brennende lidenskap 
+                for ekte varme i norske hjem. Det som startet som en liten virksomhet, 
+                har vokst til å bli en anerkjent aktør i regionen.
               </p>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                I dag er vi et team på fem dedikerte fagfolk som deler samme lidenskap for 
-                kvalitet og kundetilfredshet. Vi har installert over 1000 peiser og ovner, 
-                og hver eneste jobb behandles med samme omhu og presisjon.
+                Vi har installert over 1000 peiser og ovner, og hver eneste jobb 
+                behandles med samme omhu og presisjon.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Fra vår base i Ålesund betjener vi kunder i hele Møre og Romsdal – fra 
-                Kristiansund i nord til Volda i sør.
+                Fra vår base i Molde betjener vi kunder i hele Møre og Romsdal.
               </p>
             </div>
             <div className="relative">
               <img
-                src={teamImage}
-                alt="Alt i Ild teamet"
+                src={larsKlemmImage}
+                alt="Lars Klemm - grunnlegger av Alt i Ild"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
