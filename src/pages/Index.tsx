@@ -22,7 +22,7 @@ import installationImage from "@/assets/installation-work.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
-import testimonial1 from "@/assets/testimonial-1.jpg";
+
 
 // Real business images
 import funkisOvn from "@/assets/funkis-ovn.jpg";
@@ -332,30 +332,82 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonial */}
+      {/* Facebook Reviews */}
       <section className="section-padding bg-secondary">
-        <div className="container-narrow">
-          <div className="text-center">
-            <div className="flex justify-center gap-1 mb-8">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-primary fill-primary" />
-              ))}
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+              Kundeomtaler
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
+              Hva kundene sier
+            </h2>
+            <div className="flex items-center justify-center gap-2 text-muted-foreground">
+              <span className="font-semibold text-primary">100%</span>
+              <span>anbefaler oss på Facebook</span>
             </div>
-            <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-secondary-foreground mb-8 leading-relaxed">
-              "Alt i Ild leverte langt over forventning. Fra første konsultasjon til ferdig 
-              installert peis – alt gikk knirkefritt. Nå koser vi oss foran peisen hver kveld!"
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <OptimizedImage
-                src={testimonial1}
-                alt="Fornøyde kunder"
-                className="w-16 h-16 rounded-full"
-              />
-              <div className="text-left">
-                <p className="font-semibold text-secondary-foreground">Kari og Ola Nordmann</p>
-                <p className="text-secondary-foreground/70">Ålesund</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Kjetil Avset",
+                text: "Alt i Ild har gjort det igjen! Fikk montert ovn i stua med ny stålpipe på yttervegg. Lars yter service og er fleksibel. Utrolig hyggelig kar å ha med å gjøre. Ingenting å si på arbeidet som er gjort, tip top!",
+              },
+              {
+                name: "Arne Gussiås",
+                text: "Alt I Ild As monterte pipevifte og gjorde vedlikehold på peisovn. Arbeidet ble gjennomført med svært bra kvalitet, effektivt og ryddig! Kan trygt anbefale Alt i Ild!",
+              },
+              {
+                name: "Arne Enge Jeremiassen",
+                text: "Fikk montert ny stålpipe i hytte på fjellet. Lars kom på befaring og ga ett godt tilbud. Meget god oppfølging og alt har gått på skinner. Meget fornøyd og anbefaler Alt i Ild på det sterkeste.",
+              },
+              {
+                name: "Trond Haukebo",
+                text: "Alt I Ild, v/ Lars Klemm, har hos meg rehabilitert en gammel pipe. Montert ny feieluke og to nye ovner. Alt er nå kontrollert og godkjent av Brannvesenet. Profesjonelt og effektivt utført. Meget fornøyd!",
+              },
+              {
+                name: "Roar Markussen",
+                text: "Dette er yrkesfaglig perfeksjonisme på sitt beste. Service langt utover det vanlige. Anbefales sterkt!",
+              },
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="bg-card p-6 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-primary fill-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                  "{review.text}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold text-sm">
+                      {review.name.split(" ").map(n => n[0]).join("")}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm">{review.name}</p>
+                    <p className="text-xs text-muted-foreground">via Facebook</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="https://www.facebook.com/profile.php?id=61574577441905"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              Se alle anmeldelser på Facebook
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
