@@ -95,7 +95,7 @@ const Index = () => {
         
         <div className="container-wide relative z-10 pt-20">
           <div className="max-w-2xl animate-fade-up">
-            <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
+            <p className="text-primary font-semibold mb-4 tracking-wider uppercase text-base md:text-lg drop-shadow-lg">
               Eksperter på peis og ovn
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 leading-tight">
