@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
@@ -129,25 +129,54 @@ const GalleryCarousel = ({
   onSelectProject: (project: typeof projects[0]) => void;
   reverse?: boolean;
 }) => {
-  const [emblaRef] = useEmblaCarousel(
+  const autoplayPlugin = Autoplay({ 
+    delay: 0,
+    stopOnInteraction: false, 
+    playOnInit: true,
+  });
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
       loop: true, 
-      align: "start", 
-      skipSnaps: false,
-      direction: reverse ? "rtl" : "ltr"
+      align: "start",
+      dragFree: true,
     },
-    [Autoplay({ delay: reverse ? 4000 : 3500, stopOnInteraction: false, playOnInit: true })]
+    [autoplayPlugin]
   );
 
+  // Custom continuous scroll effect
+  useEffect(() => {
+    if (!emblaApi) return;
+    
+    let animationId: number;
+    const speed = reverse ? -0.5 : 0.5;
+    
+    const animate = () => {
+      if (!emblaApi) return;
+      const engine = emblaApi.internalEngine();
+      engine.location.add(speed);
+      engine.target.set(engine.location.get());
+      engine.scrollLooper.loop(-1);
+      engine.slideLooper.loop();
+      engine.translate.to(engine.location.get());
+      animationId = requestAnimationFrame(animate);
+    };
+    
+    animate();
+    
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
+  }, [emblaApi, reverse]);
+
   return (
-    <div className="overflow-hidden" ref={emblaRef} dir={reverse ? "rtl" : "ltr"}>
+    <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex gap-4 px-4 md:px-8">
         {carouselProjects.map((project) => (
           <button
             key={project.id}
             onClick={() => onSelectProject(project)}
             className="group flex-none w-[260px] md:w-[320px] overflow-hidden rounded-xl text-left"
-            dir="ltr"
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
               <img
