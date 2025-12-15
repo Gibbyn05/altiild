@@ -220,7 +220,7 @@ const Tjenester = () => {
       {/* CTA */}
       <section className="relative py-32">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: `url(${pipeTak})` }}
         >
           <div className="absolute inset-0 bg-charcoal/80" />
