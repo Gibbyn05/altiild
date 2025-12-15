@@ -1,11 +1,9 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { ArrowRight, X } from "lucide-react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -129,52 +127,18 @@ const GalleryCarousel = ({
   onSelectProject: (project: typeof projects[0]) => void;
   reverse?: boolean;
 }) => {
-  const autoplayPlugin = Autoplay({ 
-    delay: 0,
-    stopOnInteraction: false, 
-    playOnInit: true,
-  });
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { 
-      loop: true, 
-      align: "start",
-      dragFree: true,
-    },
-    [autoplayPlugin]
-  );
-
-  // Custom continuous scroll effect
-  useEffect(() => {
-    if (!emblaApi) return;
-    
-    let animationId: number;
-    const speed = reverse ? -0.5 : 0.5;
-    
-    const animate = () => {
-      if (!emblaApi) return;
-      const engine = emblaApi.internalEngine();
-      engine.location.add(speed);
-      engine.target.set(engine.location.get());
-      engine.scrollLooper.loop(-1);
-      engine.slideLooper.loop();
-      engine.translate.to(engine.location.get());
-      animationId = requestAnimationFrame(animate);
-    };
-    
-    animate();
-    
-    return () => {
-      cancelAnimationFrame(animationId);
-    };
-  }, [emblaApi, reverse]);
-
+  // Duplicate items for seamless loop
+  const duplicatedProjects = [...carouselProjects, ...carouselProjects];
+  
   return (
-    <div className="overflow-hidden" ref={emblaRef}>
-      <div className="flex gap-4 px-4 md:px-8">
-        {carouselProjects.map((project) => (
+    <div className="overflow-hidden">
+      <div 
+        className={`flex gap-4 px-4 md:px-8 ${reverse ? 'animate-scroll-reverse' : 'animate-scroll'}`}
+        style={{ width: 'max-content' }}
+      >
+        {duplicatedProjects.map((project, index) => (
           <button
-            key={project.id}
+            key={`${project.id}-${index}`}
             onClick={() => onSelectProject(project)}
             className="group flex-none w-[260px] md:w-[320px] overflow-hidden rounded-xl text-left"
           >
