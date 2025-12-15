@@ -139,8 +139,8 @@ const Tjenester = () => {
               Komplett tilbud for varme og trivsel
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
-              Fra første befaring til ferdig installert peis – vi tar hånd om hele prosessen. 
-              Utforsk våre tjenester og finn løsningen som passer for deg.
+              Sertifisert for søknadspliktig arbeid på ildsteder og skorsteiner. 
+              Vi håndterer montering, kontroll og rehabilitering – trygt, godkjent og dokumentert.
             </p>
           </div>
         </div>
