@@ -351,13 +351,38 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
+                name: "Anette Lien",
+                source: "Google",
+                text: "Bedre enn bestilt! Alt i Ild leverer håndverk på et nivå som imponerer. Lars ga oss gode og treffsikre råd, la en klar plan som ble utført ryddig og strukturert, med all dokumentasjon i orden. Resultatet var nøyaktig, pent utført og akkurat slik vi ønsket oss. Virkelig valuta for pengene!",
+              },
+              {
+                name: "Ida K. Johansen",
+                source: "Google",
+                text: "Vi er kjempefornøyde med arbeidet fra Lars. Vi hadde lenge forsøkt å få hjelp med en utfordring med ildstedet vårt. Lars kom på gratis befaring samme dag, tok seg god tid til å finne en god løsning. Arbeidet ble igangsatt kjapt, og han var effektiv, men samtidig nøye. Anbefaler på det sterkeste!",
+              },
+              {
+                name: "Cornelia Fischer",
+                source: "Google",
+                text: "Lars ga oss gode råd helt fra starten av. Vi fikk et detaljert kostnadsoverslag. Han jobbet veldig rent og profesjonelt. Lars installerte peisen vår, forklarte alt grundig, og tente til og med opp peisen for første gang. Anbefales på det sterkeste!",
+              },
+              {
+                name: "Cato Stranden Bergseth",
+                source: "Google",
+                text: "Alt i Ild AS leverte en svært god opplevelse ved montering av ny Contura-peis. Til tross for noen utfordringer med eksisterende pipe, håndterte de dette profesjonelt – nødvendige deler ble skaffet raskt, og både montering og utbedring ble utført på en ryddig måte.",
+              },
+              {
+                name: "Christian D",
+                source: "Google",
+                text: "Konkurransedyktig på pris, hurtig, god kommunikasjon og en mann som brenner for faget. Meget godt fornøyd!",
+              },
+              {
                 name: "Kjetil Avset",
                 source: "Facebook",
                 text: "Alt i Ild har gjort det igjen! Fikk montert ovn i stua med ny stålpipe på yttervegg. Lars yter service og er fleksibel. Utrolig hyggelig kar å ha med å gjøre. Ingenting å si på arbeidet som er gjort, tip top!",
               },
               {
                 name: "Arne Gussiås",
-                source: "Facebook",
+                source: "Google",
                 text: "Alt I Ild As monterte pipevifte og gjorde vedlikehold på peisovn. Arbeidet ble gjennomført med svært bra kvalitet, effektivt og ryddig! Kan trygt anbefale Alt i Ild!",
               },
               {
@@ -366,9 +391,14 @@ const Index = () => {
                 text: "Fikk montert ny stålpipe i hytte på fjellet. Lars kom på befaring og ga ett godt tilbud. Meget god oppfølging og alt har gått på skinner. Meget fornøyd og anbefaler Alt i Ild på det sterkeste.",
               },
               {
-                name: "Trond Haukebo",
-                source: "Facebook",
-                text: "Alt I Ild, v/ Lars Klemm, har hos meg rehabilitert en gammel pipe. Montert ny feieluke og to nye ovner. Alt er nå kontrollert og godkjent av Brannvesenet. Profesjonelt og effektivt utført. Meget fornøyd!",
+                name: "Svein Jarle Garseth",
+                source: "Google",
+                text: "Lars Klemm monterte nytt ildsted med pipe på vårt sommerhus. Veldig ryddig utført, og god informasjon underveis.",
+              },
+              {
+                name: "Trond Haukebø",
+                source: "Google",
+                text: "Alt I Ild har hos meg rehabilitert en gammel pipe. Montert ny feieluke og to nye ovner. Alt er nå kontrollert og godkjent av Brannvesenet. Profesjonelt og effektivt utført. Meget fornøyd!",
               },
               {
                 name: "Roar Markussen",
@@ -402,14 +432,23 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 flex flex-wrap justify-center gap-4">
+            <a
+              href="https://maps.app.goo.gl/3T9BK5YwkqHvH2iA8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              Se anmeldelser på Google
+              <ArrowRight className="h-4 w-4" />
+            </a>
             <a
               href="https://www.facebook.com/profile.php?id=61574577441905"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
             >
-              Se alle anmeldelser på Facebook
+              Se anmeldelser på Facebook
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
