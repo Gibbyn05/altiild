@@ -59,10 +59,10 @@ const services = [
 ];
 
 const benefits = [
-  "Over 15 års erfaring",
-  "Sertifiserte fagfolk",
-  "Garanti på alt arbeid",
+  "Eneste Nivå 3-sertifisert i Molde",
+  "Kvalifisert montør og kontrollør",
   "Gratis befaring",
+  "Garanti på alt arbeid",
 ];
 
 const galleryImages = [
@@ -262,8 +262,8 @@ const Index = () => {
                 <div className="flex items-center gap-3">
                   <Shield className="h-8 w-8 text-primary" />
                   <div>
-                    <p className="font-display text-lg font-semibold">Sertifisert</p>
-                    <p className="text-sm text-muted-foreground">montør og kontrollør</p>
+                    <p className="font-display text-lg font-semibold">Nivå 3-sertifisert</p>
+                    <p className="text-sm text-muted-foreground">Eneste i Molde</p>
                   </div>
                 </div>
               </div>
