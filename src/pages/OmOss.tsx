@@ -40,7 +40,7 @@ const OmOss = () => {
     <Layout>
       <SEO 
         title="Om oss | Alt i Ild - Din lokale peis og ovn ekspert"
-        description="Alt i Ild har siden 2008 levert kvalitetsløsninger for peiser og ovner i Møre og Romsdal. Møt teamet og les om våre verdier."
+        description="Alt i Ild i Molde leverer kvalitetsløsninger for peiser og ovner i Møre og Romsdal. Sertifisert montør, kontrollør og fagansvarlig."
         canonical="/om-oss"
       />
       {/* Hero */}
@@ -77,16 +77,20 @@ const OmOss = () => {
                 Vår historie
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Alt i Ild ble grunnlagt av Lars Klemm, en ildsjel med brennende lidenskap 
-                for ekte varme i norske hjem. Det som startet som en liten virksomhet, 
-                har vokst til å bli en anerkjent aktør i regionen.
+                Alt i Ild ble grunnlagt av Lars Klemm – sertifisert montør, kontrollør 
+                og fagansvarlig til søknadspliktig arbeid på ildsteder og skorsteiner. 
+                Med brennende lidenskap for ekte varme i norske hjem har vi raskt blitt 
+                en anerkjent aktør i regionen.
               </p>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Vi har installert over 1000 peiser og ovner, og hver eneste jobb 
-                behandles med samme omhu og presisjon.
+                Vi tilbyr montering av nye ovner og peiser, piperehabilitering og 
+                isolerte stålpiper. Hver eneste jobb behandles med samme omhu og presisjon.
               </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Fra vår base i Molde betjener vi kunder i hele Møre og Romsdal.
+              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                Fra vår base i Barvegen 16 i Molde betjener vi kunder i hele Møre og Romsdal.
+              </p>
+              <p className="text-primary font-semibold text-lg">
+                Gratis befaring – helt uforpliktende!
               </p>
             </div>
             <div className="relative">
