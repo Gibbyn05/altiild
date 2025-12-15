@@ -23,6 +23,12 @@ import pipeTak from "@/assets/pipe-tak.jpg";
 import takInnside from "@/assets/tak-innside.jpg";
 import takUtside from "@/assets/tak-utside.jpg";
 
+// New gallery images
+import galleryModernPeis from "@/assets/gallery-modern-peis.png";
+import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
+import galleryHvitPeis from "@/assets/gallery-hvit-peis.jpg";
+import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
+
 const projects = [
   {
     id: 1,
@@ -79,6 +85,38 @@ const projects = [
     location: "Molde",
     category: "Installasjon",
     description: "Moderne glasstilbygg med brannsikker gjennomføring for ovnsrør.",
+  },
+  {
+    id: 8,
+    image: galleryModernPeis,
+    title: "Modern hjørnepeis med panorama",
+    location: "Molde",
+    category: "Peis",
+    description: "Stilfull grå hjørnepeis med tresiders glass, integrert i moderne stue med utsikt over byen.",
+  },
+  {
+    id: 9,
+    image: galleryPipeSol,
+    title: "Pipe i motlys",
+    location: "Molde",
+    category: "Installasjon",
+    description: "Profesjonell pipemontasje på tak med utsikt over Molde og fjellene i bakgrunnen.",
+  },
+  {
+    id: 10,
+    image: galleryHvitPeis,
+    title: "Hvit moderne peis",
+    location: "Molde",
+    category: "Peis",
+    description: "Elegant hvit peis med ventilasjonsgitter og moderne design, integrert i stue.",
+  },
+  {
+    id: 11,
+    image: galleryPipeFjord,
+    title: "Stålpipe med fjordutsikt",
+    location: "Molde",
+    category: "Installasjon",
+    description: "Blankt stålpipehode montert på tak med spektakulær utsikt over fjorden og fjellene.",
   },
 ];
 
@@ -176,11 +214,11 @@ const Galleri = () => {
           </div>
         </div>
 
-        <GalleryCarousel projects={projects.slice(0, 4)} onSelectProject={setSelectedProject} />
+        <GalleryCarousel projects={projects.slice(0, 6)} onSelectProject={setSelectedProject} />
       </section>
 
       <section className="bg-background overflow-hidden pb-16">
-        <GalleryCarousel projects={projects.slice(4)} onSelectProject={setSelectedProject} reverse />
+        <GalleryCarousel projects={projects.slice(6)} onSelectProject={setSelectedProject} reverse />
       </section>
 
       {/* Modal */}
