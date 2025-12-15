@@ -131,9 +131,9 @@ const GalleryCarousel = ({
   const duplicatedProjects = [...carouselProjects, ...carouselProjects];
   
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden group/carousel">
       <div 
-        className={`flex gap-4 px-4 md:px-8 ${reverse ? 'animate-scroll-reverse' : 'animate-scroll'}`}
+        className={`flex gap-4 px-4 md:px-8 ${reverse ? 'animate-scroll-reverse' : 'animate-scroll'} group-hover/carousel:[animation-play-state:paused]`}
         style={{ width: 'max-content' }}
       >
         {duplicatedProjects.map((project, index) => (
