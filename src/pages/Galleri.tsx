@@ -82,20 +82,29 @@ const projects = [
   },
 ];
 
-const GalleryCarousel = ({ onSelectProject }: { onSelectProject: (project: typeof projects[0]) => void }) => {
+const GalleryCarousel = ({ 
+  projects: carouselProjects, 
+  onSelectProject,
+  reverse = false 
+}: { 
+  projects: typeof projects;
+  onSelectProject: (project: typeof projects[0]) => void;
+  reverse?: boolean;
+}) => {
   const [emblaRef] = useEmblaCarousel(
-    { loop: true, align: "start", dragFree: true },
-    [Autoplay({ delay: 3500, stopOnInteraction: false })]
+    { loop: true, align: "start", dragFree: true, direction: reverse ? "rtl" : "ltr" },
+    [Autoplay({ delay: reverse ? 4000 : 3500, stopOnInteraction: false })]
   );
 
   return (
-    <div className="overflow-hidden" ref={emblaRef}>
+    <div className="overflow-hidden" ref={emblaRef} dir={reverse ? "rtl" : "ltr"}>
       <div className="flex gap-4 px-4 md:px-8">
-        {projects.map((project) => (
+        {carouselProjects.map((project) => (
           <button
             key={project.id}
             onClick={() => onSelectProject(project)}
             className="group flex-none w-[260px] md:w-[320px] overflow-hidden rounded-xl text-left"
+            dir="ltr"
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
               <img
@@ -154,8 +163,8 @@ const Galleri = () => {
         </div>
       </section>
 
-      {/* Gallery Carousel */}
-      <section className="section-padding bg-background overflow-hidden">
+      {/* Gallery Carousels */}
+      <section className="section-padding bg-background overflow-hidden pb-8">
         <div className="container-wide mb-8">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
@@ -167,7 +176,11 @@ const Galleri = () => {
           </div>
         </div>
 
-        <GalleryCarousel onSelectProject={setSelectedProject} />
+        <GalleryCarousel projects={projects.slice(0, 4)} onSelectProject={setSelectedProject} />
+      </section>
+
+      <section className="bg-background overflow-hidden pb-16">
+        <GalleryCarousel projects={projects.slice(4)} onSelectProject={setSelectedProject} reverse />
       </section>
 
       {/* Modal */}
