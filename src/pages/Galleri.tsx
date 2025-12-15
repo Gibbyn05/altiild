@@ -130,8 +130,13 @@ const GalleryCarousel = ({
   reverse?: boolean;
 }) => {
   const [emblaRef] = useEmblaCarousel(
-    { loop: true, align: "start", dragFree: true, direction: reverse ? "rtl" : "ltr" },
-    [Autoplay({ delay: reverse ? 4000 : 3500, stopOnInteraction: false })]
+    { 
+      loop: true, 
+      align: "start", 
+      skipSnaps: false,
+      direction: reverse ? "rtl" : "ltr"
+    },
+    [Autoplay({ delay: reverse ? 4000 : 3500, stopOnInteraction: false, playOnInit: true })]
   );
 
   return (
