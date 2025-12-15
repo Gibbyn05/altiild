@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { ArrowRight, X } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -80,15 +82,46 @@ const projects = [
   },
 ];
 
-const categories = ["Alle", "Peis", "Ovn", "Installasjon"];
+const GalleryCarousel = ({ onSelectProject }: { onSelectProject: (project: typeof projects[0]) => void }) => {
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, align: "start", dragFree: true },
+    [Autoplay({ delay: 3500, stopOnInteraction: false })]
+  );
+
+  return (
+    <div className="overflow-hidden" ref={emblaRef}>
+      <div className="flex gap-4 px-4 md:px-8">
+        {projects.map((project) => (
+          <button
+            key={project.id}
+            onClick={() => onSelectProject(project)}
+            className="group flex-none w-[260px] md:w-[320px] overflow-hidden rounded-xl text-left"
+          >
+            <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <p className="text-primary text-xs font-medium mb-1">{project.category}</p>
+                  <h3 className="text-primary-foreground font-display text-base font-semibold mb-0.5 line-clamp-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-primary-foreground/80 text-xs">{project.location}</p>
+                </div>
+              </div>
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Galleri = () => {
-  const [filter, setFilter] = useState("Alle");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
-
-  const filteredProjects = filter === "Alle" 
-    ? projects 
-    : projects.filter(p => p.category === filter);
 
   return (
     <Layout>
@@ -121,56 +154,20 @@ const Galleri = () => {
         </div>
       </section>
 
-      {/* Filter */}
-      <section className="py-8 bg-background border-b border-border">
-        <div className="container-wide">
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  filter === cat
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground hover:bg-muted/80"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+      {/* Gallery Carousel */}
+      <section className="section-padding bg-background overflow-hidden">
+        <div className="container-wide mb-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+              Utvalgte prosjekter
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
+              Se hva vi har skapt
+            </h2>
           </div>
         </div>
-      </section>
 
-      {/* Gallery Grid */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
-            {filteredProjects.map((project) => (
-              <button
-                key={project.id}
-                onClick={() => setSelectedProject(project)}
-                className="group relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[4/5] sm:aspect-square text-left"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                {/* Always visible overlay on mobile, hover on desktop */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6">
-                    <p className="text-primary text-xs sm:text-sm font-medium mb-0.5 sm:mb-1">{project.category}</p>
-                    <h3 className="text-primary-foreground font-display text-sm sm:text-xl font-semibold mb-0.5 sm:mb-1 line-clamp-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-primary-foreground/80 text-xs sm:text-sm">{project.location}</p>
-                  </div>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
+        <GalleryCarousel onSelectProject={setSelectedProject} />
       </section>
 
       {/* Modal */}
