@@ -154,7 +154,7 @@ const OmOss = () => {
               </h2>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Sertifisert montør og kontrollør",
+                  "Sertifisert montør",
                   "Kvalifisert for søknadspliktig arbeid",
                   "Gratis befaring og uforpliktende tilbud",
                   "Full garanti på arbeid og produkter",
