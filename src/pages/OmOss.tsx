@@ -60,7 +60,7 @@ const OmOss = () => {
               Din lokale ekspert på peis og ovn
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
-              Vi er den eneste aktøren i Molde med Nivå 3-sertifisering – kvalifisert for 
+              Sertifisert montør, kontrollør og fagansvarlig – kvalifisert for 
               søknadspliktig arbeid på ildsteder og skorsteiner. Montering, kontroll og 
               rehabilitering utføres trygt, godkjent og dokumentert.
             </p>
@@ -154,7 +154,7 @@ const OmOss = () => {
               </h2>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Eneste Nivå 3-sertifisert montør i Molde",
+                  "Sertifisert montør og kontrollør",
                   "Kvalifisert for søknadspliktig arbeid",
                   "Gratis befaring og uforpliktende tilbud",
                   "Full garanti på arbeid og produkter",
