@@ -293,7 +293,7 @@ const Kontakt = () => {
                 {/* Benefits */}
                 <div className="space-y-4 mb-10">
                   {[
-                    "Sertifisert montør og kontrollør",
+                    "Sertifisert montør",
                     "Kvalifisert for søknadspliktig arbeid",
                     "Gratis befaring og tilbud",
                     "Garanti på alt arbeid",
