@@ -409,7 +409,7 @@ const Index = () => {
                 >
                   <X className="h-5 w-5 md:h-6 md:w-6" />
                 </button>
-                <OptimizedImage
+                <img
                   src={selectedImage.src}
                   alt={selectedImage.alt}
                   className="w-full h-auto max-h-[80vh] object-contain rounded-xl md:rounded-2xl"
