@@ -4,15 +4,14 @@ import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { 
   Flame, 
-  Wrench, 
+  Wrench,
   Shield, 
   Truck, 
   MessageCircle, 
   Settings,
   ArrowRight,
   CheckCircle,
-  Construction,
-  Cylinder
+  Construction
 } from "lucide-react";
 
 import installationImage from "@/assets/installation-work.jpg";
@@ -25,50 +24,39 @@ import pipeTak from "@/assets/pipe-tak.jpg";
 const services = [
   {
     icon: Flame,
-    title: "Peisinstallasjon",
-    description: "Profesjonell montering av alle typer peiser – fra moderne innsatser til tradisjonelle murt peis. Vi håndterer hele prosessen fra planlegging til ferdig installasjon.",
+    title: "Montering og utskifting av peis og vedovn",
+    description: "Vi monterer nye ildsteder og bytter ut gamle løsninger på en trygg og forskriftsmessig måte – tilpasset boligen og eksisterende pipe.",
     features: [
-      "Vurdering av pipeløp og avtrekk",
-      "Montering av peisinnssats eller kassett",
-      "Ferdigstilling med gulv og vegg",
-      "Dokumentasjon og godkjenning",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Ovnsmontering",
-    description: "Effektiv og sikker installasjon av vedovner, pelletskaminer og kombinasjonsovner. Vi finner riktig ovn for ditt behov og sørger for optimal plassering.",
-    features: [
-      "Valg og levering av ovn",
-      "Montering på forskriftsmessig underlag",
-      "Tilkobling til pipe",
-      "Oppstart og brukerveiledning",
+      "Montering av nye peiser og vedovner",
+      "Utskifting av gamle ildsteder",
+      "Tilpasning til eksisterende pipeløp",
+      "Trygg og forskriftsmessig utførelse",
     ],
   },
   {
     icon: Construction,
-    title: "Piperehabilitering",
-    description: "Oppgradering og rehabilitering av eksisterende piper for bedre ytelse og sikkerhet. Vi utbedrer skader og tilpasser pipen til moderne krav.",
+    title: "Kontroll, rehabilitering og tilpasning av pipe",
+    description: "Vi kontrollerer pipen før montering og utfører nødvendige utbedringer slik at ildstedet fungerer trygt og blir godkjent etter gjeldende krav.",
     features: [
-      "Inspeksjon og tilstandsvurdering",
-      "Foring av eksisterende pipe",
-      "Reparasjon av sprekker og skader",
-      "Etterisolering og tetting",
-    ],
-  },
-  {
-    icon: Cylinder,
-    title: "Isolerte stålpiper",
-    description: "Montering av moderne isolerte stålpiper for effektiv og sikker røykavledning. Ideelt for nybygg eller der tradisjonell pipe ikke er mulig.",
-    features: [
-      "Planlegging og dimensjonering",
-      "Montering innvendig eller utvendig",
-      "Brannsikker gjennomføring",
-      "Komplett med beslag og tilbehør",
+      "Grundig kontroll av pipe før montering",
+      "Rehabilitering og utbedring av skader",
+      "Tilpasning til moderne krav",
+      "Sikker og godkjent løsning",
     ],
   },
   {
     icon: Shield,
+    title: "Sertifisert utførelse og ferdig godkjent installasjon",
+    description: "Alt arbeid utføres av sertifiserte fagfolk, inkludert nødvendig dokumentasjon og ferdigmelding – slik at du slipper usikkerhet og ekstra oppfølging.",
+    features: [
+      "Sertifiserte fagfolk",
+      "Komplett dokumentasjon",
+      "Ferdigmelding til kommunen",
+      "Ingen ekstra oppfølging nødvendig",
+    ],
+  },
+  {
+    icon: Wrench,
     title: "Vedlikehold & Service",
     description: "Regelmessig vedlikehold forlenger levetiden på din peis eller ovn og sikrer optimal ytelse. Vi tilbyr servicekontrakter og akutt hjelp.",
     features: [
