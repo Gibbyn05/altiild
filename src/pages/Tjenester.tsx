@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { 
   Flame, 
   Shield, 
+  Wrench,
   ArrowRight,
   CheckCircle,
   Construction
@@ -49,6 +50,17 @@ const services = [
       "Komplett dokumentasjon",
       "Ferdigmelding til kommunen",
       "Ingen ekstra oppfølging nødvendig",
+    ],
+  },
+  {
+    icon: Wrench,
+    title: "Service og oppfølging",
+    description: "Vi er her for deg også etter at jobben er gjort. Trenger du service, vedlikehold eller har spørsmål – ta kontakt, så hjelper vi deg.",
+    features: [
+      "Service og vedlikehold",
+      "Rask respons ved behov",
+      "Rådgivning og support",
+      "Langsiktig kundeforhold",
     ],
   },
 ];
