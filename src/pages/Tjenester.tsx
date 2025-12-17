@@ -4,11 +4,7 @@ import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { 
   Flame, 
-  Wrench,
   Shield, 
-  Truck, 
-  MessageCircle, 
-  Settings,
   ArrowRight,
   CheckCircle,
   Construction
@@ -53,50 +49,6 @@ const services = [
       "Komplett dokumentasjon",
       "Ferdigmelding til kommunen",
       "Ingen ekstra oppfølging nødvendig",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Vedlikehold & Service",
-    description: "Regelmessig vedlikehold forlenger levetiden på din peis eller ovn og sikrer optimal ytelse. Vi tilbyr servicekontrakter og akutt hjelp.",
-    features: [
-      "Årlig service og kontroll",
-      "Utskifting av slitedeler",
-      "Røykgassmåling",
-      "Rens av glass og brennkammer",
-    ],
-  },
-  {
-    icon: MessageCircle,
-    title: "Rådgivning",
-    description: "Usikker på hvilken løsning som passer for deg? Vi tilbyr gratis rådgivning og hjelper deg med å finne riktig peis eller ovn basert på dine behov.",
-    features: [
-      "Befaring i ditt hjem",
-      "Energirådgivning",
-      "Designforslag",
-      "Kostnadsestimat",
-    ],
-  },
-  {
-    icon: Truck,
-    title: "Levering",
-    description: "Vi håndterer transport og levering av din nye peis eller ovn trygt og effektivt, direkte til installasjonsstedet.",
-    features: [
-      "Levering til hele Møre og Romsdal",
-      "Innbæring inkludert",
-      "Forsikret transport",
-      "Fleksible leveringstider",
-    ],
-  },
-  {
-    icon: Settings,
-    title: "Tilbehør",
-    description: "Alt du trenger for å komplettere din varmeløsning – fra vedstativ til peisverktøy, sotluker og røykrør.",
-    features: [
-      "Vedstativ og vedbokser",
-      "Peisverktøy",
-      "Gulvplater",
-      "Røykrør og tilbehør",
     ],
   },
 ];
