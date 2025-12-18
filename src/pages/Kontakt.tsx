@@ -204,9 +204,26 @@ const Kontakt = () => {
   return (
     <Layout>
       <SEO 
-        title="Kontakt oss | Alt i Ild - Gratis befaring"
-        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Vi betjener Molde, Ålesund og hele Møre og Romsdal."
+        title="Kontakt oss | Alt i Ild - Gratis befaring i Møre og Romsdal"
+        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Ring 988 44 844. Vi betjener Molde, Ålesund og hele Møre og Romsdal."
+        keywords="kontakt Alt i Ild, gratis befaring peis, tilbud ovn Molde, peismontør telefon"
         canonical="/kontakt"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Alt i Ild",
+            "telephone": "+47 988 44 844",
+            "email": "post@altiild.no",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "16:00"
+            }
+          }
+        }}
       />
       {/* Hero with background image */}
       <section className="relative pt-32 pb-24 overflow-hidden">
