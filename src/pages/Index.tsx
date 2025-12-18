@@ -277,7 +277,7 @@ const Index = () => {
                 Alt du trenger for et varmere hjem
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Fra rådgivning til ferdig installert peis – vi tar hånd om hele prosessen.
+                Fra rådgivning til ferdig installert peis, vi tar hånd om hele prosessen.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">

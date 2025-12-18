@@ -90,7 +90,7 @@ const OmOss = () => {
                 Fra vår base i Barvegen 16 i Molde betjener vi kunder i hele Møre og Romsdal.
               </p>
               <p className="text-primary font-semibold text-lg">
-                Gratis befaring – helt uforpliktende!
+                Gratis befaring, helt uforpliktende!
               </p>
             </div>
             <div className="relative">
