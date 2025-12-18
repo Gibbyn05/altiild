@@ -14,20 +14,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "+47 70 12 34 56",
-    href: "tel:+4770123456",
+    value: "+47 988 44 844",
+    href: "tel:+4798844844",
   },
   {
     icon: Mail,
     label: "E-post",
     value: "post@altiild.no",
     href: "mailto:post@altiild.no",
-  },
-  {
-    icon: MapPin,
-    label: "Adresse",
-    value: "Barvegen 16, 6411 Molde, Norway",
-    href: "https://maps.google.com/?q=Barvegen+16+6411+Molde+Norway",
   },
   {
     icon: Clock,
@@ -546,33 +540,6 @@ const Kontakt = () => {
                 )}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="bg-muted py-16">
-        <div className="container-wide">
-          <div className="text-center mb-10">
-            <h2 className="font-display text-3xl font-semibold mb-3">
-              Finn oss
-            </h2>
-            <p className="text-muted-foreground">
-              Besøk oss på vårt kontor i Molde
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg h-[400px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1798.4!2d7.1619!3d62.7347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x461168a5a5a5a5a5%3A0x0!2sBarvegen%2016%2C%206411%20Molde%2C%20Norway!5e0!3m2!1sno!2sno!4v1702000000000"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Alt i Ild lokasjon"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
-            />
           </div>
         </div>
       </section>

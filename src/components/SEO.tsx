@@ -36,19 +36,7 @@ const SEO = React.forwardRef<HTMLDivElement, SEOProps>(
       name: "Alt i Ild",
       description: "Profesjonell installasjon av peiser og ovner i Møre og Romsdal",
       url: siteUrl,
-      telephone: "+47 XXX XX XXX",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Barvegen 16",
-        addressLocality: "Molde",
-        postalCode: "6411",
-        addressCountry: "NO",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 62.7372,
-        longitude: 7.1608,
-      },
+      telephone: "+47 988 44 844",
       areaServed: "Møre og Romsdal",
       priceRange: "$$",
       openingHoursSpecification: [
