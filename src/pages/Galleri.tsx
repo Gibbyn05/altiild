@@ -181,9 +181,17 @@ const Galleri = () => {
   return (
     <Layout>
       <SEO 
-        title="Galleri | Se våre peis- og ovnsprosjekter"
+        title="Galleri | Se våre peis- og ovnsprosjekter | Alt i Ild"
         description="Bli inspirert av våre tidligere peis- og ovnsinstallasjoner i Møre og Romsdal. Se bilder fra prosjekter i Molde, Ålesund, Kristiansund og mer."
+        keywords="peis galleri, ovn bilder, peisinstallasjon Molde, vedovn prosjekter, før og etter peis"
         canonical="/galleri"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Alt i Ild Prosjektgalleri",
+          "description": "Galleri med peis- og ovnsinstallasjoner fra Alt i Ild i Møre og Romsdal",
+          "url": "https://altiild.no/galleri"
+        }}
       />
       {/* Hero */}
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">

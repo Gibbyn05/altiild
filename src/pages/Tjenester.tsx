@@ -69,10 +69,31 @@ const Tjenester = () => {
   return (
     <Layout>
       <SEO 
-        title="Tjenester | Peisinstallasjon, ovnsmontering og vedlikehold"
-        description="Alt i Ild tilbyr profesjonell peisinstallasjon, ovnsmontering, piperehabilitering og vedlikehold. Gratis befaring i Møre og Romsdal."
+        title="Tjenester | Peisinstallasjon, ovnsmontering og vedlikehold | Alt i Ild"
+        description="Alt i Ild tilbyr profesjonell peisinstallasjon, ovnsmontering, piperehabilitering og vedlikehold. Gratis befaring i Molde og Møre og Romsdal."
         canonical="/tjenester"
-        keywords="peisinstallasjon, ovnsmontering, piperehabilitering, vedlikehold peis, stålpipe, Molde, Ålesund"
+        keywords="peisinstallasjon Molde, ovnsmontering Møre og Romsdal, piperehabilitering, vedlikehold peis, stålpipe, sertifisert montør"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Peis og ovn installasjon",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Alt i Ild",
+            "telephone": "+47 988 44 844"
+          },
+          "areaServed": "Møre og Romsdal",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Våre tjenester",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Montering og utskifting av peis og vedovn"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kontroll, rehabilitering og tilpasning av pipe"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sertifisert utførelse og ferdig godkjent installasjon"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service og oppfølging"}}
+            ]
+          }
+        }}
       />
       {/* Hero */}
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">

@@ -181,7 +181,8 @@ const Index = () => {
     <Layout>
       <SEO 
         title="Alt i Ild | Peis og ovn spesialister i Møre og Romsdal"
-        description="Alt i Ild leverer profesjonell installasjon av peiser og ovner i Møre og Romsdal. Gratis befaring, sertifiserte montører, og garanti på alt arbeid."
+        description="Alt i Ild leverer profesjonell installasjon av peiser og ovner i Molde og Møre og Romsdal. Gratis befaring, sertifiserte montører, og garanti på alt arbeid."
+        keywords="peis Molde, ovn Møre og Romsdal, peisinstallasjon, vedovn, ildsted, peisinnsats, peismontør, gratis befaring"
         canonical="/"
       />
       {/* Hero Section */}

@@ -39,9 +39,21 @@ const OmOss = () => {
   return (
     <Layout>
       <SEO 
-        title="Om oss | Alt i Ild - Din lokale peis og ovn ekspert"
-        description="Alt i Ild i Molde leverer kvalitetsløsninger for peiser og ovner i Møre og Romsdal. Sertifisert montør, kontrollør og fagansvarlig."
+        title="Om oss | Alt i Ild - Din lokale peis og ovn ekspert i Molde"
+        description="Alt i Ild i Molde leverer kvalitetsløsninger for peiser og ovner i Møre og Romsdal. Sertifisert montør, kontrollør og fagansvarlig med over 15 års erfaring."
+        keywords="Alt i Ild, peis ekspert Molde, ovn spesialist Møre og Romsdal, sertifisert peismontør, Lars Klemm"
         canonical="/om-oss"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Alt i Ild",
+            "founder": {"@type": "Person", "name": "Lars Klemm"},
+            "description": "Sertifisert montør, kontrollør og fagansvarlig til søknadspliktig arbeid på ildsteder og skorsteiner.",
+            "areaServed": "Møre og Romsdal"
+          }
+        }}
       />
       {/* Hero */}
       <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
