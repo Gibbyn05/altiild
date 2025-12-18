@@ -71,14 +71,6 @@ const projects = [
     description: "Profesjonell pipearbeid på tak med ny pipehatt og beslag, med utsikt mot Molde by.",
   },
   {
-    id: 6,
-    image: takInnside,
-    title: "Hagestue med ovn",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Integrert ovnsløsning i spektakulær glasstilbygg med utsikt.",
-  },
-  {
     id: 8,
     image: galleryModernPeis,
     title: "Modern hjørnepeis med panorama",
