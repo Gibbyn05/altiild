@@ -5,12 +5,10 @@ import SEO from "@/components/SEO";
 import { ArrowRight, Award, Users, Heart, Target } from "lucide-react";
 
 import larsKlemmImage from "@/assets/lars-klemm.jpg";
-import stoveImage from "@/assets/stove-cozy.jpg";
 
 // Real business images
 import hvitOvn from "@/assets/hvit-ovn.jpg";
-import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
-import takInnside from "@/assets/tak-innside.jpg";
+import omOssHero from "@/assets/om-oss-hero.png";
 
 const values = [
   {
@@ -59,7 +57,7 @@ const OmOss = () => {
       <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${hvitOvn2})` }}
+          style={{ backgroundImage: `url(${omOssHero})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
         </div>
