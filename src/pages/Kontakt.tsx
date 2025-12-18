@@ -463,7 +463,7 @@ const Kontakt = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        placeholder="Fortell oss om ditt prosjekt – hva slags peis eller ovn ønsker du? Har du noen spesielle ønsker eller krav?"
+                        placeholder="Fortell oss om ditt prosjekt. Hva slags peis eller ovn ønsker du? Har du noen spesielle ønsker eller krav?"
                         rows={6}
                         className="resize-none bg-background border-border/50 focus:border-primary"
                       />
