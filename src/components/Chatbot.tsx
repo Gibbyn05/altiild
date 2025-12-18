@@ -8,6 +8,29 @@ type Message = {
   content: string;
 };
 
+// Helper function to render text with clickable links
+const renderMessageContent = (content: string) => {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = content.split(urlRegex);
+  
+  return parts.map((part, index) => {
+    if (part.match(urlRegex)) {
+      return (
+        <a
+          key={index}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:opacity-80 transition-opacity"
+        >
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+};
+
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 
 export const Chatbot = () => {
@@ -185,7 +208,7 @@ export const Chatbot = () => {
                     : "bg-muted text-foreground rounded-bl-md"
                 }`}
               >
-                <p className="whitespace-pre-wrap">{message.content}</p>
+                <p className="whitespace-pre-wrap">{renderMessageContent(message.content)}</p>
               </div>
             </div>
           ))}
