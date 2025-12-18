@@ -31,6 +31,8 @@ import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 // Before/After images
 import beforeFireplace from "@/assets/before-fireplace.jpg";
 import afterFireplace from "@/assets/after-fireplace.jpg";
+import beforeStove from "@/assets/before-stove.jpg";
+import afterStove from "@/assets/after-stove.jpg";
 
 const projects = [
   {
@@ -238,10 +240,16 @@ const Galleri = () => {
               Dra for å se forskjellen før og etter våre installasjoner.
             </p>
           </div>
-          <BeforeAfterSlider
-            beforeImage={beforeFireplace}
-            afterImage={afterFireplace}
-          />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <BeforeAfterSlider
+              beforeImage={beforeStove}
+              afterImage={afterStove}
+            />
+            <BeforeAfterSlider
+              beforeImage={beforeFireplace}
+              afterImage={afterFireplace}
+            />
+          </div>
         </div>
       </section>
       {/* Modal */}
