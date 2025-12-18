@@ -172,7 +172,7 @@ const Index = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; title: string } | null>(null);
 
   const galleryImagesWithSrc = [
-    { src: funkisOvn, alt: "Funkis ovn", title: "Funkis Ovn" },
+    { src: pipeTak, alt: "Pipe på tak", title: "Pipe på tak" },
     { src: hvitOvn, alt: "Hvit ovn", title: "Hvit Ovn" },
     { src: ovnSolrik, alt: "Ovn i sollys", title: "Ovn i Sollys" },
   ];
