@@ -167,7 +167,7 @@ const BeforeAfterSlider = ({
         {/* Handle Circle */}
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center border-2 border-primary/20 ${
           isDragging ? "scale-110" : ""
-        } ${!hasInteracted ? "animate-pulse" : ""} transition-transform duration-150`}>
+        } transition-transform duration-150`}>
           <div className="flex items-center gap-0.5">
             <svg
               width="8"
