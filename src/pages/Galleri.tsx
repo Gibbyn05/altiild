@@ -27,6 +27,9 @@ import galleryModernPeis from "@/assets/gallery-modern-peis.png";
 import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
 import galleryHvitPeis from "@/assets/gallery-hvit-peis.jpg";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
+import galleryOvnGra from "@/assets/gallery-ovn-gra.jpg";
+import galleryPipeUtvendig from "@/assets/gallery-pipe-utvendig.jpg";
+import galleryOvnSvart from "@/assets/gallery-ovn-svart.jpg";
 
 // Before/After images
 import beforeFireplace from "@/assets/before-fireplace.jpg";
@@ -122,6 +125,30 @@ const projects = [
     location: "Molde",
     category: "Installasjon",
     description: "Blankt stålpipehode montert på tak med spektakulær utsikt over fjorden og fjellene.",
+  },
+  {
+    id: 12,
+    image: galleryOvnGra,
+    title: "Moderne vedovn med grå vegg",
+    location: "Molde",
+    category: "Ovn",
+    description: "Stilren svart vedovn på glassplate, montert mot grå pusset vegg i lys stue.",
+  },
+  {
+    id: 13,
+    image: galleryPipeUtvendig,
+    title: "Utvendig stålpipe",
+    location: "Molde",
+    category: "Installasjon",
+    description: "Profesjonell utvendig pipemontasje langs husvegg med flott fjellutsikt i bakgrunnen.",
+  },
+  {
+    id: 14,
+    image: galleryOvnSvart,
+    title: "Svart vedovn i stue",
+    location: "Molde",
+    category: "Ovn",
+    description: "Elegant svart vedovn på glassplate mellom store vinduer med vinterutsikt.",
   },
 ];
 
