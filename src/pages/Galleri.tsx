@@ -39,14 +39,6 @@ import afterStove from "@/assets/after-stove.jpg";
 
 const projects = [
   {
-    id: 1,
-    image: funkisOvn,
-    title: "Funkis-peis i moderne stue",
-    location: "Molde",
-    category: "Peis",
-    description: "Elegant svart peis med dobbeltsidig glass, integrert i moderne bolig med spiletak og naturlig lys.",
-  },
-  {
     id: 2,
     image: hvitOvn2,
     title: "Hvit hjørnepeis med glass",
