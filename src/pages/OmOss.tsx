@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { ArrowRight, Award, Users, Heart, Target } from "lucide-react";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 import larsKlemmImage from "@/assets/lars-klemm.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
@@ -11,6 +12,8 @@ import stoveImage from "@/assets/stove-cozy.jpg";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
 import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
 import takInnside from "@/assets/tak-innside.jpg";
+import beforeStove from "@/assets/before-stove.jpg";
+import afterStove from "@/assets/after-stove.jpg";
 
 const values = [
   {
@@ -104,8 +107,25 @@ const OmOss = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Before/After */}
       <section className="section-padding bg-muted">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+              Se forskjellen
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Dra for å se før og etter installasjon av ny vedovn.
+            </p>
+          </div>
+          <BeforeAfterSlider
+            beforeImage={beforeStove}
+            afterImage={afterStove}
+          />
+        </div>
+      </section>
+      {/* Values */}
+      <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
