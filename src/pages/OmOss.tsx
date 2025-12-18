@@ -87,7 +87,7 @@ const OmOss = () => {
                 isolerte stålpiper. Hver eneste jobb behandles med samme omhu og presisjon.
               </p>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Fra vår base i Barvegen 16 i Molde betjener vi kunder i hele Møre og Romsdal.
+                Fra Molde betjener vi kunder i hele Møre og Romsdal.
               </p>
               <p className="text-primary font-semibold text-lg">
                 Gratis befaring, helt uforpliktende!

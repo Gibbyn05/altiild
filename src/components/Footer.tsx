@@ -75,8 +75,8 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-secondary-foreground/80">
                 <Phone className="h-5 w-5 text-primary" />
-                <a href="tel:+4770123456" className="hover:text-primary transition-colors">
-                  +47 70 12 34 56
+                <a href="tel:+4798844844" className="hover:text-primary transition-colors">
+                  +47 988 44 844
                 </a>
               </li>
               <li className="flex items-center gap-3 text-secondary-foreground/80">
@@ -84,13 +84,6 @@ export function Footer() {
                 <a href="mailto:post@altiild.no" className="hover:text-primary transition-colors">
                   post@altiild.no
                 </a>
-              </li>
-              <li className="flex items-start gap-3 text-secondary-foreground/80">
-                <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                <span>
-                  Industriveien 42<br />
-                  6413 Molde
-                </span>
               </li>
             </ul>
           </div>
