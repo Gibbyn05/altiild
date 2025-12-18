@@ -25,7 +25,7 @@ import takUtside from "@/assets/tak-utside.jpg";
 // New gallery images
 import galleryModernPeis from "@/assets/gallery-modern-peis.png";
 import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
-import galleryHvitPeis from "@/assets/gallery-hvit-peis.jpg";
+
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 import galleryOvnGra from "@/assets/gallery-ovn-gra.jpg";
 import galleryPipeUtvendig from "@/assets/gallery-pipe-utvendig.jpg";
@@ -85,14 +85,6 @@ const projects = [
     location: "Molde",
     category: "Installasjon",
     description: "Profesjonell pipemontasje på tak med utsikt over Molde og fjellene i bakgrunnen.",
-  },
-  {
-    id: 10,
-    image: galleryHvitPeis,
-    title: "Hvit moderne peis",
-    location: "Molde",
-    category: "Peis",
-    description: "Elegant hvit peis med ventilasjonsgitter og moderne design, integrert i stue.",
   },
   {
     id: 11,
