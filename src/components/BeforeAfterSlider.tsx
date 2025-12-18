@@ -15,6 +15,7 @@ const BeforeAfterSlider = ({
 }: BeforeAfterSliderProps) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMove = useCallback((clientX: number) => {
@@ -29,11 +30,13 @@ const BeforeAfterSlider = ({
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsDragging(true);
+    setHasInteracted(true);
     handleMove(e.clientX);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setIsDragging(true);
+    setHasInteracted(true);
     handleMove(e.touches[0].clientX);
   };
 
@@ -76,6 +79,46 @@ const BeforeAfterSlider = ({
     };
   }, [isDragging, handleMove]);
 
+  // Hint animation - moves slider to show how it works
+  useEffect(() => {
+    if (hasInteracted) return;
+
+    let animationFrame: number;
+    let startTime: number;
+    const duration = 2500; // 2.5 seconds per cycle
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = (timestamp - startTime) % duration;
+      const progress = elapsed / duration;
+      
+      // Ease in-out animation: 50% -> 35% -> 50% -> 65% -> 50%
+      let position: number;
+      if (progress < 0.25) {
+        // 50 -> 35
+        position = 50 - 15 * (progress / 0.25);
+      } else if (progress < 0.5) {
+        // 35 -> 50
+        position = 35 + 15 * ((progress - 0.25) / 0.25);
+      } else if (progress < 0.75) {
+        // 50 -> 65
+        position = 50 + 15 * ((progress - 0.5) / 0.25);
+      } else {
+        // 65 -> 50
+        position = 65 - 15 * ((progress - 0.75) / 0.25);
+      }
+      
+      setSliderPosition(position);
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) cancelAnimationFrame(animationFrame);
+    };
+  }, [hasInteracted]);
+
   return (
     <div
       ref={containerRef}
@@ -117,14 +160,14 @@ const BeforeAfterSlider = ({
       {/* Slider Handle */}
       <div
         className={`absolute top-0 bottom-0 w-1 bg-white shadow-lg z-10 ${
-          isDragging ? "" : "transition-[left] duration-75 ease-out"
+          isDragging || !hasInteracted ? "" : "transition-[left] duration-75 ease-out"
         }`}
         style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
       >
         {/* Handle Circle */}
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center border-2 border-primary/20 ${
           isDragging ? "scale-110" : ""
-        } transition-transform duration-150`}>
+        } ${!hasInteracted ? "animate-pulse" : ""} transition-transform duration-150`}>
           <div className="flex items-center gap-0.5">
             <svg
               width="8"

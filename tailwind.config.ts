@@ -110,6 +110,11 @@ export default {
           from: { transform: "translateX(-50%)" },
           to: { transform: "translateX(0)" },
         },
+        "slider-hint": {
+          "0%, 100%": { left: "50%" },
+          "25%": { left: "35%" },
+          "75%": { left: "65%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -121,6 +126,7 @@ export default {
         "zoom-in": "zoom-in 0.4s ease-out forwards",
         "scroll": "scroll 60s linear infinite",
         "scroll-reverse": "scroll-reverse 70s linear infinite",
+        "slider-hint": "slider-hint 2.5s ease-in-out infinite",
       },
     },
   },
