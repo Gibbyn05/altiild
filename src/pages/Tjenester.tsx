@@ -17,6 +17,7 @@ import stoveImage from "@/assets/stove-cozy.jpg";
 // Real business images
 import funkisOvn from "@/assets/funkis-ovn.jpg";
 import pipeTak from "@/assets/pipe-tak.jpg";
+import tjenesterPeis from "@/assets/tjenester-peis.png";
 
 const services = [
   {
@@ -153,6 +154,15 @@ const Tjenester = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Feature Image */}
+      <section className="relative h-[50vh] min-h-[400px]">
+        <img 
+          src={tjenesterPeis} 
+          alt="Koselig stue med hvit peis og utsikt til naturen"
+          className="w-full h-full object-cover"
+        />
       </section>
 
       {/* Process */}
