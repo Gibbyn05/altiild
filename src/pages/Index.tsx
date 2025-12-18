@@ -341,7 +341,7 @@ const Index = () => {
                 installasjon og vedlikehold av peiser, ovner og ildsteder.
               </p>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Med base i Ålesund betjener vi kunder i hele Møre og Romsdal. 
+                Med base i Molde betjener vi kunder i hele Møre og Romsdal. 
                 Vår filosofi er enkel: kvalitet, sikkerhet og kundetilfredshet 
                 i alt vi gjør.
               </p>
