@@ -79,14 +79,6 @@ const projects = [
     description: "Integrert ovnsløsning i spektakulær glasstilbygg med utsikt.",
   },
   {
-    id: 7,
-    image: takUtside,
-    title: "Glasstak installasjon",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Moderne glasstilbygg med brannsikker gjennomføring for ovnsrør.",
-  },
-  {
     id: 8,
     image: galleryModernPeis,
     title: "Modern hjørnepeis med panorama",
