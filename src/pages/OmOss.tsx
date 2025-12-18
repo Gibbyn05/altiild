@@ -21,7 +21,7 @@ const values = [
   {
     icon: Users,
     title: "Kompetanse",
-    description: "Vårt team består av sertifiserte fagfolk med mange års erfaring innen peis- og ovnsbransjen.",
+    description: "Vårt team består av sertifiserte fagfolk med mange års erfaring innen peis og ovnsbransjen.",
   },
   {
     icon: Heart,
@@ -60,7 +60,7 @@ const OmOss = () => {
               Din lokale ekspert på peis og ovn
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
-              Sertifisert montør, kontrollør og fagansvarlig – kvalifisert for 
+              Sertifisert montør, kontrollør og fagansvarlig, kvalifisert for 
               søknadspliktig arbeid på ildsteder og skorsteiner. Montering, kontroll og 
               rehabilitering utføres trygt, godkjent og dokumentert.
             </p>
@@ -77,7 +77,7 @@ const OmOss = () => {
                 Vår historie
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Alt i Ild ble grunnlagt av Lars Klemm – sertifisert montør, kontrollør 
+                Alt i Ild ble grunnlagt av Lars Klemm, sertifisert montør, kontrollør 
                 og fagansvarlig til søknadspliktig arbeid på ildsteder og skorsteiner. 
                 Med brennende lidenskap for ekte varme i norske hjem har vi raskt blitt 
                 en anerkjent aktør i regionen.

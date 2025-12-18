@@ -66,7 +66,7 @@ const projects = [
     title: "Piperehabilitering",
     location: "Molde",
     category: "Installasjon",
-    description: "Profesjonell pipearbeid på tak med ny pipehatt og beslag – med utsikt mot Molde by.",
+    description: "Profesjonell pipearbeid på tak med ny pipehatt og beslag, med utsikt mot Molde by.",
   },
   {
     id: 6,
