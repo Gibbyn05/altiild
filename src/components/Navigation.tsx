@@ -83,7 +83,15 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Button variant={isScrolled ? "hero" : "heroOutline"} size="lg" asChild>
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className={cn(
+                "border-2",
+                isScrolled ? "" : "border-white bg-primary text-white"
+              )}
+              asChild
+            >
               <Link to="/kontakt">Be om tilbud</Link>
             </Button>
           </div>
