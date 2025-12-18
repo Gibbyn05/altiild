@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { ArrowRight, X } from "lucide-react";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -26,6 +27,10 @@ import galleryModernPeis from "@/assets/gallery-modern-peis.png";
 import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
 import galleryHvitPeis from "@/assets/gallery-hvit-peis.jpg";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
+
+// Before/After images
+import beforeFireplace from "@/assets/before-fireplace.jpg";
+import afterFireplace from "@/assets/after-fireplace.jpg";
 
 const projects = [
   {
@@ -219,6 +224,26 @@ const Galleri = () => {
         <GalleryCarousel projects={projects.slice(6)} onSelectProject={setSelectedProject} reverse />
       </section>
 
+      {/* Before/After Section */}
+      <section className="section-padding bg-muted">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+              Før og etter
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
+              Se transformasjonen
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Dra for å se forskjellen før og etter våre installasjoner.
+            </p>
+          </div>
+          <BeforeAfterSlider
+            beforeImage={beforeFireplace}
+            afterImage={afterFireplace}
+          />
+        </div>
+      </section>
       {/* Modal */}
       {selectedProject && (
         <div 
