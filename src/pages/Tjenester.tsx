@@ -100,7 +100,7 @@ const Tjenester = () => {
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${funkisOvn})` }}
+          style={{ backgroundImage: `url(${tjenesterPeis})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
         </div>
@@ -154,15 +154,6 @@ const Tjenester = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Feature Image */}
-      <section className="relative h-[50vh] min-h-[400px]">
-        <img 
-          src={tjenesterPeis} 
-          alt="Koselig stue med hvit peis og utsikt til naturen"
-          className="w-full h-full object-cover"
-        />
       </section>
 
       {/* Process */}
