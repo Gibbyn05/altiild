@@ -173,7 +173,7 @@ const Index = () => {
 
   const galleryImagesWithSrc = [
     { src: funkisOvn, alt: "Funkis ovn", title: "Funkis Ovn" },
-    { src: hvitOvn2, alt: "Hvit ovn", title: "Hvit Ovn" },
+    { src: hvitOvn, alt: "Hvit ovn", title: "Hvit Ovn" },
     { src: ovnSolrik, alt: "Ovn i sollys", title: "Ovn i Sollys" },
   ];
 
