@@ -22,7 +22,7 @@ const services = [
   {
     icon: Flame,
     title: "Montering og utskifting av peis og vedovn",
-    description: "Vi monterer nye ildsteder og bytter ut gamle løsninger på en trygg og forskriftsmessig måte – tilpasset boligen og eksisterende pipe.",
+    description: "Vi monterer nye ildsteder og bytter ut gamle løsninger på en trygg og forskriftsmessig måte, tilpasset boligen og eksisterende pipe.",
     features: [
       "Montering av nye peiser og vedovner",
       "Utskifting av gamle ildsteder",
@@ -44,7 +44,7 @@ const services = [
   {
     icon: Shield,
     title: "Sertifisert utførelse og ferdig godkjent installasjon",
-    description: "Alt arbeid utføres av sertifiserte fagfolk, inkludert nødvendig dokumentasjon og ferdigmelding – slik at du slipper usikkerhet og ekstra oppfølging.",
+    description: "Alt arbeid utføres av sertifiserte fagfolk, inkludert nødvendig dokumentasjon og ferdigmelding, slik at du slipper usikkerhet og ekstra oppfølging.",
     features: [
       "Sertifiserte fagfolk",
       "Komplett dokumentasjon",
@@ -55,7 +55,7 @@ const services = [
   {
     icon: Wrench,
     title: "Service og oppfølging",
-    description: "Vi er her for deg også etter at jobben er gjort. Trenger du service, vedlikehold eller har spørsmål – ta kontakt, så hjelper vi deg.",
+    description: "Vi er her for deg også etter at jobben er gjort. Trenger du service, vedlikehold eller har spørsmål? Ta kontakt, så hjelper vi deg.",
     features: [
       "Service og vedlikehold",
       "Rask respons ved behov",
@@ -92,7 +92,7 @@ const Tjenester = () => {
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
               Sertifisert for søknadspliktig arbeid på ildsteder og skorsteiner. 
-              Vi håndterer montering, kontroll og rehabilitering – trygt, godkjent og dokumentert.
+              Vi håndterer montering, kontroll og rehabilitering, trygt, godkjent og dokumentert.
             </p>
           </div>
         </div>
