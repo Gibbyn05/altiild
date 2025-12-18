@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { PrivacyPolicyDialog } from "./PrivacyPolicyDialog";
+import { TermsDialog } from "./TermsDialog";
 
 const footerLinks = {
   tjenester: [
@@ -105,12 +107,16 @@ export function Footer() {
             </a>
           </p>
           <div className="flex gap-6 text-sm text-secondary-foreground/60">
-            <Link to="/personvern" className="hover:text-primary transition-colors">
-              Personvern
-            </Link>
-            <Link to="/vilkar" className="hover:text-primary transition-colors">
-              Vilkår
-            </Link>
+            <PrivacyPolicyDialog>
+              <button className="hover:text-primary transition-colors">
+                Personvern
+              </button>
+            </PrivacyPolicyDialog>
+            <TermsDialog>
+              <button className="hover:text-primary transition-colors">
+                Vilkår
+              </button>
+            </TermsDialog>
           </div>
         </div>
       </div>
