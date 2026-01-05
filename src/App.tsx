@@ -8,6 +8,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import OmOss from "./pages/OmOss";
 import Tjenester from "./pages/Tjenester";
+import Dokumentasjon from "./pages/Dokumentasjon";
 import Galleri from "./pages/Galleri";
 import Kontakt from "./pages/Kontakt";
 import Dashboard from "./pages/Dashboard";
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/om-oss" element={<OmOss />} />
             <Route path="/tjenester" element={<Tjenester />} />
+            <Route path="/dokumentasjon" element={<Dokumentasjon />} />
             <Route path="/galleri" element={<Galleri />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/login" element={<Login />} />

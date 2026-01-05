@@ -4,11 +4,23 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, ArrowRight, ImagePlus, X } from "lucide-react";
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  Send, 
+  CheckCircle, 
+  ArrowRight, 
+  ImagePlus, 
+  X,
+  Facebook
+} from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 import heroImage from "@/assets/hero-fireplace.jpg";
+import stoveImage from "@/assets/stove-cozy.jpg";
 
 const contactInfo = [
   {
@@ -24,11 +36,41 @@ const contactInfo = [
     href: "mailto:post@altiild.no",
   },
   {
+    icon: MapPin,
+    label: "Adresse",
+    value: "Barvegen 16, 6411 Molde",
+    href: null,
+  },
+  {
     icon: Clock,
     label: "Åpningstider",
     value: "Man-Fre: 08:00-16:00",
     href: null,
   },
+];
+
+const serviceOptions = [
+  "Montering av peis/ovn",
+  "Piperehabilitering",
+  "Montering av stålpipe",
+  "Inspeksjon/vurdering",
+  "Service/vedlikehold",
+  "Dårlig trekk/Exodraft",
+  "Taksikring/tilkomst",
+  "Annet",
+];
+
+const serviceAreas = [
+  "Molde",
+  "Aukra", 
+  "Hustadvika",
+  "Midsund",
+  "Rauma",
+  "Sunndal",
+  "Averøy",
+  "Kristiansund",
+  "Gjemnes",
+  "Tingvoll",
 ];
 
 const Kontakt = () => {
@@ -37,7 +79,8 @@ const Kontakt = () => {
     email: "",
     phone: "",
     address: "",
-    subject: "",
+    service: "",
+    hasFiringBan: false,
     message: "",
   });
   const [images, setImages] = useState<File[]>([]);
@@ -47,10 +90,8 @@ const Kontakt = () => {
   const [addressError, setAddressError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Validate address has street number (e.g., "Storgata 15" or "Gata 2B")
   const validateAddress = (address: string): boolean => {
-    if (!address.trim()) return true; // Address is optional, but if filled must have number
-    // Check if address contains at least one number
+    if (!address.trim()) return true;
     const hasNumber = /\d/.test(address);
     return hasNumber;
   };
@@ -105,7 +146,6 @@ const Kontakt = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate address if provided
     if (formData.address && !validateAddress(formData.address)) {
       setAddressError("Vennligst inkluder gatenummer (f.eks. Storgata 15)");
       toast({
@@ -120,7 +160,6 @@ const Kontakt = () => {
     setIsSubmitting(true);
     
     try {
-      // Upload images first
       const imageUrls: string[] = [];
       for (const image of images) {
         const fileExt = image.name.split('.').pop();
@@ -142,7 +181,8 @@ const Kontakt = () => {
         imageUrls.push(urlData.publicUrl);
       }
 
-      // Save to database
+      const firingBanText = formData.hasFiringBan ? "\n\n⚠️ HAR FYRINGSFORBUD/AVVIK" : "";
+      
       const { error: dbError } = await supabase
         .from("customer_inquiries")
         .insert({
@@ -150,23 +190,22 @@ const Kontakt = () => {
           phone: formData.phone || "Ikke oppgitt",
           email: formData.email || null,
           address: formData.address || null,
-          inquiry_type: "kontakt",
-          desired_solution: `${formData.subject}: ${formData.message}${imageUrls.length > 0 ? `\n\nBilder: ${imageUrls.join(", ")}` : ""}`,
+          inquiry_type: formData.service || "kontakt",
+          desired_solution: `Tjeneste: ${formData.service || "Ikke valgt"}\n\n${formData.message}${firingBanText}${imageUrls.length > 0 ? `\n\nBilder: ${imageUrls.join(", ")}` : ""}`,
           source: "form",
           status: "new"
         });
 
       if (dbError) throw dbError;
 
-      // Send email notification
       const { error: emailError } = await supabase.functions.invoke("send-contact-email", {
         body: {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           address: formData.address,
-          subject: formData.subject,
-          message: formData.message,
+          subject: formData.service || "Henvendelse",
+          message: `${formData.message}${firingBanText}`,
           imageUrls,
         },
       });
@@ -194,19 +233,21 @@ const Kontakt = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? (target as HTMLInputElement).checked : target.value;
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [target.name]: value,
     }));
   };
 
   return (
     <Layout>
       <SEO 
-        title="Kontakt oss | Alt i Ild - Gratis befaring i Møre og Romsdal"
-        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Ring 988 44 844. Vi betjener Molde, Ålesund og hele Møre og Romsdal."
-        keywords="kontakt Alt i Ild, gratis befaring peis, tilbud ovn Molde, peismontør telefon"
+        title="Kontakt oss | Bestill gratis befaring | Alt i Ild"
+        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Ring 988 44 844. Vi betjener Molde, Aukra, Hustadvika, Rauma og hele Møre og Romsdal."
+        keywords="kontakt Alt i Ild, gratis befaring peis, tilbud ovn Molde, peismontør telefon, piperehabilitering Møre og Romsdal"
         canonical="/kontakt"
         jsonLd={{
           "@context": "https://schema.org",
@@ -216,6 +257,13 @@ const Kontakt = () => {
             "name": "Alt i Ild",
             "telephone": "+47 988 44 844",
             "email": "post@altiild.no",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Barvegen 16",
+              "addressLocality": "Molde",
+              "postalCode": "6411",
+              "addressCountry": "NO"
+            },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -225,7 +273,8 @@ const Kontakt = () => {
           }
         }}
       />
-      {/* Hero with background image */}
+
+      {/* Hero */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -240,11 +289,11 @@ const Kontakt = () => {
               Kontakt oss
             </p>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-6 leading-tight">
-              La oss skape varme sammen
+              Bestill gratis befaring
             </h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Har du spørsmål eller ønsker et uforpliktende tilbud? 
-              Vi er her for å hjelpe deg med ditt peisprosjekt.
+              Vi kommer til deg for en uforpliktende vurdering av ditt prosjekt. 
+              Fyll ut skjemaet eller ring oss direkte.
             </p>
           </div>
         </div>
@@ -270,8 +319,6 @@ const Kontakt = () => {
                       <a 
                         href={item.href} 
                         className="font-medium text-foreground hover:text-primary transition-colors truncate block"
-                        target={item.href.startsWith("http") ? "_blank" : undefined}
-                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       >
                         {item.value}
                       </a>
@@ -297,18 +344,18 @@ const Kontakt = () => {
                   Hvorfor velge Alt i Ild?
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Med over 15 års erfaring er vi eksperter på peis og ovn. 
+                  Med mange års erfaring er vi eksperter på ildsted og skorstein. 
                   Vi tilbyr gratis befaring og rådgivning i hele Møre og Romsdal.
                 </p>
 
                 {/* Benefits */}
                 <div className="space-y-4 mb-10">
                   {[
-                    "Sertifisert montør",
+                    "Sertifisert montør og kontrollør",
                     "Kvalifisert for søknadspliktig arbeid",
                     "Gratis befaring og tilbud",
                     "Garanti på alt arbeid",
-                    "Rask responstid",
+                    "Eksperter på dårlig trekk",
                   ].map((benefit) => (
                     <div key={benefit} className="flex items-center gap-3">
                       <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
@@ -320,7 +367,7 @@ const Kontakt = () => {
                 </div>
 
                 {/* Service area */}
-                <div className="bg-muted rounded-xl p-6">
+                <div className="bg-muted rounded-xl p-6 mb-6">
                   <h3 className="font-display text-lg font-semibold mb-3 flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
                     Vårt serviceområde
@@ -329,7 +376,7 @@ const Kontakt = () => {
                     Vi betjener kunder i hele Møre og Romsdal:
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {["Molde", "Ålesund", "Kristiansund", "Volda", "Ørsta", "Ulsteinvik", "Stranda", "Sykkylven"].map((city) => (
+                    {serviceAreas.map((city) => (
                       <span 
                         key={city} 
                         className="px-3 py-1 bg-background rounded-full text-sm text-muted-foreground"
@@ -337,6 +384,33 @@ const Kontakt = () => {
                         {city}
                       </span>
                     ))}
+                  </div>
+                </div>
+
+                {/* Social Media */}
+                <div className="bg-muted rounded-xl p-6">
+                  <h3 className="font-display text-lg font-semibold mb-4">
+                    Følg oss
+                  </h3>
+                  <div className="flex gap-4">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61574577441905"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-background rounded-lg hover:bg-primary/10 transition-colors"
+                    >
+                      <Facebook className="h-5 w-5 text-primary" />
+                      <span className="text-sm font-medium">Facebook</span>
+                    </a>
+                    <a
+                      href="https://maps.app.goo.gl/3T9BK5YwkqHvH2iA8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-background rounded-lg hover:bg-primary/10 transition-colors"
+                    >
+                      <MapPin className="h-5 w-5 text-primary" />
+                      <span className="text-sm font-medium">Google</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -347,10 +421,10 @@ const Kontakt = () => {
               <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg border border-border/50">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-1 bg-primary rounded-full" />
-                  <span className="text-primary text-sm font-medium uppercase tracking-wide">Kontaktskjema</span>
+                  <span className="text-primary text-sm font-medium uppercase tracking-wide">Gratis befaring</span>
                 </div>
                 <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
-                  Send oss en melding
+                  Send oss en henvendelse
                 </h2>
                 <p className="text-muted-foreground mb-8">
                   Fyll ut skjemaet under, så tar vi kontakt innen 24 timer.
@@ -372,7 +446,7 @@ const Kontakt = () => {
                       variant="outline" 
                       onClick={() => {
                         setIsSubmitted(false);
-                        setFormData({ name: "", email: "", phone: "", address: "", subject: "", message: "" });
+                        setFormData({ name: "", email: "", phone: "", address: "", service: "", hasFiringBan: false, message: "" });
                       }}
                     >
                       Send ny melding
@@ -397,26 +471,8 @@ const Kontakt = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-2">
-                          E-post <span className="text-primary">*</span>
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          placeholder="din@epost.no"
-                          className="h-12 bg-background border-border/50 focus:border-primary"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
                         <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                          Telefon
+                          Telefon <span className="text-primary">*</span>
                         </label>
                         <Input
                           id="phone"
@@ -424,49 +480,90 @@ const Kontakt = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={handleChange}
+                          required
                           placeholder="+47 123 45 678"
                           className="h-12 bg-background border-border/50 focus:border-primary"
                         />
                       </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                          Emne <span className="text-primary">*</span>
+                        <label htmlFor="email" className="block text-sm font-medium mb-2">
+                          E-post
                         </label>
                         <Input
-                          id="subject"
-                          name="subject"
-                          value={formData.subject}
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
                           onChange={handleChange}
-                          required
-                          placeholder="Hva gjelder henvendelsen?"
+                          placeholder="din@epost.no"
                           className="h-12 bg-background border-border/50 focus:border-primary"
                         />
+                      </div>
+                      <div>
+                        <label htmlFor="address" className="block text-sm font-medium mb-2">
+                          Adresse
+                        </label>
+                        <Input
+                          id="address"
+                          name="address"
+                          value={formData.address}
+                          onChange={(e) => {
+                            handleChange(e);
+                            if (addressError) setAddressError(null);
+                          }}
+                          placeholder="Gatenavn og nummer (f.eks. Storgata 15)"
+                          className={`h-12 bg-background border-border/50 focus:border-primary ${addressError ? 'border-destructive' : ''}`}
+                        />
+                        {addressError && (
+                          <p className="text-destructive text-sm mt-1">{addressError}</p>
+                        )}
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="address" className="block text-sm font-medium mb-2">
-                        Adresse
+                      <label htmlFor="service" className="block text-sm font-medium mb-2">
+                        Hva gjelder henvendelsen? <span className="text-primary">*</span>
                       </label>
-                      <Input
-                        id="address"
-                        name="address"
-                        value={formData.address}
-                        onChange={(e) => {
-                          handleChange(e);
-                          if (addressError) setAddressError(null);
-                        }}
-                        placeholder="Gatenavn og nummer (f.eks. Storgata 15)"
-                        className={`h-12 bg-background border-border/50 focus:border-primary ${addressError ? 'border-destructive' : ''}`}
-                      />
-                      {addressError && (
-                        <p className="text-destructive text-sm mt-1">{addressError}</p>
-                      )}
+                      <select
+                        id="service"
+                        name="service"
+                        value={formData.service}
+                        onChange={handleChange}
+                        required
+                        className="w-full h-12 px-3 rounded-md bg-background border border-border/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      >
+                        <option value="">Velg tjeneste...</option>
+                        {serviceOptions.map((option) => (
+                          <option key={option} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Firing ban checkbox */}
+                    <div className="bg-muted/50 rounded-lg p-4">
+                      <label className="flex items-start gap-3 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          name="hasFiringBan"
+                          checked={formData.hasFiringBan}
+                          onChange={handleChange}
+                          className="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary"
+                        />
+                        <div>
+                          <span className="font-medium text-foreground">Har du fyringsforbud eller avvik fra brannvesenet?</span>
+                          <p className="text-sm text-muted-foreground mt-1">
+                            Kryss av hvis du har mottatt fyringsforbud eller avvik som må utbedres.
+                          </p>
+                        </div>
+                      </label>
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Melding <span className="text-primary">*</span>
+                        Beskriv ditt prosjekt <span className="text-primary">*</span>
                       </label>
                       <Textarea
                         id="message"
@@ -474,8 +571,8 @@ const Kontakt = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        placeholder="Fortell oss om ditt prosjekt. Hva slags peis eller ovn ønsker du? Har du noen spesielle ønsker eller krav?"
-                        rows={6}
+                        placeholder="Fortell oss om ditt prosjekt. Hva slags peis eller ovn ønsker du? Har du noen spesielle ønsker eller utfordringer?"
+                        rows={5}
                         className="resize-none bg-background border-border/50 focus:border-primary"
                       />
                     </div>
@@ -547,7 +644,7 @@ const Kontakt = () => {
                           </>
                         ) : (
                           <>
-                            Send melding
+                            Bestill gratis befaring
                             <Send className="ml-2 h-4 w-4" />
                           </>
                         )}
@@ -557,6 +654,39 @@ const Kontakt = () => {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map/Image Section */}
+      <section className="relative py-20">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${stoveImage})` }}
+        >
+          <div className="absolute inset-0 bg-charcoal/80" />
+        </div>
+        
+        <div className="container-wide relative z-10 text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground mb-6">
+            Vi kommer til deg
+          </h2>
+          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt – fra vurdering til ferdig godkjent installasjon.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="lg" asChild>
+              <a href="tel:+4798844844">
+                <Phone className="mr-2 h-4 w-4" />
+                Ring oss: 988 44 844
+              </a>
+            </Button>
+            <Button variant="heroOutlineLight" size="lg" asChild>
+              <a href="mailto:post@altiild.no">
+                <Mail className="mr-2 h-4 w-4" />
+                post@altiild.no
+              </a>
+            </Button>
           </div>
         </div>
       </section>
