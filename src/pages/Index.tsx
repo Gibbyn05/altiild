@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
@@ -11,64 +11,104 @@ import {
   Flame, 
   Wrench, 
   Shield, 
-  Truck, 
   MessageCircle, 
   Star,
   ArrowRight,
   CheckCircle,
-  X
+  ClipboardCheck,
+  Truck,
+  FileCheck,
+  Search,
+  MapPin,
+  Phone,
+  Mail,
+  Award,
+  Users,
+  ThermometerSun,
+  Eye
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-fireplace.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 import installationImage from "@/assets/installation-work.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-
-
-// Real business images
-import funkisOvn from "@/assets/funkis-ovn.jpg";
-import hvitOvn from "@/assets/hvit-ovn.jpg";
-import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
-import ovnSolrik from "@/assets/ovn-solrik.jpg";
 import pipeTak from "@/assets/pipe-tak.jpg";
-import takInnside from "@/assets/tak-innside.jpg";
+import hvitOvn from "@/assets/hvit-ovn.jpg";
+import funkisOvn from "@/assets/funkis-ovn.jpg";
+import teamImage from "@/assets/team.jpg";
 
 const services = [
   {
     icon: Flame,
-    title: "Peisinstallasjon",
-    description: "Profesjonell montering av alle typer peiser og ildsteder, tilpasset ditt hjem.",
+    title: "Montering av peis og ovn",
+    description: "Sikker og forskriftsmessig montering tilpasset boligen og eksisterende pipe.",
+    features: [
+      "Sikker montering",
+      "Riktig lufttilførsel",
+      "Korrekt røykrør",
+      "Ferdigmelding og dokumentasjon",
+    ],
   },
   {
     icon: Wrench,
-    title: "Ovnsmontering",
-    description: "Effektiv og sikker installasjon av vedovner og pelletskaminer.",
+    title: "Piperehabilitering",
+    description: "Vi løser problemer med dårlig trekk, fyringsforbud og avvik fra brannvesenet.",
+    features: [
+      "Dårlig trekk",
+      "Fyringsforbud",
+      "Avvik fra brannvesenet",
+      "Kondens og lekkasjer",
+    ],
   },
   {
     icon: Shield,
-    title: "Vedlikehold & Service",
-    description: "Regelmessig vedlikehold for optimal ytelse og sikkerhet.",
+    title: "Montering av stålpiper",
+    description: "Fleksible løsninger for nybygg, eldre boliger og hytter.",
+    features: [
+      "Nybygg",
+      "Eldre boliger",
+      "Hytter",
+      "Sikker og godkjent",
+    ],
+  },
+  {
+    icon: Eye,
+    title: "Inspeksjon av pipe og ildsted",
+    description: "Grundig kontroll ved symptomer som røyk, sotlukt eller dårlig trekk.",
+    features: [
+      "Røyk i rom",
+      "Sotlukt",
+      "Misfarging",
+      "Dårlig trekk",
+    ],
   },
   {
     icon: MessageCircle,
-    title: "Rådgivning",
-    description: "Ekspertråd om valg av peis, ovn og varmesystem for ditt hjem.",
+    title: "Service & vedlikehold",
+    description: "Viktig for sikker og effektiv fyring over tid.",
+    features: [
+      "Pakningsskifte",
+      "Glassbytte",
+      "Vermikulitt/røykfordelerplate",
+      "Rådgivning",
+    ],
   },
 ];
 
-const benefits = [
-  "Sertifisert montør",
-  "Kvalifisert montør og kontrollør",
-  "Gratis befaring",
-  "Garanti på alt arbeid",
+const processSteps = [
+  { icon: ClipboardCheck, step: "01", title: "Planlegging & rådgivning", desc: "Vi kommer på befaring og gir faglige råd tilpasset din bolig." },
+  { icon: Truck, step: "02", title: "Levering", desc: "Vi håndterer bestilling og levering av utstyr." },
+  { icon: Wrench, step: "03", title: "Montering", desc: "Fagmessig installasjon av sertifiserte montører." },
+  { icon: FileCheck, step: "04", title: "Dokumentasjon", desc: "Alt dokumenteres underveis i prosessen." },
+  { icon: Shield, step: "05", title: "Sluttkontroll", desc: "Ferdigmelding og godkjent installasjon." },
 ];
 
-const galleryImages = [
-  { src: null, alt: "Funkis ovn", title: "Funkis Ovn" },
-  { src: null, alt: "Hvit ovn", title: "Hvit Ovn" },
-  { src: null, alt: "Ovn i sollys", title: "Ovn i Sollys" },
+const whyChooseUs = [
+  { icon: MapPin, text: "Lokal fagbedrift i Molde" },
+  { icon: Award, text: "Sertifiserte montører" },
+  { icon: Users, text: "Mange års erfaring" },
+  { icon: CheckCircle, text: "Komplette løsninger A–Å" },
+  { icon: Search, text: "Gratis befaring" },
+  { icon: ThermometerSun, text: "Eksperter på dårlig trekk & Exodraft" },
 ];
 
 const testimonials = [
@@ -169,62 +209,55 @@ const TestimonialsCarousel = () => {
 };
 
 const Index = () => {
-  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; title: string } | null>(null);
-
-  const galleryImagesWithSrc = [
-    { src: pipeTak, alt: "Pipe på tak", title: "Pipe på tak" },
-    { src: hvitOvn, alt: "Hvit ovn", title: "Hvit Ovn" },
-    { src: ovnSolrik, alt: "Ovn i sollys", title: "Ovn i Sollys" },
-  ];
-
   return (
     <Layout>
       <SEO 
-        title="Alt i Ild | Peis og ovn spesialister i Møre og Romsdal"
-        description="Alt i Ild leverer profesjonell installasjon av peiser og ovner i Molde og Møre og Romsdal. Gratis befaring, sertifiserte montører, og garanti på alt arbeid."
-        keywords="peis Molde, ovn Møre og Romsdal, peisinstallasjon, vedovn, ildsted, peisinnsats, peismontør, gratis befaring"
+        title="Alt i Ild | Peis og ovn spesialister i Molde og Møre og Romsdal"
+        description="Alt i Ild leverer komplette løsninger for ildsted og skorstein i Møre og Romsdal. Gratis befaring, sertifiserte montører. Montering, piperehabilitering, service og dokumentasjon."
+        keywords="peis Molde, ovn Møre og Romsdal, peisinstallasjon, vedovn, ildsted, piperehabilitering, stålpipe, gratis befaring"
         canonical="/"
       />
-      {/* Hero Section */}
+      
+      {/* 1.1 HERO-SEKSJON */}
       <section className="relative h-screen min-h-[700px] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-transparent" />
         </div>
         
         <div className="container-wide relative z-10 pt-20">
           <div className="max-w-2xl animate-fade-up">
-            <p className="text-primary font-semibold mb-4 tracking-wider uppercase text-base md:text-lg drop-shadow-lg">
-              Eksperter på peis og ovn
-            </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 leading-tight">
-              Skap varme og atmosfære i ditt hjem
+              Skap varme og trygghet i ditt hjem
             </h1>
-            <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-              Alt i Ild leverer profesjonell installasjon av peiser og ovner. 
-              Vi kombinerer håndverk, kvalitet og moderne design for å skape 
-              det perfekte ildstedet for deg.
+            <p className="text-2xl text-primary font-medium mb-4">
+              Komplette løsninger for ildsted og skorstein i Møre og Romsdal
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">
+              Alt i Ild AS leverer helhetlige, trygge og dokumenterte løsninger – fra vurdering til ferdig godkjent installasjon. Én partner hele veien.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button variant="hero" size="xl" className="animate-gentle-pulse !border-2 !border-white" asChild>
                 <Link to="/kontakt">
-                  Be om gratis tilbud
+                  Bestill gratis befaring
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="heroOutlineLight" size="xl" asChild>
-                <Link to="/galleri">Se våre prosjekter</Link>
+                <Link to="/tjenester">Se våre tjenester</Link>
               </Button>
             </div>
+            <p className="text-primary-foreground/70 text-sm">
+              Montering • Piperehabilitering • Service • Dokumentasjon
+            </p>
           </div>
         </div>
 
-        {/* Scroll indicator - desktop only */}
         <button 
           onClick={() => {
-            document.getElementById('benefits-section')?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('tjenester-section')?.scrollIntoView({ behavior: 'smooth' });
           }}
           className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
           aria-label="Scroll ned"
@@ -235,197 +268,52 @@ const Index = () => {
         </button>
       </section>
 
-      {/* Benefits Bar */}
-      <section id="benefits-section" className="bg-primary py-6 md:py-8">
+      {/* 1.2 VÅRE TJENESTER */}
+      <section id="tjenester-section" className="section-padding bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-12">
-            {benefits.map((benefit) => (
-              <div key={benefit} className="flex items-center justify-center gap-2 text-primary-foreground text-center">
-                <CheckCircle className="h-4 w-4 md:h-5 md:w-5 flex-shrink-0" />
-                <span className="font-medium text-sm md:text-base">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <OptimizedImage
-                src={installationImage}
-                alt="Profesjonell peis- og ovnsinstallasjon"
-                className="rounded-2xl shadow-2xl w-full aspect-[4/5]"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-xl hidden md:block border border-border">
-                <div className="flex items-center gap-3">
-                  <Shield className="h-8 w-8 text-primary" />
-                  <div>
-                    <p className="font-display text-lg font-semibold">Sertifisert</p>
-                    <p className="text-sm text-muted-foreground">Kvalifisert montør</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
-                Våre tjenester
-              </p>
-              <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-                Alt du trenger for et varmere hjem
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8">
-                Fra rådgivning til ferdig installert peis, vi tar hånd om hele prosessen.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                {services.map((service, index) => (
-                  <div
-                    key={service.title}
-                    className="group flex items-start gap-4 p-4 rounded-xl bg-card hover:bg-primary/5 transition-all duration-300"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <service.icon className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-display text-lg font-semibold mb-1">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
-                <Link to="/tjenester">
-                  Se alle tjenester
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Preview */}
-      <section className="section-padding bg-muted">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <OptimizedImage
-                src={stoveImage}
-                alt="Koselig vedovn i skandinavisk interiør"
-                className="rounded-2xl shadow-2xl w-full aspect-[4/5]"
-              />
-              <div className="absolute -bottom-8 -right-8 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl hidden md:block">
-                <p className="font-display text-4xl font-bold">15+</p>
-                <p className="text-sm">års erfaring</p>
-              </div>
-            </div>
-            
-            <div>
-              <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
-                Om Alt i Ild
-              </p>
-              <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-                Håndverk og kvalitet i over 15 år
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Alt i Ild ble grunnlagt med en lidenskap for varme og atmosfære. 
-                Vi er et team av sertifiserte fagfolk som spesialiserer oss på 
-                installasjon og vedlikehold av peiser, ovner og ildsteder.
-              </p>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Med base i Molde betjener vi kunder i hele Møre og Romsdal. 
-                Vår filosofi er enkel: kvalitet, sikkerhet og kundetilfredshet 
-                i alt vi gjør.
-              </p>
-              <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
-                <Link to="/om-oss">
-                  Les mer om oss
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Preview */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
-              Våre prosjekter
+              Våre tjenester
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Se hva vi har skapt
+              Alt du trenger for ildsted og skorstein
             </h2>
             <p className="text-muted-foreground text-lg">
-              Utforsk et utvalg av våre tidligere prosjekter og bli inspirert.
+              Vi tilbyr både nye installasjoner og service på eksisterende ildsted og skorstein – alltid tilpasset boligen, trekkforhold og gjeldende krav.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-            {galleryImagesWithSrc.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedImage(image)}
-                className="group relative overflow-hidden rounded-xl md:rounded-2xl aspect-square cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                style={{ animationDelay: `${index * 100}ms` }}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-card rounded-2xl p-6 md:p-8 hover-lift border border-border/50"
               >
-                <OptimizedImage
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/40 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-primary-foreground font-medium text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Se mer
-                  </span>
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <service.icon className="h-6 w-6 text-primary" />
                 </div>
-              </button>
+                <h3 className="font-display text-xl font-semibold mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
 
-          {/* Image Modal */}
-          {selectedImage && (
-            <div 
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/90 backdrop-blur-sm animate-fade-in"
-              onClick={() => setSelectedImage(null)}
-            >
-              <div 
-                className="relative max-w-4xl max-h-[90vh] w-full animate-scale-in"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={() => setSelectedImage(null)}
-                  className="absolute -top-12 right-0 md:top-4 md:right-4 z-10 p-2 bg-background/80 backdrop-blur-sm rounded-full hover:bg-background transition-colors"
-                  aria-label="Lukk bilde"
-                >
-                  <X className="h-5 w-5 md:h-6 md:w-6" />
-                </button>
-                <img
-                  src={selectedImage.src}
-                  alt={selectedImage.alt}
-                  className="w-full h-auto max-h-[80vh] object-contain rounded-xl md:rounded-2xl"
-                />
-                <p className="text-center text-primary-foreground mt-3 md:mt-4 font-display text-lg md:text-xl">
-                  {selectedImage.title}
-                </p>
-              </div>
-            </div>
-          )}
-
-          <div className="text-center mt-12">
-            <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
-              <Link to="/galleri">
-                Se hele galleriet
+          <div className="text-center mt-10">
+            <Button variant="default" size="lg" asChild>
+              <Link to="/tjenester">
+                Se alle tjenester
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -433,8 +321,164 @@ const Index = () => {
         </div>
       </section>
 
+      {/* 1.3 KOMPLETTE LØSNINGER – ÉN PARTNER HELE VEIEN */}
+      <section className="section-padding bg-muted">
+        <div className="container-wide">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+              Én partner hele veien
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+              Komplette løsninger fra A til Å
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Med Alt i Ild slipper du å koordinere flere aktører. Vi håndterer hele prosessen for deg.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {processSteps.map((item, index) => (
+              <div key={item.step} className="text-center relative">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mb-4">
+                  <item.icon className="h-7 w-7" />
+                </div>
+                <div className="text-primary font-bold text-sm mb-2">{item.step}</div>
+                <h3 className="font-display text-lg font-semibold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {item.desc}
+                </p>
+                {index < processSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-primary/20" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 1.4 DOKUMENTASJON & MYNDIGHETSKRAV */}
+      <section className="section-padding bg-background">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+                Trygghet og godkjenning
+              </p>
+              <h2 className="font-display text-4xl font-semibold mb-6">
+                Dokumentasjon & myndighetskrav
+              </h2>
+              <p className="text-muted-foreground text-lg mb-6">
+                Montering av ildsted og pipe er søknadspliktig. Alt i Ild AS håndterer ALT for deg – fra søknad til ferdig godkjent installasjon.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Kommunesøknad og nødvendige tillatelser",
+                  "Ferdigmelding til brannvesenet",
+                  "Dokumentasjon til Boligmappa",
+                  "Sertifikat og garantidokumenter",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                    </div>
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button variant="default" size="lg" asChild>
+                <Link to="/dokumentasjon">
+                  Les mer om dokumentasjon
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <OptimizedImage
+                src={installationImage}
+                alt="Profesjonell dokumentert installasjon"
+                className="rounded-2xl shadow-2xl w-full aspect-[4/5]"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-xl hidden md:block border border-border">
+                <div className="flex items-center gap-3">
+                  <FileCheck className="h-8 w-8 text-primary" />
+                  <div>
+                    <p className="font-display text-lg font-semibold">100%</p>
+                    <p className="text-sm text-muted-foreground">Dokumentert</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 1.5 HVORFOR VELGE OSS? */}
+      <section className="section-padding bg-primary">
+        <div className="container-wide">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6 text-primary-foreground">
+              Hvorfor velge Alt i Ild?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {whyChooseUs.map((item) => (
+              <div key={item.text} className="text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-foreground/10 mb-4">
+                  <item.icon className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <p className="text-primary-foreground font-medium text-sm">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 1.6 LOKAL FORANKRING */}
+      <section className="section-padding bg-muted">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <OptimizedImage
+                src={teamImage}
+                alt="Alt i Ild i Molde"
+                className="rounded-2xl shadow-2xl w-full"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+                Lokal forankring
+              </p>
+              <h2 className="font-display text-4xl font-semibold mb-6">
+                Molde & Møre og Romsdal
+              </h2>
+              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                Vi kjenner de lokale forholdene – fra klimaet langs kysten til kommunale krav og feiervesenet i regionen. Med base i Molde er vi alltid i nærheten.
+              </p>
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                Vår lokalkunnskap gir deg trygghet for at løsningen vi velger er tilpasset nettopp ditt hjem og dine forhold.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Molde", "Aukra", "Hustadvika", "Midsund", "Rauma", "Sunndal", "Averøy"].map((area) => (
+                  <span 
+                    key={area}
+                    className="px-4 py-2 bg-background rounded-full text-sm text-foreground border border-border"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Carousel */}
-      <section className="section-padding bg-muted overflow-hidden">
+      <section className="section-padding bg-background overflow-hidden">
         <div className="container-wide mb-8">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
@@ -472,28 +516,57 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 1.7 KONTAKT & GRATIS BEFARING */}
       <section className="relative py-32">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${installationImage})` }}
+          style={{ backgroundImage: `url(${pipeTak})` }}
         >
-          <div className="absolute inset-0 bg-charcoal/80" />
+          <div className="absolute inset-0 bg-charcoal/85" />
         </div>
         
-        <div className="container-narrow relative z-10 text-center">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-foreground mb-6">
-            Klar for et varmere hjem?
-          </h2>
-          <p className="text-xl text-primary-foreground/90 mb-10 max-w-xl mx-auto">
-            Kontakt oss i dag for en uforpliktende prat om hvordan vi kan hjelpe deg.
-          </p>
-          <Button variant="hero" size="xl" className="animate-gentle-pulse" asChild>
-            <Link to="/kontakt">
-              Be om gratis tilbud
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+        <div className="container-wide relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl font-semibold text-primary-foreground mb-6">
+                Klar for gratis befaring?
+              </h2>
+              <p className="text-xl text-primary-foreground/90 mb-8">
+                Vi kommer til deg for en uforpliktende vurdering av ditt prosjekt. Helt gratis.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3 text-primary-foreground">
+                  <Phone className="h-5 w-5" />
+                  <a href="tel:+4798844844" className="hover:text-primary transition-colors">
+                    +47 988 44 844
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-primary-foreground">
+                  <Mail className="h-5 w-5" />
+                  <a href="mailto:post@altiild.no" className="hover:text-primary transition-colors">
+                    post@altiild.no
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-primary-foreground">
+                  <MapPin className="h-5 w-5" />
+                  <span>Molde, Møre og Romsdal</span>
+                </div>
+              </div>
+              <Button variant="hero" size="xl" className="animate-gentle-pulse !border-2 !border-white" asChild>
+                <Link to="/kontakt">
+                  Bestill gratis befaring
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+            <div className="hidden lg:block">
+              <OptimizedImage
+                src={stoveImage}
+                alt="Ferdig montert ildsted"
+                className="rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
