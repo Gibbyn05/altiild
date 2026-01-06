@@ -19,6 +19,7 @@ import tjenesterPeis from "@/assets/tjenester-peis.png";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
 import funkisOvn from "@/assets/funkis-ovn.jpg";
 import installationImage from "@/assets/installation-work.jpg";
+import takUtside from "@/assets/tak-utside.jpg";
 
 const services = [
   {
@@ -80,6 +81,8 @@ const services = [
     typicalProjects: [
       "Nyinstallasjon av vedovn i hus uten pipe",
       "Utskifting av gammel pipe",
+      "Plassering av ovn i kjeller, tilbygg eller loft",
+      "Fritidsboliger og hytter",
     ],
     conclusion: "Vi sørger for riktig dimensjonering, brannsikre løsninger og komplett dokumentasjon.",
   },
@@ -151,7 +154,7 @@ const services = [
     icon: Wind,
     title: "Dårlig trekk & røyksugere (Exodraft)",
     description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt – spesielt i moderne, tette boliger.",
-    image: funkisOvn,
+    image: takUtside,
     intro: "Vanlige årsaker til dårlig trekk:",
     causes: [
       "Undertrykk i huset",

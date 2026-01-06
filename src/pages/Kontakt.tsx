@@ -14,7 +14,8 @@ import {
   ArrowRight, 
   ImagePlus, 
   X,
-  Facebook
+  Facebook,
+  Shield
 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -28,7 +29,6 @@ const contactInfo = [
     label: "Telefon",
     value: "98 844 844",
     href: "tel:+4798844844",
-    description: "Ring oss gjerne ved akutte problemer",
   },
   {
     icon: Mail,
@@ -40,13 +40,6 @@ const contactInfo = [
     icon: MapPin,
     label: "Adresse",
     value: "Molde, Møre og Romsdal",
-    href: null,
-  },
-  {
-    icon: Clock,
-    label: "Åpningstider",
-    value: "Man-Fre: 08:00-16:00",
-    description: "Kveld og helg etter avtale",
     href: null,
   },
 ];
@@ -330,6 +323,36 @@ const Kontakt = () => {
                 </div>
               </div>
             ))}
+            {/* Org.nr boblen */}
+            <div 
+              className="bg-card rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/50"
+            >
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Shield className="h-5 w-5 text-primary" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Org.nr</p>
+                  <p className="font-medium text-foreground">934 777 018</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Åpningstider og Ring oss */}
+          <div className="mt-6 bg-muted rounded-xl p-6 text-center">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5 text-primary" />
+                <span className="text-foreground font-medium">Åpningstider:</span>
+                <span className="text-muted-foreground">Mandag–fredag 08:00–16:00</span>
+              </div>
+              <div className="hidden md:block w-px h-6 bg-border" />
+              <span className="text-muted-foreground">Kveld og helg etter avtale – spesielt ved akutte problemer.</span>
+            </div>
+            <p className="mt-3 text-primary font-medium">
+              Ring oss gjerne ved akutte problemer.
+            </p>
           </div>
         </div>
       </section>
@@ -354,7 +377,7 @@ const Kontakt = () => {
                   {[
                     "Sertifisert montør og kontrollør",
                     "Kvalifisert for søknadspliktig arbeid",
-                    "Gratis befaring og tilbud",
+                    "Gratis og uforpliktende befaring",
                     "Garanti på alt arbeid",
                     "Eksperter på dårlig trekk",
                   ].map((benefit) => (
