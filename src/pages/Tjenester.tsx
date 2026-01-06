@@ -287,7 +287,17 @@ const Tjenester = () => {
                     ))}
                   </ul>
                 )}
-                
+                {service.causes && (
+                  <ul className="space-y-3 mb-6">
+                    {service.causes.map((cause) => (
+                      <li key={cause} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{cause}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
                 {service.solutionsIntro && (
                   <p className="font-medium mb-3">{service.solutionsIntro}</p>
                 )}
@@ -391,16 +401,6 @@ const Tjenester = () => {
                   </ul>
                 )}
 
-                {service.causes && (
-                  <ul className="space-y-3 mb-6">
-                    {service.causes.map((cause) => (
-                      <li key={cause} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">{cause}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
 
                 {service.benefitsIntro && (
                   <p className="font-medium mb-3">{service.benefitsIntro}</p>
