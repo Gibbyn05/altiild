@@ -215,22 +215,22 @@ const Tjenester = () => {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 min-h-[40vh] md:min-h-[50vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${tjenesterPeis})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/50 md:from-charcoal/90 md:via-charcoal/70 md:to-charcoal/40" />
         </div>
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
-            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+            <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
               Våre tjenester
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6 text-primary-foreground">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 md:mb-6 text-primary-foreground">
               Komplett tilbud for ildsted og skorstein
             </h1>
-            <p className="text-primary-foreground/90 text-xl leading-relaxed">
+            <p className="text-primary-foreground/90 text-base sm:text-lg md:text-xl leading-relaxed">
               Sertifisert for søknadspliktig arbeid på ildsteder og skorsteiner. 
               Vi håndterer alt fra befaring til ferdig godkjent installasjon.
             </p>
@@ -239,26 +239,26 @@ const Tjenester = () => {
       </section>
 
       {/* Services */}
-      <section className="section-padding bg-background">
-        <div className="container-wide space-y-24">
+      <section className="py-10 sm:py-16 md:py-20 lg:py-28 bg-background">
+        <div className="container-wide space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24">
           {services.map((service, index) => (
             <div 
               key={service.id}
               id={service.id}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
             >
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <service.icon className="h-6 w-6 text-primary" />
+                <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                    <service.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                   </div>
-                  <h2 className="font-display text-3xl font-semibold">
+                  <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-semibold">
                     {service.title}
                   </h2>
                 </div>
-                <p className="text-muted-foreground text-lg mb-6">
+                <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6">
                   {service.description}
                 </p>
                 
