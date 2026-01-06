@@ -240,40 +240,40 @@ const Index = () => {
       />
       
       {/* 1.1 HERO-SEKSJON */}
-      <section className="relative h-screen min-h-[700px] flex items-center">
+      <section className="relative min-h-[100svh] md:min-h-screen flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50 md:from-charcoal/85 md:via-charcoal/60 md:to-transparent" />
         </div>
         
-        <div className="container-wide relative z-10 pt-20">
+        <div className="container-wide relative z-10 pt-24 pb-16 md:pt-20 md:pb-0">
           <div className="max-w-2xl animate-fade-up">
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-primary-foreground mb-4 md:mb-6 leading-tight">
               Skap varme og atmosfære i ditt hjem
             </h1>
-            <p className="text-2xl text-primary font-medium mb-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-primary font-medium mb-3 md:mb-4">
               Komplette løsninger for ildsted og skorstein i Møre og Romsdal
             </p>
-            <p className="text-lg text-primary-foreground/90 mb-4 leading-relaxed">
-              Hos oss får du mer enn bare produkter. Vi leverer helhetlige løsninger som gir trygghet, komfort og riktig varme i hjemmet ditt. Med solid fagkunnskap og lang erfaring hjelper vi deg hele veien fra første vurdering til ferdig godkjent løsning.
+            <p className="text-base md:text-lg text-primary-foreground/90 mb-3 md:mb-4 leading-relaxed">
+              Hos oss får du mer enn bare produkter. Vi leverer helhetlige løsninger som gir trygghet, komfort og riktig varme i hjemmet ditt.
             </p>
-            <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">
+            <p className="hidden sm:block text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 leading-relaxed">
               Enten du har dårlig trekk i pipe, vurderer rehabilitering av pipe, har fått fyringsforbud, ønsker bedre varmeeffekt eller planlegger å montere en ny vedovn eller peisovn – vi finner den riktige løsningen for boligen din.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Button variant="hero" size="xl" className="animate-gentle-pulse !border-2 !border-white" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4 md:mb-6">
+              <Button variant="hero" size="lg" className="animate-gentle-pulse !border-2 !border-white text-sm sm:text-base md:text-lg" asChild>
                 <Link to="/kontakt">
                   Bestill gratis befaring
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                 </Link>
               </Button>
-              <Button variant="heroOutlineLight" size="xl" asChild>
+              <Button variant="heroOutlineLight" size="lg" className="text-sm sm:text-base md:text-lg" asChild>
                 <Link to="/tjenester">Se våre tjenester</Link>
               </Button>
             </div>
-            <p className="text-primary-foreground/70 text-sm">
+            <p className="text-primary-foreground/70 text-xs sm:text-sm">
               Montering • Piperehabilitering • Service • Dokumentasjon
             </p>
           </div>
@@ -293,39 +293,39 @@ const Index = () => {
       </section>
 
       {/* 1.2 VÅRE TJENESTER */}
-      <section id="tjenester-section" className="section-padding bg-background">
+      <section id="tjenester-section" className="py-12 md:py-20 lg:py-28 bg-background">
         <div className="container-wide">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+            <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
               Våre tjenester
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
               Alt du trenger for ildsted og skorstein
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-2">
               Vi tilbyr både nye installasjoner og service på eksisterende ildsted og skorstein. Alle løsninger tilpasses boligen, trekkforholdene og gjeldende krav i Møre og Romsdal.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-card rounded-2xl p-6 md:p-8 hover-lift border border-border/50"
+                className="bg-card rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 hover-lift border border-border/50"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <service.icon className="h-6 w-6 text-primary" />
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center mb-3 md:mb-4">
+                  <service.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-2">
+                <h3 className="font-display text-lg md:text-xl font-semibold mb-2">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-xs sm:text-sm mb-3 md:mb-4">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-1.5 md:space-y-2">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                    <li key={feature} className="flex items-center gap-2 text-xs sm:text-sm">
+                      <CheckCircle className="h-3.5 w-3.5 md:h-4 md:w-4 text-primary flex-shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
@@ -334,8 +334,8 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-10">
-            <Button variant="default" size="lg" asChild>
+          <div className="text-center mt-8 md:mt-10">
+            <Button variant="default" size="lg" className="text-sm md:text-base" asChild>
               <Link to="/tjenester">
                 Se alle tjenester
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -346,31 +346,31 @@ const Index = () => {
       </section>
 
       {/* 1.3 KOMPLETTE LØSNINGER – ÉN PARTNER HELE VEIEN */}
-      <section className="section-padding bg-muted">
+      <section className="py-12 md:py-20 lg:py-28 bg-muted">
         <div className="container-wide">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+            <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
               Én fagpartner hele veien
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
               Komplette løsninger fra A til Å
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-2">
               Vi tar hele ansvaret – fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {processSteps.map((item, index) => (
               <div key={item.step} className="text-center relative">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mb-4">
-                  <item.icon className="h-7 w-7" />
+                <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
+                  <item.icon className="h-5 w-5 md:h-7 md:w-7" />
                 </div>
-                <div className="text-primary font-bold text-sm mb-2">{item.step}</div>
-                <h3 className="font-display text-lg font-semibold mb-2">
+                <div className="text-primary font-bold text-xs md:text-sm mb-1 md:mb-2">{item.step}</div>
+                <h3 className="font-display text-sm md:text-lg font-semibold mb-1 md:mb-2">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs md:text-sm hidden sm:block">
                   {item.desc}
                 </p>
                 {index < processSteps.length - 1 && (
@@ -383,23 +383,23 @@ const Index = () => {
       </section>
 
       {/* 1.4 DOKUMENTASJON & MYNDIGHETSKRAV */}
-      <section className="section-padding bg-background">
+      <section className="py-12 md:py-20 lg:py-28 bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+              <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
                 Trygghet og godkjenning
               </p>
-              <h2 className="font-display text-4xl font-semibold mb-6">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 md:mb-6">
                 Dokumentasjon & myndighetskrav
               </h2>
-              <p className="text-muted-foreground text-lg mb-6">
+              <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6">
                 Arbeid på pipe og skorstein er ofte søknadspliktig. Dette gjelder piperehabilitering, ny stålpipe, bruk av stålrør i pipe og andre strukturelle endringer.
               </p>
-              <p className="text-muted-foreground text-lg mb-6">
-                Alt i Ild AS håndterer hele prosessen – dette gjør prosessen trygg og enkel, uten at du må forholde deg til det tekniske eller byråkratiske:
+              <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6">
+                Alt i Ild AS håndterer hele prosessen – dette gjør prosessen trygg og enkel:
               </p>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-2 md:space-y-4 mb-6 md:mb-8">
                 {[
                   "Vurdering av skorstein",
                   "Valg av riktig rehabiliteringsmetode",
@@ -408,33 +408,33 @@ const Index = () => {
                   "Ferdigmelding direkte til brannvesen og kommune",
                   "Dokumentpakke til boligmappen",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                  <li key={item} className="flex items-start gap-2 md:gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                      <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-primary" />
                     </div>
-                    <span className="text-foreground">{item}</span>
+                    <span className="text-foreground text-sm md:text-base">{item}</span>
                   </li>
                 ))}
               </ul>
-              <Button variant="default" size="lg" asChild>
+              <Button variant="default" size="lg" className="text-sm md:text-base" asChild>
                 <Link to="/dokumentasjon">
                   Les mer om dokumentasjon
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
-            <div className="relative">
+            <div className="relative order-first lg:order-last">
               <OptimizedImage
                 src={installationImage}
                 alt="Profesjonell dokumentert installasjon"
-                className="rounded-2xl shadow-2xl w-full aspect-[4/5]"
+                className="rounded-xl md:rounded-2xl shadow-2xl w-full aspect-[4/5]"
               />
-              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-xl hidden md:block border border-border">
-                <div className="flex items-center gap-3">
-                  <FileCheck className="h-8 w-8 text-primary" />
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-card p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl hidden sm:block border border-border">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <FileCheck className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   <div>
-                    <p className="font-display text-lg font-semibold">100%</p>
-                    <p className="text-sm text-muted-foreground">Dokumentert</p>
+                    <p className="font-display text-base md:text-lg font-semibold">100%</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Dokumentert</p>
                   </div>
                 </div>
               </div>
@@ -444,29 +444,29 @@ const Index = () => {
       </section>
 
       {/* 1.5 HVORFOR VELGE OSS? */}
-      <section className="section-padding bg-primary">
+      <section className="py-12 md:py-20 lg:py-28 bg-primary">
         <div className="container-wide">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6 text-primary-foreground">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-primary-foreground">
               Hvorfor velge oss?
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8 md:mb-12">
             {whyChooseUs.map((item) => (
               <div key={item.text} className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-foreground/10 mb-4">
-                  <item.icon className="h-6 w-6 text-primary-foreground" />
+                <div className="inline-flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary-foreground/10 mb-2 md:mb-4">
+                  <item.icon className="h-4 w-4 md:h-6 md:w-6 text-primary-foreground" />
                 </div>
-                <p className="text-primary-foreground font-medium text-sm">
+                <p className="text-primary-foreground font-medium text-xs md:text-sm">
                   {item.text}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="bg-primary-foreground/10 rounded-2xl p-8 max-w-4xl mx-auto">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-primary-foreground/10 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 max-w-4xl mx-auto">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
               {[
                 "Lokal fagbedrift innen ildsted og skorstein i Molde",
                 "Mange års erfaring",
@@ -477,8 +477,8 @@ const Index = () => {
                 "Rehabilitering av pipe og stålpipeinstallasjon",
                 "Dokumentasjon og ferdigmelding alltid inkludert",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-primary-foreground">
-                  <CheckCircle className="h-5 w-5 text-primary-foreground/70 flex-shrink-0" />
+                <li key={item} className="flex items-center gap-2 md:gap-3 text-primary-foreground text-xs sm:text-sm md:text-base">
+                  <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-primary-foreground/70 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}

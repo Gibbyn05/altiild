@@ -270,54 +270,54 @@ const Kontakt = () => {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/80 to-charcoal/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/85 to-charcoal/70 md:from-charcoal/90 md:via-charcoal/80 md:to-charcoal/60" />
         </div>
         
         <div className="container-wide relative z-10">
           <div className="max-w-2xl">
-            <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
+            <p className="text-primary font-medium mb-2 md:mb-4 tracking-wide uppercase text-xs sm:text-sm">
               Kontakt oss
             </p>
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-6 leading-tight">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-4 md:mb-6 leading-tight">
               Kontakt oss
             </h1>
-            <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Du er alltid velkommen til å ta kontakt med oss – enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud. Vi svarer så raskt vi kan.
+            <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
+              Du er alltid velkommen til å ta kontakt med oss – enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.
             </p>
           </div>
         </div>
       </section>
 
       {/* Quick contact cards */}
-      <section className="relative z-20 -mt-12">
+      <section className="relative z-20 -mt-8 sm:-mt-10 md:-mt-12">
         <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
             {contactInfo.map((item, index) => (
               <div 
                 key={item.label} 
-                className="bg-card rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/50"
+                className="bg-card rounded-lg md:rounded-xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/50"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <item.icon className="h-5 w-5 text-primary" />
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <item.icon className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">{item.label}</p>
+                    <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide mb-0.5 md:mb-1">{item.label}</p>
                     {item.href ? (
                       <a 
                         href={item.href} 
-                        className="font-medium text-foreground hover:text-primary transition-colors truncate block"
+                        className="font-medium text-sm md:text-base text-foreground hover:text-primary transition-colors truncate block"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="font-medium text-foreground truncate">{item.value}</p>
+                      <p className="font-medium text-sm md:text-base text-foreground truncate">{item.value}</p>
                     )}
                   </div>
                 </div>
@@ -325,34 +325,36 @@ const Kontakt = () => {
             ))}
             {/* Org.nr boblen */}
             <div 
-              className="bg-card rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/50"
+              className="bg-card rounded-lg md:rounded-xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/50"
             >
-              <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Shield className="h-5 w-5 text-primary" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Shield className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Org.nr</p>
-                  <p className="font-medium text-foreground">934 777 018</p>
+                  <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide mb-0.5 md:mb-1">Org.nr</p>
+                  <p className="font-medium text-sm md:text-base text-foreground">934 777 018</p>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Åpningstider og Ring oss */}
-          <div className="mt-6 bg-muted rounded-xl p-6 text-center">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-primary" />
-                <span className="text-foreground font-medium">Åpningstider:</span>
-                <span className="text-muted-foreground">Mandag–fredag 08:00–16:00</span>
+          <div className="mt-4 md:mt-6 bg-muted rounded-lg md:rounded-xl p-4 md:p-6 text-center">
+            <div className="flex flex-col gap-2 md:gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-8">
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 md:h-5 md:w-5 text-primary" />
+                  <span className="text-foreground font-medium text-sm md:text-base">Åpningstider:</span>
+                  <span className="text-muted-foreground text-sm md:text-base">Man–fre 08:00–16:00</span>
+                </div>
+                <div className="hidden md:block w-px h-6 bg-border" />
+                <span className="text-muted-foreground text-xs md:text-sm">Kveld og helg etter avtale</span>
               </div>
-              <div className="hidden md:block w-px h-6 bg-border" />
-              <span className="text-muted-foreground">Kveld og helg etter avtale – spesielt ved akutte problemer.</span>
+              <p className="text-primary font-medium text-sm md:text-base">
+                Ring oss gjerne ved akutte problemer.
+              </p>
             </div>
-            <p className="mt-3 text-primary font-medium">
-              Ring oss gjerne ved akutte problemer.
-            </p>
           </div>
         </div>
       </section>

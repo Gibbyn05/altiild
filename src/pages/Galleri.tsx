@@ -186,22 +186,22 @@ const Galleri = () => {
         }}
       />
       {/* Hero */}
-      <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 min-h-[35vh] md:min-h-[50vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/50 md:from-charcoal/90 md:via-charcoal/70 md:to-charcoal/40" />
         </div>
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
-            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+            <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
               Galleri
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6 text-primary-foreground">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 md:mb-6 text-primary-foreground">
               Våre prosjekter
             </h1>
-            <p className="text-primary-foreground/90 text-xl leading-relaxed">
+            <p className="text-primary-foreground/90 text-base sm:text-lg md:text-xl leading-relaxed">
               Bli inspirert av et utvalg av våre tidligere installasjoner. 
               Hver peis og ovn er unik, tilpasset kundens ønsker og bolig.
             </p>
@@ -210,13 +210,13 @@ const Galleri = () => {
       </section>
 
       {/* Gallery Carousels */}
-      <section className="section-padding bg-background overflow-hidden pb-8">
-        <div className="container-wide mb-8">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background overflow-hidden pb-6 md:pb-8">
+        <div className="container-wide mb-6 md:mb-8">
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+            <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
               Utvalgte prosjekter
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
               Se hva vi har skapt
             </h2>
           </div>
@@ -225,25 +225,25 @@ const Galleri = () => {
         <GalleryCarousel projects={projects.slice(0, 6)} onSelectProject={setSelectedProject} />
       </section>
 
-      <section className="bg-background overflow-hidden pb-16">
+      <section className="bg-background overflow-hidden pb-8 md:pb-16">
         <GalleryCarousel projects={projects.slice(6)} onSelectProject={setSelectedProject} reverse />
       </section>
 
       {/* Before/After Section */}
-      <section className="section-padding bg-muted">
+      <section className="py-10 sm:py-16 md:py-20 lg:py-28 bg-muted">
         <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
+          <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
+            <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
               Før og etter
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
               Se transformasjonen
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-4">
               Dra for å se forskjellen før og etter våre installasjoner.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
             <BeforeAfterSlider
               beforeImage={beforeStove}
               afterImage={afterStove}
@@ -288,15 +288,15 @@ const Galleri = () => {
       )}
 
       {/* CTA */}
-      <section className="section-padding bg-muted">
-        <div className="container-narrow text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6">
+      <section className="py-10 sm:py-16 md:py-20 lg:py-28 bg-muted">
+        <div className="container-narrow text-center px-6">
+          <h2 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6">
             Liker du det du ser?
           </h2>
-          <p className="text-muted-foreground text-lg mb-8">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-6 md:mb-8">
             Vi kan skape noe like flott for deg. Kontakt oss for en uforpliktende prat.
           </p>
-          <Button variant="default" size="lg" asChild>
+          <Button variant="default" size="lg" className="text-sm md:text-base" asChild>
             <Link to="/kontakt">
               Kontakt oss
               <ArrowRight className="ml-2 h-4 w-4" />
