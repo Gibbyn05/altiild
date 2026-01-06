@@ -13,36 +13,84 @@ const values = [
   {
     icon: Shield,
     title: "Trygghet",
-    description: "Din sikkerhet er vår førsteprioritet. Alt arbeid utføres etter gjeldende forskrifter.",
+    description: "Alt utføres i henhold til gjeldende krav og forskrifter.",
   },
   {
     icon: Award,
     title: "Kvalitet",
-    description: "Vi bruker kun materialer og produkter av høyeste kvalitet, og utfører alt arbeid etter bransjestandard.",
+    description: "Nøyaktig håndverk og teknisk riktige løsninger.",
   },
   {
     icon: Users,
     title: "Ryddighet",
-    description: "Vi holder orden på arbeidsplassen og etterlater alt i bedre stand enn vi fant det.",
+    description: "Vi jobber effektivt og rent – både inne og ute.",
   },
   {
     icon: MapPin,
     title: "Lokal tilstedeværelse",
-    description: "Med base i Molde er vi alltid i nærheten og kjenner de lokale forholdene.",
+    description: "Vi kjenner Molde og Møre og Romsdal.",
   },
   {
     icon: Heart,
-    title: "Ærlig rådgivning",
-    description: "Vi gir deg alltid ærlige råd – også når det betyr å fraråde unødvendige løsninger.",
+    title: "Ærlighet",
+    description: "Vi anbefaler kun løsninger som faktisk passer din bolig.",
   },
 ];
 
 const workProcess = [
-  { icon: Eye, step: "01", title: "Befaring", desc: "Vi kommer hjem til deg for å vurdere muligheter og gi faglige råd." },
-  { icon: ClipboardCheck, step: "02", title: "Gjennomgang", desc: "Vi presenterer løsningen og går gjennom alle detaljer med deg." },
-  { icon: Wrench, step: "03", title: "Utførelse", desc: "Fagmessig installasjon av sertifiserte montører." },
-  { icon: FileCheck, step: "04", title: "Dokumentasjon", desc: "Alt dokumenteres underveis for full sporbarhet." },
-  { icon: Shield, step: "05", title: "Sluttkontroll", desc: "Ferdigmelding og godkjent installasjon fra brannvesenet." },
+  { 
+    icon: Eye, 
+    step: "01", 
+    title: "Før-befaring & kartlegging", 
+    desc: "Vi undersøker pipe, ildsted, lufttilførsel og byggets forhold. Ved piperehabilitering vurderer vi sprekkdannelser, tetthet, trekkproblemer og brannrisiko." 
+  },
+  { 
+    icon: ClipboardCheck, 
+    step: "02", 
+    title: "Gjennomgang av løsning med kunde", 
+    desc: "Vi forklarer hva som trengs og hvorfor – i klart språk. Du får forslag til riktige materialer, metoder og eventuelle alternativer." 
+  },
+  { 
+    icon: Wrench, 
+    step: "03", 
+    title: "Fagmessig og trygg utførelse", 
+    desc: "Alt arbeid utføres av sertifiserte fagfolk, uansett om det gjelder montering av vedovn eller peisovn, piperehabilitering, stålpipemontering eller bytte av røykrør." 
+  },
+  { 
+    icon: FileCheck, 
+    step: "04", 
+    title: "Dokumentasjon underveis", 
+    desc: "Vi tar bilder, målinger og registrerer alle kontrollpunkter. Dette sikrer sporbarhet og enkel godkjenning." 
+  },
+  { 
+    icon: Shield, 
+    step: "05", 
+    title: "Sluttkontroll & ferdigmelding", 
+    desc: "Når arbeidet er ferdig, gjennomfører vi sluttkontroll og sender ferdigmelding til kommune og brannvesen." 
+  },
+];
+
+const expertise = [
+  "Piperehabilitering og rehabilitering av teglsteinskorsteiner",
+  "Montering av ildsted (vedovn, peisovn, innsats)",
+  "Installasjon av isolert stålpipe og komplette skorsteinsløsninger",
+  "Inspeksjon, vurdering og feilsøking på skorsteiner og røykrør",
+  "Problemløsning ved dårlig trekk eller feil lufttilførsel",
+  "Håndtering av avvik fra brannvesenet",
+  "Optimalisering av forbrenning og varmeeffekt",
+];
+
+const specialCompetence = [
+  "Exodraft røyksugere og tekniske trekkforbedringer",
+  "Materialvalg for piperehabilitering (stålrør i pipe, keramiske rør, osv.)",
+  "Dokumentasjon i henhold til brannforskrifter og TEK17",
+];
+
+const certifications = [
+  "Montering av ildsted",
+  "Skorsteinsarbeid",
+  "Piperehabilitering",
+  "Dokumentasjon til kommune, brannvesen og boligmappen",
 ];
 
 const OmOss = () => {
@@ -80,11 +128,10 @@ const OmOss = () => {
               Om Alt i Ild
             </p>
             <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6 text-primary-foreground">
-              Hvem vi er
+              Hvem vi er – erfaring, fagkompetanse & sertifiseringer
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
-              Alt i Ild AS er en lokal fagbedrift i Molde, spesialisert på ildsted og skorstein. 
-              Vi tilbyr piperehabilitering, ildstedsmontering, stålpiper, inspeksjon og problemløsning ved dårlig trekk.
+              Alt i Ild AS er en lokal fagbedrift i Molde, spesialisert på ildsted, skorstein og piperehabilitering i hele Møre og Romsdal.
             </p>
           </div>
         </div>
@@ -93,26 +140,19 @@ const OmOss = () => {
       {/* 2.1 Hvem vi er */}
       <section className="section-padding bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="font-display text-4xl font-semibold mb-6">
-                Fagbedrift med komplett tilbud
+                Erfaring og fagkompetanse
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Alt i Ild AS ble grunnlagt av Lars Klemm, sertifisert montør, kontrollør 
-                og fagansvarlig til søknadspliktig arbeid på ildsteder og skorsteiner.
+                Vi leverer ikke bare produkter – vi leverer løsninger som er trygge, dokumenterte og teknisk riktige for både nye og eldre boliger.
               </p>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Vi tilbyr komplette løsninger innen:
+                Vår bakgrunn består av mange års erfaring innen:
               </p>
-              <ul className="space-y-3 mb-6">
-                {[
-                  "Piperehabilitering og utbedring",
-                  "Ildstedsmontering og utskifting",
-                  "Stålpiper til nybygg og hytter",
-                  "Inspeksjon og vurdering",
-                  "Problemløsning ved dårlig trekk",
-                ].map((item) => (
+              <ul className="space-y-3 mb-8">
+                {expertise.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                       <CheckCircle className="h-4 w-4 text-primary" />
@@ -121,13 +161,6 @@ const OmOss = () => {
                   </li>
                 ))}
               </ul>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Alt arbeid dokumenteres og ferdigmeldes etter gjeldende krav. Du får en trygg, 
-                godkjent installasjon.
-              </p>
-              <p className="text-primary font-semibold text-lg">
-                Gratis befaring, helt uforpliktende!
-              </p>
             </div>
             <div className="relative">
               <img
@@ -140,26 +173,66 @@ const OmOss = () => {
         </div>
       </section>
 
-      {/* 2.2 Våre verdier */}
+      {/* Spesialkompetanse og sertifiseringer */}
       <section className="section-padding bg-muted">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="bg-background rounded-2xl p-8">
+              <h3 className="font-display text-2xl font-semibold mb-6">
+                Spesialkompetanse
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Vi har spesialkompetanse innen:
+              </p>
+              <ul className="space-y-3">
+                {specialCompetence.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-background rounded-2xl p-8">
+              <h3 className="font-display text-2xl font-semibold mb-6">
+                Sertifiseringer & godkjenninger
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Vårt arbeid utføres av sertifiserte montører, med nødvendig godkjenning for:
+              </p>
+              <ul className="space-y-3">
+                {certifications.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-muted-foreground mt-6 text-sm">
+                Vi legger stor vekt på faglig kvalitet og kontinuerlig utvikling – slik at du som kunde alltid får en løsning som er både trygg og fremtidsrettet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2.2 Våre verdier */}
+      <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
               Våre verdier
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Det vi står for
+              Vårt arbeid bygger på fem kjerneverdier
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Disse verdiene ligger til grunn for alt vi gjør.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {values.map((value) => (
               <div
                 key={value.title}
-                className="bg-background rounded-2xl p-8 text-center hover-lift"
+                className="bg-muted rounded-2xl p-8 text-center hover-lift"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                   <value.icon className="h-8 w-8 text-primary" />
@@ -173,11 +246,17 @@ const OmOss = () => {
               </div>
             ))}
           </div>
+
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+            <p className="text-lg text-foreground">
+              Vi er ikke butikk. Vi er fagfolk som gir ærlige råd basert på boligens behov – ikke hva som står på lager.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* 2.2 Arbeidsmetode */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-muted">
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
@@ -186,9 +265,6 @@ const OmOss = () => {
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
               Vår arbeidsmetode
             </h2>
-            <p className="text-muted-foreground text-lg">
-              En strukturert prosess som sikrer kvalitet og trygghet.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -214,7 +290,7 @@ const OmOss = () => {
       </section>
 
       {/* 2.3 Lokal forankring */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -232,72 +308,43 @@ const OmOss = () => {
                 Molde & Møre og Romsdal
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Med base i Molde betjener vi kunder i hele Møre og Romsdal. Vi har god kjennskap 
-                til feiervesenet og lokale krav i regionen.
+                Alt i Ild AS er lokalt forankret i Molde, og vi kjenner forholdene i Møre og Romsdal – både når det gjelder klima, byggetradisjoner og kommunale krav. Dette gjør oss ekstra godt rustet til å levere løsninger som:
               </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Gir optimalt trekk i kystklima",
+                  "Følger lokale forskrifter og praksis hos feiervesenet",
+                  "Tar hensyn til eldre murverk og tradisjonelle teglsteinsskorsteiner",
+                  "Sikrer korrekt godkjenning ved kommunal søknadsplikt",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Vår lokalkunnskap gjør at vi raskt kan vurdere muligheter og gi deg en løsning 
-                som passer til klimaet og forholdene i området.
+                Vi samarbeider med lokale aktører, og vi er vant til å jobbe i:
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
-                {["Molde", "Aukra", "Hustadvika", "Midsund", "Rauma", "Sunndal", "Averøy", "Kristiansund"].map((area) => (
+                {["Molde", "Hustadvika", "Aukra", "Midsund", "Rauma"].map((area) => (
                   <span 
                     key={area}
-                    className="px-4 py-2 bg-background rounded-full text-sm text-foreground border border-border"
+                    className="px-4 py-2 bg-muted rounded-full text-sm text-foreground border border-border"
                   >
                     {area}
                   </span>
                 ))}
               </div>
-              <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
-                <Link to="/kontakt">
-                  Kontakt oss
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us CTA */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="font-display text-4xl font-semibold mb-6">
-                Hvorfor velge oss?
-              </h2>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Sertifisert montør og kontrollør",
-                  "Kvalifisert for søknadspliktig arbeid",
-                  "Gratis befaring og uforpliktende tilbud",
-                  "Full garanti på arbeid og produkter",
-                  "Service og vedlikehold etter installasjon",
-                  "Eksperter på dårlig trekk og Exodraft røyksugere",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                    </div>
-                    <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-muted-foreground text-lg mb-8">
+                For deg betyr dette rask respons, gode vurderinger og en leverandør som kjenner lokale forhold og myndighetskrav.
+              </p>
               <Button variant="default" size="lg" className="animate-gentle-pulse" asChild>
                 <Link to="/kontakt">
                   Bestill gratis befaring
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-            </div>
-            <div className="order-2 lg:order-1">
-              <img
-                src={hvitOvn}
-                alt="Hvit peis installert av Alt i Ild"
-                className="rounded-2xl shadow-2xl w-full"
-              />
             </div>
           </div>
         </div>

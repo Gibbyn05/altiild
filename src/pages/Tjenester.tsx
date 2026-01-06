@@ -11,8 +11,7 @@ import {
   Construction,
   Eye,
   Wind,
-  Hammer,
-  FileCheck
+  Hammer
 } from "lucide-react";
 
 import pipeTak from "@/assets/pipe-tak.jpg";
@@ -26,92 +25,159 @@ const services = [
     id: "montering",
     icon: Flame,
     title: "Montering av peis og ovn",
-    description: "Vi monterer nye peiser og vedovner på en trygg og forskriftsmessig måte, tilpasset boligen og eksisterende pipe.",
+    description: "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal – for både nye og eldre boliger.",
     image: hvitOvn,
+    intro: "Vi vurderer alltid:",
     features: [
-      "Sikker montering etter gjeldende forskrifter",
-      "Riktig lufttilførsel for optimal forbrenning",
-      "Korrekt røykrør og tilkobling",
-      "Ferdigmelding og dokumentasjon inkludert",
+      "Trekkforhold i skorsteinen",
+      "Lufttilførsel i rommet",
+      "Riktig dimensjon på røykrør",
+      "Avstand til brennbart materiale",
+      "Gulvplate og brannsikring",
+      "Tilstand på eksisterende skorstein",
     ],
+    conclusion: "Målet er en installasjon som fungerer optimalt fra første fyring – uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne.",
   },
   {
     id: "piperehabilitering",
     icon: Construction,
     title: "Piperehabilitering",
-    description: "Har du problemer med pipen? Vi løser utfordringer med dårlig trekk, fyringsforbud og avvik fra brannvesenet.",
+    description: "En slitt eller skadet pipe kan føre til dårlig trekk, sotlukt, røyklekkasje, sprekkdannelser og i verste fall fyringsforbud. Alt i Ild AS er spesialister på piperehabilitering i Molde og hele Møre og Romsdal.",
     image: pipeTak,
+    intro: "Vanlige tegn på at pipe må rehabiliteres:",
     problems: [
-      "Dårlig trekk",
-      "Fyringsforbud",
-      "Pipe ikke godkjent",
-      "Avvik fra brannvesenet",
-      "Kondens og lekkasjer",
+      "Røyk kommer ut i rommet",
+      "Dårlig trekk i pipe",
+      "Misfarging på mur / pipe",
+      "Avvik fra brannstasjonen",
+      "Kondens eller fukt i skorstein",
+      "Gammel teglpipe som smuldrer",
+      "Pipe som ikke er godkjent",
     ],
+    solutionsIntro: "Vi benytter riktige metoder basert på pipens tilstand:",
+    solutions: [
+      "Stålrør i pipe – fleksibelt og trygt",
+      "Keramiske rør – svært holdbart og varmebestandig",
+      "Tetting og utbedring",
+    ],
+    conclusion: "Rehabilitering av pipe er søknadspliktig arbeid. Vi håndterer hele prosessen: befaring og tilstandsvurdering, valg av metode, komplett søknad til kommunen, dokumentasjon underveis og ferdigmelding til brannvesen og kommune.",
   },
   {
     id: "stalpiper",
     icon: Shield,
-    title: "Montering av stålpiper",
-    description: "Isolerte stålpiper er en fleksibel og sikker løsning for mange boliger og hytter.",
+    title: "Montering av isolerte stålpiper",
+    description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
+    intro: "Fordeler med stålpipe:",
     suitableFor: [
-      "Nybygg uten murpipe",
-      "Eldre boliger med dårlig pipe",
-      "Hytter og fritidsboliger",
-      "Tilbygg og påbygg",
+      "Rask installasjon",
+      "Fleksibel plassering av ildsted",
+      "Lav vekt – egnet for både nye og eldre bygg",
+      "Kan føres gjennom vegg eller tak",
+      "Minimalt inngrep i eksisterende konstruksjon",
+      "Svært brannsikkert",
     ],
+    typicalProjects: [
+      "Nyinstallasjon av vedovn i hus uten pipe",
+      "Utskifting av gammel pipe",
+    ],
+    conclusion: "Vi sørger for riktig dimensjonering, brannsikre løsninger og komplett dokumentasjon.",
   },
   {
     id: "inspeksjon",
     icon: Eye,
-    title: "Inspeksjon av pipe og ildsted",
-    description: "Opplever du problemer med fyringen? Vi gjennomfører grundig inspeksjon for å avdekke årsaken.",
+    title: "Inspeksjon & vurdering av pipe og ildsted",
+    description: "Opplever du problemer med pipen eller ildstedet? Da er det tid for en profesjonell inspeksjon.",
     image: installationImage,
+    intro: "Opplever du problemer som:",
     symptoms: [
-      "Røyk som slår inn i rommet",
-      "Sotlukt i boligen",
-      "Misfarging rundt ildstedet",
-      "Dårlig trekk og treig opptenning",
+      "Dårlig trekk",
+      "Røyk kommer inn i rommet",
+      "Sotlukt",
+      "Misfargede vegger",
+      "Høyt vedforbruk",
+      "Brannvesenet har gitt avvik",
     ],
+    checkIntro: "Dette sjekker vi:",
+    checks: [
+      "Skorsteinsløp og tetthet",
+      "Røykrør og overgang",
+      "Brennkammer og pakninger",
+      "Pipehøyde og trekkforhold",
+      "Lufttilførsel i rommet",
+      "Eventuelle brannfarlige forhold",
+    ],
+    conclusion: "Vi gir deg en tydelig rapport med anbefalt løsning – enten det gjelder mindre utbedringer, service eller full piperehabilitering.",
   },
   {
     id: "service",
     icon: Wrench,
     title: "Service & vedlikehold",
-    description: "Regelmessig service er viktig for sikker og effektiv fyring. Vi hjelper deg med alt vedlikehold.",
+    description: "Regelmessig service sikrer trygg fyring, bedre varmeeffekt og mindre sot. Slitasje på deler er naturlig, og vedlikehold forhindrer større problemer som lekkasjer og dårlig trekk.",
     image: tjenesterPeis,
+    intro: "Hva inngår i service?",
     services: [
-      "Pakningsskifte på dører og glass",
-      "Bytte av glass",
-      "Bytte av vermikulitt/røykfordelerplate",
-      "Generelt vedlikehold og sjekk",
+      "Kontroll av røykrør og feste",
+      "Sjekk av pakninger",
+      "Kontroll av brennkammer",
+      "Vurdering av trekk og lufttilførsel",
+      "Sjekk for sprekkdannelser og misfarging",
     ],
+    workIntro: "Vi utfører:",
+    work: [
+      "Pakningsskifte – viktig for korrekt forbrenning",
+      "Glassbytte – ved skadet eller slitt ovnsglass",
+      "Bytte av vermikulittplater – forbedrer forbrenning og varmeeffekt",
+    ],
+    conclusion: "Dette gjør ildstedet ditt tryggere og mer effektivt.",
   },
   {
     id: "taksikring",
     icon: Hammer,
-    title: "Stige, taksikring & tilkomst",
-    description: "Vi sørger for sikker tilkomst til pipe og tak, noe som er påkrevd ved installasjon.",
+    title: "Stige, taksikring & tilkomst til pipe",
+    description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
     image: pipeTak,
+    intro: "Vi monterer:",
     includes: [
-      "Montasje av takstige",
-      "Taksikringsutstyr",
-      "Tilkomst for feiing",
-      "Godkjent av brannvesenet",
+      "Pipestige",
+      "Stigetrinn",
+      "Takstige",
+      "Pipeplattform / plattform for feiing",
+      "Sikringskroker",
     ],
   },
   {
     id: "darlig-trekk",
     icon: Wind,
-    title: "Dårlig trekk & Exodraft røyksugere",
-    description: "Spesialister på løsninger for dårlig trekk. Vi monterer Exodraft røyksugere for optimal forbrenning.",
+    title: "Dårlig trekk & røyksugere (Exodraft)",
+    description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt – spesielt i moderne, tette boliger.",
     image: funkisOvn,
+    intro: "Vanlige årsaker til dårlig trekk:",
+    causes: [
+      "Undertrykk i huset",
+      "Kald pipe",
+      "Fukt eller lekkasjer i skorstein",
+      "Feil dimensjon på pipe",
+      "Tette røykrør",
+      "Moderne bygg med lite naturlig ventilasjon",
+      "Lav pipehøyde",
+      "Feil montert ildsted",
+    ],
+    solutionsIntro: "Løsninger vi tilbyr:",
     solutions: [
-      "Analyse av trekkproblemer",
-      "Exodraft røyksugere",
-      "Tilpasning av pipeløp",
-      "Optimalisering av lufttilførsel",
+      "Exodraft røyksuger – markedets beste løsning for varig trekkforbedring",
+      "Tilførsel av friskluft (luftventiler eller rør)",
+      "Justering av røykrør",
+      "Optimalisering av pipehøyde og tverrsnitt",
+      "Rehabilitering ved skader",
+    ],
+    benefitsIntro: "En røyksuger gir:",
+    benefits: [
+      "Stabilt og kraftig trekk i all slags vær",
+      "Tryggere og renere forbrenning",
+      "Enklere opptenning",
+      "Mindre røyk i rommet",
+      "Bedre varmeeffekt",
     ],
   },
 ];
@@ -176,7 +242,7 @@ const Tjenester = () => {
             <div 
               key={service.id}
               id={service.id}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
             >
@@ -193,6 +259,10 @@ const Tjenester = () => {
                   {service.description}
                 </p>
                 
+                {service.intro && (
+                  <p className="font-medium mb-3">{service.intro}</p>
+                )}
+                
                 {service.features && (
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature) => (
@@ -205,27 +275,50 @@ const Tjenester = () => {
                 )}
                 
                 {service.problems && (
-                  <div className="mb-6">
-                    <p className="font-medium mb-3">Problemer vi løser:</p>
-                    <ul className="space-y-3">
-                      {service.problems.map((problem) => (
-                        <li key={problem} className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground">{problem}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {service.problems.map((problem) => (
+                      <li key={problem} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{problem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                {service.solutionsIntro && (
+                  <p className="font-medium mb-3">{service.solutionsIntro}</p>
+                )}
+                
+                {service.solutions && (
+                  <ul className="space-y-3 mb-6">
+                    {service.solutions.map((solution) => (
+                      <li key={solution} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{solution}</span>
+                      </li>
+                    ))}
+                  </ul>
                 )}
                 
                 {service.suitableFor && (
+                  <ul className="space-y-3 mb-6">
+                    {service.suitableFor.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {service.typicalProjects && (
                   <div className="mb-6">
-                    <p className="font-medium mb-3">Passer for:</p>
+                    <p className="font-medium mb-3">Typiske prosjekter:</p>
                     <ul className="space-y-3">
-                      {service.suitableFor.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
+                      {service.typicalProjects.map((project) => (
+                        <li key={project} className="flex items-start gap-3">
                           <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground">{item}</span>
+                          <span className="text-foreground">{project}</span>
                         </li>
                       ))}
                     </ul>
@@ -233,59 +326,96 @@ const Tjenester = () => {
                 )}
                 
                 {service.symptoms && (
-                  <div className="mb-6">
-                    <p className="font-medium mb-3">Typiske symptomer:</p>
-                    <ul className="space-y-3">
-                      {service.symptoms.map((symptom) => (
-                        <li key={symptom} className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground">{symptom}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {service.symptoms.map((symptom) => (
+                      <li key={symptom} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{symptom}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {service.checkIntro && (
+                  <p className="font-medium mb-3">{service.checkIntro}</p>
+                )}
+
+                {service.checks && (
+                  <ul className="space-y-3 mb-6">
+                    {service.checks.map((check) => (
+                      <li key={check} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{check}</span>
+                      </li>
+                    ))}
+                  </ul>
                 )}
                 
                 {service.services && (
-                  <div className="mb-6">
-                    <p className="font-medium mb-3">Vi tilbyr:</p>
-                    <ul className="space-y-3">
-                      {service.services.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {service.services.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {service.workIntro && (
+                  <p className="font-medium mb-3">{service.workIntro}</p>
+                )}
+
+                {service.work && (
+                  <ul className="space-y-3 mb-6">
+                    {service.work.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 )}
                 
                 {service.includes && (
-                  <div className="mb-6">
-                    <p className="font-medium mb-3">Inkluderer:</p>
-                    <ul className="space-y-3">
-                      {service.includes.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {service.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 )}
-                
-                {service.solutions && (
-                  <div className="mb-6">
-                    <p className="font-medium mb-3">Våre løsninger:</p>
-                    <ul className="space-y-3">
-                      {service.solutions.map((solution) => (
-                        <li key={solution} className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground">{solution}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+
+                {service.causes && (
+                  <ul className="space-y-3 mb-6">
+                    {service.causes.map((cause) => (
+                      <li key={cause} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{cause}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {service.benefitsIntro && (
+                  <p className="font-medium mb-3">{service.benefitsIntro}</p>
+                )}
+
+                {service.benefits && (
+                  <ul className="space-y-3 mb-6">
+                    {service.benefits.map((benefit) => (
+                      <li key={benefit} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {service.conclusion && (
+                  <p className="text-muted-foreground mb-6">{service.conclusion}</p>
                 )}
                 
                 <Button variant="default" size="lg" asChild>
