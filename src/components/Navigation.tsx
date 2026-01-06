@@ -93,7 +93,7 @@ export function Navigation() {
               )}
               asChild
             >
-              <Link to="/kontakt">Be om tilbud</Link>
+              <Link to="/kontakt">Kontakt oss</Link>
             </Button>
           </div>
 
@@ -205,7 +205,7 @@ export function Navigation() {
               }}
             >
               <Button variant="hero" size="lg" className="w-full text-lg py-6" asChild>
-                <Link to="/kontakt">Be om tilbud</Link>
+                <Link to="/kontakt">Kontakt oss</Link>
               </Button>
             </div>
           </div>

@@ -8,6 +8,7 @@ import larsKlemmImage from "@/assets/lars-klemm.jpg";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
 import omOssHero from "@/assets/om-oss-hero.png";
 import teamImage from "@/assets/team.jpg";
+import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 
 const values = [
   {
@@ -84,6 +85,16 @@ const specialCompetence = [
   "Exodraft røyksugere og tekniske trekkforbedringer",
   "Materialvalg for piperehabilitering (stålrør i pipe, keramiske rør, osv.)",
   "Dokumentasjon i henhold til brannforskrifter og TEK17",
+];
+
+// En sjette "verdi" for å fylle gridet symmetrisk
+const valuesWithSixth = [
+  ...values,
+  {
+    icon: Award,
+    title: "Faglig utvikling",
+    description: "Vi holder oss oppdatert på nye krav og løsninger.",
+  },
 ];
 
 const certifications = [
@@ -179,7 +190,7 @@ const OmOss = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-background rounded-2xl p-8">
               <h3 className="font-display text-2xl font-semibold mb-6">
-                Spesialkompetanse
+                Fagkompetanse
               </h3>
               <p className="text-muted-foreground mb-4">
                 Vi har spesialkompetanse innen:
@@ -229,7 +240,7 @@ const OmOss = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {values.map((value) => (
+            {valuesWithSixth.map((value) => (
               <div
                 key={value.title}
                 className="bg-muted rounded-2xl p-8 text-center hover-lift"
@@ -295,8 +306,8 @@ const OmOss = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <img
-                src={teamImage}
-                alt="Alt i Ild i Molde"
+                src={galleryPipeFjord}
+                alt="Utsikt over Molde og fjorden"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
