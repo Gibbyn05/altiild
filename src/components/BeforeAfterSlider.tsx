@@ -79,45 +79,6 @@ const BeforeAfterSlider = ({
     };
   }, [isDragging, handleMove]);
 
-  // Hint animation - moves slider to show how it works
-  useEffect(() => {
-    if (hasInteracted) return;
-
-    let animationFrame: number;
-    let startTime: number;
-    const duration = 2500; // 2.5 seconds per cycle
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const elapsed = (timestamp - startTime) % duration;
-      const progress = elapsed / duration;
-      
-      // Ease in-out animation: 50% -> 35% -> 50% -> 65% -> 50%
-      let position: number;
-      if (progress < 0.25) {
-        // 50 -> 35
-        position = 50 - 15 * (progress / 0.25);
-      } else if (progress < 0.5) {
-        // 35 -> 50
-        position = 35 + 15 * ((progress - 0.25) / 0.25);
-      } else if (progress < 0.75) {
-        // 50 -> 65
-        position = 50 + 15 * ((progress - 0.5) / 0.25);
-      } else {
-        // 65 -> 50
-        position = 65 - 15 * ((progress - 0.75) / 0.25);
-      }
-      
-      setSliderPosition(position);
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationFrame) cancelAnimationFrame(animationFrame);
-    };
-  }, [hasInteracted]);
 
   return (
     <div
