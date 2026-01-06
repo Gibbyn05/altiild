@@ -40,19 +40,24 @@ const documentationSteps = [
 ];
 
 const whyImportant = [
-  "Installasjon uten dokumentasjon kan gi problemer ved salg av bolig",
-  "Brannvesenet kan pålegge utbedring eller fyringsforbud",
-  "Forsikringsselskapet kan avvise krav ved skade",
-  "Feil montering kan føre til brann eller helseskadelig røyk",
+  "Sikkerheten i boligen",
+  "Godkjenning hos myndighetene",
+  "Verdien av huset ditt",
 ];
 
-const whatWeDocument = [
-  "Komplett søknad til kommunen",
-  "Produktdokumentasjon og sertifikater",
-  "Bilder fra montering og ferdig resultat",
-  "Kontrollerklæring fra sertifisert montør",
-  "Ferdigmelding til brannvesenet",
-  "Garantidokumenter",
+const duringWork = [
+  "Bilder av alle arbeidssteg",
+  "Målinger (avstand til brennbart, pipedimensjoner)",
+  "Materialvalg (stålrør, keramiske rør, isolasjon osv.)",
+  "Kontrollpunkter (tetthet, brannsikring, røykrør-overganger)",
+];
+
+const whatWeDo = [
+  "Vi utarbeider ferdigmelding",
+  "Vi sender all dokumentasjon til kommune og brannvesen",
+  "Vi legger ved bilder, målinger og rapport",
+  "Vi sørger for at installasjonen blir godkjent",
+  "Du får en komplett dokumentpakke klar for boligmappen",
 ];
 
 const Dokumentasjon = () => {
@@ -79,10 +84,10 @@ const Dokumentasjon = () => {
               Dokumentasjon
             </p>
             <h1 className="font-display text-5xl md:text-6xl font-semibold mb-6 text-primary-foreground">
-              Trygghet gjennom dokumentasjon
+              Hvorfor dokumentasjon er viktig
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
-              Vi håndterer ALT av dokumentasjon og myndighetskrav – fra søknad til ferdig godkjent installasjon.
+              Dokumentasjon er en av de viktigste delene av arbeidet på pipe og ildsted – både for sikkerheten i boligen, for godkjenning hos myndighetene og for verdien av huset ditt.
             </p>
           </div>
         </div>
@@ -97,32 +102,24 @@ const Dokumentasjon = () => {
                 Viktig å vite
               </p>
               <h2 className="font-display text-4xl font-semibold mb-6">
-                Hvorfor er dokumentasjon viktig?
+                Dokumentasjon under arbeidet
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Montering av ildsted og skorstein er søknadspliktig arbeid. Riktig dokumentasjon 
-                beskytter deg som huseier og sikrer at installasjonen er trygg.
+                Vi dokumenterer hele arbeidsprosessen nøye, slik at både du, kommunen og brannvesenet får et klart bilde av hva som er gjort. Det gir trygghet og viser at alt er utført fagmessig i henhold til TEK17 og brannforskrifter.
               </p>
               
-              <div className="bg-destructive/10 border border-destructive/20 rounded-xl p-6 mb-6">
-                <div className="flex items-start gap-4">
-                  <AlertTriangle className="h-6 w-6 text-destructive flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Uten dokumentasjon risikerer du:</h3>
-                    <ul className="space-y-2">
-                      {whyImportant.map((item) => (
-                        <li key={item} className="text-muted-foreground text-sm flex items-start gap-2">
-                          <span className="text-destructive">•</span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <p className="font-medium mb-3">Under prosessen registrerer vi:</p>
+              <ul className="space-y-3 mb-6">
+                {duringWork.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
 
-              <p className="text-foreground font-medium">
-                Med Alt i Ild får du alltid komplett dokumentasjon – inkludert i prisen.
+              <p className="text-muted-foreground">
+                Dette gir en fullstendig og profesjonell dokumentasjonslinje, noe som gjør godkjenning hos kommunen langt enklere og raskere.
               </p>
             </div>
             <div>
@@ -178,16 +175,23 @@ const Dokumentasjon = () => {
               <div className="bg-card rounded-2xl p-8 border border-border/50">
                 <div className="flex items-center gap-3 mb-6">
                   <FileCheck className="h-8 w-8 text-primary" />
-                  <h3 className="font-display text-xl font-semibold">Dokumentasjonspakke</h3>
+                  <h3 className="font-display text-xl font-semibold">Ferdigmelding & dokumentpakke</h3>
                 </div>
+                <p className="text-muted-foreground mb-4">
+                  Når arbeidet er ferdig, tar vi oss av alt som gjelder ferdigmelding og godkjenning. Du skal ikke fylle ut skjemaer, kontakte kommunen eller sende inn dokumenter – det gjør vi.
+                </p>
+                <p className="font-medium mb-3">Dette gjør vi for deg:</p>
                 <ul className="space-y-4">
-                  {whatWeDocument.map((item) => (
+                  {whatWeDo.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
+                <p className="text-muted-foreground mt-4 text-sm">
+                  Du mottar en ferdig PDF med all nødvendig informasjon – trygg, oversiktlig og klar til bruk når du trenger den.
+                </p>
               </div>
             </div>
             <div className="order-1 lg:order-2">

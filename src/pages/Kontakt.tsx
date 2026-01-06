@@ -26,8 +26,9 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "+47 988 44 844",
+    value: "98 844 844",
     href: "tel:+4798844844",
+    description: "Ring oss gjerne ved akutte problemer",
   },
   {
     icon: Mail,
@@ -38,13 +39,14 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Adresse",
-    value: "Barvegen 16, 6411 Molde",
+    value: "Molde, Møre og Romsdal",
     href: null,
   },
   {
     icon: Clock,
     label: "Åpningstider",
     value: "Man-Fre: 08:00-16:00",
+    description: "Kveld og helg etter avtale",
     href: null,
   },
 ];
@@ -289,11 +291,10 @@ const Kontakt = () => {
               Kontakt oss
             </p>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-6 leading-tight">
-              Bestill gratis befaring
+              Kontakt oss
             </h1>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Vi kommer til deg for en uforpliktende vurdering av ditt prosjekt. 
-              Fyll ut skjemaet eller ring oss direkte.
+              Du er alltid velkommen til å ta kontakt med oss – enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud. Vi svarer så raskt vi kan.
             </p>
           </div>
         </div>

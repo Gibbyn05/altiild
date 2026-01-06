@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
@@ -11,7 +10,6 @@ import {
   Flame, 
   Wrench, 
   Shield, 
-  MessageCircle, 
   Star,
   ArrowRight,
   CheckCircle,
@@ -32,15 +30,13 @@ import heroImage from "@/assets/hero-fireplace.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import pipeTak from "@/assets/pipe-tak.jpg";
-import hvitOvn from "@/assets/hvit-ovn.jpg";
-import funkisOvn from "@/assets/funkis-ovn.jpg";
 import teamImage from "@/assets/team.jpg";
 
 const services = [
   {
     icon: Flame,
     title: "Montering av peis og ovn",
-    description: "Sikker og forskriftsmessig montering tilpasset boligen og eksisterende pipe.",
+    description: "Vi monterer peisovn, vedovn og innsats på en trygg og fagmessig måte. Vi sørger for riktig avstand til brennbart materiale, god lufttilførsel, riktig dimensjonert røykrør og stabilt trekk.",
     features: [
       "Sikker montering",
       "Riktig lufttilførsel",
@@ -51,61 +47,86 @@ const services = [
   {
     icon: Wrench,
     title: "Piperehabilitering",
-    description: "Vi løser problemer med dårlig trekk, fyringsforbud og avvik fra brannvesenet.",
+    description: "Har du en gammel teglsteinskorstein, sprekkdannelser, dårlig trekk eller pipe som ikke er godkjent? Vi utfører piperehabilitering med stålrør i pipe, keramiske rør eller andre fagløsninger.",
     features: [
-      "Dårlig trekk",
+      "Dårlig trekk i pipe",
       "Fyringsforbud",
+      "Pipe ikke godkjent",
       "Avvik fra brannvesenet",
-      "Kondens og lekkasjer",
+      "Lekkasjer eller kondens i skorstein",
     ],
   },
   {
     icon: Shield,
     title: "Montering av stålpiper",
-    description: "Fleksible løsninger for nybygg, eldre boliger og hytter.",
+    description: "Vi leverer og monterer isolert stålpipe – en fleksibel og trygg løsning når boligen mangler skorstein eller når ildstedet må plasseres annerledes.",
     features: [
       "Nybygg",
-      "Eldre boliger",
       "Hytter",
-      "Sikker og godkjent",
+      "Eldre hus",
     ],
   },
   {
     icon: Eye,
     title: "Inspeksjon av pipe og ildsted",
-    description: "Grundig kontroll ved symptomer som røyk, sotlukt eller dårlig trekk.",
+    description: "Vi utfører inspeksjon ved problemer eller krav om kontroll etter avvik.",
     features: [
-      "Røyk i rom",
+      "Røyk i rommet",
       "Sotlukt",
-      "Misfarging",
+      "Misfarging på pipe",
       "Dårlig trekk",
+      "Problemer med fyring",
     ],
   },
   {
-    icon: MessageCircle,
+    icon: Wrench,
     title: "Service & vedlikehold",
-    description: "Viktig for sikker og effektiv fyring over tid.",
+    description: "God service og vedlikehold er avgjørende for sikker og effektiv fyring. Mange problemer oppstår fordi pakninger, glass eller vermikulittplater i brennkammeret er slitt.",
     features: [
-      "Pakningsskifte",
-      "Glassbytte",
-      "Vermikulitt/røykfordelerplate",
-      "Rådgivning",
+      "Pakningsskifte for bedre forbrenning",
+      "Glassbytte ved sprekk eller slitasje",
+      "Bytte av vermikulitt røykfordelerplate",
     ],
   },
 ];
 
 const processSteps = [
-  { icon: ClipboardCheck, step: "01", title: "Planlegging & rådgivning", desc: "Vi kommer på befaring og gir faglige råd tilpasset din bolig." },
-  { icon: Truck, step: "02", title: "Levering", desc: "Vi håndterer bestilling og levering av utstyr." },
-  { icon: Wrench, step: "03", title: "Montering", desc: "Fagmessig installasjon av sertifiserte montører." },
-  { icon: FileCheck, step: "04", title: "Dokumentasjon", desc: "Alt dokumenteres underveis i prosessen." },
-  { icon: Shield, step: "05", title: "Sluttkontroll", desc: "Ferdigmelding og godkjent installasjon." },
+  { 
+    icon: ClipboardCheck, 
+    step: "01", 
+    title: "Planlegging & rådgivning", 
+    desc: "Vi vurderer hvilken vedovn eller peis som passer best, hvilken skorsteinsløsning som kreves, behov for friskluft, ventilasjon eller røyksuger, om pipe må rehabiliteres og risiko for avvik ved kontroll." 
+  },
+  { 
+    icon: Truck, 
+    step: "02", 
+    title: "Levering", 
+    desc: "Vi leverer røykrør, ovner, stålpipe, stålrør, keramiske rør og Exodraft røyksugere – alt som trengs for en komplett installasjon." 
+  },
+  { 
+    icon: Wrench, 
+    step: "03", 
+    title: "Montering", 
+    desc: "Sertifiserte montører utfører jobben i henhold til TEK17, produsentens krav og lokale forskrifter." 
+  },
+  { 
+    icon: FileCheck, 
+    step: "04", 
+    title: "Dokumentasjon underveis", 
+    desc: "Vi dokumenterer alt arbeid: bilder, målinger, teknisk beskrivelse og kontrollpunkter. Dokumentasjonen sendes til kommune og brannvesen ved behov." 
+  },
+  { 
+    icon: Shield, 
+    step: "05", 
+    title: "Sluttkontroll & ferdigdokumentasjon", 
+    desc: "Vi utfører sluttkontroll, sender ferdigmelding til brannvesenet og du får komplett dokumentasjon for boligmappen." 
+  },
 ];
 
 const whyChooseUs = [
   { icon: MapPin, text: "Lokal fagbedrift i Molde" },
-  { icon: Award, text: "Sertifiserte montører" },
   { icon: Users, text: "Mange års erfaring" },
+  { icon: Award, text: "Sertifiserte montører" },
   { icon: CheckCircle, text: "Komplette løsninger A–Å" },
   { icon: Search, text: "Gratis befaring" },
   { icon: ThermometerSun, text: "Eksperter på dårlig trekk & Exodraft" },
@@ -230,13 +251,16 @@ const Index = () => {
         <div className="container-wide relative z-10 pt-20">
           <div className="max-w-2xl animate-fade-up">
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-6 leading-tight">
-              Skap varme og trygghet i ditt hjem
+              Skap varme og atmosfære i ditt hjem
             </h1>
             <p className="text-2xl text-primary font-medium mb-4">
               Komplette løsninger for ildsted og skorstein i Møre og Romsdal
             </p>
+            <p className="text-lg text-primary-foreground/90 mb-4 leading-relaxed">
+              Hos oss får du mer enn bare produkter. Vi leverer helhetlige løsninger som gir trygghet, komfort og riktig varme i hjemmet ditt. Med solid fagkunnskap og lang erfaring hjelper vi deg hele veien fra første vurdering til ferdig godkjent løsning.
+            </p>
             <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">
-              Alt i Ild AS leverer helhetlige, trygge og dokumenterte løsninger – fra vurdering til ferdig godkjent installasjon. Én partner hele veien.
+              Enten du har dårlig trekk i pipe, vurderer rehabilitering av pipe, har fått fyringsforbud, ønsker bedre varmeeffekt eller planlegger å montere en ny vedovn eller peisovn – vi finner den riktige løsningen for boligen din.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button variant="hero" size="xl" className="animate-gentle-pulse !border-2 !border-white" asChild>
@@ -279,7 +303,7 @@ const Index = () => {
               Alt du trenger for ildsted og skorstein
             </h2>
             <p className="text-muted-foreground text-lg">
-              Vi tilbyr både nye installasjoner og service på eksisterende ildsted og skorstein – alltid tilpasset boligen, trekkforhold og gjeldende krav.
+              Vi tilbyr både nye installasjoner og service på eksisterende ildsted og skorstein. Alle løsninger tilpasses boligen, trekkforholdene og gjeldende krav i Møre og Romsdal.
             </p>
           </div>
 
@@ -326,13 +350,13 @@ const Index = () => {
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
-              Én partner hele veien
+              Én fagpartner hele veien
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
               Komplette løsninger fra A til Å
             </h2>
             <p className="text-muted-foreground text-lg">
-              Med Alt i Ild slipper du å koordinere flere aktører. Vi håndterer hele prosessen for deg.
+              Vi tar hele ansvaret – fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt.
             </p>
           </div>
 
@@ -370,14 +394,19 @@ const Index = () => {
                 Dokumentasjon & myndighetskrav
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Montering av ildsted og pipe er søknadspliktig. Alt i Ild AS håndterer ALT for deg – fra søknad til ferdig godkjent installasjon.
+                Arbeid på pipe og skorstein er ofte søknadspliktig. Dette gjelder piperehabilitering, ny stålpipe, bruk av stålrør i pipe og andre strukturelle endringer.
+              </p>
+              <p className="text-muted-foreground text-lg mb-6">
+                Alt i Ild AS håndterer hele prosessen – dette gjør prosessen trygg og enkel, uten at du må forholde deg til det tekniske eller byråkratiske:
               </p>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Kommunesøknad og nødvendige tillatelser",
-                  "Ferdigmelding til brannvesenet",
-                  "Dokumentasjon til Boligmappa",
-                  "Sertifikat og garantidokumenter",
+                  "Vurdering av skorstein",
+                  "Valg av riktig rehabiliteringsmetode",
+                  "Komplett søknad til kommunen i Møre og Romsdal",
+                  "Dokumentasjon underveis",
+                  "Ferdigmelding direkte til brannvesen og kommune",
+                  "Dokumentpakke til boligmappen",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
@@ -419,11 +448,11 @@ const Index = () => {
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6 text-primary-foreground">
-              Hvorfor velge Alt i Ild?
+              Hvorfor velge oss?
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
             {whyChooseUs.map((item) => (
               <div key={item.text} className="text-center">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-foreground/10 mb-4">
@@ -434,6 +463,26 @@ const Index = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="bg-primary-foreground/10 rounded-2xl p-8 max-w-4xl mx-auto">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                "Lokal fagbedrift innen ildsted og skorstein i Molde",
+                "Mange års erfaring",
+                "Sertifiserte montører",
+                "Komplette løsninger fra A–Å",
+                "Gratis befaring",
+                "Ekspertise på dårlig trekk og Exodraft røyksugere",
+                "Rehabilitering av pipe og stålpipeinstallasjon",
+                "Dokumentasjon og ferdigmelding alltid inkludert",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-primary-foreground">
+                  <CheckCircle className="h-5 w-5 text-primary-foreground/70 flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -457,10 +506,7 @@ const Index = () => {
                 Molde & Møre og Romsdal
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Vi kjenner de lokale forholdene – fra klimaet langs kysten til kommunale krav og feiervesenet i regionen. Med base i Molde er vi alltid i nærheten.
-              </p>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Vår lokalkunnskap gir deg trygghet for at løsningen vi velger er tilpasset nettopp ditt hjem og dine forhold.
+                Vi kjenner byggeskikk, klima og kommunale krav i regionen. Derfor vet vi hva som kreves for at ildsted og pipe blir godkjent uten problemer.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Molde", "Aukra", "Hustadvika", "Midsund", "Rauma", "Sunndal", "Averøy"].map((area) => (
@@ -529,10 +575,27 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-primary-foreground mb-6">
-                Klar for gratis befaring?
+                Kontakt & gratis befaring
               </h2>
+              <p className="text-xl text-primary-foreground/90 mb-4">
+                Vi tilbyr gratis befaring ved:
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Piperehabilitering",
+                  "Montering av peis og vedovn",
+                  "Dårlig trekk i pipe",
+                  "Valg av riktig skorsteinsløsning",
+                  "Vurdering før kjøp av peis eller ovn",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-primary-foreground">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Vi kommer til deg for en uforpliktende vurdering av ditt prosjekt. Helt gratis.
+                Kontakt oss i dag for en trygg og profesjonell løsning.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3 text-primary-foreground">
