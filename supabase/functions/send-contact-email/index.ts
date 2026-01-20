@@ -15,6 +15,7 @@ interface ContactEmailRequest {
   subject: string;
   message: string;
   imageUrls?: string[];
+  hasFiringBan?: boolean;
 }
 
 // Simple in-memory rate limiting (per IP, 5 requests per minute)
@@ -149,7 +150,7 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    const { name, email, phone, address, subject, message, imageUrls } = requestData;
+    const { name, email, phone, address, subject, message, imageUrls, hasFiringBan } = requestData;
 
     // Sanitize all user inputs for HTML
     const safeName = sanitizeHtml(name.trim());
@@ -164,15 +165,30 @@ const handler = async (req: Request): Promise<Response> => {
     // Build images HTML
     const imagesHtml = imageUrls && imageUrls.length > 0 
       ? `
-        <hr />
-        <h3>Vedlagte bilder:</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-          ${imageUrls.map((url, i) => `<a href="${sanitizeHtml(url)}" target="_blank"><img src="${sanitizeHtml(url)}" alt="Bilde ${i + 1}" style="max-width: 200px; max-height: 200px; border-radius: 8px;" /></a>`).join('')}
-        </div>
+        <tr>
+          <td colspan="2" style="padding: 20px 0 10px 0; border-top: 1px solid #e5e5e5;">
+            <h3 style="margin: 0 0 15px 0; color: #333; font-size: 16px;">📷 Vedlagte bilder (${imageUrls.length})</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              ${imageUrls.map((url, i) => `<a href="${sanitizeHtml(url)}" target="_blank" style="display: inline-block;"><img src="${sanitizeHtml(url)}" alt="Bilde ${i + 1}" style="max-width: 150px; max-height: 150px; border-radius: 8px; border: 1px solid #ddd;" /></a>`).join('')}
+            </div>
+          </td>
+        </tr>
       `
       : '';
 
-    // Send notification to business
+    // Build firing ban alert
+    const firingBanAlert = hasFiringBan 
+      ? `
+        <tr>
+          <td colspan="2" style="padding: 15px; background-color: #fef2f2; border-radius: 8px; border-left: 4px solid #b1222f;">
+            <strong style="color: #b1222f;">⚠️ VIKTIG: Kunden har fyringsforbud eller avvik!</strong>
+          </td>
+        </tr>
+        <tr><td colspan="2" style="height: 15px;"></td></tr>
+      `
+      : '';
+
+    // Send notification to business with improved formatting
     const businessEmailRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -182,18 +198,94 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "Alt i Ild <noreply@altiild.no>",
         to: ["post@altiild.no"],
-        subject: `Ny henvendelse: ${safeSubject}`,
+        subject: `${hasFiringBan ? '⚠️ ' : ''}Ny henvendelse: ${safeSubject}`,
         html: `
-          <h2>Ny henvendelse fra kontaktskjema</h2>
-          <p><strong>Navn:</strong> ${safeName}</p>
-          <p><strong>E-post:</strong> ${safeEmail}</p>
-          <p><strong>Telefon:</strong> ${safePhone || "Ikke oppgitt"}</p>
-          <p><strong>Adresse:</strong> ${safeAddress || "Ikke oppgitt"}</p>
-          <p><strong>Emne:</strong> ${safeSubject}</p>
-          <hr />
-          <h3>Melding:</h3>
-          <p>${safeMessage.replace(/\n/g, "<br>")}</p>
-          ${imagesHtml}
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          </head>
+          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+              <!-- Header -->
+              <tr>
+                <td style="background-color: #b1222f; padding: 25px; text-align: center;">
+                  <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600;">Ny henvendelse</h1>
+                </td>
+              </tr>
+              
+              <!-- Content -->
+              <tr>
+                <td style="padding: 30px;">
+                  <table width="100%" cellpadding="0" cellspacing="0">
+                    ${firingBanAlert}
+                    
+                    <!-- Tjeneste/Emne -->
+                    <tr>
+                      <td style="padding: 12px 15px; background-color: #f8f8f8; border-radius: 8px;">
+                        <strong style="color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Tjeneste</strong>
+                        <p style="margin: 5px 0 0 0; font-size: 18px; color: #333; font-weight: 600;">${safeSubject}</p>
+                      </td>
+                    </tr>
+                    <tr><td style="height: 15px;"></td></tr>
+                    
+                    <!-- Kontaktinfo -->
+                    <tr>
+                      <td style="padding: 0;">
+                        <h3 style="margin: 0 0 15px 0; color: #333; font-size: 16px; border-bottom: 2px solid #b1222f; padding-bottom: 8px;">👤 Kontaktinformasjon</h3>
+                        <table width="100%" cellpadding="8" cellspacing="0" style="background-color: #fafafa; border-radius: 8px;">
+                          <tr>
+                            <td width="100" style="color: #666; font-weight: 500;">Navn:</td>
+                            <td style="color: #333;">${safeName}</td>
+                          </tr>
+                          <tr>
+                            <td style="color: #666; font-weight: 500;">Telefon:</td>
+                            <td style="color: #333;">
+                              ${safePhone ? `<a href="tel:${safePhone}" style="color: #b1222f; text-decoration: none; font-weight: 600;">${safePhone}</a>` : '<span style="color: #999;">Ikke oppgitt</span>'}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="color: #666; font-weight: 500;">E-post:</td>
+                            <td style="color: #333;">
+                              <a href="mailto:${safeEmail}" style="color: #b1222f; text-decoration: none;">${safeEmail}</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="color: #666; font-weight: 500;">Adresse:</td>
+                            <td style="color: #333;">${safeAddress || '<span style="color: #999;">Ikke oppgitt</span>'}</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr><td style="height: 20px;"></td></tr>
+                    
+                    <!-- Melding -->
+                    <tr>
+                      <td style="padding: 0;">
+                        <h3 style="margin: 0 0 15px 0; color: #333; font-size: 16px; border-bottom: 2px solid #b1222f; padding-bottom: 8px;">💬 Melding</h3>
+                        <div style="background-color: #fafafa; border-radius: 8px; padding: 15px; border-left: 3px solid #b1222f;">
+                          <p style="margin: 0; color: #333; line-height: 1.6; white-space: pre-wrap;">${safeMessage.replace(/\n/g, "<br>")}</p>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    ${imagesHtml}
+                  </table>
+                </td>
+              </tr>
+              
+              <!-- Footer -->
+              <tr>
+                <td style="background-color: #f5f5f5; padding: 20px; text-align: center; border-top: 1px solid #e5e5e5;">
+                  <p style="margin: 0; color: #666; font-size: 12px;">
+                    Denne e-posten ble sendt fra kontaktskjemaet på altiild.no
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </body>
+          </html>
         `,
       }),
     });
@@ -218,15 +310,78 @@ const handler = async (req: Request): Promise<Response> => {
         to: [email],
         subject: "Vi har mottatt din henvendelse - Alt i Ild",
         html: `
-          <h2>Takk for din henvendelse, ${safeName}!</h2>
-          <p>Vi har mottatt meldingen din og vil ta kontakt så snart som mulig, vanligvis innen 24 timer.</p>
-          <hr />
-          <h3>Din melding:</h3>
-          <p><strong>Emne:</strong> ${safeSubject}</p>
-          <p>${safeMessage.replace(/\n/g, "<br>")}</p>
-          <hr />
-          <p>Med vennlig hilsen,<br><strong>Alt i Ild</strong></p>
-          <p>Telefon: +47 70 12 34 56<br>E-post: post@altiild.no</p>
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          </head>
+          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+              <!-- Header -->
+              <tr>
+                <td style="background-color: #b1222f; padding: 25px; text-align: center;">
+                  <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600;">Takk for din henvendelse!</h1>
+                </td>
+              </tr>
+              
+              <!-- Content -->
+              <tr>
+                <td style="padding: 30px;">
+                  <p style="font-size: 16px; color: #333; line-height: 1.6; margin: 0 0 20px 0;">
+                    Hei ${safeName}! 👋
+                  </p>
+                  <p style="font-size: 16px; color: #333; line-height: 1.6; margin: 0 0 20px 0;">
+                    Vi har mottatt henvendelsen din og vil ta kontakt så snart som mulig, vanligvis innen 24 timer.
+                  </p>
+                  
+                  <!-- Summary box -->
+                  <div style="background-color: #fafafa; border-radius: 8px; padding: 20px; margin: 20px 0; border-left: 3px solid #b1222f;">
+                    <h3 style="margin: 0 0 15px 0; color: #333; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Din henvendelse</h3>
+                    <p style="margin: 0 0 10px 0; color: #666;">
+                      <strong style="color: #333;">Tjeneste:</strong> ${safeSubject}
+                    </p>
+                    <p style="margin: 0; color: #666; line-height: 1.6;">
+                      <strong style="color: #333;">Melding:</strong><br>
+                      ${safeMessage.replace(/\n/g, "<br>")}
+                    </p>
+                  </div>
+                  
+                  <p style="font-size: 16px; color: #333; line-height: 1.6; margin: 20px 0;">
+                    Har du spørsmål i mellomtiden? Ta gjerne kontakt med oss:
+                  </p>
+                  
+                  <!-- Contact info -->
+                  <table cellpadding="8" cellspacing="0" style="margin: 20px 0;">
+                    <tr>
+                      <td style="color: #666;">📞 Telefon:</td>
+                      <td><a href="tel:+4798844844" style="color: #b1222f; text-decoration: none; font-weight: 600;">+47 988 44 844</a></td>
+                    </tr>
+                    <tr>
+                      <td style="color: #666;">✉️ E-post:</td>
+                      <td><a href="mailto:post@altiild.no" style="color: #b1222f; text-decoration: none;">post@altiild.no</a></td>
+                    </tr>
+                  </table>
+                  
+                  <p style="font-size: 16px; color: #333; line-height: 1.6; margin: 20px 0 0 0;">
+                    Med vennlig hilsen,<br>
+                    <strong style="color: #b1222f;">Alt i Ild</strong>
+                  </p>
+                </td>
+              </tr>
+              
+              <!-- Footer -->
+              <tr>
+                <td style="background-color: #f5f5f5; padding: 20px; text-align: center; border-top: 1px solid #e5e5e5;">
+                  <p style="margin: 0; color: #666; font-size: 12px;">
+                    Alt i Ild AS | Molde, Møre og Romsdal<br>
+                    <a href="https://altiild.no" style="color: #b1222f; text-decoration: none;">altiild.no</a>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </body>
+          </html>
         `,
       }),
     });
