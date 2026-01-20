@@ -30,7 +30,7 @@ const documentationSteps = [
   {
     icon: Shield,
     title: "Ferdigmelding til brannvesen",
-    description: "Når jobben er ferdig, sender vi ferdigmelding til lokalt brannvesen for godkjenning.",
+    description: "Når jobben er ferdig, sender vi ferdigmelding til lokalt brannvesen/kommune og deg for godkjenning.",
   },
 ];
 
