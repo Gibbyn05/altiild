@@ -26,6 +26,7 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [showMobileServicesDropdown, setShowMobileServicesDropdown] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -39,6 +40,7 @@ export function Navigation() {
   useEffect(() => {
     setIsOpen(false);
     setShowServicesDropdown(false);
+    setShowMobileServicesDropdown(false);
   }, [location]);
 
   // Prevent body scroll when menu is open
@@ -247,23 +249,77 @@ export function Navigation() {
         )}>
           <div className="flex flex-col items-center gap-6 w-full max-w-sm">
             {navLinks.map((link, index) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={cn(
-                  "text-2xl font-heading font-medium py-3 px-6 rounded-lg transition-all duration-300 w-full text-center",
-                  location.pathname === link.href
-                    ? "text-primary bg-primary/10"
-                    : "text-foreground hover:text-primary hover:bg-muted"
-                )}
-                style={{
-                  transitionDelay: isOpen ? `${100 + index * 75}ms` : "0ms",
-                  opacity: isOpen ? 1 : 0,
-                  transform: isOpen ? "translateY(0)" : "translateY(-20px)",
-                }}
-              >
-                {link.label}
-              </Link>
+              link.hasDropdown ? (
+                <div key={link.href} className="w-full">
+                  <button
+                    onClick={() => setShowMobileServicesDropdown(!showMobileServicesDropdown)}
+                    className={cn(
+                      "text-2xl font-heading font-medium py-3 px-6 rounded-lg transition-all duration-300 w-full text-center flex items-center justify-center gap-2",
+                      location.pathname.startsWith("/tjenester") || location.pathname === "/dokumentasjon"
+                        ? "text-primary bg-primary/10"
+                        : "text-foreground hover:text-primary hover:bg-muted"
+                    )}
+                    style={{
+                      transitionDelay: isOpen ? `${100 + index * 75}ms` : "0ms",
+                      opacity: isOpen ? 1 : 0,
+                      transform: isOpen ? "translateY(0)" : "translateY(-20px)",
+                    }}
+                  >
+                    {link.label}
+                    <ChevronDown className={cn(
+                      "h-5 w-5 transition-transform duration-200",
+                      showMobileServicesDropdown ? "rotate-180" : ""
+                    )} />
+                  </button>
+                  
+                  {/* Mobile Services Dropdown */}
+                  <div
+                    className={cn(
+                      "overflow-hidden transition-all duration-300 w-full",
+                      showMobileServicesDropdown ? "max-h-[500px] opacity-100 mt-2" : "max-h-0 opacity-0"
+                    )}
+                  >
+                    <div className="bg-muted rounded-xl p-2 space-y-1">
+                      {serviceLinks.map((service) => (
+                        <Link
+                          key={service.href}
+                          to={service.href}
+                          className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-base text-foreground hover:bg-background hover:text-primary transition-colors"
+                        >
+                          <service.icon className="h-4 w-4 text-primary" />
+                          {service.label}
+                        </Link>
+                      ))}
+                      <div className="border-t border-border/50 mt-2 pt-2">
+                        <Link
+                          to="/tjenester"
+                          className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium text-primary hover:bg-background transition-colors"
+                        >
+                          Se alle tjenester
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={cn(
+                    "text-2xl font-heading font-medium py-3 px-6 rounded-lg transition-all duration-300 w-full text-center",
+                    location.pathname === link.href
+                      ? "text-primary bg-primary/10"
+                      : "text-foreground hover:text-primary hover:bg-muted"
+                  )}
+                  style={{
+                    transitionDelay: isOpen ? `${100 + index * 75}ms` : "0ms",
+                    opacity: isOpen ? 1 : 0,
+                    transform: isOpen ? "translateY(0)" : "translateY(-20px)",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <div 
               className="mt-6 pt-6 border-t border-border w-full"
