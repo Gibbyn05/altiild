@@ -6,13 +6,13 @@ import { ChevronDown, Flame, Construction, Shield, Eye, Wrench, Hammer, Wind } f
 import logo from "@/assets/logo.png";
 
 const serviceLinks = [
-  { href: "/tjenester#montering", label: "Montering av peis og ovn", icon: Flame },
-  { href: "/tjenester#piperehabilitering", label: "Piperehabilitering", icon: Construction },
-  { href: "/tjenester#stalpiper", label: "Isolerte stålpiper", icon: Shield },
-  { href: "/tjenester#inspeksjon", label: "Inspeksjon & vurdering", icon: Eye },
-  { href: "/tjenester#service", label: "Service & vedlikehold", icon: Wrench },
-  { href: "/tjenester#taksikring", label: "Stige & taksikring", icon: Hammer },
-  { href: "/tjenester#darlig-trekk", label: "Dårlig trekk & røyksugere", icon: Wind },
+  { href: "/tjenester/montering", label: "Montering av peis og ovn", icon: Flame },
+  { href: "/tjenester/piperehabilitering", label: "Piperehabilitering", icon: Construction },
+  { href: "/tjenester/stalpiper", label: "Isolerte stålpiper", icon: Shield },
+  { href: "/tjenester/inspeksjon", label: "Inspeksjon & vurdering", icon: Eye },
+  { href: "/tjenester/service", label: "Service & vedlikehold", icon: Wrench },
+  { href: "/tjenester/taksikring", label: "Stige & taksikring", icon: Hammer },
+  { href: "/tjenester/darlig-trekk", label: "Dårlig trekk & røyksugere", icon: Wind },
 ];
 
 const navLinks = [
