@@ -57,15 +57,10 @@ const serviceOptions = [
 
 const serviceAreas = [
   "Molde",
-  "Aukra", 
   "Hustadvika",
+  "Aukra", 
   "Midsund",
   "Rauma",
-  "Sunndal",
-  "Averøy",
-  "Kristiansund",
-  "Gjemnes",
-  "Tingvoll",
 ];
 
 const Kontakt = () => {
