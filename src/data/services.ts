@@ -209,7 +209,7 @@ export const services: ServiceData[] = [
     id: "darlig-trekk",
     slug: "darlig-trekk",
     icon: Wind,
-    title: "Dårlig trekk & røyksugere (Exodraft)",
+    title: "Dårlig trekk",
     shortTitle: "Dårlig trekk",
     description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt – spesielt i moderne, tette boliger.",
     image: takUtside,
