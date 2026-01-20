@@ -418,17 +418,17 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4">
             {processSteps.map((item, index) => (
-              <div key={item.step} className="text-center relative">
-                <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
-                  <item.icon className="h-5 w-5 md:h-7 md:w-7" />
+              <div key={item.step} className="text-center relative flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
+                  <item.icon className="h-6 w-6 md:h-7 md:w-7" />
                 </div>
                 <div className="text-primary font-bold text-xs md:text-sm mb-1 md:mb-2">{item.step}</div>
-                <h3 className="font-display text-sm md:text-lg font-semibold mb-1 md:mb-2">
+                <h3 className="font-display text-base md:text-lg font-semibold mb-1 md:mb-2">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-xs md:text-sm hidden sm:block">
+                <p className="text-muted-foreground text-xs md:text-sm">
                   {item.desc}
                 </p>
                 {index < processSteps.length - 1 && (
