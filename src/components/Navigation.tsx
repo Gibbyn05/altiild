@@ -2,11 +2,22 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ChevronDown, Flame, Construction, Shield, Eye, Wrench, Hammer, Wind } from "lucide-react";
 import logo from "@/assets/logo.png";
+
+const serviceLinks = [
+  { href: "/tjenester#montering", label: "Montering av peis og ovn", icon: Flame },
+  { href: "/tjenester#piperehabilitering", label: "Piperehabilitering", icon: Construction },
+  { href: "/tjenester#stalpiper", label: "Isolerte stålpiper", icon: Shield },
+  { href: "/tjenester#inspeksjon", label: "Inspeksjon & vurdering", icon: Eye },
+  { href: "/tjenester#service", label: "Service & vedlikehold", icon: Wrench },
+  { href: "/tjenester#taksikring", label: "Stige & taksikring", icon: Hammer },
+  { href: "/tjenester#darlig-trekk", label: "Dårlig trekk & røyksugere", icon: Wind },
+];
 
 const navLinks = [
   { href: "/", label: "Hjem" },
-  { href: "/tjenester", label: "Tjenester" },
+  { href: "/tjenester", label: "Tjenester", hasDropdown: true },
   { href: "/dokumentasjon", label: "Dokumentasjon" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/galleri", label: "Galleri" },
@@ -15,6 +26,7 @@ const navLinks = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -27,6 +39,7 @@ export function Navigation() {
 
   useEffect(() => {
     setIsOpen(false);
+    setShowServicesDropdown(false);
   }, [location]);
 
   // Prevent body scroll when menu is open
@@ -69,20 +82,78 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={cn(
-                  "text-sm font-medium transition-colors link-underline",
-                  location.pathname === link.href
-                    ? isScrolled ? "text-primary" : "text-warm-cream"
-                    : isScrolled
-                    ? "text-foreground hover:text-primary"
-                    : "text-warm-cream/90 hover:text-warm-cream"
-                )}
-              >
-                {link.label}
-              </Link>
+              link.hasDropdown ? (
+                <div
+                  key={link.href}
+                  className="relative"
+                  onMouseEnter={() => setShowServicesDropdown(true)}
+                  onMouseLeave={() => setShowServicesDropdown(false)}
+                >
+                  <Link
+                    to={link.href}
+                    className={cn(
+                      "text-sm font-medium transition-colors link-underline flex items-center gap-1",
+                      location.pathname === link.href || location.pathname.startsWith("/tjenester")
+                        ? isScrolled ? "text-primary" : "text-warm-cream"
+                        : isScrolled
+                        ? "text-foreground hover:text-primary"
+                        : "text-warm-cream/90 hover:text-warm-cream"
+                    )}
+                  >
+                    {link.label}
+                    <ChevronDown className={cn(
+                      "h-4 w-4 transition-transform duration-200",
+                      showServicesDropdown ? "rotate-180" : ""
+                    )} />
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  <div
+                    className={cn(
+                      "absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200",
+                      showServicesDropdown 
+                        ? "opacity-100 translate-y-0 pointer-events-auto" 
+                        : "opacity-0 -translate-y-2 pointer-events-none"
+                    )}
+                  >
+                    <div className="bg-background rounded-xl shadow-xl border border-border/50 p-2 min-w-[280px]">
+                      {serviceLinks.map((service) => (
+                        <Link
+                          key={service.href}
+                          to={service.href}
+                          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                        >
+                          <service.icon className="h-4 w-4 text-primary" />
+                          {service.label}
+                        </Link>
+                      ))}
+                      <div className="border-t border-border/50 mt-2 pt-2">
+                        <Link
+                          to="/tjenester"
+                          className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
+                        >
+                          Se alle tjenester
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={cn(
+                    "text-sm font-medium transition-colors link-underline",
+                    location.pathname === link.href
+                      ? isScrolled ? "text-primary" : "text-warm-cream"
+                      : isScrolled
+                      ? "text-foreground hover:text-primary"
+                      : "text-warm-cream/90 hover:text-warm-cream"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <Button 
               variant="hero" 
