@@ -20,7 +20,6 @@ const navLinks = [
   { href: "/tjenester", label: "Tjenester", hasDropdown: true },
   { href: "/dokumentasjon", label: "Dokumentasjon" },
   { href: "/om-oss", label: "Om oss" },
-  { href: "/galleri", label: "Galleri" },
 ];
 
 export function Navigation() {

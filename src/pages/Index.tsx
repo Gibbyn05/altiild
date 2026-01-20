@@ -30,7 +30,22 @@ import heroImage from "@/assets/hero-fireplace.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import pipeTak from "@/assets/pipe-tak.jpg";
-import teamImage from "@/assets/team.jpg";
+
+// Gallery images
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import galleryHvitPeis from "@/assets/gallery-hvit-peis.jpg";
+import galleryModernPeis from "@/assets/gallery-modern-peis.png";
+import galleryOvnGra from "@/assets/gallery-ovn-gra.jpg";
+import galleryOvnSvart from "@/assets/gallery-ovn-svart.jpg";
+import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
+import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
+import galleryPipeUtvendig from "@/assets/gallery-pipe-utvendig.jpg";
+import funkisOvn from "@/assets/funkis-ovn.jpg";
+import hvitOvn from "@/assets/hvit-ovn.jpg";
+import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
+import ovnSolrik from "@/assets/ovn-solrik.jpg";
 
 const services = [
   {
@@ -189,6 +204,49 @@ const testimonials = [
     text: "Dette er yrkesfaglig perfeksjonisme på sitt beste. Service langt utover det vanlige. Anbefales sterkt!",
   },
 ];
+
+const galleryImages = [
+  { src: gallery1, alt: "Peis installasjon" },
+  { src: gallery2, alt: "Vedovn montering" },
+  { src: gallery3, alt: "Pipe arbeid" },
+  { src: galleryHvitPeis, alt: "Hvit peis" },
+  { src: galleryModernPeis, alt: "Moderne peis" },
+  { src: galleryOvnGra, alt: "Grå ovn" },
+  { src: galleryOvnSvart, alt: "Svart ovn" },
+  { src: galleryPipeFjord, alt: "Pipe med fjordutsikt" },
+  { src: galleryPipeSol, alt: "Pipe i solnedgang" },
+  { src: galleryPipeUtvendig, alt: "Utvendig pipe" },
+  { src: funkisOvn, alt: "Funkis ovn" },
+  { src: hvitOvn, alt: "Hvit ovn" },
+  { src: hvitOvn2, alt: "Hvit ovn 2" },
+  { src: ovnSolrik, alt: "Ovn i solrikt rom" },
+];
+
+const GalleryCarousel = () => {
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, align: "start", dragFree: true },
+    [Autoplay({ delay: 2500, stopOnInteraction: false })]
+  );
+
+  return (
+    <div className="overflow-hidden" ref={emblaRef}>
+      <div className="flex gap-4 px-4 md:px-8">
+        {galleryImages.map((image, index) => (
+          <div
+            key={index}
+            className="flex-none w-[200px] sm:w-[280px] md:w-[320px] lg:w-[380px] aspect-[4/3] rounded-xl overflow-hidden"
+          >
+            <OptimizedImage
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const TestimonialsCarousel = () => {
   const [emblaRef] = useEmblaCarousel(
@@ -487,39 +545,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 1.6 LOKAL FORANKRING */}
-      <section className="section-padding bg-muted">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <OptimizedImage
-                src={teamImage}
-                alt="Alt i Ild i Molde"
-                className="rounded-2xl shadow-2xl w-full"
-              />
-            </div>
-            <div className="order-1 lg:order-2">
-              <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
-                Lokal forankring
-              </p>
-              <h2 className="font-display text-4xl font-semibold mb-6">
-                Molde & Møre og Romsdal
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Vi kjenner byggeskikk, klima og kommunale krav i regionen. Derfor vet vi hva som kreves for at ildsted og pipe blir godkjent uten problemer.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Molde", "Aukra", "Hustadvika", "Midsund", "Rauma", "Sunndal", "Averøy"].map((area) => (
-                  <span 
-                    key={area}
-                    className="px-4 py-2 bg-background rounded-full text-sm text-foreground border border-border"
-                  >
-                    {area}
-                  </span>
-                ))}
-              </div>
-            </div>
+      {/* 1.6 GALLERI */}
+      <section className="py-12 md:py-20 lg:py-28 bg-muted overflow-hidden">
+        <div className="container-wide mb-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
+              Vårt arbeid
+            </p>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+              Galleri
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+              Se eksempler på peiser, ovner og pipeinstallasjoner vi har utført.
+            </p>
           </div>
+        </div>
+        
+        <GalleryCarousel />
+        
+        <div className="container-wide text-center mt-8">
+          <Button variant="default" size="lg" className="text-sm md:text-base" asChild>
+            <Link to="/galleri">
+              Se hele galleriet
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 
