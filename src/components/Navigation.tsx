@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ChevronDown, Flame, Construction, Shield, Eye, Wrench, Hammer, Wind } from "lucide-react";
+import { ChevronDown, Flame, Construction, Shield, Eye, Wrench, Hammer, Wind, FileText } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const serviceLinks = [
@@ -13,12 +13,12 @@ const serviceLinks = [
   { href: "/tjenester/service", label: "Service & vedlikehold", icon: Wrench },
   { href: "/tjenester/taksikring", label: "Stige & taksikring", icon: Hammer },
   { href: "/tjenester/darlig-trekk", label: "Dårlig trekk", icon: Wind },
+  { href: "/dokumentasjon", label: "Dokumentasjon", icon: FileText },
 ];
 
 const navLinks = [
   { href: "/", label: "Hjem" },
   { href: "/tjenester", label: "Tjenester", hasDropdown: true },
-  { href: "/dokumentasjon", label: "Dokumentasjon" },
   { href: "/om-oss", label: "Om oss" },
 ];
 
