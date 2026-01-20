@@ -32,11 +32,6 @@ const documentationSteps = [
     title: "Ferdigmelding til brannvesen",
     description: "Når jobben er ferdig, sender vi ferdigmelding til lokalt brannvesen for godkjenning.",
   },
-  {
-    icon: Home,
-    title: "Boligmappa",
-    description: "All dokumentasjon lastes opp til din Boligmappa for trygg oppbevaring.",
-  },
 ];
 
 const whyImportant = [
@@ -148,19 +143,23 @@ const Dokumentasjon = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
             {documentationSteps.map((step, index) => (
-              <div key={step.title} className="bg-background rounded-2xl p-6 text-center hover-lift">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground mb-4">
-                  <step.icon className="h-6 w-6" />
+              <div key={step.title} className="flex items-center">
+                <div className="bg-background rounded-2xl p-6 text-center hover-lift w-full md:w-auto md:min-w-[280px]">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground mb-4">
+                    <step.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    {step.description}
+                  </p>
                 </div>
-                <div className="text-primary font-bold text-sm mb-2">0{index + 1}</div>
-                <h3 className="font-display text-lg font-semibold mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {step.description}
-                </p>
+                {index < documentationSteps.length - 1 && (
+                  <ArrowRight className="hidden md:block h-8 w-8 text-primary mx-4 flex-shrink-0" />
+                )}
               </div>
             ))}
           </div>
