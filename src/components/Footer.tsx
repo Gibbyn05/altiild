@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, Facebook } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { PrivacyPolicyDialog } from "./PrivacyPolicyDialog";
 import { TermsDialog } from "./TermsDialog";
@@ -85,6 +85,17 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-primary" />
                 <a href="mailto:post@altiild.no" className="hover:text-primary transition-colors">
                   post@altiild.no
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-secondary-foreground/80">
+                <Facebook className="h-5 w-5 text-primary" />
+                <a 
+                  href="https://www.facebook.com/p/Alt-I-Ild-As-61574577441905/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Facebook
                 </a>
               </li>
             </ul>
