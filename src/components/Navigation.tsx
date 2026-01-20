@@ -12,7 +12,7 @@ const serviceLinks = [
   { href: "/tjenester/inspeksjon", label: "Inspeksjon & vurdering", icon: Eye },
   { href: "/tjenester/service", label: "Service & vedlikehold", icon: Wrench },
   { href: "/tjenester/taksikring", label: "Stige & taksikring", icon: Hammer },
-  { href: "/tjenester/darlig-trekk", label: "Dårlig trekk & røyksugere", icon: Wind },
+  { href: "/tjenester/darlig-trekk", label: "Dårlig trekk", icon: Wind },
 ];
 
 const navLinks = [
