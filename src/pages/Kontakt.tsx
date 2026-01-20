@@ -195,8 +195,9 @@ const Kontakt = () => {
           phone: formData.phone,
           address: formData.address,
           subject: formData.service || "Henvendelse",
-          message: `${formData.message}${firingBanText}`,
+          message: formData.message,
           imageUrls,
+          hasFiringBan: formData.hasFiringBan,
         },
       });
 
