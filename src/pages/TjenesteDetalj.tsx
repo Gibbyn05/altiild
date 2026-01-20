@@ -267,7 +267,7 @@ const TjenesteDetalj = () => {
                     Trenger du hjelp?
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    Vi tilbyr gratis og uforpliktende befaring i hele Møre og Romsdal.
+                    Vi tilbyr gratis og uforpliktende befaring.
                   </p>
                   <Button variant="hero" size="lg" className="w-full" asChild>
                     <Link to="/kontakt">
