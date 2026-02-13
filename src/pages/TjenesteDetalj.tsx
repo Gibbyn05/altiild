@@ -251,6 +251,26 @@ const TjenesteDetalj = () => {
                 </div>
               )}
 
+              {service.galleryImages && service.galleryImages.length > 0 && (
+                <div>
+                  <h2 className="font-display text-xl md:text-2xl font-semibold mb-4">
+                    Bilder fra våre prosjekter
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {service.galleryImages.map((img, idx) => (
+                      <div key={idx} className="rounded-xl overflow-hidden border border-border/50">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {service.conclusion && (
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   {service.conclusion}
