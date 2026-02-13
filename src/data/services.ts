@@ -12,9 +12,13 @@ import {
 import pipeTak from "@/assets/pipe-tak.jpg";
 import tjenesterPeis from "@/assets/tjenester-peis.png";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
+import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
+import ovnSolrik from "@/assets/ovn-solrik.jpg";
 import funkisOvn from "@/assets/funkis-ovn.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import takUtside from "@/assets/tak-utside.jpg";
+import takInnside from "@/assets/tak-innside.jpg";
+import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 
 export interface ServiceData {
   id: string;
@@ -24,6 +28,7 @@ export interface ServiceData {
   shortTitle: string;
   description: string;
   image: string;
+  galleryImages?: { src: string; alt: string }[];
   intro?: string;
   features?: string[];
   problems?: string[];
@@ -56,6 +61,11 @@ export const services: ServiceData[] = [
     shortTitle: "Peis og ovn",
     description: "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal – for både nye og eldre boliger.",
     image: hvitOvn,
+    galleryImages: [
+      { src: hvitOvn, alt: "Hvit peis med glassdør – moderne installasjon" },
+      { src: hvitOvn2, alt: "Hvit hjørnepeis med tre-sidig glass" },
+      { src: ovnSolrik, alt: "Vedovn i solrik veranda" },
+    ],
     intro: "Vi vurderer alltid:",
     features: [
       "Trekkforhold i skorsteinen",
@@ -78,6 +88,11 @@ export const services: ServiceData[] = [
     shortTitle: "Piperehabilitering",
     description: "En slitt eller skadet pipe kan føre til dårlig trekk, sotlukt, røyklekkasje, sprekkdannelser og i verste fall fyringsforbud. Alt i Ild AS er spesialister på piperehabilitering i Molde og hele Møre og Romsdal.",
     image: pipeTak,
+    galleryImages: [
+      { src: galleryPipeFjord, alt: "Rehabilitert pipe med utsikt over fjorden" },
+      { src: takUtside, alt: "Piperehabilitering sett fra utsiden av taket" },
+      { src: takInnside, alt: "Pipe- og takarbeid sett fra innsiden" },
+    ],
     intro: "Vanlige tegn på at pipe må rehabiliteres:",
     problems: [
       "Røyk kommer ut i rommet",
