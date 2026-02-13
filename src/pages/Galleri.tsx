@@ -25,11 +25,18 @@ import takUtside from "@/assets/tak-utside.jpg";
 // New gallery images
 import galleryModernPeis from "@/assets/gallery-modern-peis.png";
 import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
-
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 import galleryOvnGra from "@/assets/gallery-ovn-gra.jpg";
 import galleryPipeUtvendig from "@/assets/gallery-pipe-utvendig.jpg";
 import galleryOvnSvart from "@/assets/gallery-ovn-svart.jpg";
+import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
+import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
+import galleryTakstigePlatetak from "@/assets/gallery-takstige-platetak.jpg";
+import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
+import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
+import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
+import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
+import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
 
 // Before/After images
 import beforeFireplace from "@/assets/before-fireplace.jpg";
