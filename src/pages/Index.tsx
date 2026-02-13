@@ -46,6 +46,16 @@ import funkisOvn from "@/assets/funkis-ovn.jpg";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
 import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
 import ovnSolrik from "@/assets/ovn-solrik.jpg";
+import takInnside from "@/assets/tak-innside.jpg";
+import takUtside from "@/assets/tak-utside.jpg";
+import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
+import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
+import galleryTakstigePlatetak from "@/assets/gallery-takstige-platetak.jpg";
+import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
+import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
+import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
+import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
+import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
 
 const services = [
   {

@@ -130,6 +130,12 @@ export const services: ServiceData[] = [
     shortTitle: "Stålpiper",
     description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
+    galleryImages: [
+      { src: funkisOvn, alt: "Funkis-peis i moderne hytte" },
+      { src: galleryStalpipeSvart, alt: "Svart stålpipe på tak" },
+      { src: galleryStalpipeFeieplattform, alt: "Stålpipe med feieplattform" },
+      { src: galleryStalpipePlatetak, alt: "Stålpipe montert på platetak" },
+    ],
     intro: "Fordeler med stålpipe:",
     suitableFor: [
       "Rask installasjon",
@@ -216,6 +222,13 @@ export const services: ServiceData[] = [
     shortTitle: "Taksikring",
     description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
     image: pipeTak,
+    galleryImages: [
+      { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak" },
+      { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak" },
+      { src: galleryStalpipeTakstige, alt: "Stålpipe med takstige og feieplattform" },
+      { src: galleryTakstigePipe, alt: "Takstige langs pipe på husvegg" },
+      { src: galleryPipeRehab, alt: "Rehabilitert pipe med takstige" },
+    ],
     intro: "Vi monterer:",
     includes: [
       "Pipestige",
