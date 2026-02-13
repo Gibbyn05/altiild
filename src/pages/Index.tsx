@@ -46,6 +46,16 @@ import funkisOvn from "@/assets/funkis-ovn.jpg";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
 import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
 import ovnSolrik from "@/assets/ovn-solrik.jpg";
+import takInnside from "@/assets/tak-innside.jpg";
+import takUtside from "@/assets/tak-utside.jpg";
+import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
+import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
+import galleryTakstigePlatetak from "@/assets/gallery-takstige-platetak.jpg";
+import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
+import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
+import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
+import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
+import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
 
 const services = [
   {
@@ -206,20 +216,21 @@ const testimonials = [
 ];
 
 const galleryImages = [
-  { src: gallery1, alt: "Peis installasjon" },
-  { src: gallery2, alt: "Vedovn montering" },
-  { src: gallery3, alt: "Pipe arbeid" },
-  { src: galleryHvitPeis, alt: "Hvit peis" },
-  { src: galleryModernPeis, alt: "Moderne peis" },
-  { src: galleryOvnGra, alt: "Grå ovn" },
-  { src: galleryOvnSvart, alt: "Svart ovn" },
-  { src: galleryPipeFjord, alt: "Pipe med fjordutsikt" },
-  { src: galleryPipeSol, alt: "Pipe i solnedgang" },
-  { src: galleryPipeUtvendig, alt: "Utvendig pipe" },
-  { src: funkisOvn, alt: "Funkis ovn" },
-  { src: hvitOvn, alt: "Hvit ovn" },
-  { src: hvitOvn2, alt: "Hvit ovn 2" },
-  { src: ovnSolrik, alt: "Ovn i solrikt rom" },
+  { src: hvitOvn, alt: "Hvit frittstående peis" },
+  { src: hvitOvn2, alt: "Hvit hjørnepeis med treveis glass" },
+  { src: funkisOvn, alt: "Funkis-peis i moderne hytte" },
+  { src: ovnSolrik, alt: "Vedovn i solrik hagestue" },
+  { src: galleryPipeFjord, alt: "Pipe med fjordutsikt og cruiseskip" },
+  { src: takUtside, alt: "Takarbeid sett fra utsiden" },
+  { src: takInnside, alt: "Hagestue med ovn sett innenfra" },
+  { src: galleryPipeRehab, alt: "Rehabilitert pipe med takstige" },
+  { src: galleryStalpipeSvart, alt: "Svart stålpipe på tak" },
+  { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak" },
+  { src: galleryTakstigeSno, alt: "Takstige på snødekt tak" },
+  { src: galleryStalpipeTakstige, alt: "Stålpipe med takstige og feieplattform" },
+  { src: galleryTakstigePipe, alt: "Takstige langs husvegg" },
+  { src: galleryStalpipePlatetak, alt: "Stålpipe og takstige på platetak" },
+  { src: galleryStalpipeFeieplattform, alt: "Stålpipe med feieplattform" },
 ];
 
 const GalleryCarousel = () => {

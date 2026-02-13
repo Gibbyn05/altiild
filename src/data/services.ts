@@ -19,6 +19,14 @@ import installationImage from "@/assets/installation-work.jpg";
 import takUtside from "@/assets/tak-utside.jpg";
 import takInnside from "@/assets/tak-innside.jpg";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
+import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
+import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
+import galleryTakstigePlatetak from "@/assets/gallery-takstige-platetak.jpg";
+import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
+import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
+import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
+import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
+import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
 
 export interface ServiceData {
   id: string;
@@ -122,6 +130,12 @@ export const services: ServiceData[] = [
     shortTitle: "Stålpiper",
     description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
+    galleryImages: [
+      { src: funkisOvn, alt: "Funkis-peis i moderne hytte" },
+      { src: galleryStalpipeSvart, alt: "Svart stålpipe på tak" },
+      { src: galleryStalpipeFeieplattform, alt: "Stålpipe med feieplattform" },
+      { src: galleryStalpipePlatetak, alt: "Stålpipe montert på platetak" },
+    ],
     intro: "Fordeler med stålpipe:",
     suitableFor: [
       "Rask installasjon",
@@ -208,6 +222,13 @@ export const services: ServiceData[] = [
     shortTitle: "Taksikring",
     description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
     image: pipeTak,
+    galleryImages: [
+      { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak" },
+      { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak" },
+      { src: galleryStalpipeTakstige, alt: "Stålpipe med takstige og feieplattform" },
+      { src: galleryTakstigePipe, alt: "Takstige langs pipe på husvegg" },
+      { src: galleryPipeRehab, alt: "Rehabilitert pipe med takstige" },
+    ],
     intro: "Vi monterer:",
     includes: [
       "Pipestige",

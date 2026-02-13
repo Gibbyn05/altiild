@@ -25,11 +25,18 @@ import takUtside from "@/assets/tak-utside.jpg";
 // New gallery images
 import galleryModernPeis from "@/assets/gallery-modern-peis.png";
 import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
-
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 import galleryOvnGra from "@/assets/gallery-ovn-gra.jpg";
 import galleryPipeUtvendig from "@/assets/gallery-pipe-utvendig.jpg";
 import galleryOvnSvart from "@/assets/gallery-ovn-svart.jpg";
+import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
+import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
+import galleryTakstigePlatetak from "@/assets/gallery-takstige-platetak.jpg";
+import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
+import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
+import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
+import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
+import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
 
 // Before/After images
 import beforeFireplace from "@/assets/before-fireplace.jpg";
@@ -117,6 +124,86 @@ const projects = [
     location: "Molde",
     category: "Ovn",
     description: "Elegant svart vedovn på glassplate mellom store vinduer med vinterutsikt.",
+  },
+  {
+    id: 15,
+    image: galleryPipeRehab,
+    title: "Rehabilitert pipe med takstige",
+    location: "Molde",
+    category: "Installasjon",
+    description: "Pipe rehabilitert med ny beslag og takstige på tegltak.",
+  },
+  {
+    id: 16,
+    image: galleryStalpipeSvart,
+    title: "Svart stålpipe på tak",
+    location: "Molde",
+    category: "Installasjon",
+    description: "Ny svart stålpipe montert på sort takstein med snøfangere.",
+  },
+  {
+    id: 17,
+    image: galleryTakstigePlatetak,
+    title: "Takstige på platetak",
+    location: "Møre og Romsdal",
+    category: "Taksikring",
+    description: "Takstige montert på platetak for trygg tilkomst til pipe for feiing.",
+  },
+  {
+    id: 18,
+    image: galleryTakstigeSno,
+    title: "Takstige og pipe vinterstid",
+    location: "Møre og Romsdal",
+    category: "Taksikring",
+    description: "Takstige og pipe på snødekt platetak med stålpipe og feieplattform.",
+  },
+  {
+    id: 19,
+    image: galleryStalpipeTakstige,
+    title: "Stålpipe med feieplattform",
+    location: "Møre og Romsdal",
+    category: "Installasjon",
+    description: "Stålpipe med feieplattform og takstige på tak med vinterlys.",
+  },
+  {
+    id: 20,
+    image: galleryTakstigePipe,
+    title: "Takstige langs husvegg",
+    location: "Møre og Romsdal",
+    category: "Taksikring",
+    description: "Takstige montert langs husvegg for tilkomst til pipe og tak.",
+  },
+  {
+    id: 21,
+    image: galleryStalpipePlatetak,
+    title: "Stålpipe og takstige på platetak",
+    location: "Møre og Romsdal",
+    category: "Installasjon",
+    description: "Stålpipe med stigetrinn og feieplattform montert på sort platetak i skogen.",
+  },
+  {
+    id: 22,
+    image: galleryStalpipeFeieplattform,
+    title: "Stålpipe med feieplattform",
+    location: "Møre og Romsdal",
+    category: "Installasjon",
+    description: "Isolert stålpipe med barduner og feieplattform montert på platetak.",
+  },
+  {
+    id: 23,
+    image: takInnside,
+    title: "Hagestue med ovn",
+    location: "Møre og Romsdal",
+    category: "Ovn",
+    description: "Vedovn installert i moderne hagestue med glasstak og utsikt.",
+  },
+  {
+    id: 24,
+    image: takUtside,
+    title: "Takarbeid utvendig",
+    location: "Møre og Romsdal",
+    category: "Installasjon",
+    description: "Takarbeid og pipegjennomføring sett fra utsiden.",
   },
 ];
 
