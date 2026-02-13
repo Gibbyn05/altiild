@@ -19,6 +19,14 @@ import installationImage from "@/assets/installation-work.jpg";
 import takUtside from "@/assets/tak-utside.jpg";
 import takInnside from "@/assets/tak-innside.jpg";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
+import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
+import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
+import galleryTakstигеPlatetak from "@/assets/gallery-takstige-platetak.jpg";
+import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
+import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
+import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
+import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
+import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
 
 export interface ServiceData {
   id: string;
