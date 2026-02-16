@@ -224,7 +224,6 @@ export const services: ServiceData[] = [
     galleryImages: [
       { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak – Alt i Ild Molde" },
       { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak – Alt i Ild" },
-      { src: galleryStalpipeTakstige, alt: "Gjennomføring i tak med laser – stålpipe Alt i Ild Molde" },
       { src: galleryTakstigePipe, alt: "Takstige langs pipe på husvegg – Alt i Ild" },
       { src: galleryPipeRehab, alt: "Piperehabilitering foringsrør ovenfra – Alt i Ild Molde" },
     ],
