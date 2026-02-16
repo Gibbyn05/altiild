@@ -256,7 +256,7 @@ const TjenesteDetalj = () => {
                   <h2 className="font-display text-xl md:text-2xl font-semibold mb-4">
                     Bilder fra våre prosjekter
                   </h2>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {service.galleryImages.map((img, idx) => (
                       <div key={idx} className="rounded-xl overflow-hidden border border-border/50">
                         <img
