@@ -256,13 +256,13 @@ const TjenesteDetalj = () => {
                   <h2 className="font-display text-xl md:text-2xl font-semibold mb-4">
                     Bilder fra våre prosjekter
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     {service.galleryImages.map((img, idx) => (
-                      <div key={idx} className="rounded-xl overflow-hidden border border-border/50 bg-muted/30">
+                      <div key={idx} className="rounded-xl overflow-hidden border border-border/50">
                         <img
                           src={img.src}
                           alt={img.alt}
-                          className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300"
+                          className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                         />
                       </div>
