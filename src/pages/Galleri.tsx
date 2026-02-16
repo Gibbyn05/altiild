@@ -88,10 +88,10 @@ const projects = [
   {
     id: 9,
     image: galleryPipeSol,
-    title: "Pipe i motlys",
+    title: "Pipehatt på hytte",
     location: "Molde",
     category: "Installasjon",
-    description: "Profesjonell pipemontasje på tak med utsikt over Molde og fjellene i bakgrunnen.",
+    description: "Stålpipe med pipehatt montert på hytte – Alt i Ild Molde.",
   },
   {
     id: 11,
@@ -112,10 +112,10 @@ const projects = [
   {
     id: 13,
     image: galleryPipeUtvendig,
-    title: "Utvendig stålpipe",
+    title: "Pipehatt på tak",
     location: "Molde",
     category: "Installasjon",
-    description: "Profesjonell utvendig pipemontasje langs husvegg med flott fjellutsikt i bakgrunnen.",
+    description: "Svart pipehatt og beslag montert på tak – Alt i Ild Molde.",
   },
   {
     id: 14,
@@ -128,18 +128,18 @@ const projects = [
   {
     id: 15,
     image: galleryPipeRehab,
-    title: "Rehabilitert pipe med takstige",
+    title: "Piperehabilitering – foringsrør",
     location: "Molde",
     category: "Installasjon",
-    description: "Pipe rehabilitert med ny beslag og takstige på tegltak.",
+    description: "Piperehabilitering med keramiske foringsrør sett ovenfra – Alt i Ild Molde.",
   },
   {
     id: 16,
     image: galleryStalpipeSvart,
-    title: "Svart stålpipe på tak",
+    title: "Isolert stålpipe veggmontert",
     location: "Molde",
     category: "Installasjon",
-    description: "Ny svart stålpipe montert på sort takstein med snøfangere.",
+    description: "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt – Alt i Ild Molde.",
   },
   {
     id: 17,
@@ -160,10 +160,10 @@ const projects = [
   {
     id: 19,
     image: galleryStalpipeTakstige,
-    title: "Stålpipe med feieplattform",
+    title: "Gjennomføring i tak – stålpipe",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Stålpipe med feieplattform og takstige på tak med vinterlys.",
+    description: "Gjennomføring av stålpipe i tak med lasermåling – Alt i Ild Molde.",
   },
   {
     id: 20,
@@ -176,18 +176,18 @@ const projects = [
   {
     id: 21,
     image: galleryStalpipePlatetak,
-    title: "Stålpipe og takstige på platetak",
+    title: "Stålpipe gjennom vinterhage",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Stålpipe med stigetrinn og feieplattform montert på sort platetak i skogen.",
+    description: "Isolert stålpipe montert gjennom vinterhage med pipehatt – Alt i Ild Molde.",
   },
   {
     id: 22,
     image: galleryStalpipeFeieplattform,
-    title: "Stålpipe med feieplattform",
+    title: "Utvendig stålpipe på hus",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Isolert stålpipe med barduner og feieplattform montert på platetak.",
+    description: "Utvendig isolert stålpipe montert på moderne hus – Alt i Ild Molde.",
   },
   {
     id: 23,
