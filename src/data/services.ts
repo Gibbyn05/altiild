@@ -97,9 +97,9 @@ export const services: ServiceData[] = [
     description: "En slitt eller skadet pipe kan føre til dårlig trekk, sotlukt, røyklekkasje, sprekkdannelser og i verste fall fyringsforbud. Alt i Ild AS er spesialister på piperehabilitering i Molde og hele Møre og Romsdal.",
     image: pipeTak,
     galleryImages: [
-      { src: galleryPipeFjord, alt: "Rehabilitert pipe med utsikt over fjorden" },
-      { src: takUtside, alt: "Piperehabilitering sett fra utsiden av taket" },
-      { src: takInnside, alt: "Pipe- og takarbeid sett fra innsiden" },
+      { src: galleryPipeFjord, alt: "Rehabilitert pipe med utsikt over fjorden – Alt i Ild Molde" },
+      { src: takUtside, alt: "Piperehabilitering sett fra utsiden av taket – Alt i Ild Molde" },
+      { src: takInnside, alt: "Pipe- og takarbeid sett fra innsiden – Alt i Ild Molde" },
     ],
     intro: "Vanlige tegn på at pipe må rehabiliteres:",
     problems: [
@@ -132,9 +132,9 @@ export const services: ServiceData[] = [
     image: funkisOvn,
     galleryImages: [
       { src: funkisOvn, alt: "Funkis-peis i moderne hytte" },
-      { src: galleryStalpipeSvart, alt: "Svart stålpipe på tak" },
-      { src: galleryStalpipeFeieplattform, alt: "Stålpipe med feieplattform" },
-      { src: galleryStalpipePlatetak, alt: "Stålpipe montert på platetak" },
+      { src: galleryStalpipeSvart, alt: "Isolert stålpipe veggmontert – Alt i Ild Molde" },
+      { src: galleryStalpipeFeieplattform, alt: "Utvendig stålpipe på hus – Alt i Ild Molde" },
+      { src: galleryStalpipePlatetak, alt: "Stålpipe gjennom vinterhage – piperehabilitering Molde" },
     ],
     intro: "Fordeler med stålpipe:",
     suitableFor: [
@@ -223,11 +223,11 @@ export const services: ServiceData[] = [
     description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
     image: pipeTak,
     galleryImages: [
-      { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak" },
-      { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak" },
-      { src: galleryStalpipeTakstige, alt: "Stålpipe med takstige og feieplattform" },
-      { src: galleryTakstigePipe, alt: "Takstige langs pipe på husvegg" },
-      { src: galleryPipeRehab, alt: "Rehabilitert pipe med takstige" },
+      { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak – Alt i Ild Molde" },
+      { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak – Alt i Ild" },
+      { src: galleryStalpipeTakstige, alt: "Gjennomføring i tak med laser – stålpipe Alt i Ild Molde" },
+      { src: galleryTakstigePipe, alt: "Takstige langs pipe på husvegg – Alt i Ild" },
+      { src: galleryPipeRehab, alt: "Piperehabilitering foringsrør ovenfra – Alt i Ild Molde" },
     ],
     intro: "Vi monterer:",
     includes: [
