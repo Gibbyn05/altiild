@@ -219,35 +219,6 @@ const Dokumentasjon = () => {
         </div>
       </section>
 
-      {/* Boligmappa Section */}
-      <section className="section-padding bg-muted">
-        <div className="container-wide">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-              <Building className="h-8 w-8 text-primary" />
-            </div>
-            <h2 className="font-display text-4xl font-semibold mb-6">
-              Boligmappa
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Boligmappa er Norges digitale plattform for boligdokumentasjon. 
-              All dokumentasjon fra Alt i Ild lastes automatisk opp til din Boligmappa, 
-              slik at du alltid har tilgang til viktig informasjon om boligen din.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {["Sikker oppbevaring", "Alltid tilgjengelig", "Verdifullt ved salg", "Enkel oversikt"].map((item) => (
-                <span 
-                  key={item}
-                  className="px-4 py-2 bg-background rounded-full text-sm text-foreground border border-border"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="relative py-32">
         <div 
