@@ -258,11 +258,11 @@ const TjenesteDetalj = () => {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {service.galleryImages.map((img, idx) => (
-                      <div key={idx} className="rounded-xl overflow-hidden border border-border/50 aspect-[4/3]">
+                      <div key={idx} className="rounded-xl overflow-hidden border border-border/50">
                         <img
                           src={img.src}
                           alt={img.alt}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          className="w-full h-auto block hover:scale-105 transition-transform duration-300"
                           loading="lazy"
                         />
                       </div>
