@@ -27,6 +27,11 @@ import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
 import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
 import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
 import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
+import galleryExodraft1 from "@/assets/gallery-exodraft-1.jpg";
+import galleryExodraft2 from "@/assets/gallery-exodraft-2.jpg";
+import galleryExodraft3 from "@/assets/gallery-exodraft-3.jpg";
+import galleryPipehatt1 from "@/assets/gallery-pipehatt-1.jpg";
+import galleryPipehatt2 from "@/assets/gallery-pipehatt-2.jpg";
 
 export interface ServiceData {
   id: string;
@@ -247,6 +252,13 @@ export const services: ServiceData[] = [
     shortTitle: "Dårlig trekk",
     description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt – spesielt i moderne, tette boliger.",
     image: takUtside,
+    galleryImages: [
+      { src: galleryExodraft1, alt: "Exodraft røyksuger på pipe med fjordutsikt – Alt i Ild Molde" },
+      { src: galleryExodraft2, alt: "Exodraft røyksuger montert på tegltak – Alt i Ild" },
+      { src: galleryExodraft3, alt: "Exodraft røyksuger nærbilde – piperehabilitering Molde" },
+      { src: galleryPipehatt1, alt: "Roterende pipehatt med fjordutsikt – Alt i Ild" },
+      { src: galleryPipehatt2, alt: "Roterende pipehatt nærbilde – dårlig trekk løsning" },
+    ],
     intro: "Vanlige årsaker til dårlig trekk:",
     causes: [
       "Undertrykk i huset",
