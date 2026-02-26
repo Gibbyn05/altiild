@@ -32,6 +32,13 @@ import galleryExodraft2 from "@/assets/gallery-exodraft-2.jpg";
 import galleryExodraft3 from "@/assets/gallery-exodraft-3.jpg";
 import galleryPipehatt1 from "@/assets/gallery-pipehatt-1.jpg";
 import galleryPipehatt2 from "@/assets/gallery-pipehatt-2.jpg";
+import galleryStalpipe1 from "@/assets/gallery-stalpipe-1.jpg";
+import galleryStalpipe2 from "@/assets/gallery-stalpipe-2.jpg";
+import galleryStalpipe3 from "@/assets/gallery-stalpipe-3.jpg";
+import galleryStalpipe4 from "@/assets/gallery-stalpipe-4.jpg";
+import galleryStalpipe5 from "@/assets/gallery-stalpipe-5.jpg";
+import galleryStalpipe6 from "@/assets/gallery-stalpipe-6.jpg";
+import galleryStalpipe7 from "@/assets/gallery-stalpipe-7.jpg";
 
 export interface ServiceData {
   id: string;
@@ -136,9 +143,13 @@ export const services: ServiceData[] = [
     description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
     galleryImages: [
-      { src: galleryStalpipeSvart, alt: "Isolert stålpipe veggmontert – Alt i Ild Molde" },
-      { src: galleryStalpipeFeieplattform, alt: "Utvendig stålpipe på hus – Alt i Ild Molde" },
-      { src: galleryStalpipePlatetak, alt: "Stålpipe gjennom vinterhage – piperehabilitering Molde" },
+      { src: galleryStalpipe3, alt: "Svart stålpipe montert på husvegg" },
+      { src: galleryStalpipe5, alt: "Utvendig stålpipe på hvit trevegg" },
+      { src: galleryStalpipe7, alt: "Moderne peisovn med stålpipe innvendig" },
+      { src: galleryStalpipe2, alt: "Stålpipe gjennomføring på tak" },
+      { src: galleryStalpipe4, alt: "Stålpipe gjennom glasstak i vinterhage" },
+      { src: galleryStalpipe1, alt: "Pipehatt sett ovenfra" },
+      { src: galleryStalpipe6, alt: "Gjennomføring i vegg klargjort for stålpipe" },
     ],
     intro: "Fordeler med stålpipe:",
     suitableFor: [
