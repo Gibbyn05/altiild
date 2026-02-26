@@ -13,8 +13,7 @@ import {
   AlertTriangle
 } from "lucide-react";
 
-import installationImage from "@/assets/installation-work.jpg";
-import pipeTak from "@/assets/pipe-tak.jpg";
+import dokumentasjonHero from "@/assets/dokumentasjon-hero.png";
 
 const documentationSteps = [
   {
@@ -69,7 +68,7 @@ const Dokumentasjon = () => {
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${installationImage})` }}
+          style={{ backgroundImage: `url(${dokumentasjonHero})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
         </div>
@@ -119,7 +118,7 @@ const Dokumentasjon = () => {
             </div>
             <div>
               <img
-                src={pipeTak}
+                src={dokumentasjonHero}
                 alt="Dokumentert pipeinstallasjon"
                 className="rounded-2xl shadow-xl w-full"
               />
@@ -253,7 +252,7 @@ const Dokumentasjon = () => {
       <section className="relative py-32">
         <div 
           className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: `url(${installationImage})` }}
+          style={{ backgroundImage: `url(${dokumentasjonHero})` }}
         >
           <div className="absolute inset-0 bg-charcoal/80" />
         </div>
