@@ -48,7 +48,7 @@ export interface ServiceData {
   shortTitle: string;
   description: string;
   image: string;
-  galleryImages?: { src: string; alt: string; zoom?: boolean }[];
+  galleryImages?: { src: string; alt: string; zoom?: boolean; objectPosition?: string }[];
   intro?: string;
   features?: string[];
   problems?: string[];
@@ -146,7 +146,8 @@ export const services: ServiceData[] = [
       { src: galleryStalpipe3, alt: "Svart stålpipe montert på husvegg" },
       { src: galleryStalpipe5, alt: "Utvendig stålpipe på hvit trevegg" },
       { src: galleryStalpipe7, alt: "Moderne peisovn med stålpipe innvendig", zoom: true },
-      { src: galleryStalpipe4, alt: "Stålpipe gjennom glasstak i vinterhage", zoom: true },
+      { src: galleryStalpipe2, alt: "Stålpipe gjennomføring på tak" },
+      { src: galleryStalpipe4, alt: "Stålpipe gjennom glasstak i vinterhage", zoom: true, objectPosition: "center 60%" },
       { src: galleryStalpipe6, alt: "Gjennomføring i vegg klargjort for stålpipe" },
     ],
     intro: "Fordeler med stålpipe:",
