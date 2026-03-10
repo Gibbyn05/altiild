@@ -48,7 +48,7 @@ export interface ServiceData {
   shortTitle: string;
   description: string;
   image: string;
-  galleryImages?: { src: string; alt: string; zoom?: boolean }[];
+  galleryImages?: { src: string; alt: string; zoom?: boolean; objectPosition?: string }[];
   intro?: string;
   features?: string[];
   problems?: string[];
