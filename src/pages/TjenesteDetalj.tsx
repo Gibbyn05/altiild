@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
+import ImageLightbox from "@/components/ImageLightbox";
 import { ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
 import { getServiceBySlug, services } from "@/data/services";
 
