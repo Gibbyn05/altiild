@@ -261,16 +261,21 @@ const TjenesteDetalj = () => {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {service.galleryImages.map((img, idx) => (
-                      <figure key={idx} className="rounded-xl overflow-hidden border border-border/50">
+                      <figure
+                        key={idx}
+                        className="rounded-xl overflow-hidden border border-border/50 cursor-pointer"
+                        onClick={() => setLightbox({ src: img.src, alt: img.alt })}
+                      >
                         <div className="aspect-[4/3] overflow-hidden">
                           <img
                             src={img.src}
                             alt={img.alt}
                             className={`w-full h-full object-cover block hover:scale-105 transition-transform duration-300 ${img.zoom ? 'scale-125' : ''}`}
+                            style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
                             loading="lazy"
                           />
                         </div>
-                        <figcaption className="text-xs text-muted-foreground px-3 py-2 text-center">
+                        <figcaption className="text-[10px] text-muted-foreground/60 px-2 py-1 text-center">
                           {img.alt}
                         </figcaption>
                       </figure>
