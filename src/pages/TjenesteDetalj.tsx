@@ -409,6 +409,12 @@ const TjenesteDetalj = () => {
           </div>
         </div>
       </section>
+      <ImageLightbox
+        src={lightbox?.src || ""}
+        alt={lightbox?.alt || ""}
+        isOpen={!!lightbox}
+        onClose={() => setLightbox(null)}
+      />
     </Layout>
   );
 };
