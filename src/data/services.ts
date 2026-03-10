@@ -145,10 +145,8 @@ export const services: ServiceData[] = [
     galleryImages: [
       { src: galleryStalpipe3, alt: "Svart stålpipe montert på husvegg" },
       { src: galleryStalpipe5, alt: "Utvendig stålpipe på hvit trevegg" },
-      { src: galleryStalpipe7, alt: "Moderne peisovn med stålpipe innvendig" },
-      { src: galleryStalpipe2, alt: "Stålpipe gjennomføring på tak" },
-      { src: galleryStalpipe4, alt: "Stålpipe gjennom glasstak i vinterhage" },
-      { src: galleryStalpipe1, alt: "Pipehatt sett ovenfra" },
+      { src: galleryStalpipe7, alt: "Moderne peisovn med stålpipe innvendig", zoom: true },
+      { src: galleryStalpipe4, alt: "Stålpipe gjennom glasstak i vinterhage", zoom: true },
       { src: galleryStalpipe6, alt: "Gjennomføring i vegg klargjort for stålpipe" },
     ],
     intro: "Fordeler med stålpipe:",
