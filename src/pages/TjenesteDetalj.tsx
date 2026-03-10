@@ -10,6 +10,7 @@ import { getServiceBySlug, services } from "@/data/services";
 const TjenesteDetalj = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? getServiceBySlug(slug) : undefined;
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   if (!service) {
     return <Navigate to="/tjenester" replace />;
