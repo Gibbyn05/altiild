@@ -283,7 +283,7 @@ const Kontakt = () => {
               Kontakt oss
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
-              Du er alltid velkommen til å ta kontakt med oss – enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.
+              Du er alltid velkommen til å ta kontakt med oss - enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.
             </p>
           </div>
         </div>
