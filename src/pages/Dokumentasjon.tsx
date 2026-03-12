@@ -176,7 +176,7 @@ const Dokumentasjon = () => {
                   <h3 className="font-display text-xl font-semibold">Ferdigmelding & dokumentpakke</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Når arbeidet er ferdig, tar vi oss av alt som gjelder ferdigmelding og godkjenning. Du skal ikke fylle ut skjemaer, kontakte kommunen eller sende inn dokumenter – det gjør vi.
+                  Når arbeidet er ferdig, tar vi oss av alt som gjelder ferdigmelding og godkjenning. Du skal ikke fylle ut skjemaer, kontakte kommunen eller sende inn dokumenter - det gjør vi.
                 </p>
                 <p className="font-medium mb-3">Dette gjør vi for deg:</p>
                 <ul className="space-y-4">
