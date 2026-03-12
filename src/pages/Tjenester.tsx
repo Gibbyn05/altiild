@@ -110,7 +110,7 @@ const services = [
       "Lufttilførsel i rommet",
       "Eventuelle brannfarlige forhold",
     ],
-    conclusion: "Vi gir deg en tydelig rapport med anbefalt løsning – enten det gjelder mindre utbedringer, service eller full piperehabilitering.",
+    conclusion: "Vi gir deg en tydelig rapport med anbefalt løsning - enten det gjelder mindre utbedringer, service eller full piperehabilitering.",
   },
   {
     id: "service",
