@@ -37,7 +37,7 @@ const services = [
       "Gulvplate og brannsikring",
       "Tilstand på eksisterende skorstein",
     ],
-    conclusion: "Målet er en installasjon som fungerer optimalt fra første fyring – uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne.",
+    conclusion: "Målet er en installasjon som fungerer optimalt fra første fyring - uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne.",
   },
   {
     id: "piperehabilitering",
