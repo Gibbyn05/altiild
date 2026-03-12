@@ -84,7 +84,7 @@ const services = [
   {
     icon: Shield,
     title: "Montering av stålpiper",
-    description: "Vi leverer og monterer isolert stålpipe – en fleksibel og trygg løsning når boligen mangler skorstein eller når ildstedet må plasseres annerledes.",
+    description: "Vi leverer og monterer isolert stålpipe - en fleksibel og trygg løsning når boligen mangler skorstein eller når ildstedet må plasseres annerledes.",
     features: [
       "Nybygg",
       "Hytter",
