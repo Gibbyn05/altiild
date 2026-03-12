@@ -414,7 +414,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 1.3 KOMPLETTE LØSNINGER – ÉN PARTNER HELE VEIEN */}
+      {/* 1.3 KOMPLETTE LØSNINGER - ÉN PARTNER HELE VEIEN */}
       <section className="py-12 md:py-20 lg:py-28 bg-muted">
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
