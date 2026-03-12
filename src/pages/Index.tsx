@@ -223,14 +223,14 @@ const galleryImages = [
   { src: galleryPipeFjord, alt: "Pipe med fjordutsikt og cruiseskip" },
   { src: takUtside, alt: "Takarbeid sett fra utsiden" },
   { src: takInnside, alt: "Hagestue med ovn sett innenfra" },
-  { src: galleryPipeRehab, alt: "Piperehabilitering foringsrør ovenfra – Alt i Ild Molde" },
-  { src: galleryStalpipeSvart, alt: "Isolert stålpipe veggmontert – Alt i Ild Molde" },
-  { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak – Alt i Ild" },
-  { src: galleryTakstigeSno, alt: "Takstige på snødekt tak – Alt i Ild" },
-  { src: galleryStalpipeTakstige, alt: "Gjennomføring i tak med laser – stålpipe Alt i Ild Molde" },
-  { src: galleryTakstigePipe, alt: "Takstige langs husvegg – Alt i Ild" },
-  { src: galleryStalpipePlatetak, alt: "Stålpipe gjennom vinterhage – piperehabilitering Molde" },
-  { src: galleryStalpipeFeieplattform, alt: "Utvendig stålpipe på hus – Alt i Ild Molde" },
+  { src: galleryPipeRehab, alt: "Piperehabilitering foringsrør ovenfra - Alt i Ild Molde" },
+  { src: galleryStalpipeSvart, alt: "Isolert stålpipe veggmontert - Alt i Ild Molde" },
+  { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak - Alt i Ild" },
+  { src: galleryTakstigeSno, alt: "Takstige på snødekt tak - Alt i Ild" },
+  { src: galleryStalpipeTakstige, alt: "Gjennomføring i tak med laser - stålpipe Alt i Ild Molde" },
+  { src: galleryTakstigePipe, alt: "Takstige langs husvegg - Alt i Ild" },
+  { src: galleryStalpipePlatetak, alt: "Stålpipe gjennom vinterhage - piperehabilitering Molde" },
+  { src: galleryStalpipeFeieplattform, alt: "Utvendig stålpipe på hus - Alt i Ild Molde" },
 ];
 
 const GalleryCarousel = () => {
