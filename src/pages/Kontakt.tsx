@@ -342,7 +342,7 @@ const Kontakt = () => {
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   <span className="text-foreground font-medium text-sm md:text-base">Åpningstider:</span>
-                  <span className="text-muted-foreground text-sm md:text-base">Man–fre 08:00–16:00</span>
+                  <span className="text-muted-foreground text-sm md:text-base">Man-fre 08:00-16:00</span>
                 </div>
                 <div className="hidden md:block w-px h-6 bg-border" />
                 <span className="text-muted-foreground text-xs md:text-sm">Kveld og helg etter avtale</span>
