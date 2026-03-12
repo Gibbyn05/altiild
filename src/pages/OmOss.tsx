@@ -113,7 +113,7 @@ const OmOss = () => {
                 Erfaring og fagkompetanse
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Vi leverer ikke bare produkter – vi leverer løsninger som er trygge, dokumenterte og teknisk riktige for både nye og eldre boliger.
+                Vi leverer ikke bare produkter - vi leverer løsninger som er trygge, dokumenterte og teknisk riktige for både nye og eldre boliger.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
                 Vår bakgrunn består av mange års erfaring innen:
