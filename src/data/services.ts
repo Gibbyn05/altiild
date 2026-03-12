@@ -95,7 +95,7 @@ export const services: ServiceData[] = [
       "Gulvplate og brannsikring",
       "Tilstand på eksisterende skorstein",
     ],
-    conclusion: "Målet er en installasjon som fungerer optimalt fra første fyring – uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne.",
+    conclusion: "Målet er en installasjon som fungerer optimalt fra første fyring - uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne.",
     metaTitle: "Montering av peis og ovn | Sertifisert installasjon | Alt i Ild",
     metaDescription: "Profesjonell montering av peis og vedovn i Molde og Møre og Romsdal. Sertifisert montør, gratis befaring, komplett dokumentasjon og ferdigmelding.",
     keywords: "peismontering Molde, ovnsmontering, vedovn installasjon, sertifisert montør, peis Møre og Romsdal",
