@@ -4,7 +4,7 @@ const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface ContactEmailRequest {
@@ -50,13 +50,15 @@ function validateInput(data: ContactEmailRequest): { valid: boolean; error?: str
     return { valid: false, error: 'Navn kan ikke være lengre enn 100 tegn' };
   }
 
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!data.email || typeof data.email !== 'string' || !emailRegex.test(data.email)) {
-    return { valid: false, error: 'Ugyldig e-postadresse' };
-  }
-  if (data.email.length > 255) {
-    return { valid: false, error: 'E-post kan ikke være lengre enn 255 tegn' };
+  // Email validation (optional field)
+  if (data.email && typeof data.email === 'string' && data.email.trim().length > 0) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      return { valid: false, error: 'Ugyldig e-postadresse' };
+    }
+    if (data.email.length > 255) {
+      return { valid: false, error: 'E-post kan ikke være lengre enn 255 tegn' };
+    }
   }
 
   // Phone validation (optional but if provided, must be valid)
@@ -298,7 +300,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Business email sent successfully");
 
-    // Send confirmation to customer
+    // Send confirmation to customer (only if email provided)
+    if (email && email.trim().length > 0) {
     const customerEmailRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -392,6 +395,7 @@ const handler = async (req: Request): Promise<Response> => {
     } else {
       console.log("Customer confirmation email sent successfully");
     }
+    } // end if email provided
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
