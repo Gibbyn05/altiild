@@ -187,7 +187,7 @@ const projects = [
     title: "Utvendig stålpipe på hus",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Utvendig isolert stålpipe montert på moderne hus – Alt i Ild Molde.",
+    description: "Utvendig isolert stålpipe montert på moderne hus - Alt i Ild Molde.",
   },
   {
     id: 23,
