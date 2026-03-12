@@ -95,7 +95,7 @@ const OmOss = () => {
               Om Alt i Ild
             </p>
             <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 md:mb-6 text-primary-foreground">
-              Hvem vi er – erfaring, fagkompetanse & sertifiseringer
+              Hvem vi er - erfaring, fagkompetanse & sertifiseringer
             </h1>
             <p className="text-primary-foreground/90 text-base sm:text-lg md:text-xl leading-relaxed">
               Alt i Ild AS er en lokal fagbedrift i Molde, spesialisert på ildsted, skorstein og piperehabilitering i hele Møre og Romsdal.
