@@ -237,9 +237,9 @@ export const services: ServiceData[] = [
     description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
     image: pipeTak,
     galleryImages: [
-      { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak – Alt i Ild" },
-      { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak – Alt i Ild Molde" },
-      { src: galleryTakstigePipe, alt: "Takstige langs pipe på husvegg – Alt i Ild" },
+      { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak - Alt i Ild" },
+      { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak - Alt i Ild Molde" },
+      { src: galleryTakstigePipe, alt: "Takstige langs pipe på husvegg - Alt i Ild" },
     ],
     intro: "Vi monterer:",
     includes: [
