@@ -115,7 +115,7 @@ const projects = [
     title: "Pipehatt på tak",
     location: "Molde",
     category: "Installasjon",
-    description: "Svart pipehatt og beslag montert på tak – Alt i Ild Molde.",
+    description: "Svart pipehatt og beslag montert på tak - Alt i Ild Molde.",
   },
   {
     id: 14,
