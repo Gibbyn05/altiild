@@ -179,7 +179,7 @@ const projects = [
     title: "Stålpipe gjennom vinterhage",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Isolert stålpipe montert gjennom vinterhage med pipehatt – Alt i Ild Molde.",
+    description: "Isolert stålpipe montert gjennom vinterhage med pipehatt - Alt i Ild Molde.",
   },
   {
     id: 22,
