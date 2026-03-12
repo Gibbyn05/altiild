@@ -50,13 +50,15 @@ function validateInput(data: ContactEmailRequest): { valid: boolean; error?: str
     return { valid: false, error: 'Navn kan ikke være lengre enn 100 tegn' };
   }
 
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!data.email || typeof data.email !== 'string' || !emailRegex.test(data.email)) {
-    return { valid: false, error: 'Ugyldig e-postadresse' };
-  }
-  if (data.email.length > 255) {
-    return { valid: false, error: 'E-post kan ikke være lengre enn 255 tegn' };
+  // Email validation (optional field)
+  if (data.email && typeof data.email === 'string' && data.email.trim().length > 0) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      return { valid: false, error: 'Ugyldig e-postadresse' };
+    }
+    if (data.email.length > 255) {
+      return { valid: false, error: 'E-post kan ikke være lengre enn 255 tegn' };
+    }
   }
 
   // Phone validation (optional but if provided, must be valid)
