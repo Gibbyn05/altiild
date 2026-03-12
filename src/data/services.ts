@@ -196,7 +196,7 @@ export const services: ServiceData[] = [
       "Lufttilførsel i rommet",
       "Eventuelle brannfarlige forhold",
     ],
-    conclusion: "Vi gir deg en tydelig rapport med anbefalt løsning – enten det gjelder mindre utbedringer, service eller full piperehabilitering.",
+    conclusion: "Vi gir deg en tydelig rapport med anbefalt løsning - enten det gjelder mindre utbedringer, service eller full piperehabilitering.",
     metaTitle: "Inspeksjon av pipe og ildsted | Tilstandsvurdering | Alt i Ild",
     metaDescription: "Profesjonell inspeksjon og vurdering av pipe og ildsted i Molde. Få en tydelig rapport med anbefalte løsninger. Gratis befaring.",
     keywords: "pipeinspeksjon, tilstandsvurdering skorstein, kontroll ildsted, avvik brannvesen, dårlig trekk",
