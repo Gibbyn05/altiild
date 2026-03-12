@@ -163,7 +163,7 @@ const projects = [
     title: "Gjennomføring i tak - stålpipe",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Gjennomføring av stålpipe i tak med lasermåling – Alt i Ild Molde.",
+    description: "Gjennomføring av stålpipe i tak med lasermåling - Alt i Ild Molde.",
   },
   {
     id: 20,
