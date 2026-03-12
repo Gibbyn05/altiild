@@ -81,7 +81,7 @@ const Dokumentasjon = () => {
               Hvorfor dokumentasjon er viktig
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
-              Dokumentasjon er en av de viktigste delene av arbeidet på pipe og ildsted – både for sikkerheten i boligen, for godkjenning hos myndighetene og for verdien av huset ditt.
+              Dokumentasjon er en av de viktigste delene av arbeidet på pipe og ildsted - både for sikkerheten i boligen, for godkjenning hos myndighetene og for verdien av huset ditt.
             </p>
           </div>
         </div>
