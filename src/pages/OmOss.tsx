@@ -201,7 +201,7 @@ const OmOss = () => {
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 text-center max-w-3xl mx-auto">
             <p className="text-sm md:text-base lg:text-lg text-foreground">
-              Vi er ikke butikk. Vi er fagfolk som gir ærlige råd basert på boligens behov – ikke hva som står på lager.
+              Vi er ikke butikk. Vi er fagfolk som gir ærlige råd basert på boligens behov - ikke hva som står på lager.
             </p>
           </div>
         </div>
