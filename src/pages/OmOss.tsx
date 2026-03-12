@@ -38,7 +38,7 @@ const workProcess = [{
   icon: ClipboardCheck,
   step: "02",
   title: "Gjennomgang av løsning med kunde",
-  desc: "Vi forklarer hva som trengs og hvorfor – i klart språk. Du får forslag til riktige materialer, metoder og eventuelle alternativer."
+  desc: "Vi forklarer hva som trengs og hvorfor - i klart språk. Du får forslag til riktige materialer, metoder og eventuelle alternativer."
 }, {
   icon: Wrench,
   step: "03",
