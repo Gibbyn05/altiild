@@ -131,7 +131,7 @@ const projects = [
     title: "Piperehabilitering - foringsrør",
     location: "Molde",
     category: "Installasjon",
-    description: "Piperehabilitering med keramiske foringsrør sett ovenfra – Alt i Ild Molde.",
+    description: "Piperehabilitering med keramiske foringsrør sett ovenfra - Alt i Ild Molde.",
   },
   {
     id: 16,
