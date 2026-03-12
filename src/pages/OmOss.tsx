@@ -19,7 +19,7 @@ const values = [{
 }, {
   icon: Users,
   title: "Ryddighet",
-  description: "Vi jobber effektivt og rent – både inne og ute."
+  description: "Vi jobber effektivt og rent - både inne og ute."
 }, {
   icon: MapPin,
   title: "Lokal tilstedeværelse",
@@ -38,7 +38,7 @@ const workProcess = [{
   icon: ClipboardCheck,
   step: "02",
   title: "Gjennomgang av løsning med kunde",
-  desc: "Vi forklarer hva som trengs og hvorfor – i klart språk. Du får forslag til riktige materialer, metoder og eventuelle alternativer."
+  desc: "Vi forklarer hva som trengs og hvorfor - i klart språk. Du får forslag til riktige materialer, metoder og eventuelle alternativer."
 }, {
   icon: Wrench,
   step: "03",
@@ -95,7 +95,7 @@ const OmOss = () => {
               Om Alt i Ild
             </p>
             <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 md:mb-6 text-primary-foreground">
-              Hvem vi er – erfaring, fagkompetanse & sertifiseringer
+              Hvem vi er - erfaring, fagkompetanse & sertifiseringer
             </h1>
             <p className="text-primary-foreground/90 text-base sm:text-lg md:text-xl leading-relaxed">
               Alt i Ild AS er en lokal fagbedrift i Molde, spesialisert på ildsted, skorstein og piperehabilitering i hele Møre og Romsdal.
@@ -113,7 +113,7 @@ const OmOss = () => {
                 Erfaring og fagkompetanse
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Vi leverer ikke bare produkter – vi leverer løsninger som er trygge, dokumenterte og teknisk riktige for både nye og eldre boliger.
+                Vi leverer ikke bare produkter - vi leverer løsninger som er trygge, dokumenterte og teknisk riktige for både nye og eldre boliger.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
                 Vår bakgrunn består av mange års erfaring innen:
@@ -166,7 +166,7 @@ const OmOss = () => {
                   </li>)}
               </ul>
               <p className="text-muted-foreground mt-4 md:mt-6 text-xs md:text-sm">
-                Vi legger stor vekt på faglig kvalitet og kontinuerlig utvikling – slik at du som kunde alltid får en løsning som er både trygg og fremtidsrettet.
+                Vi legger stor vekt på faglig kvalitet og kontinuerlig utvikling - slik at du som kunde alltid får en løsning som er både trygg og fremtidsrettet.
               </p>
             </div>
           </div>
@@ -201,7 +201,7 @@ const OmOss = () => {
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 text-center max-w-3xl mx-auto">
             <p className="text-sm md:text-base lg:text-lg text-foreground">
-              Vi er ikke butikk. Vi er fagfolk som gir ærlige råd basert på boligens behov – ikke hva som står på lager.
+              Vi er ikke butikk. Vi er fagfolk som gir ærlige råd basert på boligens behov - ikke hva som står på lager.
             </p>
           </div>
         </div>
@@ -252,7 +252,7 @@ const OmOss = () => {
                 Molde & Møre og Romsdal
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Alt i Ild AS er lokalt forankret i Molde, og vi kjenner forholdene i Møre og Romsdal – både når det gjelder klima, byggetradisjoner og kommunale krav. Dette gjør oss ekstra godt rustet til å levere løsninger som:
+                Alt i Ild AS er lokalt forankret i Molde, og vi kjenner forholdene i Møre og Romsdal - både når det gjelder klima, byggetradisjoner og kommunale krav. Dette gjør oss ekstra godt rustet til å levere løsninger som:
               </p>
               <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                 {["Gir optimalt trekk i kystklima", "Følger lokale forskrifter og praksis hos feiervesenet", "Tar hensyn til eldre murverk og tradisjonelle teglsteinsskorsteiner", "Sikrer korrekt godkjenning ved kommunal søknadsplikt"].map(item => <li key={item} className="flex items-start gap-2 md:gap-3">

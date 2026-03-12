@@ -84,7 +84,7 @@ const services = [
   {
     icon: Shield,
     title: "Montering av stålpiper",
-    description: "Vi leverer og monterer isolert stålpipe – en fleksibel og trygg løsning når boligen mangler skorstein eller når ildstedet må plasseres annerledes.",
+    description: "Vi leverer og monterer isolert stålpipe - en fleksibel og trygg løsning når boligen mangler skorstein eller når ildstedet må plasseres annerledes.",
     features: [
       "Nybygg",
       "Hytter",
@@ -126,7 +126,7 @@ const processSteps = [
     icon: Truck, 
     step: "02", 
     title: "Levering", 
-    desc: "Vi leverer røykrør, ovner, stålpipe, stålrør, keramiske rør og Exodraft røyksugere – alt som trengs for en komplett installasjon." 
+    desc: "Vi leverer røykrør, ovner, stålpipe, stålrør, keramiske rør og Exodraft røyksugere - alt som trengs for en komplett installasjon." 
   },
   { 
     icon: Wrench, 
@@ -152,7 +152,7 @@ const whyChooseUs = [
   { icon: MapPin, text: "Lokal fagbedrift i Molde" },
   { icon: Users, text: "Mange års erfaring" },
   { icon: Award, text: "Sertifiserte montører" },
-  { icon: CheckCircle, text: "Komplette løsninger A–Å" },
+  { icon: CheckCircle, text: "Komplette løsninger A-Å" },
   { icon: Search, text: "Gratis befaring" },
   { icon: ThermometerSun, text: "Eksperter på dårlig trekk & Exodraft" },
 ];
@@ -223,14 +223,14 @@ const galleryImages = [
   { src: galleryPipeFjord, alt: "Pipe med fjordutsikt og cruiseskip" },
   { src: takUtside, alt: "Takarbeid sett fra utsiden" },
   { src: takInnside, alt: "Hagestue med ovn sett innenfra" },
-  { src: galleryPipeRehab, alt: "Piperehabilitering foringsrør ovenfra – Alt i Ild Molde" },
-  { src: galleryStalpipeSvart, alt: "Isolert stålpipe veggmontert – Alt i Ild Molde" },
-  { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak – Alt i Ild" },
-  { src: galleryTakstigeSno, alt: "Takstige på snødekt tak – Alt i Ild" },
-  { src: galleryStalpipeTakstige, alt: "Gjennomføring i tak med laser – stålpipe Alt i Ild Molde" },
-  { src: galleryTakstigePipe, alt: "Takstige langs husvegg – Alt i Ild" },
-  { src: galleryStalpipePlatetak, alt: "Stålpipe gjennom vinterhage – piperehabilitering Molde" },
-  { src: galleryStalpipeFeieplattform, alt: "Utvendig stålpipe på hus – Alt i Ild Molde" },
+  { src: galleryPipeRehab, alt: "Piperehabilitering foringsrør ovenfra - Alt i Ild Molde" },
+  { src: galleryStalpipeSvart, alt: "Isolert stålpipe veggmontert - Alt i Ild Molde" },
+  { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak - Alt i Ild" },
+  { src: galleryTakstigeSno, alt: "Takstige på snødekt tak - Alt i Ild" },
+  { src: galleryStalpipeTakstige, alt: "Gjennomføring i tak med laser - stålpipe Alt i Ild Molde" },
+  { src: galleryTakstigePipe, alt: "Takstige langs husvegg - Alt i Ild" },
+  { src: galleryStalpipePlatetak, alt: "Stålpipe gjennom vinterhage - piperehabilitering Molde" },
+  { src: galleryStalpipeFeieplattform, alt: "Utvendig stålpipe på hus - Alt i Ild Molde" },
 ];
 
 const GalleryCarousel = () => {
@@ -329,7 +329,7 @@ const Index = () => {
               Hos oss får du mer enn bare produkter. Vi leverer helhetlige løsninger som gir trygghet, komfort og riktig varme i hjemmet ditt.
             </p>
             <p className="hidden sm:block text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 leading-relaxed">
-              Enten du har dårlig trekk i pipe, vurderer rehabilitering av pipe, har fått fyringsforbud, ønsker bedre varmeeffekt eller planlegger å montere en ny vedovn eller peisovn – vi finner den riktige løsningen for boligen din.
+              Enten du har dårlig trekk i pipe, vurderer rehabilitering av pipe, har fått fyringsforbud, ønsker bedre varmeeffekt eller planlegger å montere en ny vedovn eller peisovn - vi finner den riktige løsningen for boligen din.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4 md:mb-6">
               <Button variant="hero" size="lg" className="animate-gentle-pulse !border-2 !border-white text-sm sm:text-base md:text-lg" asChild>
@@ -414,7 +414,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 1.3 KOMPLETTE LØSNINGER – ÉN PARTNER HELE VEIEN */}
+      {/* 1.3 KOMPLETTE LØSNINGER - ÉN PARTNER HELE VEIEN */}
       <section className="py-12 md:py-20 lg:py-28 bg-muted">
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
@@ -425,7 +425,7 @@ const Index = () => {
               Komplette løsninger fra A til Å
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-2">
-              Vi tar hele ansvaret – fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt.
+              Vi tar hele ansvaret - fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt.
             </p>
           </div>
 
@@ -466,7 +466,7 @@ const Index = () => {
                 Arbeid på pipe og skorstein er ofte søknadspliktig. Dette gjelder piperehabilitering, ny stålpipe, bruk av stålrør i pipe og andre strukturelle endringer.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6">
-                Alt i Ild AS håndterer hele prosessen – dette gjør prosessen trygg og enkel:
+                Alt i Ild AS håndterer hele prosessen - dette gjør prosessen trygg og enkel:
               </p>
               <ul className="space-y-2 md:space-y-4 mb-6 md:mb-8">
                 {[
@@ -540,7 +540,7 @@ const Index = () => {
                 "Lokal fagbedrift innen ildsted og skorstein i Molde",
                 "Mange års erfaring",
                 "Sertifiserte montører",
-                "Komplette løsninger fra A–Å",
+                "Komplette løsninger fra A-Å",
                 "Gratis befaring",
                 "Ekspertise på dårlig trekk og Exodraft røyksugere",
                 "Rehabilitering av pipe og stålpipeinstallasjon",

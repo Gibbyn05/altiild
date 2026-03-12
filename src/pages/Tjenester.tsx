@@ -26,7 +26,7 @@ const services = [
     id: "montering",
     icon: Flame,
     title: "Montering av peis og ovn",
-    description: "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal – for både nye og eldre boliger.",
+    description: "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal - for både nye og eldre boliger.",
     image: hvitOvn,
     intro: "Vi vurderer alltid:",
     features: [
@@ -37,7 +37,7 @@ const services = [
       "Gulvplate og brannsikring",
       "Tilstand på eksisterende skorstein",
     ],
-    conclusion: "Målet er en installasjon som fungerer optimalt fra første fyring – uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne.",
+    conclusion: "Målet er en installasjon som fungerer optimalt fra første fyring - uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne.",
   },
   {
     id: "piperehabilitering",
@@ -57,8 +57,8 @@ const services = [
     ],
     solutionsIntro: "Vi benytter riktige metoder basert på pipens tilstand:",
     solutions: [
-      "Stålrør i pipe – fleksibelt og trygt",
-      "Keramiske rør – svært holdbart og varmebestandig",
+      "Stålrør i pipe - fleksibelt og trygt",
+      "Keramiske rør - svært holdbart og varmebestandig",
       "Tetting og utbedring",
     ],
     conclusion: "Rehabilitering av pipe er søknadspliktig arbeid. Vi håndterer hele prosessen: befaring og tilstandsvurdering, valg av metode, komplett søknad til kommunen, dokumentasjon underveis og ferdigmelding til brannvesen og kommune.",
@@ -73,7 +73,7 @@ const services = [
     suitableFor: [
       "Rask installasjon",
       "Fleksibel plassering av ildsted",
-      "Lav vekt – egnet for både nye og eldre bygg",
+      "Lav vekt - egnet for både nye og eldre bygg",
       "Kan føres gjennom vegg eller tak",
       "Minimalt inngrep i eksisterende konstruksjon",
       "Svært brannsikkert",
@@ -110,7 +110,7 @@ const services = [
       "Lufttilførsel i rommet",
       "Eventuelle brannfarlige forhold",
     ],
-    conclusion: "Vi gir deg en tydelig rapport med anbefalt løsning – enten det gjelder mindre utbedringer, service eller full piperehabilitering.",
+    conclusion: "Vi gir deg en tydelig rapport med anbefalt løsning - enten det gjelder mindre utbedringer, service eller full piperehabilitering.",
   },
   {
     id: "service",
@@ -128,9 +128,9 @@ const services = [
     ],
     workIntro: "Vi utfører:",
     work: [
-      "Pakningsskifte – viktig for korrekt forbrenning",
-      "Glassbytte – ved skadet eller slitt ovnsglass",
-      "Bytte av vermikulittplater – forbedrer forbrenning og varmeeffekt",
+      "Pakningsskifte - viktig for korrekt forbrenning",
+      "Glassbytte - ved skadet eller slitt ovnsglass",
+      "Bytte av vermikulittplater - forbedrer forbrenning og varmeeffekt",
     ],
     conclusion: "Dette gjør ildstedet ditt tryggere og mer effektivt.",
   },
@@ -153,7 +153,7 @@ const services = [
     id: "darlig-trekk",
     icon: Wind,
     title: "Dårlig trekk & røyksugere (Exodraft)",
-    description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt – spesielt i moderne, tette boliger.",
+    description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt - spesielt i moderne, tette boliger.",
     image: takUtside,
     intro: "Vanlige årsaker til dårlig trekk:",
     causes: [
@@ -168,7 +168,7 @@ const services = [
     ],
     solutionsIntro: "Løsninger vi tilbyr:",
     solutions: [
-      "Exodraft røyksuger – markedets beste løsning for varig trekkforbedring",
+      "Exodraft røyksuger - markedets beste løsning for varig trekkforbedring",
       "Tilførsel av friskluft (luftventiler eller rør)",
       "Justering av røykrør",
       "Optimalisering av pipehøyde og tverrsnitt",

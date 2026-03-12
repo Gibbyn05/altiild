@@ -283,7 +283,7 @@ const Kontakt = () => {
               Kontakt oss
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
-              Du er alltid velkommen til å ta kontakt med oss – enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.
+              Du er alltid velkommen til å ta kontakt med oss - enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.
             </p>
           </div>
         </div>
@@ -342,7 +342,7 @@ const Kontakt = () => {
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   <span className="text-foreground font-medium text-sm md:text-base">Åpningstider:</span>
-                  <span className="text-muted-foreground text-sm md:text-base">Man–fre 08:00–16:00</span>
+                  <span className="text-muted-foreground text-sm md:text-base">Man-fre 08:00-16:00</span>
                 </div>
                 <div className="hidden md:block w-px h-6 bg-border" />
                 <span className="text-muted-foreground text-xs md:text-sm">Kveld og helg etter avtale</span>
@@ -694,7 +694,7 @@ const Kontakt = () => {
             Vi kommer til deg
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt – fra vurdering til ferdig godkjent installasjon.
+            Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt - fra vurdering til ferdig godkjent installasjon.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>

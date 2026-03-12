@@ -81,7 +81,7 @@ const Dokumentasjon = () => {
               Hvorfor dokumentasjon er viktig
             </h1>
             <p className="text-primary-foreground/90 text-xl leading-relaxed">
-              Dokumentasjon er en av de viktigste delene av arbeidet på pipe og ildsted – både for sikkerheten i boligen, for godkjenning hos myndighetene og for verdien av huset ditt.
+              Dokumentasjon er en av de viktigste delene av arbeidet på pipe og ildsted - både for sikkerheten i boligen, for godkjenning hos myndighetene og for verdien av huset ditt.
             </p>
           </div>
         </div>
@@ -176,7 +176,7 @@ const Dokumentasjon = () => {
                   <h3 className="font-display text-xl font-semibold">Ferdigmelding & dokumentpakke</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Når arbeidet er ferdig, tar vi oss av alt som gjelder ferdigmelding og godkjenning. Du skal ikke fylle ut skjemaer, kontakte kommunen eller sende inn dokumenter – det gjør vi.
+                  Når arbeidet er ferdig, tar vi oss av alt som gjelder ferdigmelding og godkjenning. Du skal ikke fylle ut skjemaer, kontakte kommunen eller sende inn dokumenter - det gjør vi.
                 </p>
                 <p className="font-medium mb-3">Dette gjør vi for deg:</p>
                 <ul className="space-y-4">
@@ -188,7 +188,7 @@ const Dokumentasjon = () => {
                   ))}
                 </ul>
                 <p className="text-muted-foreground mt-4 text-sm">
-                  Du mottar en ferdig PDF med all nødvendig informasjon – trygg, oversiktlig og klar til bruk når du trenger den.
+                  Du mottar en ferdig PDF med all nødvendig informasjon - trygg, oversiktlig og klar til bruk når du trenger den.
                 </p>
               </div>
             </div>
@@ -205,7 +205,7 @@ const Dokumentasjon = () => {
               </p>
               <p className="text-muted-foreground text-lg mb-6">
                 Dokumentasjonen sikrer at du som huseier har full oversikt over 
-                installasjonen – noe som er verdifullt både for egen trygghet og ved 
+                installasjonen - noe som er verdifullt både for egen trygghet og ved 
                 eventuelt salg av boligen.
               </p>
               <Button variant="default" size="lg" asChild>
@@ -233,7 +233,7 @@ const Dokumentasjon = () => {
             Trygg og dokumentert installasjon
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-10 max-w-xl mx-auto">
-            Kontakt oss for en gratis befaring. Vi tar oss av alt – inkludert dokumentasjon.
+            Kontakt oss for en gratis befaring. Vi tar oss av alt - inkludert dokumentasjon.
           </p>
           <Button variant="hero" size="xl" className="animate-gentle-pulse" asChild>
             <Link to="/kontakt">

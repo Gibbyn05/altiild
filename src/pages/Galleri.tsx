@@ -91,7 +91,7 @@ const projects = [
     title: "Pipehatt på hytte",
     location: "Molde",
     category: "Installasjon",
-    description: "Stålpipe med pipehatt montert på hytte – Alt i Ild Molde.",
+    description: "Stålpipe med pipehatt montert på hytte - Alt i Ild Molde.",
   },
   {
     id: 11,
@@ -115,7 +115,7 @@ const projects = [
     title: "Pipehatt på tak",
     location: "Molde",
     category: "Installasjon",
-    description: "Svart pipehatt og beslag montert på tak – Alt i Ild Molde.",
+    description: "Svart pipehatt og beslag montert på tak - Alt i Ild Molde.",
   },
   {
     id: 14,
@@ -128,10 +128,10 @@ const projects = [
   {
     id: 15,
     image: galleryPipeRehab,
-    title: "Piperehabilitering – foringsrør",
+    title: "Piperehabilitering - foringsrør",
     location: "Molde",
     category: "Installasjon",
-    description: "Piperehabilitering med keramiske foringsrør sett ovenfra – Alt i Ild Molde.",
+    description: "Piperehabilitering med keramiske foringsrør sett ovenfra - Alt i Ild Molde.",
   },
   {
     id: 16,
@@ -139,7 +139,7 @@ const projects = [
     title: "Isolert stålpipe veggmontert",
     location: "Molde",
     category: "Installasjon",
-    description: "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt – Alt i Ild Molde.",
+    description: "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt - Alt i Ild Molde.",
   },
   {
     id: 17,
@@ -160,10 +160,10 @@ const projects = [
   {
     id: 19,
     image: galleryStalpipeTakstige,
-    title: "Gjennomføring i tak – stålpipe",
+    title: "Gjennomføring i tak - stålpipe",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Gjennomføring av stålpipe i tak med lasermåling – Alt i Ild Molde.",
+    description: "Gjennomføring av stålpipe i tak med lasermåling - Alt i Ild Molde.",
   },
   {
     id: 20,
@@ -179,7 +179,7 @@ const projects = [
     title: "Stålpipe gjennom vinterhage",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Isolert stålpipe montert gjennom vinterhage med pipehatt – Alt i Ild Molde.",
+    description: "Isolert stålpipe montert gjennom vinterhage med pipehatt - Alt i Ild Molde.",
   },
   {
     id: 22,
@@ -187,7 +187,7 @@ const projects = [
     title: "Utvendig stålpipe på hus",
     location: "Møre og Romsdal",
     category: "Installasjon",
-    description: "Utvendig isolert stålpipe montert på moderne hus – Alt i Ild Molde.",
+    description: "Utvendig isolert stålpipe montert på moderne hus - Alt i Ild Molde.",
   },
   {
     id: 23,
