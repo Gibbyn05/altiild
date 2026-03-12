@@ -125,8 +125,8 @@ export const services: ServiceData[] = [
     ],
     solutionsIntro: "Vi benytter riktige metoder basert på pipens tilstand:",
     solutions: [
-      "Stålrør i pipe – fleksibelt og trygt",
-      "Keramiske rør – svært holdbart og varmebestandig",
+      "Stålrør i pipe - fleksibelt og trygt",
+      "Keramiske rør - svært holdbart og varmebestandig",
       "Tetting og utbedring",
     ],
     conclusion: "Rehabilitering av pipe er søknadspliktig arbeid. Vi håndterer hele prosessen: befaring og tilstandsvurdering, valg av metode, komplett søknad til kommunen, dokumentasjon underveis og ferdigmelding til brannvesen og kommune.",
