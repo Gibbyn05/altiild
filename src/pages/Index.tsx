@@ -466,7 +466,7 @@ const Index = () => {
                 Arbeid på pipe og skorstein er ofte søknadspliktig. Dette gjelder piperehabilitering, ny stålpipe, bruk av stålrør i pipe og andre strukturelle endringer.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6">
-                Alt i Ild AS håndterer hele prosessen – dette gjør prosessen trygg og enkel:
+                Alt i Ild AS håndterer hele prosessen - dette gjør prosessen trygg og enkel:
               </p>
               <ul className="space-y-2 md:space-y-4 mb-6 md:mb-8">
                 {[
