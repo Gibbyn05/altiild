@@ -205,7 +205,7 @@ const Dokumentasjon = () => {
               </p>
               <p className="text-muted-foreground text-lg mb-6">
                 Dokumentasjonen sikrer at du som huseier har full oversikt over 
-                installasjonen – noe som er verdifullt både for egen trygghet og ved 
+                installasjonen - noe som er verdifullt både for egen trygghet og ved 
                 eventuelt salg av boligen.
               </p>
               <Button variant="default" size="lg" asChild>
