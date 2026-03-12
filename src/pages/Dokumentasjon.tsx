@@ -188,7 +188,7 @@ const Dokumentasjon = () => {
                   ))}
                 </ul>
                 <p className="text-muted-foreground mt-4 text-sm">
-                  Du mottar en ferdig PDF med all nødvendig informasjon – trygg, oversiktlig og klar til bruk når du trenger den.
+                  Du mottar en ferdig PDF med all nødvendig informasjon - trygg, oversiktlig og klar til bruk når du trenger den.
                 </p>
               </div>
             </div>
