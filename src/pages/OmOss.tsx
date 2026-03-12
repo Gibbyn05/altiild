@@ -19,7 +19,7 @@ const values = [{
 }, {
   icon: Users,
   title: "Ryddighet",
-  description: "Vi jobber effektivt og rent – både inne og ute."
+  description: "Vi jobber effektivt og rent - både inne og ute."
 }, {
   icon: MapPin,
   title: "Lokal tilstedeværelse",
