@@ -126,7 +126,7 @@ const processSteps = [
     icon: Truck, 
     step: "02", 
     title: "Levering", 
-    desc: "Vi leverer røykrør, ovner, stålpipe, stålrør, keramiske rør og Exodraft røyksugere – alt som trengs for en komplett installasjon." 
+    desc: "Vi leverer røykrør, ovner, stålpipe, stålrør, keramiske rør og Exodraft røyksugere - alt som trengs for en komplett installasjon." 
   },
   { 
     icon: Wrench, 
