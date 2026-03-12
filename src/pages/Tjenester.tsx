@@ -128,9 +128,9 @@ const services = [
     ],
     workIntro: "Vi utfører:",
     work: [
-      "Pakningsskifte – viktig for korrekt forbrenning",
-      "Glassbytte – ved skadet eller slitt ovnsglass",
-      "Bytte av vermikulittplater – forbedrer forbrenning og varmeeffekt",
+      "Pakningsskifte - viktig for korrekt forbrenning",
+      "Glassbytte - ved skadet eller slitt ovnsglass",
+      "Bytte av vermikulittplater - forbedrer forbrenning og varmeeffekt",
     ],
     conclusion: "Dette gjør ildstedet ditt tryggere og mer effektivt.",
   },
