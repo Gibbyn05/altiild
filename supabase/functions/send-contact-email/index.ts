@@ -300,7 +300,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Business email sent successfully");
 
-    // Send confirmation to customer
+    // Send confirmation to customer (only if email provided)
+    if (email && email.trim().length > 0) {
     const customerEmailRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
