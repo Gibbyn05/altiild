@@ -79,7 +79,7 @@ export const services: ServiceData[] = [
     icon: Flame,
     title: "Montering av peis og ovn",
     shortTitle: "Peis og ovn",
-    description: "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal – for både nye og eldre boliger.",
+    description: "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal - for både nye og eldre boliger.",
     image: hvitOvn,
     galleryImages: [
       { src: hvitOvn, alt: "Hvit peis med glassdør – moderne installasjon" },
