@@ -166,7 +166,7 @@ const OmOss = () => {
                   </li>)}
               </ul>
               <p className="text-muted-foreground mt-4 md:mt-6 text-xs md:text-sm">
-                Vi legger stor vekt på faglig kvalitet og kontinuerlig utvikling – slik at du som kunde alltid får en løsning som er både trygg og fremtidsrettet.
+                Vi legger stor vekt på faglig kvalitet og kontinuerlig utvikling - slik at du som kunde alltid får en løsning som er både trygg og fremtidsrettet.
               </p>
             </div>
           </div>
