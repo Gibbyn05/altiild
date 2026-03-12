@@ -91,7 +91,7 @@ const projects = [
     title: "Pipehatt på hytte",
     location: "Molde",
     category: "Installasjon",
-    description: "Stålpipe med pipehatt montert på hytte – Alt i Ild Molde.",
+    description: "Stålpipe med pipehatt montert på hytte - Alt i Ild Molde.",
   },
   {
     id: 11,
