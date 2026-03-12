@@ -395,6 +395,7 @@ const handler = async (req: Request): Promise<Response> => {
     } else {
       console.log("Customer confirmation email sent successfully");
     }
+    } // end if email provided
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
