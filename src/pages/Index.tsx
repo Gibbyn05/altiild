@@ -152,7 +152,7 @@ const whyChooseUs = [
   { icon: MapPin, text: "Lokal fagbedrift i Molde" },
   { icon: Users, text: "Mange års erfaring" },
   { icon: Award, text: "Sertifiserte montører" },
-  { icon: CheckCircle, text: "Komplette løsninger A–Å" },
+  { icon: CheckCircle, text: "Komplette løsninger A-Å" },
   { icon: Search, text: "Gratis befaring" },
   { icon: ThermometerSun, text: "Eksperter på dårlig trekk & Exodraft" },
 ];
