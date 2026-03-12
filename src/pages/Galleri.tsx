@@ -139,7 +139,7 @@ const projects = [
     title: "Isolert stålpipe veggmontert",
     location: "Molde",
     category: "Installasjon",
-    description: "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt – Alt i Ild Molde.",
+    description: "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt - Alt i Ild Molde.",
   },
   {
     id: 17,
