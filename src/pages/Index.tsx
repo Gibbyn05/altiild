@@ -425,7 +425,7 @@ const Index = () => {
               Komplette løsninger fra A til Å
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-2">
-              Vi tar hele ansvaret – fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt.
+              Vi tar hele ansvaret - fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt.
             </p>
           </div>
 
