@@ -153,7 +153,7 @@ const services = [
     id: "darlig-trekk",
     icon: Wind,
     title: "Dårlig trekk & røyksugere (Exodraft)",
-    description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt – spesielt i moderne, tette boliger.",
+    description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt - spesielt i moderne, tette boliger.",
     image: takUtside,
     intro: "Vanlige årsaker til dårlig trekk:",
     causes: [
