@@ -154,7 +154,7 @@ export const services: ServiceData[] = [
     suitableFor: [
       "Rask installasjon",
       "Fleksibel plassering av ildsted",
-      "Lav vekt – egnet for både nye og eldre bygg",
+      "Lav vekt - egnet for både nye og eldre bygg",
       "Kan føres gjennom vegg eller tak",
       "Minimalt inngrep i eksisterende konstruksjon",
       "Svært brannsikkert",
