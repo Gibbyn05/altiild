@@ -160,7 +160,7 @@ const projects = [
   {
     id: 19,
     image: galleryStalpipeTakstige,
-    title: "Gjennomføring i tak – stålpipe",
+    title: "Gjennomføring i tak - stålpipe",
     location: "Møre og Romsdal",
     category: "Installasjon",
     description: "Gjennomføring av stålpipe i tak med lasermåling – Alt i Ild Molde.",
