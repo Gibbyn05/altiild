@@ -540,7 +540,7 @@ const Index = () => {
                 "Lokal fagbedrift innen ildsted og skorstein i Molde",
                 "Mange års erfaring",
                 "Sertifiserte montører",
-                "Komplette løsninger fra A–Å",
+                "Komplette løsninger fra A-Å",
                 "Gratis befaring",
                 "Ekspertise på dårlig trekk og Exodraft røyksugere",
                 "Rehabilitering av pipe og stålpipeinstallasjon",

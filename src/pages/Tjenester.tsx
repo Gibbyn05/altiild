@@ -168,7 +168,7 @@ const services = [
     ],
     solutionsIntro: "Løsninger vi tilbyr:",
     solutions: [
-      "Exodraft røyksuger – markedets beste løsning for varig trekkforbedring",
+      "Exodraft røyksuger - markedets beste løsning for varig trekkforbedring",
       "Tilførsel av friskluft (luftventiler eller rør)",
       "Justering av røykrør",
       "Optimalisering av pipehøyde og tverrsnitt",

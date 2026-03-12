@@ -252,7 +252,7 @@ const OmOss = () => {
                 Molde & Møre og Romsdal
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                Alt i Ild AS er lokalt forankret i Molde, og vi kjenner forholdene i Møre og Romsdal – både når det gjelder klima, byggetradisjoner og kommunale krav. Dette gjør oss ekstra godt rustet til å levere løsninger som:
+                Alt i Ild AS er lokalt forankret i Molde, og vi kjenner forholdene i Møre og Romsdal - både når det gjelder klima, byggetradisjoner og kommunale krav. Dette gjør oss ekstra godt rustet til å levere løsninger som:
               </p>
               <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                 {["Gir optimalt trekk i kystklima", "Følger lokale forskrifter og praksis hos feiervesenet", "Tar hensyn til eldre murverk og tradisjonelle teglsteinsskorsteiner", "Sikrer korrekt godkjenning ved kommunal søknadsplikt"].map(item => <li key={item} className="flex items-start gap-2 md:gap-3">

@@ -233,7 +233,7 @@ const Dokumentasjon = () => {
             Trygg og dokumentert installasjon
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-10 max-w-xl mx-auto">
-            Kontakt oss for en gratis befaring. Vi tar oss av alt – inkludert dokumentasjon.
+            Kontakt oss for en gratis befaring. Vi tar oss av alt - inkludert dokumentasjon.
           </p>
           <Button variant="hero" size="xl" className="animate-gentle-pulse" asChild>
             <Link to="/kontakt">

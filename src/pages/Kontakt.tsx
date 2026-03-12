@@ -694,7 +694,7 @@ const Kontakt = () => {
             Vi kommer til deg
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt – fra vurdering til ferdig godkjent installasjon.
+            Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt - fra vurdering til ferdig godkjent installasjon.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
