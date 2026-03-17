@@ -463,7 +463,7 @@ const Kontakt = () => {
                       variant="outline" 
                       onClick={() => {
                         setIsSubmitted(false);
-                        setFormData({ name: "", email: "", phone: "", address: "", service: "", hasFiringBan: false, message: "" });
+                        setFormData({ name: "", email: "", phone: "", address: "", message: "" });
                       }}
                     >
                       Send ny melding
