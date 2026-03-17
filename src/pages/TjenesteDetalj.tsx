@@ -36,7 +36,7 @@ const TjenesteDetalj = () => {
           "provider": {
             "@type": "LocalBusiness",
             "name": "Alt i Ild",
-            "telephone": "+47 988 44 844"
+            "telephone": "+47 98 844 844"
           },
           "areaServed": "Møre og Romsdal",
           "description": service.description
