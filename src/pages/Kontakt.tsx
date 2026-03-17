@@ -190,10 +190,9 @@ const Kontakt = () => {
           email: formData.email,
           phone: formData.phone,
           address: formData.address,
-          subject: formData.service || "Henvendelse",
+          subject: "Henvendelse",
           message: formData.message,
           imageUrls,
-          hasFiringBan: formData.hasFiringBan,
         },
       });
 
