@@ -69,8 +69,6 @@ const Kontakt = () => {
     email: "",
     phone: "",
     address: "",
-    service: "",
-    hasFiringBan: false,
     message: "",
   });
   const [images, setImages] = useState<File[]>([]);
