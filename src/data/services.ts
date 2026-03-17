@@ -6,11 +6,11 @@ import {
   Wrench, 
   Hammer, 
   Wind,
-  LucideIcon
+  LucideIconß
 } from "lucide-react";
 
 import pipeTak from "@/assets/pipe-tak.jpg";
-import tjenesterPeis from "@/assets/tjenester-peis.png";
+import tjenesterPeis from "@/assets/4.png";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
 import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
 import ovnSolrik from "@/assets/ovn-solrik.jpg";
