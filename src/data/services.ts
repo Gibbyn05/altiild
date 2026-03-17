@@ -39,7 +39,6 @@ import galleryStalpipe4 from "@/assets/gallery-stalpipe-4.jpg";
 import galleryStalpipe5 from "@/assets/gallery-stalpipe-5.jpg";
 import galleryStalpipe6 from "@/assets/gallery-stalpipe-6.jpg";
 import galleryStalpipe7 from "@/assets/gallery-stalpipe-7.jpg";
-import 4 from "@/assets/4.png";
 
 export interface ServiceData {
   id: string;

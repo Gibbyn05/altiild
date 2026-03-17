@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import { ArrowRight, Shield, Award, Heart, Users, MapPin, CheckCircle, ClipboardCheck, Wrench, FileCheck, Eye } from "lucide-react";
 import larsKlemmImage from "@/assets/lars-klemm.jpg";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
-import omOssHero from "@/assets/om-oss-hero.png";
+import omOssHero from "@/assets/4.png";
 import teamImage from "@/assets/team.jpg";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 const values = [{
