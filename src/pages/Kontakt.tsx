@@ -241,7 +241,7 @@ const Kontakt = () => {
           "mainEntity": {
             "@type": "LocalBusiness",
             "name": "Alt i Ild",
-            "telephone": "+47 988 44 844",
+            "telephone": "+47 98 844 844",
             "email": "post@altiild.no",
             "address": {
               "@type": "PostalAddress",
