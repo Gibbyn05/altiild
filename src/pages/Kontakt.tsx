@@ -169,8 +169,6 @@ const Kontakt = () => {
         imageUrls.push(urlData.publicUrl);
       }
 
-      const firingBanText = formData.hasFiringBan ? "\n\n⚠️ HAR FYRINGSFORBUD/AVVIK" : "";
-      
       const { error: dbError } = await supabase
         .from("customer_inquiries")
         .insert({
@@ -178,8 +176,8 @@ const Kontakt = () => {
           phone: formData.phone || "Ikke oppgitt",
           email: formData.email || null,
           address: formData.address || null,
-          inquiry_type: formData.service || "kontakt",
-          desired_solution: `Tjeneste: ${formData.service || "Ikke valgt"}\n\n${formData.message}${firingBanText}${imageUrls.length > 0 ? `\n\nBilder: ${imageUrls.join(", ")}` : ""}`,
+          inquiry_type: "kontakt",
+          desired_solution: `${formData.message || "Ingen notat"}${imageUrls.length > 0 ? `\n\nBilder: ${imageUrls.join(", ")}` : ""}`,
           source: "form",
           status: "new"
         });
