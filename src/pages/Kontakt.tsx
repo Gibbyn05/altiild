@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "988 44 844",
+    value: "+47 98 844 844",
     href: "tel:+4798844844",
   },
   {
