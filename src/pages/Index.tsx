@@ -662,7 +662,7 @@ const Index = () => {
                 <div className="flex items-center gap-3 text-primary-foreground">
                   <Phone className="h-5 w-5" />
                   <a href="tel:+4798844844" className="hover:text-primary transition-colors">
-                    +47 988 44 844
+                    +47 98 844 844
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-primary-foreground">

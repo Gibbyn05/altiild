@@ -36,7 +36,7 @@ const TjenesteDetalj = () => {
           "provider": {
             "@type": "LocalBusiness",
             "name": "Alt i Ild",
-            "telephone": "+47 988 44 844"
+            "telephone": "+47 98 844 844"
           },
           "areaServed": "Møre og Romsdal",
           "description": service.description
@@ -310,10 +310,10 @@ const TjenesteDetalj = () => {
                   </Button>
                   <div className="mt-4 text-center">
                     <a 
-                      href="tel:98844844" 
+                      href="tel:+4798844844" 
                       className="text-primary hover:underline font-medium"
                     >
-                      Ring 988 44 844
+                      Ring +47 98 844 844
                     </a>
                   </div>
                 </div>
@@ -404,7 +404,7 @@ const TjenesteDetalj = () => {
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               asChild
             >
-              <a href="tel:98844844">Ring 988 44 844</a>
+              <a href="tel:+4798844844">Ring +47 98 844 844</a>
             </Button>
           </div>
         </div>

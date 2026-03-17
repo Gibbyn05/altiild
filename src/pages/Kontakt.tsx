@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "988 44 844",
+    value: "+47 98 844 844",
     href: "tel:+4798844844",
   },
   {
@@ -232,7 +232,7 @@ const Kontakt = () => {
     <Layout>
       <SEO 
         title="Kontakt oss | Bestill gratis befaring | Alt i Ild"
-        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Ring 988 44 844. Vi betjener Molde, Aukra, Hustadvika, Rauma og hele Møre og Romsdal."
+        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Ring +47 98 844 844. Vi betjener Molde, Aukra, Hustadvika, Rauma og hele Møre og Romsdal."
         keywords="kontakt Alt i Ild, gratis befaring peis, tilbud ovn Molde, peismontør telefon, piperehabilitering Møre og Romsdal"
         canonical="/kontakt"
         jsonLd={{
@@ -241,7 +241,7 @@ const Kontakt = () => {
           "mainEntity": {
             "@type": "LocalBusiness",
             "name": "Alt i Ild",
-            "telephone": "+47 988 44 844",
+            "telephone": "+47 98 844 844",
             "email": "post@altiild.no",
             "address": {
               "@type": "PostalAddress",
@@ -656,7 +656,7 @@ const Kontakt = () => {
             <Button variant="hero" size="lg" asChild>
               <a href="tel:+4798844844">
                 <Phone className="mr-2 h-4 w-4" />
-                Ring oss: 988 44 844
+                Ring oss: +47 98 844 844
               </a>
             </Button>
             <Button variant="heroOutlineLight" size="lg" asChild>
