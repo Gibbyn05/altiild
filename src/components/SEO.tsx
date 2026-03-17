@@ -36,7 +36,7 @@ const SEO = React.forwardRef<HTMLDivElement, SEOProps>(
       name: "Alt i Ild",
       description: "Profesjonell installasjon av peiser og ovner i Møre og Romsdal",
       url: siteUrl,
-      telephone: "+47 988 44 844",
+      telephone: "+47 98 844 844",
       areaServed: "Møre og Romsdal",
       priceRange: "$$",
       openingHoursSpecification: [

@@ -404,7 +404,7 @@ const TjenesteDetalj = () => {
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               asChild
             >
-              <a href="tel:98844844">Ring 988 44 844</a>
+              <a href="tel:+4798844844">Ring +47 98 844 844</a>
             </Button>
           </div>
         </div>

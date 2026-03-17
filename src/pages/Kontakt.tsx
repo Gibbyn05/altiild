@@ -656,7 +656,7 @@ const Kontakt = () => {
             <Button variant="hero" size="lg" asChild>
               <a href="tel:+4798844844">
                 <Phone className="mr-2 h-4 w-4" />
-                Ring oss: 988 44 844
+                Ring oss: +47 98 844 844
               </a>
             </Button>
             <Button variant="heroOutlineLight" size="lg" asChild>

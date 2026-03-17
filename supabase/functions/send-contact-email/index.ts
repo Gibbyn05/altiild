@@ -358,7 +358,7 @@ const handler = async (req: Request): Promise<Response> => {
                   <table cellpadding="8" cellspacing="0" style="margin: 20px 0;">
                     <tr>
                       <td style="color: #666;">📞 Telefon:</td>
-                      <td><a href="tel:+4798844844" style="color: #b1222f; text-decoration: none; font-weight: 600;">+47 988 44 844</a></td>
+                      <td><a href="tel:+4798844844" style="color: #b1222f; text-decoration: none; font-weight: 600;">+47 98 844 844</a></td>
                     </tr>
                     <tr>
                       <td style="color: #666;">✉️ E-post:</td>

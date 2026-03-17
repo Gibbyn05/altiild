@@ -93,7 +93,7 @@ export function PrivacyPolicyDialog({ children }: PrivacyPolicyDialogProps) {
                 </a>{" "}
                 eller ring{" "}
                 <a href="tel:+4798844844" className="text-primary hover:underline">
-                  +47 988 44 844
+                  +47 98 844 844
                 </a>.
               </p>
             </section>
