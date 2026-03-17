@@ -313,7 +313,7 @@ const TjenesteDetalj = () => {
                       href="tel:98844844" 
                       className="text-primary hover:underline font-medium"
                     >
-                      Ring 988 44 844
+                      Ring +47 98 844 844
                     </a>
                   </div>
                 </div>
