@@ -10,13 +10,13 @@ import {
 } from "lucide-react";
 
 import pipeTak from "@/assets/pipe-tak.jpg";
-import tjenesterPeis from "@/assets/4.png";
+import tjenesterPeis from "@/assets/tjenester-peis.png";
 import hvitOvn from "@/assets/hvit-ovn.jpg";
 import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
 import ovnSolrik from "@/assets/ovn-solrik.jpg";
 import funkisOvn from "@/assets/funkis-ovn.jpg";
 import installationImage from "@/assets/installation-work.jpg";
-import takUtside from "@/assets/tak-utside.jpg";
+import takUtside from "@/assets/4.png";
 import takInnside from "@/assets/tak-innside.jpg";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
