@@ -232,7 +232,7 @@ const Kontakt = () => {
     <Layout>
       <SEO 
         title="Kontakt oss | Bestill gratis befaring | Alt i Ild"
-        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Ring 988 44 844. Vi betjener Molde, Aukra, Hustadvika, Rauma og hele Møre og Romsdal."
+        description="Kontakt Alt i Ild for gratis befaring og uforpliktende tilbud på peis og ovn. Ring +47 98 844 844. Vi betjener Molde, Aukra, Hustadvika, Rauma og hele Møre og Romsdal."
         keywords="kontakt Alt i Ild, gratis befaring peis, tilbud ovn Molde, peismontør telefon, piperehabilitering Møre og Romsdal"
         canonical="/kontakt"
         jsonLd={{
