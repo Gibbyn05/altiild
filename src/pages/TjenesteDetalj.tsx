@@ -310,7 +310,7 @@ const TjenesteDetalj = () => {
                   </Button>
                   <div className="mt-4 text-center">
                     <a 
-                      href="tel:98844844" 
+                      href="tel:+4798844844" 
                       className="text-primary hover:underline font-medium"
                     >
                       Ring +47 98 844 844
