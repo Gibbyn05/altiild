@@ -6,7 +6,7 @@ import {
   Wrench, 
   Hammer, 
   Wind,
-  LucideIcon
+  LucideIconß
 } from "lucide-react";
 
 import pipeTak from "@/assets/pipe-tak.jpg";
@@ -17,7 +17,7 @@ import ovnSolrik from "@/assets/ovn-solrik.jpg";
 import funkisOvn from "@/assets/funkis-ovn.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import takUtside from "@/assets/ovn-solrik.jpg";
-import takInnside from "@/assets/tak-innside.jpg";
+import takInnside from "@/assets/4.png";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
 import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
