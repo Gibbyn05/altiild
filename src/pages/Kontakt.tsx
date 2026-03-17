@@ -69,8 +69,6 @@ const Kontakt = () => {
     email: "",
     phone: "",
     address: "",
-    service: "",
-    hasFiringBan: false,
     message: "",
   });
   const [images, setImages] = useState<File[]>([]);
@@ -171,8 +169,6 @@ const Kontakt = () => {
         imageUrls.push(urlData.publicUrl);
       }
 
-      const firingBanText = formData.hasFiringBan ? "\n\n⚠️ HAR FYRINGSFORBUD/AVVIK" : "";
-      
       const { error: dbError } = await supabase
         .from("customer_inquiries")
         .insert({
@@ -180,8 +176,8 @@ const Kontakt = () => {
           phone: formData.phone || "Ikke oppgitt",
           email: formData.email || null,
           address: formData.address || null,
-          inquiry_type: formData.service || "kontakt",
-          desired_solution: `Tjeneste: ${formData.service || "Ikke valgt"}\n\n${formData.message}${firingBanText}${imageUrls.length > 0 ? `\n\nBilder: ${imageUrls.join(", ")}` : ""}`,
+          inquiry_type: "kontakt",
+          desired_solution: `${formData.message || "Ingen notat"}${imageUrls.length > 0 ? `\n\nBilder: ${imageUrls.join(", ")}` : ""}`,
           source: "form",
           status: "new"
         });
@@ -194,10 +190,9 @@ const Kontakt = () => {
           email: formData.email,
           phone: formData.phone,
           address: formData.address,
-          subject: formData.service || "Henvendelse",
+          subject: "Henvendelse",
           message: formData.message,
           imageUrls,
-          hasFiringBan: formData.hasFiringBan,
         },
       });
 
@@ -468,7 +463,7 @@ const Kontakt = () => {
                       variant="outline" 
                       onClick={() => {
                         setIsSubmitted(false);
-                        setFormData({ name: "", email: "", phone: "", address: "", service: "", hasFiringBan: false, message: "" });
+                        setFormData({ name: "", email: "", phone: "", address: "", message: "" });
                       }}
                     >
                       Send ny melding
@@ -546,55 +541,16 @@ const Kontakt = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="service" className="block text-sm font-medium mb-2">
-                        Hva gjelder henvendelsen? <span className="text-primary">*</span>
-                      </label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleChange}
-                        required
-                        className="w-full h-12 px-3 rounded-md bg-background border border-border/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                      >
-                        <option value="">Velg tjeneste...</option>
-                        {serviceOptions.map((option) => (
-                          <option key={option} value={option}>{option}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    {/* Firing ban checkbox */}
-                    <div className="bg-muted/50 rounded-lg p-4">
-                      <label className="flex items-start gap-3 cursor-pointer">
-                        <input
-                          type="checkbox"
-                          name="hasFiringBan"
-                          checked={formData.hasFiringBan}
-                          onChange={handleChange}
-                          className="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary"
-                        />
-                        <div>
-                          <span className="font-medium text-foreground">Har du fyringsforbud eller avvik fra brannvesenet?</span>
-                          <p className="text-sm text-muted-foreground mt-1">
-                            Kryss av hvis du har mottatt fyringsforbud eller avvik som må utbedres.
-                          </p>
-                        </div>
-                      </label>
-                    </div>
-
-                    <div>
                       <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Beskriv ditt prosjekt <span className="text-primary">*</span>
+                        Notat
                       </label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        required
-                        placeholder="Fortell oss om ditt prosjekt. Hva slags peis eller ovn ønsker du? Har du noen spesielle ønsker eller utfordringer?"
-                        rows={5}
+                        placeholder="Eventuell tilleggsinformasjon"
+                        rows={4}
                         className="resize-none bg-background border-border/50 focus:border-primary"
                       />
                     </div>
