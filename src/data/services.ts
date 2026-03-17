@@ -6,7 +6,7 @@ import {
   Wrench, 
   Hammer, 
   Wind,
-  LucideIconß
+  LucideIcon
 } from "lucide-react";
 
 import pipeTak from "@/assets/pipe-tak.jpg";
