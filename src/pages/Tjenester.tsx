@@ -48,6 +48,10 @@ const services = [
     title: "Piperehabilitering",
     description: "En slitt eller skadet pipe kan føre til dårlig trekk, sotlukt, røyklekkasje, sprekkdannelser og i verste fall fyringsforbud. Alt i Ild AS er spesialister på piperehabilitering i Molde og hele Møre og Romsdal.",
     image: pipeTak,
+    extraImages: [
+      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg - Alt i Ild Molde" },
+      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe innvendig - Alt i Ild Molde" },
+    ],
     intro: "Vanlige tegn på at pipe må rehabiliteres:",
     problems: [
       "Røyk kommer ut i rommet",
@@ -72,6 +76,10 @@ const services = [
     title: "Montering av isolerte stålpiper",
     description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
+    extraImages: [
+      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg", caption: "Utvendig montering av isolert stålpipe" },
+      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe i stue", caption: "Innvendig stålpipe med moderne peisovn" },
+    ],
     intro: "Fordeler med stålpipe:",
     suitableFor: [
       "Rask installasjon",
