@@ -20,6 +20,9 @@ import hvitOvn from "@/assets/hvit-ovn.jpg";
 import funkisOvn from "@/assets/funkis-ovn.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import takUtside from "@/assets/tak-utside.jpg";
+import stalpipeUtvendig from "@/assets/stalpipe-utvendig.jpg";
+import stalpipeInnvendig from "@/assets/stalpipe-innvendig.jpg";
+import takstigeNy from "@/assets/takstige-ny.png";
 
 const services = [
   {
@@ -45,6 +48,10 @@ const services = [
     title: "Piperehabilitering",
     description: "En slitt eller skadet pipe kan føre til dårlig trekk, sotlukt, røyklekkasje, sprekkdannelser og i verste fall fyringsforbud. Alt i Ild AS er spesialister på piperehabilitering i Molde og hele Møre og Romsdal.",
     image: pipeTak,
+    extraImages: [
+      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg - Alt i Ild Molde" },
+      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe innvendig - Alt i Ild Molde" },
+    ],
     intro: "Vanlige tegn på at pipe må rehabiliteres:",
     problems: [
       "Røyk kommer ut i rommet",
@@ -69,6 +76,10 @@ const services = [
     title: "Montering av isolerte stålpiper",
     description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
+    extraImages: [
+      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg", caption: "Utvendig montering av isolert stålpipe" },
+      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe i stue", caption: "Innvendig stålpipe med moderne peisovn" },
+    ],
     intro: "Fordeler med stålpipe:",
     suitableFor: [
       "Rask installasjon",
@@ -139,7 +150,7 @@ const services = [
     icon: Hammer,
     title: "Stige, taksikring & tilkomst til pipe",
     description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
-    image: pipeTak,
+    image: takstigeNy,
     intro: "Vi monterer:",
     includes: [
       "Pipestige",
@@ -428,12 +439,28 @@ const Tjenester = () => {
                   </Link>
                 </Button>
               </div>
-              <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+              <div className={`space-y-4 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <img
                   src={service.image}
                   alt={service.title}
                   className="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover"
                 />
+                {service.extraImages && (
+                  <div className="grid grid-cols-2 gap-4">
+                    {service.extraImages.map((img, i) => (
+                      <figure key={i} className="space-y-2">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          className="rounded-xl shadow-lg w-full aspect-[3/4] object-cover"
+                        />
+                        {img.caption && (
+                          <figcaption className="text-xs text-muted-foreground text-center">{img.caption}</figcaption>
+                        )}
+                      </figure>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}

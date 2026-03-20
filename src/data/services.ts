@@ -18,6 +18,9 @@ import funkisOvn from "@/assets/funkis-ovn.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import takUtside from "@/assets/ovn-solrik.jpg";
 import takInnside from "@/assets/4.png";
+import stalpipeUtvendig from "@/assets/stalpipe-utvendig.jpg";
+import stalpipeInnvendig from "@/assets/stalpipe-innvendig.jpg";
+import takstigeNy from "@/assets/takstige-ny.png";
 import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
 import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
@@ -111,7 +114,8 @@ export const services: ServiceData[] = [
     galleryImages: [
       { src: galleryPipeFjord, alt: "Rehabilitert pipe med utsikt over fjorden - Alt i Ild Molde" },
       { src: takUtside, alt: "Piperehabilitering sett fra utsiden av taket - Alt i Ild Molde" },
-      { src: takInnside, alt: "Pipe- og takarbeid sett fra innsiden - Alt i Ild Molde" },
+      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg - Alt i Ild Molde" },
+      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe innvendig - Alt i Ild Molde" },
     ],
     intro: "Vanlige tegn på at pipe må rehabiliteres:",
     problems: [
@@ -143,6 +147,8 @@ export const services: ServiceData[] = [
     description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
     galleryImages: [
+      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg - Alt i Ild" },
+      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe i stue - Alt i Ild" },
       { src: galleryStalpipe3, alt: "Svart stålpipe montert på husvegg" },
       { src: galleryStalpipe5, alt: "Utvendig stålpipe på hvit trevegg" },
       { src: galleryStalpipe7, alt: "Moderne peisovn med stålpipe innvendig", zoom: true },
@@ -235,7 +241,7 @@ export const services: ServiceData[] = [
     title: "Stige, taksikring & tilkomst til pipe",
     shortTitle: "Taksikring",
     description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
-    image: pipeTak,
+    image: takstigeNy,
     galleryImages: [
       { src: galleryTakstigeSno, alt: "Takstige og pipe på snødekt tak - Alt i Ild" },
       { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak - Alt i Ild Molde" },
