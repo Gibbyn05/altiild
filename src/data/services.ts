@@ -268,11 +268,11 @@ export const services: ServiceData[] = [
     description: "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt - spesielt i moderne, tette boliger.",
     image: takUtside,
     galleryImages: [
-      { src: galleryExodraft1, alt: "Exodraft røyksuger på pipe med fjordutsikt - Alt i Ild Molde" },
-      { src: galleryExodraft2, alt: "Exodraft røyksuger montert på tegltak - Alt i Ild" },
-      { src: galleryExodraft3, alt: "Exodraft røyksuger nærbilde - piperehabilitering Molde" },
-      { src: galleryPipehatt1, alt: "Roterende pipehatt med fjordutsikt - Alt i Ild" },
-      { src: galleryPipehatt2, alt: "Roterende pipehatt nærbilde - dårlig trekk løsning" },
+      { src: galleryExodraft1, alt: "gallery-exodraft-1" },
+      { src: galleryExodraft2, alt: "gallery-exodraft-2" },
+      { src: galleryExodraft3, alt: "gallery-exodraft-3" },
+      { src: galleryPipehatt1, alt: "gallery-pipehatt-1" },
+      { src: galleryPipehatt2, alt: "gallery-pipehatt-2" },
     ],
     intro: "Vanlige årsaker til dårlig trekk:",
     causes: [
