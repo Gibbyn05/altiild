@@ -439,12 +439,28 @@ const Tjenester = () => {
                   </Link>
                 </Button>
               </div>
-              <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+              <div className={`space-y-4 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <img
                   src={service.image}
                   alt={service.title}
                   className="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover"
                 />
+                {service.extraImages && (
+                  <div className="grid grid-cols-2 gap-4">
+                    {service.extraImages.map((img, i) => (
+                      <figure key={i} className="space-y-2">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          className="rounded-xl shadow-lg w-full aspect-[3/4] object-cover"
+                        />
+                        {img.caption && (
+                          <figcaption className="text-xs text-muted-foreground text-center">{img.caption}</figcaption>
+                        )}
+                      </figure>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}
