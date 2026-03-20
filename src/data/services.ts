@@ -85,9 +85,9 @@ export const services: ServiceData[] = [
     description: "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal - for både nye og eldre boliger.",
     image: hvitOvn,
     galleryImages: [
-      { src: hvitOvn, alt: "Hvit peis med glassdør - moderne installasjon" },
-      { src: hvitOvn2, alt: "Hvit hjørnepeis med tre-sidig glass" },
-      { src: ovnSolrik, alt: "Vedovn i solrik veranda" },
+      { src: hvitOvn, alt: "hvit-ovn" },
+      { src: hvitOvn2, alt: "hvit-ovn-2" },
+      { src: ovnSolrik, alt: "ovn-solrik" },
     ],
     intro: "Vi vurderer alltid:",
     features: [
