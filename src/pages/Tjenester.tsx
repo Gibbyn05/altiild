@@ -77,8 +77,8 @@ const services = [
     description: "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
     image: funkisOvn,
     extraImages: [
-      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg", caption: "Utvendig montering av isolert stålpipe" },
-      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe i stue", caption: "Innvendig stålpipe med moderne peisovn" },
+      { src: stalpipeUtvendig, alt: "stalpipe-utvendig", caption: "stalpipe-utvendig" },
+      { src: stalpipeInnvendig, alt: "stalpipe-innvendig", caption: "stalpipe-innvendig" },
     ],
     intro: "Fordeler med stålpipe:",
     suitableFor: [
