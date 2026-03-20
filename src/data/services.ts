@@ -114,7 +114,8 @@ export const services: ServiceData[] = [
     galleryImages: [
       { src: galleryPipeFjord, alt: "Rehabilitert pipe med utsikt over fjorden - Alt i Ild Molde" },
       { src: takUtside, alt: "Piperehabilitering sett fra utsiden av taket - Alt i Ild Molde" },
-      { src: takInnside, alt: "Pipe- og takarbeid sett fra innsiden - Alt i Ild Molde" },
+      { src: stalpipeUtvendig, alt: "Isolert stålpipe montert utvendig på husvegg - Alt i Ild Molde" },
+      { src: stalpipeInnvendig, alt: "Moderne peisovn med stålpipe innvendig - Alt i Ild Molde" },
     ],
     intro: "Vanlige tegn på at pipe må rehabiliteres:",
     problems: [
