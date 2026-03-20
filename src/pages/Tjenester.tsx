@@ -150,7 +150,7 @@ const services = [
     icon: Hammer,
     title: "Stige, taksikring & tilkomst til pipe",
     description: "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
-    image: pipeTak,
+    image: takstigeNy,
     intro: "Vi monterer:",
     includes: [
       "Pipestige",
