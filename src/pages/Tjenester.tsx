@@ -20,6 +20,9 @@ import hvitOvn from "@/assets/hvit-ovn.jpg";
 import funkisOvn from "@/assets/funkis-ovn.jpg";
 import installationImage from "@/assets/installation-work.jpg";
 import takUtside from "@/assets/tak-utside.jpg";
+import stalpipeUtvendig from "@/assets/stalpipe-utvendig.jpg";
+import stalpipeInnvendig from "@/assets/stalpipe-innvendig.jpg";
+import takstigeNy from "@/assets/takstige-ny.png";
 
 const services = [
   {
