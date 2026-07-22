@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AuthProvider } from "@/hooks/useAuth";
-import { TinaEditProvider } from "tinacms/dist/edit-state";
 import Index from "./pages/Index";
 import OmOss from "./pages/OmOss";
 import Tjenester from "./pages/Tjenester";
@@ -28,32 +27,30 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <TinaEditProvider>
-          <BrowserRouter>
-            <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/om-oss" element={<OmOss />} />
-              <Route path="/tjenester" element={<Tjenester />} />
-              <Route path="/tjenester/:slug" element={<TjenesteDetalj />} />
-              <Route path="/dokumentasjon" element={<Dokumentasjon />} />
-              <Route path="/galleri" element={<Galleri />} />
-              <Route path="/kontakt" element={<Kontakt />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/admin" element={<TinaAdmin />} />
-              <Route
-                path="/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/om-oss" element={<OmOss />} />
+            <Route path="/tjenester" element={<Tjenester />} />
+            <Route path="/tjenester/:slug" element={<TjenesteDetalj />} />
+            <Route path="/dokumentasjon" element={<Dokumentasjon />} />
+            <Route path="/galleri" element={<Galleri />} />
+            <Route path="/kontakt" element={<Kontakt />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={<TinaAdmin />} />
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-          </BrowserRouter>
-        </TinaEditProvider>
+        </BrowserRouter>
       </TooltipProvider>
     </AuthProvider>
   </QueryClientProvider>
