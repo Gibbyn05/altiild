@@ -1,7 +1,10 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
-import schemas from './schemas'
+import blockContent from './schemas/blockContent'
+import post from './schemas/post'
+import service from './schemas/service'
+import page from './schemas/page'
 
 export default defineConfig({
   name: 'default',
@@ -16,6 +19,6 @@ export default defineConfig({
   ],
 
   schema: {
-    types: schemas,
+    types: [blockContent, post, service, page],
   },
 })
