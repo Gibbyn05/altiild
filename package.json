@@ -7,7 +7,7 @@
     "dev": "vite",
     "tina:dev": "tinacms dev",
     "tina:build": "tinacms build",
-    "build": "vite build && tinacms build",
+    "build": "vite build && tinacms build --skip-cloud-checks",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
