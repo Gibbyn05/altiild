@@ -22,9 +22,6 @@ import { supabase } from "@/integrations/supabase/client";
 
 import content from "@/content/kontakt.json";
 
-import heroImage from "@/assets/hero-fireplace.jpg";
-import stoveImage from "@/assets/stove-cozy.jpg";
-
 const contactInfo = [
   {
     icon: Phone,
@@ -260,7 +257,7 @@ const Kontakt = () => {
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${content.hero.image})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/85 to-charcoal/70 md:from-charcoal/90 md:via-charcoal/80 md:to-charcoal/60" />
         </div>
@@ -628,7 +625,7 @@ const Kontakt = () => {
       <section className="relative py-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${stoveImage})` }}
+          style={{ backgroundImage: `url(${content.cta.image})` }}
         >
           <div className="absolute inset-0 bg-charcoal/80" />
         </div>

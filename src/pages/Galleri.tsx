@@ -8,72 +8,8 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 import content from "@/content/galleri.json";
 
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import heroImage from "@/assets/hero-fireplace.jpg";
-import stoveImage from "@/assets/stove-cozy.jpg";
-import installationImage from "@/assets/installation-work.jpg";
-
-// Real business images
-import funkisOvn from "@/assets/funkis-ovn.jpg";
-import hvitOvn from "@/assets/hvit-ovn.jpg";
-import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
-import ovnSolrik from "@/assets/ovn-solrik.jpg";
-import pipeTak from "@/assets/pipe-tak.jpg";
-import takInnside from "@/assets/tak-innside.jpg";
-import takUtside from "@/assets/tak-utside.jpg";
-
-// New gallery images
-import galleryModernPeis from "@/assets/gallery-modern-peis.png";
-import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
-import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
-import galleryOvnGra from "@/assets/gallery-ovn-gra.jpg";
-import galleryPipeUtvendig from "@/assets/gallery-pipe-utvendig.jpg";
-import galleryOvnSvart from "@/assets/gallery-ovn-svart.jpg";
-import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
-import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
-import galleryTakstigePlatetak from "@/assets/gallery-takstige-platetak.jpg";
-import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
-import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
-import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
-import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
-import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
-
-// Before/After images
-import beforeFireplace from "@/assets/before-fireplace.jpg";
-import afterFireplace from "@/assets/after-fireplace.jpg";
-import beforeStove from "@/assets/before-stove.jpg";
-import afterStove from "@/assets/after-stove.jpg";
-
-// Image imports and stable ids stay in code; text comes from galleri.json (by index)
-const projectMeta = [
-  { id: 2, image: hvitOvn2 },
-  { id: 3, image: hvitOvn },
-  { id: 4, image: ovnSolrik },
-  { id: 5, image: pipeTak },
-  { id: 8, image: galleryModernPeis },
-  { id: 9, image: galleryPipeSol },
-  { id: 11, image: galleryPipeFjord },
-  { id: 12, image: galleryOvnGra },
-  { id: 13, image: galleryPipeUtvendig },
-  { id: 14, image: galleryOvnSvart },
-  { id: 15, image: galleryPipeRehab },
-  { id: 16, image: galleryStalpipeSvart },
-  { id: 17, image: galleryTakstigePlatetak },
-  { id: 18, image: galleryTakstigeSno },
-  { id: 19, image: galleryStalpipeTakstige },
-  { id: 20, image: galleryTakstigePipe },
-  { id: 21, image: galleryStalpipePlatetak },
-  { id: 22, image: galleryStalpipeFeieplattform },
-  { id: 23, image: takInnside },
-  { id: 24, image: takUtside },
-];
-
-const projects = projectMeta.map((meta, index) => ({
-  ...meta,
-  ...content.projects[index],
-}));
+// Project data (including image paths) comes from galleri.json so the CMS can edit it
+const projects = content.projects;
 
 const GalleryCarousel = ({ 
   projects: carouselProjects, 
@@ -144,7 +80,7 @@ const Galleri = () => {
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 min-h-[35vh] md:min-h-[50vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${content.hero.image})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/50 md:from-charcoal/90 md:via-charcoal/70 md:to-charcoal/40" />
         </div>
@@ -198,14 +134,13 @@ const Galleri = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
-            <BeforeAfterSlider
-              beforeImage={beforeStove}
-              afterImage={afterStove}
-            />
-            <BeforeAfterSlider
-              beforeImage={beforeFireplace}
-              afterImage={afterFireplace}
-            />
+            {content.beforeAfterPairs.map((pair, index) => (
+              <BeforeAfterSlider
+                key={index}
+                beforeImage={pair.before}
+                afterImage={pair.after}
+              />
+            ))}
           </div>
         </div>
       </section>

@@ -2,7 +2,8 @@
   "hero": {
     "eyebrow": "Galleri",
     "title": "Våre prosjekter",
-    "intro": "Bli inspirert av et utvalg av våre tidligere installasjoner. Hver peis og ovn er unik, tilpasset kundens ønsker og bolig."
+    "intro": "Bli inspirert av et utvalg av våre tidligere installasjoner. Hver peis og ovn er unik, tilpasset kundens ønsker og bolig.",
+    "image": "/uploads/hero-fireplace.jpg"
   },
   "carouselSection": {
     "eyebrow": "Utvalgte prosjekter",
@@ -20,124 +21,174 @@
   },
   "projects": [
     {
+      "id": 2,
+      "image": "/uploads/hvit-ovn-2.jpg",
       "title": "Hvit hjørnepeis med glass",
       "location": "Molde",
       "category": "Peis",
       "description": "Moderne hvit peis med treveis glass som gir utsikt til flammene fra flere vinkler."
     },
     {
+      "id": 3,
+      "image": "/uploads/hvit-ovn.jpg",
       "title": "Hvit frittstående peis",
       "location": "Ålesund",
       "category": "Peis",
       "description": "Stilren hvit peis med hjørneglassløsning, perfekt plassert i overgangen mellom rom."
     },
     {
+      "id": 4,
+      "image": "/uploads/ovn-solrik.jpg",
       "title": "Vedovn i hagestue",
       "location": "Kristiansund",
       "category": "Ovn",
       "description": "Klassisk vedovn installert i lys hagestue med panoramautsikt og naturlige omgivelser."
     },
     {
+      "id": 5,
+      "image": "/uploads/pipe-tak.jpg",
       "title": "Piperehabilitering",
       "location": "Molde",
       "category": "Installasjon",
       "description": "Profesjonell pipearbeid på tak med ny pipehatt og beslag, med utsikt mot Molde by."
     },
     {
+      "id": 8,
+      "image": "/uploads/gallery-modern-peis.png",
       "title": "Modern hjørnepeis med panorama",
       "location": "Molde",
       "category": "Peis",
       "description": "Stilfull grå hjørnepeis med tresiders glass, integrert i moderne stue med utsikt over byen."
     },
     {
+      "id": 9,
+      "image": "/uploads/gallery-pipe-sol.jpg",
       "title": "Pipehatt på hytte",
       "location": "Molde",
       "category": "Installasjon",
       "description": "Stålpipe med pipehatt montert på hytte - Alt i Ild Molde."
     },
     {
+      "id": 11,
+      "image": "/uploads/gallery-pipe-fjord.jpg",
       "title": "Stålpipe med fjordutsikt",
       "location": "Molde",
       "category": "Installasjon",
       "description": "Blankt stålpipehode montert på tak med spektakulær utsikt over fjorden og fjellene."
     },
     {
+      "id": 12,
+      "image": "/uploads/gallery-ovn-gra.jpg",
       "title": "Moderne vedovn med grå vegg",
       "location": "Molde",
       "category": "Ovn",
       "description": "Stilren svart vedovn på glassplate, montert mot grå pusset vegg i lys stue."
     },
     {
+      "id": 13,
+      "image": "/uploads/gallery-pipe-utvendig.jpg",
       "title": "Pipehatt på tak",
       "location": "Molde",
       "category": "Installasjon",
       "description": "Svart pipehatt og beslag montert på tak - Alt i Ild Molde."
     },
     {
+      "id": 14,
+      "image": "/uploads/gallery-ovn-svart.jpg",
       "title": "Svart vedovn i stue",
       "location": "Molde",
       "category": "Ovn",
       "description": "Elegant svart vedovn på glassplate mellom store vinduer med vinterutsikt."
     },
     {
+      "id": 15,
+      "image": "/uploads/gallery-pipe-rehabilitering.jpg",
       "title": "Piperehabilitering - foringsrør",
       "location": "Molde",
       "category": "Installasjon",
       "description": "Piperehabilitering med keramiske foringsrør sett ovenfra - Alt i Ild Molde."
     },
     {
+      "id": 16,
+      "image": "/uploads/gallery-stalpipe-svart.jpg",
       "title": "Isolert stålpipe veggmontert",
       "location": "Molde",
       "category": "Installasjon",
       "description": "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt - Alt i Ild Molde."
     },
     {
+      "id": 17,
+      "image": "/uploads/gallery-takstige-platetak.jpg",
       "title": "Takstige på platetak",
       "location": "Møre og Romsdal",
       "category": "Taksikring",
       "description": "Takstige montert på platetak for trygg tilkomst til pipe for feiing."
     },
     {
+      "id": 18,
+      "image": "/uploads/gallery-takstige-sno.jpg",
       "title": "Takstige og pipe vinterstid",
       "location": "Møre og Romsdal",
       "category": "Taksikring",
       "description": "Takstige og pipe på snødekt platetak med stålpipe og feieplattform."
     },
     {
+      "id": 19,
+      "image": "/uploads/gallery-stalpipe-takstige.jpg",
       "title": "Gjennomføring i tak - stålpipe",
       "location": "Møre og Romsdal",
       "category": "Installasjon",
       "description": "Gjennomføring av stålpipe i tak med lasermåling - Alt i Ild Molde."
     },
     {
+      "id": 20,
+      "image": "/uploads/gallery-takstige-pipe.jpg",
       "title": "Takstige langs husvegg",
       "location": "Møre og Romsdal",
       "category": "Taksikring",
       "description": "Takstige montert langs husvegg for tilkomst til pipe og tak."
     },
     {
+      "id": 21,
+      "image": "/uploads/gallery-stalpipe-platetak.jpg",
       "title": "Stålpipe gjennom vinterhage",
       "location": "Møre og Romsdal",
       "category": "Installasjon",
       "description": "Isolert stålpipe montert gjennom vinterhage med pipehatt - Alt i Ild Molde."
     },
     {
+      "id": 22,
+      "image": "/uploads/gallery-stalpipe-feieplattform.jpg",
       "title": "Utvendig stålpipe på hus",
       "location": "Møre og Romsdal",
       "category": "Installasjon",
       "description": "Utvendig isolert stålpipe montert på moderne hus - Alt i Ild Molde."
     },
     {
+      "id": 23,
+      "image": "/uploads/tak-innside.jpg",
       "title": "Hagestue med ovn",
       "location": "Møre og Romsdal",
       "category": "Ovn",
       "description": "Vedovn installert i moderne hagestue med glasstak og utsikt."
     },
     {
+      "id": 24,
+      "image": "/uploads/tak-utside.jpg",
       "title": "Takarbeid utvendig",
       "location": "Møre og Romsdal",
       "category": "Installasjon",
       "description": "Takarbeid og pipegjennomføring sett fra utsiden."
+    }
+  ],
+  "beforeAfterPairs": [
+    {
+      "before": "/uploads/before-stove.jpg",
+      "after": "/uploads/after-stove.jpg"
+    },
+    {
+      "before": "/uploads/before-fireplace.jpg",
+      "after": "/uploads/after-fireplace.jpg"
     }
   ]
 }

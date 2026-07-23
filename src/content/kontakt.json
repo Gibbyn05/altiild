@@ -2,7 +2,8 @@
   "hero": {
     "eyebrow": "Kontakt oss",
     "title": "Kontakt oss",
-    "description": "Du er alltid velkommen til å ta kontakt med oss - enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud."
+    "description": "Du er alltid velkommen til å ta kontakt med oss - enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.",
+    "image": "/uploads/hero-fireplace.jpg"
   },
   "contactCards": {
     "phone": {
@@ -85,6 +86,7 @@
     "title": "Vi kommer til deg",
     "description": "Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt - fra vurdering til ferdig godkjent installasjon.",
     "phoneButton": "Ring oss: +47 98 844 844",
-    "emailButton": "post@altiild.no"
+    "emailButton": "post@altiild.no",
+    "image": "/uploads/stove-cozy.jpg"
   }
 }

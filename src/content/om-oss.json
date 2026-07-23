@@ -2,7 +2,8 @@
   "hero": {
     "eyebrow": "Om Alt i Ild",
     "title": "Hvem vi er - erfaring, fagkompetanse & sertifiseringer",
-    "description": "Alt i Ild AS er en lokal fagbedrift i Molde, spesialisert på ildsted, skorstein og piperehabilitering i hele Møre og Romsdal."
+    "description": "Alt i Ild AS er en lokal fagbedrift i Molde, spesialisert på ildsted, skorstein og piperehabilitering i hele Møre og Romsdal.",
+    "image": "/uploads/om-oss-hero.png"
   },
   "whoWeAre": {
     "title": "Erfaring og fagkompetanse",
@@ -16,7 +17,8 @@
       "Problemløsning ved dårlig trekk eller feil lufttilførsel",
       "Håndtering av avvik fra brannvesenet",
       "Optimalisering av forbrenning og varmeeffekt"
-    ]
+    ],
+    "image": "/uploads/lars-klemm.jpg"
   },
   "competenceAndCertifications": {
     "competenceTitle": "Fagkompetanse",
@@ -111,6 +113,7 @@
     "paragraph2": "Vi samarbeider med lokale aktører, og vi er vant til å jobbe i:",
     "areas": ["Molde", "Hustadvika", "Aukra", "Midsund", "Rauma"],
     "paragraph3": "For deg betyr dette rask respons, gode vurderinger og en leverandør som kjenner lokale forhold og myndighetskrav.",
-    "buttonText": "Bestill gratis befaring"
+    "buttonText": "Bestill gratis befaring",
+    "image": "/uploads/gallery-pipe-fjord.jpg"
   }
 }

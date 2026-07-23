@@ -2,14 +2,17 @@
   "hero": {
     "eyebrow": "Våre tjenester",
     "title": "Komplett tilbud for ildsted og skorstein",
-    "description": "Sertifisert for søknadspliktig arbeid på ildsteder og skorsteiner. Vi håndterer alt fra befaring til ferdig godkjent installasjon."
+    "description": "Sertifisert for søknadspliktig arbeid på ildsteder og skorsteiner. Vi håndterer alt fra befaring til ferdig godkjent installasjon.",
+    "image": "/uploads/tjenester-peis.png"
   },
   "typicalProjectsLabel": "Typiske prosjekter:",
   "ctaButton": "Bestill gratis befaring",
+  "ctaImage": "/uploads/pipe-tak.jpg",
   "services": [
     {
       "title": "Montering av peis og ovn",
       "description": "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal - for både nye og eldre boliger.",
+      "image": "/uploads/hvit-ovn.jpg",
       "intro": "Vi vurderer alltid:",
       "features": [
         "Trekkforhold i skorsteinen",
@@ -24,9 +27,10 @@
     {
       "title": "Piperehabilitering",
       "description": "En slitt eller skadet pipe kan føre til dårlig trekk, sotlukt, røyklekkasje, sprekkdannelser og i verste fall fyringsforbud. Alt i Ild AS er spesialister på piperehabilitering i Molde og hele Møre og Romsdal.",
+      "image": "/uploads/pipe-tak.jpg",
       "extraImages": [
-        { "alt": "stalpipe-utvendig" },
-        { "alt": "stalpipe-innvendig" }
+        { "alt": "stalpipe-utvendig", "image": "/uploads/stalpipe-utvendig.jpg" },
+        { "alt": "stalpipe-innvendig", "image": "/uploads/stalpipe-innvendig.jpg" }
       ],
       "intro": "Vanlige tegn på at pipe må rehabiliteres:",
       "problems": [
@@ -49,9 +53,10 @@
     {
       "title": "Montering av isolerte stålpiper",
       "description": "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
+      "image": "/uploads/funkis-ovn.jpg",
       "extraImages": [
-        { "alt": "stalpipe-utvendig", "caption": "stalpipe-utvendig" },
-        { "alt": "stalpipe-innvendig", "caption": "stalpipe-innvendig" }
+        { "alt": "stalpipe-utvendig", "caption": "stalpipe-utvendig", "image": "/uploads/stalpipe-utvendig.jpg" },
+        { "alt": "stalpipe-innvendig", "caption": "stalpipe-innvendig", "image": "/uploads/stalpipe-innvendig.jpg" }
       ],
       "intro": "Fordeler med stålpipe:",
       "suitableFor": [
@@ -73,6 +78,7 @@
     {
       "title": "Inspeksjon & vurdering av pipe og ildsted",
       "description": "Opplever du problemer med pipen eller ildstedet? Da er det tid for en profesjonell inspeksjon.",
+      "image": "/uploads/installation-work.jpg",
       "intro": "Opplever du problemer som:",
       "symptoms": [
         "Dårlig trekk",
@@ -96,6 +102,7 @@
     {
       "title": "Service & vedlikehold",
       "description": "Regelmessig service sikrer trygg fyring, bedre varmeeffekt og mindre sot. Slitasje på deler er naturlig, og vedlikehold forhindrer større problemer som lekkasjer og dårlig trekk.",
+      "image": "/uploads/tjenester-peis.png",
       "intro": "Hva inngår i service?",
       "services": [
         "Kontroll av røykrør og feste",
@@ -115,6 +122,7 @@
     {
       "title": "Stige, taksikring & tilkomst til pipe",
       "description": "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
+      "image": "/uploads/takstige-ny.png",
       "intro": "Vi monterer:",
       "includes": [
         "Pipestige",
@@ -127,6 +135,7 @@
     {
       "title": "Dårlig trekk & røyksugere (Exodraft)",
       "description": "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt - spesielt i moderne, tette boliger.",
+      "image": "/uploads/tak-utside.jpg",
       "intro": "Vanlige årsaker til dårlig trekk:",
       "causes": [
         "Undertrykk i huset",

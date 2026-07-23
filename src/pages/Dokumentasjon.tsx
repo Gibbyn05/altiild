@@ -15,8 +15,6 @@ import {
 
 import content from "@/content/dokumentasjon.json";
 
-import dokumentasjonHero from "@/assets/dokumentasjon-hero.png";
-
 const documentationStepIcons = [ClipboardCheck, FileCheck, Shield];
 
 const Dokumentasjon = () => {
@@ -33,7 +31,7 @@ const Dokumentasjon = () => {
       <section className="relative pt-32 pb-20 min-h-[50vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${dokumentasjonHero})` }}
+          style={{ backgroundImage: `url(${content.hero.image})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
         </div>
@@ -83,7 +81,7 @@ const Dokumentasjon = () => {
             </div>
             <div>
               <img
-                src={dokumentasjonHero}
+                src={content.duringWorkSection.image}
                 alt="Dokumentert pipeinstallasjon"
                 className="rounded-2xl shadow-xl w-full"
               />
@@ -188,7 +186,7 @@ const Dokumentasjon = () => {
       <section className="relative py-32">
         <div
           className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: `url(${dokumentasjonHero})` }}
+          style={{ backgroundImage: `url(${content.cta.image})` }}
         >
           <div className="absolute inset-0 bg-charcoal/80" />
         </div>

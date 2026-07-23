@@ -16,24 +16,14 @@ import {
 
 import content from "@/content/tjenester.json";
 
-import pipeTak from "@/assets/pipe-tak.jpg";
-import tjenesterPeis from "@/assets/tjenester-peis.png";
-import hvitOvn from "@/assets/hvit-ovn.jpg";
-import funkisOvn from "@/assets/funkis-ovn.jpg";
-import installationImage from "@/assets/installation-work.jpg";
-import takUtside from "@/assets/tak-utside.jpg";
-import stalpipeUtvendig from "@/assets/stalpipe-utvendig.jpg";
-import stalpipeInnvendig from "@/assets/stalpipe-innvendig.jpg";
-import takstigeNy from "@/assets/takstige-ny.png";
-
 const serviceMeta = [
-  { id: "montering", icon: Flame, image: hvitOvn, extraImages: [] },
-  { id: "piperehabilitering", icon: Construction, image: pipeTak, extraImages: [stalpipeUtvendig, stalpipeInnvendig] },
-  { id: "stalpiper", icon: Shield, image: funkisOvn, extraImages: [stalpipeUtvendig, stalpipeInnvendig] },
-  { id: "inspeksjon", icon: Eye, image: installationImage, extraImages: [] },
-  { id: "service", icon: Wrench, image: tjenesterPeis, extraImages: [] },
-  { id: "taksikring", icon: Hammer, image: takstigeNy, extraImages: [] },
-  { id: "darlig-trekk", icon: Wind, image: takUtside, extraImages: [] },
+  { id: "montering", icon: Flame },
+  { id: "piperehabilitering", icon: Construction },
+  { id: "stalpiper", icon: Shield },
+  { id: "inspeksjon", icon: Eye },
+  { id: "service", icon: Wrench },
+  { id: "taksikring", icon: Hammer },
+  { id: "darlig-trekk", icon: Wind },
 ];
 
 const Tjenester = () => {
@@ -69,7 +59,7 @@ const Tjenester = () => {
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 min-h-[40vh] md:min-h-[50vh] flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${tjenesterPeis})` }}
+          style={{ backgroundImage: `url(${content.hero.image})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/50 md:from-charcoal/90 md:via-charcoal/70 md:to-charcoal/40" />
         </div>
@@ -283,21 +273,21 @@ const Tjenester = () => {
               </div>
               <div className={`space-y-4 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <img
-                  src={meta.image}
+                  src={service.image}
                   alt={service.title}
                   className="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover"
                 />
-                {meta.extraImages.length > 0 && (
+                {service.extraImages && service.extraImages.length > 0 && (
                   <div className="grid grid-cols-2 gap-4">
-                    {meta.extraImages.map((src, i) => (
+                    {service.extraImages.map((extra, i) => (
                       <figure key={i} className="space-y-2">
                         <img
-                          src={src}
-                          alt={service.extraImages[i].alt}
+                          src={extra.image}
+                          alt={extra.alt}
                           className="rounded-xl shadow-lg w-full aspect-[3/4] object-cover"
                         />
-                        {service.extraImages[i].caption && (
-                          <figcaption className="text-xs text-muted-foreground text-center">{service.extraImages[i].caption}</figcaption>
+                        {extra.caption && (
+                          <figcaption className="text-xs text-muted-foreground text-center">{extra.caption}</figcaption>
                         )}
                       </figure>
                     ))}
@@ -344,7 +334,7 @@ const Tjenester = () => {
       <section className="relative py-32">
         <div 
           className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: `url(${pipeTak})` }}
+          style={{ backgroundImage: `url(${content.ctaImage})` }}
         >
           <div className="absolute inset-0 bg-charcoal/80" />
         </div>

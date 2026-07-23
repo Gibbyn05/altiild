@@ -3,11 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { ArrowRight, Shield, Award, Heart, Users, MapPin, CheckCircle, ClipboardCheck, Wrench, FileCheck, Eye } from "lucide-react";
-import larsKlemmImage from "@/assets/lars-klemm.jpg";
-import hvitOvn from "@/assets/hvit-ovn.jpg";
-import omOssHero from "@/assets/om-oss-hero.png";
-import teamImage from "@/assets/team.jpg";
-import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
 import content from "@/content/om-oss.json";
 
 // Ikoner beholdes i koden og kobles til tekst fra JSON via rekkefølge
@@ -42,7 +37,7 @@ const OmOss = () => {
       {/* Hero */}
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 min-h-[40vh] md:min-h-[60vh] flex items-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: `url(${omOssHero})`
+        backgroundImage: `url(${content.hero.image})`
       }}>
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/50 md:from-charcoal/90 md:via-charcoal/70 md:to-charcoal/40" />
         </div>
@@ -85,7 +80,7 @@ const OmOss = () => {
               </ul>
             </div>
             <div className="relative order-first lg:order-last">
-              <img src={larsKlemmImage} alt="Lars Klemm - grunnlegger av Alt i Ild" className="rounded-xl md:rounded-2xl shadow-2xl w-full" />
+              <img src={content.whoWeAre.image} alt="Lars Klemm - grunnlegger av Alt i Ild" className="rounded-xl md:rounded-2xl shadow-2xl w-full" />
             </div>
           </div>
         </div>
@@ -199,7 +194,7 @@ const OmOss = () => {
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <img src={galleryPipeFjord} alt="Utsikt over Molde og fjorden" className="rounded-xl md:rounded-2xl shadow-2xl w-full" />
+              <img src={content.localSection.image} alt="Utsikt over Molde og fjorden" className="rounded-xl md:rounded-2xl shadow-2xl w-full" />
             </div>
             <div className="order-1 lg:order-2">
               <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">

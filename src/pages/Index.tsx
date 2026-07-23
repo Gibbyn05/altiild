@@ -28,37 +28,6 @@ import {
 
 import content from "@/content/forside.json";
 
-import heroImage from "@/assets/hero-fireplace.jpg";
-import stoveImage from "@/assets/stove-cozy.jpg";
-import installationImage from "@/assets/installation-work.jpg";
-import pipeTak from "@/assets/pipe-tak.jpg";
-
-// Gallery images
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import galleryHvitPeis from "@/assets/gallery-hvit-peis.jpg";
-import galleryModernPeis from "@/assets/gallery-modern-peis.png";
-import galleryOvnGra from "@/assets/gallery-ovn-gra.jpg";
-import galleryOvnSvart from "@/assets/gallery-ovn-svart.jpg";
-import galleryPipeFjord from "@/assets/gallery-pipe-fjord.jpg";
-import galleryPipeSol from "@/assets/gallery-pipe-sol.jpg";
-import galleryPipeUtvendig from "@/assets/gallery-pipe-utvendig.jpg";
-import funkisOvn from "@/assets/funkis-ovn.jpg";
-import hvitOvn from "@/assets/hvit-ovn.jpg";
-import hvitOvn2 from "@/assets/hvit-ovn-2.jpg";
-import ovnSolrik from "@/assets/ovn-solrik.jpg";
-import takInnside from "@/assets/tak-innside.jpg";
-import takUtside from "@/assets/tak-utside.jpg";
-import galleryPipeRehab from "@/assets/gallery-pipe-rehabilitering.jpg";
-import galleryStalpipeSvart from "@/assets/gallery-stalpipe-svart.jpg";
-import galleryTakstigePlatetak from "@/assets/gallery-takstige-platetak.jpg";
-import galleryTakstigeSno from "@/assets/gallery-takstige-sno.jpg";
-import galleryStalpipeTakstige from "@/assets/gallery-stalpipe-takstige.jpg";
-import galleryTakstigePipe from "@/assets/gallery-takstige-pipe.jpg";
-import galleryStalpipePlatetak from "@/assets/gallery-stalpipe-platetak.jpg";
-import galleryStalpipeFeieplattform from "@/assets/gallery-stalpipe-feieplattform.jpg";
-
 const services = [
   {
     icon: Flame,
@@ -217,24 +186,6 @@ const testimonials = [
   },
 ];
 
-const galleryImages = [
-  { src: hvitOvn, alt: "Hvit frittstående peis" },
-  { src: hvitOvn2, alt: "Hvit hjørnepeis med treveis glass" },
-  { src: funkisOvn, alt: "Funkis-peis i moderne hytte" },
-  { src: ovnSolrik, alt: "Vedovn i solrik hagestue" },
-  { src: galleryPipeFjord, alt: "Pipe med fjordutsikt og cruiseskip" },
-  { src: takUtside, alt: "Takarbeid sett fra utsiden" },
-  { src: takInnside, alt: "Hagestue med ovn sett innenfra" },
-  { src: galleryPipeRehab, alt: "Piperehabilitering foringsrør ovenfra - Alt i Ild Molde" },
-  { src: galleryStalpipeSvart, alt: "Isolert stålpipe veggmontert - Alt i Ild Molde" },
-  { src: galleryTakstigePlatetak, alt: "Takstige montert på platetak - Alt i Ild" },
-  { src: galleryTakstigeSno, alt: "Takstige på snødekt tak - Alt i Ild" },
-  { src: galleryStalpipeTakstige, alt: "Gjennomføring i tak med laser - stålpipe Alt i Ild Molde" },
-  { src: galleryTakstigePipe, alt: "Takstige langs husvegg - Alt i Ild" },
-  { src: galleryStalpipePlatetak, alt: "Stålpipe gjennom vinterhage - piperehabilitering Molde" },
-  { src: galleryStalpipeFeieplattform, alt: "Utvendig stålpipe på hus - Alt i Ild Molde" },
-];
-
 const GalleryCarousel = () => {
   const [emblaRef] = useEmblaCarousel(
     { loop: true, align: "start", dragFree: true },
@@ -244,13 +195,13 @@ const GalleryCarousel = () => {
   return (
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex gap-4 px-4 md:px-8">
-        {galleryImages.map((image, index) => (
+        {content.gallerySection.images.map((image, index) => (
           <div
             key={index}
             className="flex-none w-[200px] sm:w-[280px] md:w-[320px] lg:w-[380px] aspect-[4/3] rounded-xl overflow-hidden"
           >
             <OptimizedImage
-              src={image.src}
+              src={image.image}
               alt={image.alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -314,7 +265,7 @@ const Index = () => {
       <section className="relative min-h-[100svh] md:min-h-screen flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${content.hero.image})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50 md:from-charcoal/85 md:via-charcoal/60 md:to-transparent" />
         </div>
@@ -489,7 +440,7 @@ const Index = () => {
             </div>
             <div className="relative order-first lg:order-last">
               <OptimizedImage
-                src={installationImage}
+                src={content.documentationSection.image}
                 alt="Profesjonell dokumentert installasjon"
                 className="rounded-xl md:rounded-2xl shadow-2xl w-full aspect-[4/5]"
               />
@@ -613,7 +564,7 @@ const Index = () => {
       <section className="relative py-32">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${pipeTak})` }}
+          style={{ backgroundImage: `url(${content.contactSection.backgroundImage})` }}
         >
           <div className="absolute inset-0 bg-charcoal/85" />
         </div>
@@ -665,7 +616,7 @@ const Index = () => {
             </div>
             <div className="hidden lg:block">
               <OptimizedImage
-                src={stoveImage}
+                src={content.contactSection.image}
                 alt="Ferdig montert ildsted"
                 className="rounded-2xl shadow-2xl"
               />

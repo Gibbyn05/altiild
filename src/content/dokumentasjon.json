@@ -2,11 +2,13 @@
   "hero": {
     "eyebrow": "Dokumentasjon",
     "title": "Hvorfor dokumentasjon er viktig",
-    "description": "Dokumentasjon er en av de viktigste delene av arbeidet på pipe og ildsted - både for sikkerheten i boligen, for godkjenning hos myndighetene og for verdien av huset ditt."
+    "description": "Dokumentasjon er en av de viktigste delene av arbeidet på pipe og ildsted - både for sikkerheten i boligen, for godkjenning hos myndighetene og for verdien av huset ditt.",
+    "image": "/uploads/dokumentasjon-hero.png"
   },
   "duringWorkSection": {
     "eyebrow": "Viktig å vite",
     "title": "Dokumentasjon under arbeidet",
+    "image": "/uploads/dokumentasjon-hero.png",
     "paragraph1": "Vi dokumenterer hele arbeidsprosessen nøye, slik at både du, kommunen og brannvesenet får et klart bilde av hva som er gjort. Det gir trygghet og viser at alt er utført fagmessig i henhold til TEK17 og brannforskrifter.",
     "listIntro": "Under prosessen registrerer vi:",
     "items": [
@@ -57,6 +59,7 @@
   "cta": {
     "title": "Trygg og dokumentert installasjon",
     "description": "Kontakt oss for en gratis befaring. Vi tar oss av alt - inkludert dokumentasjon.",
-    "buttonText": "Bestill gratis befaring"
+    "buttonText": "Bestill gratis befaring",
+    "image": "/uploads/dokumentasjon-hero.png"
   }
 }

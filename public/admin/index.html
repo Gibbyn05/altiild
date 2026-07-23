@@ -15,358 +15,1887 @@
       function initCMS(){
       CMS.init({
         config: {
-          backend: {
-            name: "github",
-            repo: "gibbyn05/altiild",
-            branch: "main",
-            base_url: "https://www.altiild.no",
-            auth_endpoint: "api/auth"
+  "backend": {
+    "name": "github",
+    "repo": "gibbyn05/altiild",
+    "branch": "main",
+    "base_url": "https://www.altiild.no",
+    "auth_endpoint": "api/auth"
+  },
+  "media_folder": "public/uploads",
+  "public_folder": "/uploads",
+  "collections": [
+    {
+      "name": "sider",
+      "label": "Sider",
+      "label_singular": "Side",
+      "editor": {
+        "preview": false
+      },
+      "files": [
+        {
+          "name": "forside",
+          "label": "Forside",
+          "file": "src/content/forside.json",
+          "editor": {
+            "preview": false
           },
-          media_folder: "public/uploads",
-          public_folder: "/uploads",
-          collections: [
+          "fields": [
             {
-              name: "sider",
-              label: "Sider",
-              label_singular: "Side",
-              editor: { preview: false },
-              files: [
+              "label": "Toppseksjon (Hero)",
+              "name": "hero",
+              "widget": "object",
+              "required": false,
+              "fields": [
                 {
-                  name: "forside",
-                  label: "Forside",
-                  file: "src/content/forside.json",
-                  editor: { preview: false },
-                  fields: [
-                    { label: "Toppseksjon (Hero)", name: "hero", widget: "object", required: false, fields: [
-                      { label: "Overskrift", name: "title", widget: "string", required: false },
-                      { label: "Undertittel", name: "subtitle", widget: "string", required: false },
-                      { label: "Introtekst", name: "intro", widget: "text", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Knapp 1 (tekst)", name: "primaryButton", widget: "string", required: false },
-                      { label: "Knapp 2 (tekst)", name: "secondaryButton", widget: "string", required: false },
-                      { label: "Slagord nederst", name: "tagline", widget: "string", required: false }
-                    ]},
-                    { label: "Tjenester (overskrift)", name: "servicesSection", widget: "object", required: false, fields: [
-                      { label: "Liten overskrift", name: "eyebrow", widget: "string", required: false },
-                      { label: "Overskrift", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Komplette løsninger (overskrift)", name: "solutionsSection", widget: "object", required: false, fields: [
-                      { label: "Liten overskrift", name: "eyebrow", widget: "string", required: false },
-                      { label: "Overskrift", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Dokumentasjon-seksjon", name: "documentationSection", widget: "object", required: false, fields: [
-                      { label: "Liten overskrift", name: "eyebrow", widget: "string", required: false },
-                      { label: "Overskrift", name: "title", widget: "string", required: false },
-                      { label: "Avsnitt 1", name: "paragraph1", widget: "text", required: false },
-                      { label: "Avsnitt 2", name: "paragraph2", widget: "text", required: false },
-                      { label: "Punktliste", name: "points", widget: "list", field: { name: "item", widget: "string" }, required: false }
-                    ]},
-                    { label: "Hvorfor velge oss", name: "whyChooseUsSection", widget: "object", required: false, fields: [
-                      { label: "Overskrift", name: "title", widget: "string", required: false },
-                      { label: "Punktliste", name: "highlights", widget: "list", field: { name: "item", widget: "string" }, required: false }
-                    ]},
-                    { label: "Galleri (overskrift)", name: "gallerySection", widget: "object", required: false, fields: [
-                      { label: "Liten overskrift", name: "eyebrow", widget: "string", required: false },
-                      { label: "Overskrift", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Kundeomtaler (overskrift)", name: "testimonialsSection", widget: "object", required: false, fields: [
-                      { label: "Liten overskrift", name: "eyebrow", widget: "string", required: false },
-                      { label: "Overskrift", name: "title", widget: "string", required: false }
-                    ]},
-                    { label: "Kontakt-seksjon", name: "contactSection", widget: "object", required: false, fields: [
-                      { label: "Overskrift", name: "title", widget: "string", required: false },
-                      { label: "Introtekst", name: "introText", widget: "string", required: false },
-                      { label: "Punktliste", name: "points", widget: "list", field: { name: "item", widget: "string" }, required: false },
-                      { label: "Avslutningstekst", name: "closingText", widget: "text", required: false },
-                      { label: "Telefon", name: "phone", widget: "string", required: false },
-                      { label: "E-post", name: "email", widget: "string", required: false },
-                      { label: "Sted", name: "location", widget: "string", required: false },
-                      { label: "Knapp (tekst)", name: "buttonText", widget: "string", required: false }
-                    ]}
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Undertittel",
+                  "name": "subtitle",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Introtekst",
+                  "name": "intro",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Knapp 1 (tekst)",
+                  "name": "primaryButton",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Knapp 2 (tekst)",
+                  "name": "secondaryButton",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Slagord nederst",
+                  "name": "tagline",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Hero-bakgrunnsbilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Tjenester (overskrift)",
+              "name": "servicesSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Liten overskrift",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Komplette løsninger (overskrift)",
+              "name": "solutionsSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Liten overskrift",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Dokumentasjon-seksjon",
+              "name": "documentationSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Liten overskrift",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 1",
+                  "name": "paragraph1",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 2",
+                  "name": "paragraph2",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Punktliste",
+                  "name": "points",
+                  "widget": "list",
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Dokumentasjonsbilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Hvorfor velge oss",
+              "name": "whyChooseUsSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Punktliste",
+                  "name": "highlights",
+                  "widget": "list",
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Galleri (overskrift)",
+              "name": "gallerySection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Liten overskrift",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Galleribilder",
+                  "name": "images",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Bilde",
+                      "name": "image",
+                      "widget": "image",
+                      "required": false
+                    },
+                    {
+                      "label": "Alt-tekst",
+                      "name": "alt",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Kundeomtaler (overskrift)",
+              "name": "testimonialsSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Liten overskrift",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Kontakt-seksjon",
+              "name": "contactSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Overskrift",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Introtekst",
+                  "name": "introText",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Punktliste",
+                  "name": "points",
+                  "widget": "list",
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Avslutningstekst",
+                  "name": "closingText",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Telefon",
+                  "name": "phone",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "E-post",
+                  "name": "email",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Sted",
+                  "name": "location",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Knapp (tekst)",
+                  "name": "buttonText",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Kontakt bakgrunnsbilde",
+                  "name": "backgroundImage",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "label": "Kontaktbilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "om-oss",
+          "label": "Om oss",
+          "file": "src/content/om-oss.json",
+          "editor": {
+            "preview": false
+          },
+          "fields": [
+            {
+              "label": "Hero",
+              "name": "hero",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Etikett",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Hero-bilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Hvem vi er",
+              "name": "whoWeAre",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 1",
+                  "name": "paragraph1",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 2",
+                  "name": "paragraph2",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Fagområder",
+                  "name": "expertise",
+                  "widget": "list",
+                  "field": {
+                    "label": "Punkt",
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Bilde av Lars Klemm",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Fagkompetanse og sertifiseringer",
+              "name": "competenceAndCertifications",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Fagkompetanse tittel",
+                  "name": "competenceTitle",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Fagkompetanse ingress",
+                  "name": "competenceIntro",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Spesialkompetanse",
+                  "name": "specialCompetence",
+                  "widget": "list",
+                  "field": {
+                    "label": "Punkt",
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Sertifiseringer tittel",
+                  "name": "certificationsTitle",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Sertifiseringer ingress",
+                  "name": "certificationsIntro",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Sertifiseringer",
+                  "name": "certifications",
+                  "widget": "list",
+                  "field": {
+                    "label": "Punkt",
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Sertifiseringer bunntekst",
+                  "name": "certificationsFooter",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Våre verdier",
+              "name": "valuesSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Etikett",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Verdier",
+                  "name": "values",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "description",
+                      "widget": "text",
+                      "required": false
+                    }
                   ]
                 },
                 {
-                  name: "om-oss",
-                  label: "Om oss",
-                  file: "src/content/om-oss.json",
-                  editor: { preview: false },
-                  fields: [
-                    { label: "Hero", name: "hero", widget: "object", required: false, fields: [
-                      { label: "Etikett", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Hvem vi er", name: "whoWeAre", widget: "object", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Avsnitt 1", name: "paragraph1", widget: "text", required: false },
-                      { label: "Avsnitt 2", name: "paragraph2", widget: "text", required: false },
-                      { label: "Fagområder", name: "expertise", widget: "list", field: { label: "Punkt", name: "item", widget: "string" }, required: false }
-                    ]},
-                    { label: "Fagkompetanse og sertifiseringer", name: "competenceAndCertifications", widget: "object", required: false, fields: [
-                      { label: "Fagkompetanse tittel", name: "competenceTitle", widget: "string", required: false },
-                      { label: "Fagkompetanse ingress", name: "competenceIntro", widget: "text", required: false },
-                      { label: "Spesialkompetanse", name: "specialCompetence", widget: "list", field: { label: "Punkt", name: "item", widget: "string" }, required: false },
-                      { label: "Sertifiseringer tittel", name: "certificationsTitle", widget: "string", required: false },
-                      { label: "Sertifiseringer ingress", name: "certificationsIntro", widget: "text", required: false },
-                      { label: "Sertifiseringer", name: "certifications", widget: "list", field: { label: "Punkt", name: "item", widget: "string" }, required: false },
-                      { label: "Sertifiseringer bunntekst", name: "certificationsFooter", widget: "text", required: false }
-                    ]},
-                    { label: "Våre verdier", name: "valuesSection", widget: "object", required: false, fields: [
-                      { label: "Etikett", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Verdier", name: "values", widget: "list", required: false, fields: [
-                        { label: "Tittel", name: "title", widget: "string", required: false },
-                        { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                      ]},
-                      { label: "Uthevet tekst", name: "callout", widget: "text", required: false }
-                    ]},
-                    { label: "Arbeidsmetode", name: "workProcessSection", widget: "object", required: false, fields: [
-                      { label: "Etikett", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Steg", name: "steps", widget: "list", required: false, fields: [
-                        { label: "Stegnummer", name: "step", widget: "string", required: false },
-                        { label: "Tittel", name: "title", widget: "string", required: false },
-                        { label: "Beskrivelse", name: "desc", widget: "text", required: false }
-                      ]}
-                    ]},
-                    { label: "Lokal forankring", name: "localSection", widget: "object", required: false, fields: [
-                      { label: "Etikett", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Avsnitt 1", name: "paragraph1", widget: "text", required: false },
-                      { label: "Fordeler", name: "benefits", widget: "list", field: { label: "Punkt", name: "item", widget: "string" }, required: false },
-                      { label: "Avsnitt 2", name: "paragraph2", widget: "text", required: false },
-                      { label: "Områder", name: "areas", widget: "list", field: { label: "Område", name: "area", widget: "string" }, required: false },
-                      { label: "Avsnitt 3", name: "paragraph3", widget: "text", required: false },
-                      { label: "Knappetekst", name: "buttonText", widget: "string", required: false }
-                    ]}
+                  "label": "Uthevet tekst",
+                  "name": "callout",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Arbeidsmetode",
+              "name": "workProcessSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Etikett",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Steg",
+                  "name": "steps",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Stegnummer",
+                      "name": "step",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "desc",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Lokal forankring",
+              "name": "localSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Etikett",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 1",
+                  "name": "paragraph1",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Fordeler",
+                  "name": "benefits",
+                  "widget": "list",
+                  "field": {
+                    "label": "Punkt",
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 2",
+                  "name": "paragraph2",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Områder",
+                  "name": "areas",
+                  "widget": "list",
+                  "field": {
+                    "label": "Område",
+                    "name": "area",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 3",
+                  "name": "paragraph3",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Knappetekst",
+                  "name": "buttonText",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Lokalt bilde (Molde og fjorden)",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "tjenester",
+          "label": "Tjenester",
+          "file": "src/content/tjenester.json",
+          "editor": {
+            "preview": false
+          },
+          "fields": [
+            {
+              "label": "Hero",
+              "name": "hero",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Stikktittel",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Hero-bilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Etikett for typiske prosjekter",
+              "name": "typicalProjectsLabel",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "label": "Knappetekst (tjenester)",
+              "name": "ctaButton",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "label": "Tjenester",
+              "name": "services",
+              "widget": "list",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Ekstra bilder",
+                  "name": "extraImages",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Alt-tekst",
+                      "name": "alt",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Bildetekst",
+                      "name": "caption",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Ekstrabilde",
+                      "name": "image",
+                      "widget": "image",
+                      "required": false
+                    }
                   ]
                 },
                 {
-                  name: "tjenester",
-                  label: "Tjenester",
-                  file: "src/content/tjenester.json",
-                  editor: { preview: false },
-                  fields: [
-                    { label: "Hero", name: "hero", widget: "object", required: false, fields: [
-                      { label: "Stikktittel", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Etikett for typiske prosjekter", name: "typicalProjectsLabel", widget: "string", required: false },
-                    { label: "Knappetekst (tjenester)", name: "ctaButton", widget: "string", required: false },
-                    { label: "Tjenester", name: "services", widget: "list", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Ekstra bilder", name: "extraImages", widget: "list", required: false, fields: [
-                        { label: "Alt-tekst", name: "alt", widget: "string", required: false },
-                        { label: "Bildetekst", name: "caption", widget: "string", required: false }
-                      ]},
-                      { label: "Introtekst", name: "intro", widget: "string", required: false },
-                      { label: "Funksjoner", name: "features", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Problemer", name: "problems", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Årsaker", name: "causes", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Introtekst løsninger", name: "solutionsIntro", widget: "string", required: false },
-                      { label: "Løsninger", name: "solutions", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Egnet for", name: "suitableFor", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Typiske prosjekter", name: "typicalProjects", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Symptomer", name: "symptoms", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Introtekst sjekk", name: "checkIntro", widget: "string", required: false },
-                      { label: "Sjekkpunkter", name: "checks", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Service inngår", name: "services", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Introtekst arbeid", name: "workIntro", widget: "string", required: false },
-                      { label: "Arbeid", name: "work", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Inkluderer", name: "includes", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Introtekst fordeler", name: "benefitsIntro", widget: "string", required: false },
-                      { label: "Fordeler", name: "benefits", widget: "list", required: false, field: { name: "item", widget: "string" } },
-                      { label: "Avslutning", name: "conclusion", widget: "text", required: false }
-                    ]},
-                    { label: "Prosess", name: "process", widget: "object", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Steg", name: "steps", widget: "list", required: false, fields: [
-                        { label: "Steg", name: "step", widget: "string", required: false },
-                        { label: "Tittel", name: "title", widget: "string", required: false },
-                        { label: "Beskrivelse", name: "desc", widget: "text", required: false }
-                      ]}
-                    ]},
-                    { label: "Call to action", name: "cta", widget: "object", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Knappetekst", name: "button", widget: "string", required: false }
-                    ]}
+                  "label": "Introtekst",
+                  "name": "intro",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Funksjoner",
+                  "name": "features",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Problemer",
+                  "name": "problems",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Årsaker",
+                  "name": "causes",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Introtekst løsninger",
+                  "name": "solutionsIntro",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Løsninger",
+                  "name": "solutions",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Egnet for",
+                  "name": "suitableFor",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Typiske prosjekter",
+                  "name": "typicalProjects",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Symptomer",
+                  "name": "symptoms",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Introtekst sjekk",
+                  "name": "checkIntro",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Sjekkpunkter",
+                  "name": "checks",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Service inngår",
+                  "name": "services",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Introtekst arbeid",
+                  "name": "workIntro",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Arbeid",
+                  "name": "work",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Inkluderer",
+                  "name": "includes",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Introtekst fordeler",
+                  "name": "benefitsIntro",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Fordeler",
+                  "name": "benefits",
+                  "widget": "list",
+                  "required": false,
+                  "field": {
+                    "name": "item",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "label": "Avslutning",
+                  "name": "conclusion",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Hovedbilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Prosess",
+              "name": "process",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Steg",
+                  "name": "steps",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Steg",
+                      "name": "step",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "desc",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Call to action",
+              "name": "cta",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Knappetekst",
+                  "name": "button",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "CTA-bakgrunnsbilde",
+              "name": "ctaImage",
+              "widget": "image",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "file": "src/content/kontakt.json",
+          "editor": {
+            "preview": false
+          },
+          "fields": [
+            {
+              "label": "Hero",
+              "name": "hero",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Stikktittel",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Hero-bilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Kontaktkort",
+              "name": "contactCards",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Telefon",
+                  "name": "phone",
+                  "widget": "object",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Etikett",
+                      "name": "label",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Verdi",
+                      "name": "value",
+                      "widget": "string",
+                      "required": false
+                    }
                   ]
                 },
                 {
-                  name: "kontakt",
-                  label: "Kontakt",
-                  file: "src/content/kontakt.json",
-                  editor: { preview: false },
-                  fields: [
-                    { label: "Hero", name: "hero", widget: "object", required: false, fields: [
-                      { label: "Stikktittel", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Kontaktkort", name: "contactCards", widget: "object", required: false, fields: [
-                      { label: "Telefon", name: "phone", widget: "object", required: false, fields: [
-                        { label: "Etikett", name: "label", widget: "string", required: false },
-                        { label: "Verdi", name: "value", widget: "string", required: false }
-                      ]},
-                      { label: "E-post", name: "email", widget: "object", required: false, fields: [
-                        { label: "Etikett", name: "label", widget: "string", required: false },
-                        { label: "Verdi", name: "value", widget: "string", required: false }
-                      ]},
-                      { label: "Adresse", name: "address", widget: "object", required: false, fields: [
-                        { label: "Etikett", name: "label", widget: "string", required: false },
-                        { label: "Verdi", name: "value", widget: "string", required: false }
-                      ]},
-                      { label: "Org.nr", name: "orgNumber", widget: "object", required: false, fields: [
-                        { label: "Etikett", name: "label", widget: "string", required: false },
-                        { label: "Verdi", name: "value", widget: "string", required: false }
-                      ]}
-                    ]},
-                    { label: "Åpningstider", name: "openingHours", widget: "object", required: false, fields: [
-                      { label: "Etikett", name: "label", widget: "string", required: false },
-                      { label: "Verdi", name: "value", widget: "string", required: false },
-                      { label: "Merknad", name: "note", widget: "string", required: false },
-                      { label: "Akutt-melding", name: "emergency", widget: "string", required: false }
-                    ]},
-                    { label: "Sidepanel", name: "sidebar", widget: "object", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Fordeler", name: "benefits", widget: "list", field: { label: "Fordel", name: "item", widget: "string" }, required: false },
-                      { label: "Serviceområde", name: "serviceArea", widget: "object", required: false, fields: [
-                        { label: "Tittel", name: "title", widget: "string", required: false },
-                        { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                        { label: "Områder", name: "areas", widget: "list", field: { label: "Område", name: "item", widget: "string" }, required: false }
-                      ]},
-                      { label: "Sosiale medier", name: "social", widget: "object", required: false, fields: [
-                        { label: "Tittel", name: "title", widget: "string", required: false },
-                        { label: "Facebook", name: "facebook", widget: "string", required: false },
-                        { label: "Google", name: "google", widget: "string", required: false }
-                      ]}
-                    ]},
-                    { label: "Skjema", name: "form", widget: "object", required: false, fields: [
-                      { label: "Stikktittel", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Bekreftelse", name: "success", widget: "object", required: false, fields: [
-                        { label: "Tittel", name: "title", widget: "string", required: false },
-                        { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                        { label: "Knapp", name: "button", widget: "string", required: false }
-                      ]},
-                      { label: "Etikett navn", name: "nameLabel", widget: "string", required: false },
-                      { label: "Plassholder navn", name: "namePlaceholder", widget: "string", required: false },
-                      { label: "Etikett telefon", name: "phoneLabel", widget: "string", required: false },
-                      { label: "Plassholder telefon", name: "phonePlaceholder", widget: "string", required: false },
-                      { label: "Etikett e-post", name: "emailLabel", widget: "string", required: false },
-                      { label: "Plassholder e-post", name: "emailPlaceholder", widget: "string", required: false },
-                      { label: "Etikett adresse", name: "addressLabel", widget: "string", required: false },
-                      { label: "Plassholder adresse", name: "addressPlaceholder", widget: "string", required: false },
-                      { label: "Etikett notat", name: "messageLabel", widget: "string", required: false },
-                      { label: "Plassholder notat", name: "messagePlaceholder", widget: "string", required: false },
-                      { label: "Etikett bilder", name: "imagesLabel", widget: "string", required: false },
-                      { label: "Hjelpetekst bilder", name: "imagesHelp", widget: "text", required: false },
-                      { label: "Legg til bilde", name: "addImage", widget: "string", required: false },
-                      { label: "Påkrevd-merknad", name: "requiredNote", widget: "string" },
-                      { label: "Send-knapp", name: "submitButton", widget: "string", required: false },
-                      { label: "Sender-tekst", name: "submitting", widget: "string", required: false }
-                    ]},
-                    { label: "Bunnseksjon (CTA)", name: "cta", widget: "object", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Telefonknapp", name: "phoneButton", widget: "string", required: false },
-                      { label: "E-postknapp", name: "emailButton", widget: "string", required: false }
-                    ]}
+                  "label": "E-post",
+                  "name": "email",
+                  "widget": "object",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Etikett",
+                      "name": "label",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Verdi",
+                      "name": "value",
+                      "widget": "string",
+                      "required": false
+                    }
                   ]
                 },
                 {
-                  name: "galleri",
-                  label: "Galleri",
-                  file: "src/content/galleri.json",
-                  editor: { preview: false },
-                  fields: [
-                    { label: "Hero", name: "hero", widget: "object", required: false, fields: [
-                      { label: "Stikktittel", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Introtekst", name: "intro", widget: "text", required: false }
-                    ]},
-                    { label: "Karusell-seksjon", name: "carouselSection", widget: "object", required: false, fields: [
-                      { label: "Stikktittel", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false }
-                    ]},
-                    { label: "Før og etter-seksjon", name: "beforeAfterSection", widget: "object", required: false, fields: [
-                      { label: "Stikktittel", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Oppfordring (CTA)", name: "cta", widget: "object", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Knappetekst", name: "buttonText", widget: "string", required: false }
-                    ]},
-                    { label: "Prosjekter", name: "projects", widget: "list", label_singular: "Prosjekt", summary: "{{fields.title}}", fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Sted", name: "location", widget: "string", required: false },
-                      { label: "Kategori", name: "category", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]}
+                  "label": "Adresse",
+                  "name": "address",
+                  "widget": "object",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Etikett",
+                      "name": "label",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Verdi",
+                      "name": "value",
+                      "widget": "string",
+                      "required": false
+                    }
                   ]
                 },
                 {
-                  name: "dokumentasjon",
-                  label: "Dokumentasjon",
-                  file: "src/content/dokumentasjon.json",
-                  editor: { preview: false },
-                  fields: [
-                    { label: "Hero", name: "hero", widget: "object", required: false, fields: [
-                      { label: "Eyebrow", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                    ]},
-                    { label: "Dokumentasjon under arbeidet", name: "duringWorkSection", widget: "object", required: false, fields: [
-                      { label: "Eyebrow", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Avsnitt 1", name: "paragraph1", widget: "text", required: false },
-                      { label: "Liste-intro", name: "listIntro", widget: "string", required: false },
-                      { label: "Punkter", name: "items", widget: "list", field: { label: "Punkt", name: "item", widget: "string" }, required: false },
-                      { label: "Avsnitt 2", name: "paragraph2", widget: "text", required: false }
-                    ]},
-                    { label: "Vår prosess", name: "processSection", widget: "object", required: false, fields: [
-                      { label: "Eyebrow", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Steg", name: "steps", widget: "list", required: false, fields: [
-                        { label: "Tittel", name: "title", widget: "string", required: false },
-                        { label: "Beskrivelse", name: "description", widget: "text", required: false }
-                      ]}
-                    ]},
-                    { label: "Hva dokumenterer vi", name: "whatWeDocumentSection", widget: "object", required: false, fields: [
-                      { label: "Kort-tittel", name: "cardTitle", widget: "string", required: false },
-                      { label: "Kort-avsnitt", name: "cardParagraph", widget: "text", required: false },
-                      { label: "Kort liste-intro", name: "cardListIntro", widget: "string", required: false },
-                      { label: "Punkter", name: "items", widget: "list", field: { label: "Punkt", name: "item", widget: "string" }, required: false },
-                      { label: "Kort-notat", name: "cardNote", widget: "text", required: false },
-                      { label: "Eyebrow", name: "eyebrow", widget: "string", required: false },
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Avsnitt 1", name: "paragraph1", widget: "text", required: false },
-                      { label: "Avsnitt 2", name: "paragraph2", widget: "text", required: false },
-                      { label: "Knappetekst", name: "buttonText", widget: "string", required: false }
-                    ]},
-                    { label: "CTA", name: "cta", widget: "object", required: false, fields: [
-                      { label: "Tittel", name: "title", widget: "string", required: false },
-                      { label: "Beskrivelse", name: "description", widget: "text", required: false },
-                      { label: "Knappetekst", name: "buttonText", widget: "string", required: false }
-                    ]}
+                  "label": "Org.nr",
+                  "name": "orgNumber",
+                  "widget": "object",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Etikett",
+                      "name": "label",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Verdi",
+                      "name": "value",
+                      "widget": "string",
+                      "required": false
+                    }
                   ]
+                }
+              ]
+            },
+            {
+              "label": "Åpningstider",
+              "name": "openingHours",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Etikett",
+                  "name": "label",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Verdi",
+                  "name": "value",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Merknad",
+                  "name": "note",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Akutt-melding",
+                  "name": "emergency",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Sidepanel",
+              "name": "sidebar",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Fordeler",
+                  "name": "benefits",
+                  "widget": "list",
+                  "field": {
+                    "label": "Fordel",
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Serviceområde",
+                  "name": "serviceArea",
+                  "widget": "object",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "description",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "Områder",
+                      "name": "areas",
+                      "widget": "list",
+                      "field": {
+                        "label": "Område",
+                        "name": "item",
+                        "widget": "string"
+                      },
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "label": "Sosiale medier",
+                  "name": "social",
+                  "widget": "object",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Facebook",
+                      "name": "facebook",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Google",
+                      "name": "google",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Skjema",
+              "name": "form",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Stikktittel",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Bekreftelse",
+                  "name": "success",
+                  "widget": "object",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "description",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "Knapp",
+                      "name": "button",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "label": "Etikett navn",
+                  "name": "nameLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Plassholder navn",
+                  "name": "namePlaceholder",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Etikett telefon",
+                  "name": "phoneLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Plassholder telefon",
+                  "name": "phonePlaceholder",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Etikett e-post",
+                  "name": "emailLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Plassholder e-post",
+                  "name": "emailPlaceholder",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Etikett adresse",
+                  "name": "addressLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Plassholder adresse",
+                  "name": "addressPlaceholder",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Etikett notat",
+                  "name": "messageLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Plassholder notat",
+                  "name": "messagePlaceholder",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Etikett bilder",
+                  "name": "imagesLabel",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Hjelpetekst bilder",
+                  "name": "imagesHelp",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Legg til bilde",
+                  "name": "addImage",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Påkrevd-merknad",
+                  "name": "requiredNote",
+                  "widget": "string"
+                },
+                {
+                  "label": "Send-knapp",
+                  "name": "submitButton",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Sender-tekst",
+                  "name": "submitting",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Bunnseksjon (CTA)",
+              "name": "cta",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Telefonknapp",
+                  "name": "phoneButton",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "E-postknapp",
+                  "name": "emailButton",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "CTA-bilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "galleri",
+          "label": "Galleri",
+          "file": "src/content/galleri.json",
+          "editor": {
+            "preview": false
+          },
+          "fields": [
+            {
+              "label": "Hero",
+              "name": "hero",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Stikktittel",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Introtekst",
+                  "name": "intro",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Bakgrunnsbilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Karusell-seksjon",
+              "name": "carouselSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Stikktittel",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Før og etter-seksjon",
+              "name": "beforeAfterSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Stikktittel",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Oppfordring (CTA)",
+              "name": "cta",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Knappetekst",
+                  "name": "buttonText",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Prosjekter",
+              "name": "projects",
+              "widget": "list",
+              "label_singular": "Prosjekt",
+              "summary": "{{fields.title}}",
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Sted",
+                  "name": "location",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Kategori",
+                  "name": "category",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Bilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Før og etter-bilder",
+              "name": "beforeAfterPairs",
+              "widget": "list",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Før-bilde",
+                  "name": "before",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "label": "Etter-bilde",
+                  "name": "after",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "dokumentasjon",
+          "label": "Dokumentasjon",
+          "file": "src/content/dokumentasjon.json",
+          "editor": {
+            "preview": false
+          },
+          "fields": [
+            {
+              "label": "Hero",
+              "name": "hero",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Eyebrow",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Hero-bilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Dokumentasjon under arbeidet",
+              "name": "duringWorkSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Eyebrow",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 1",
+                  "name": "paragraph1",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Liste-intro",
+                  "name": "listIntro",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Punkter",
+                  "name": "items",
+                  "widget": "list",
+                  "field": {
+                    "label": "Punkt",
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 2",
+                  "name": "paragraph2",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Bilde under arbeidet",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "Vår prosess",
+              "name": "processSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Eyebrow",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Steg",
+                  "name": "steps",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "description",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Hva dokumenterer vi",
+              "name": "whatWeDocumentSection",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Kort-tittel",
+                  "name": "cardTitle",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Kort-avsnitt",
+                  "name": "cardParagraph",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Kort liste-intro",
+                  "name": "cardListIntro",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Punkter",
+                  "name": "items",
+                  "widget": "list",
+                  "field": {
+                    "label": "Punkt",
+                    "name": "item",
+                    "widget": "string"
+                  },
+                  "required": false
+                },
+                {
+                  "label": "Kort-notat",
+                  "name": "cardNote",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Eyebrow",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 1",
+                  "name": "paragraph1",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Avsnitt 2",
+                  "name": "paragraph2",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Knappetekst",
+                  "name": "buttonText",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "CTA",
+              "name": "cta",
+              "widget": "object",
+              "required": false,
+              "fields": [
+                {
+                  "label": "Tittel",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "Beskrivelse",
+                  "name": "description",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "Knappetekst",
+                  "name": "buttonText",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "CTA-bakgrunnsbilde",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
                 }
               ]
             }
           ]
         }
+      ]
+    },
+    {
+      "name": "innstillinger",
+      "label": "Innstillinger",
+      "label_singular": "Innstilling",
+      "editor": {
+        "preview": false
+      },
+      "files": [
+        {
+          "name": "global",
+          "label": "Logo og generelt",
+          "file": "src/content/global.json",
+          "editor": {
+            "preview": false
+          },
+          "fields": [
+            {
+              "label": "Logo",
+              "name": "logo",
+              "widget": "image",
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
       });
       }
       // Always clear entry drafts before loading, so the editor shows the

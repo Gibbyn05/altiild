@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Facebook } from "lucide-react";
-import logo from "@/assets/logo.png";
+import global from "@/content/global.json";
+const logo = global.logo;
 import { PrivacyPolicyDialog } from "./PrivacyPolicyDialog";
 import { TermsDialog } from "./TermsDialog";
 

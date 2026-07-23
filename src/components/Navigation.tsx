@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ChevronDown, Flame, Construction, Shield, Eye, Wrench, Hammer, Wind, FileText } from "lucide-react";
-import logo from "@/assets/logo.png";
+import global from "@/content/global.json";
+const logo = global.logo;
 
 const serviceLinks = [
   { href: "/tjenester/montering", label: "Montering av peis og ovn", icon: Flame },
