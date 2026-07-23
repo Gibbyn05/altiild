@@ -12,6 +12,7 @@
     </script>
     <script src="https://unpkg.com/decap-cms@3.14.0/dist/decap-cms.js"></script>
     <script>
+      function initCMS(){
       CMS.init({
         config: {
           backend: {
@@ -367,6 +368,26 @@
           ]
         }
       });
+      }
+      // Clear stale/broken entry drafts (from earlier crashes) once per
+      // browser, so the editor loads the real published content.
+      (function(){
+        var FLAG='altiild_backup_cleared_v1';
+        function done(){ try{localStorage.setItem(FLAG,'1');}catch(e){} initCMS(); }
+        if (localStorage.getItem(FLAG)) { initCMS(); return; }
+        try {
+          var req = indexedDB.open('localforage');
+          req.onsuccess = function(e){
+            var db=e.target.result;
+            if(!db.objectStoreNames.contains('keyvaluepairs')){ done(); return; }
+            var tx=db.transaction('keyvaluepairs','readwrite');
+            var store=tx.objectStore('keyvaluepairs');
+            store.openCursor().onsuccess=function(ev){ var c=ev.target.result; if(c){ if(String(c.key).indexOf('backup')===0) store.delete(c.key); c.continue(); } };
+            tx.oncomplete=done; tx.onerror=function(){ initCMS(); };
+          };
+          req.onerror=function(){ initCMS(); };
+        } catch(err){ initCMS(); }
+      })();
     </script>
   </body>
 </html>
