@@ -25,36 +25,82 @@
           public_folder: '/uploads',
           collections: [
             {
-              name: 'posts',
-              label: 'Blogginnlegg',
-              folder: 'content/posts',
-              create: true,
-              slug: '{{slug}}',
-              format: 'json',
-              fields: [
-                { label: 'Tittel', name: 'title', widget: 'string', required: true },
-                { label: 'Slug', name: 'slug', widget: 'string' },
-                { label: 'Beskrivelse', name: 'description', widget: 'text' },
-                { label: 'Innhold', name: 'body', widget: 'markdown' },
-                { label: 'Bilde', name: 'image', widget: 'image', required: false },
-                { label: 'Forfatter', name: 'author', widget: 'string', required: false },
-                { label: 'Publiseringsdato', name: 'publishedAt', widget: 'datetime', required: false }
-              ]
-            },
-            {
-              name: 'pages',
+              name: 'sider',
               label: 'Sider',
-              folder: 'content/pages',
-              create: true,
-              slug: '{{slug}}',
-              format: 'json',
-              fields: [
-                { label: 'Tittel', name: 'title', widget: 'string', required: true },
-                { label: 'Slug', name: 'slug', widget: 'string' },
-                { label: 'Beskrivelse', name: 'description', widget: 'text' },
-                { label: 'Innhold', name: 'body', widget: 'markdown' },
-                { label: 'Bilde', name: 'image', widget: 'image', required: false },
-                { label: 'Publiseringsdato', name: 'publishedAt', widget: 'datetime', required: false }
+              label_singular: 'Side',
+              files: [
+                {
+                  name: 'forside',
+                  label: 'Forside',
+                  file: 'src/content/forside.json',
+                  fields: [
+                    {
+                      label: 'Toppseksjon (Hero)', name: 'hero', widget: 'object', fields: [
+                        { label: 'Overskrift', name: 'title', widget: 'string' },
+                        { label: 'Undertittel', name: 'subtitle', widget: 'string' },
+                        { label: 'Introtekst', name: 'intro', widget: 'text' },
+                        { label: 'Beskrivelse', name: 'description', widget: 'text' },
+                        { label: 'Knapp 1 (tekst)', name: 'primaryButton', widget: 'string' },
+                        { label: 'Knapp 2 (tekst)', name: 'secondaryButton', widget: 'string' },
+                        { label: 'Slagord nederst', name: 'tagline', widget: 'string' }
+                      ]
+                    },
+                    {
+                      label: 'Tjenester (overskrift)', name: 'servicesSection', widget: 'object', fields: [
+                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
+                        { label: 'Overskrift', name: 'title', widget: 'string' },
+                        { label: 'Beskrivelse', name: 'description', widget: 'text' }
+                      ]
+                    },
+                    {
+                      label: 'Komplette løsninger (overskrift)', name: 'solutionsSection', widget: 'object', fields: [
+                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
+                        { label: 'Overskrift', name: 'title', widget: 'string' },
+                        { label: 'Beskrivelse', name: 'description', widget: 'text' }
+                      ]
+                    },
+                    {
+                      label: 'Dokumentasjon-seksjon', name: 'documentationSection', widget: 'object', fields: [
+                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
+                        { label: 'Overskrift', name: 'title', widget: 'string' },
+                        { label: 'Avsnitt 1', name: 'paragraph1', widget: 'text' },
+                        { label: 'Avsnitt 2', name: 'paragraph2', widget: 'text' },
+                        { label: 'Punktliste', name: 'points', widget: 'list' }
+                      ]
+                    },
+                    {
+                      label: 'Hvorfor velge oss', name: 'whyChooseUsSection', widget: 'object', fields: [
+                        { label: 'Overskrift', name: 'title', widget: 'string' },
+                        { label: 'Punktliste', name: 'highlights', widget: 'list' }
+                      ]
+                    },
+                    {
+                      label: 'Galleri (overskrift)', name: 'gallerySection', widget: 'object', fields: [
+                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
+                        { label: 'Overskrift', name: 'title', widget: 'string' },
+                        { label: 'Beskrivelse', name: 'description', widget: 'text' }
+                      ]
+                    },
+                    {
+                      label: 'Kundeomtaler (overskrift)', name: 'testimonialsSection', widget: 'object', fields: [
+                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
+                        { label: 'Overskrift', name: 'title', widget: 'string' }
+                      ]
+                    },
+                    {
+                      label: 'Kontakt-seksjon', name: 'contactSection', widget: 'object', fields: [
+                        { label: 'Overskrift', name: 'title', widget: 'string' },
+                        { label: 'Introtekst', name: 'introText', widget: 'string' },
+                        { label: 'Punktliste', name: 'points', widget: 'list' },
+                        { label: 'Avslutningstekst', name: 'closingText', widget: 'text' },
+                        { label: 'Telefon', name: 'phone', widget: 'string' },
+                        { label: 'E-post', name: 'email', widget: 'string' },
+                        { label: 'Sted', name: 'location', widget: 'string' },
+                        { label: 'Knapp (tekst)', name: 'buttonText', widget: 'string' }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]

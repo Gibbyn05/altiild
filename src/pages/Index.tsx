@@ -26,6 +26,8 @@ import {
   Eye
 } from "lucide-react";
 
+import content from "@/content/forside.json";
+
 import heroImage from "@/assets/hero-fireplace.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 import installationImage from "@/assets/installation-work.jpg";
@@ -320,30 +322,30 @@ const Index = () => {
         <div className="container-wide relative z-10 pt-24 pb-16 md:pt-20 md:pb-0">
           <div className="max-w-2xl animate-fade-up">
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-primary-foreground mb-4 md:mb-6 leading-tight">
-              Skap varme og atmosfære i ditt hjem
+              {content.hero.title}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-primary font-medium mb-3 md:mb-4">
-              Komplette løsninger for ildsted og skorstein i Møre og Romsdal
+              {content.hero.subtitle}
             </p>
             <p className="text-base md:text-lg text-primary-foreground/90 mb-3 md:mb-4 leading-relaxed">
-              Hos oss får du mer enn bare produkter. Vi leverer helhetlige løsninger som gir trygghet, komfort og riktig varme i hjemmet ditt.
+              {content.hero.intro}
             </p>
             <p className="hidden sm:block text-base md:text-lg text-primary-foreground/90 mb-6 md:mb-8 leading-relaxed">
-              Enten du har dårlig trekk i pipe, vurderer rehabilitering av pipe, har fått fyringsforbud, ønsker bedre varmeeffekt eller planlegger å montere en ny vedovn eller peisovn - vi finner den riktige løsningen for boligen din.
+              {content.hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4 md:mb-6">
               <Button variant="hero" size="lg" className="animate-gentle-pulse !border-2 !border-white text-sm sm:text-base md:text-lg" asChild>
                 <Link to="/kontakt">
-                  Bestill gratis befaring
+                  {content.hero.primaryButton}
                   <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                 </Link>
               </Button>
               <Button variant="heroOutlineLight" size="lg" className="text-sm sm:text-base md:text-lg" asChild>
-                <Link to="/tjenester">Se våre tjenester</Link>
+                <Link to="/tjenester">{content.hero.secondaryButton}</Link>
               </Button>
             </div>
             <p className="text-primary-foreground/70 text-xs sm:text-sm">
-              Montering • Piperehabilitering • Service • Dokumentasjon
+              {content.hero.tagline}
             </p>
           </div>
         </div>
@@ -366,13 +368,13 @@ const Index = () => {
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
-              Våre tjenester
+              {content.servicesSection.eyebrow}
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
-              Alt du trenger for ildsted og skorstein
+              {content.servicesSection.title}
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-2">
-              Vi tilbyr både nye installasjoner og service på eksisterende ildsted og skorstein. Alle løsninger tilpasses boligen, trekkforholdene og gjeldende krav i Møre og Romsdal.
+              {content.servicesSection.description}
             </p>
           </div>
 
@@ -419,13 +421,13 @@ const Index = () => {
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
-              Én fagpartner hele veien
+              {content.solutionsSection.eyebrow}
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
-              Komplette løsninger fra A til Å
+              {content.solutionsSection.title}
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-2">
-              Vi tar hele ansvaret - fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt.
+              {content.solutionsSection.description}
             </p>
           </div>
 
@@ -457,26 +459,19 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
-                Trygghet og godkjenning
+                {content.documentationSection.eyebrow}
               </p>
               <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 md:mb-6">
-                Dokumentasjon & myndighetskrav
+                {content.documentationSection.title}
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6">
-                Arbeid på pipe og skorstein er ofte søknadspliktig. Dette gjelder piperehabilitering, ny stålpipe, bruk av stålrør i pipe og andre strukturelle endringer.
+                {content.documentationSection.paragraph1}
               </p>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-4 md:mb-6">
-                Alt i Ild AS håndterer hele prosessen - dette gjør prosessen trygg og enkel:
+                {content.documentationSection.paragraph2}
               </p>
               <ul className="space-y-2 md:space-y-4 mb-6 md:mb-8">
-                {[
-                  "Vurdering av skorstein",
-                  "Valg av riktig rehabiliteringsmetode",
-                  "Komplett søknad til kommunen i Møre og Romsdal",
-                  "Dokumentasjon underveis",
-                  "Ferdigmelding direkte til brannvesen og kommune",
-                  "Dokumentpakke til boligmappen",
-                ].map((item) => (
+                {content.documentationSection.points.map((item) => (
                   <li key={item} className="flex items-start gap-2 md:gap-3">
                     <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                       <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-primary" />
@@ -517,7 +512,7 @@ const Index = () => {
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-primary-foreground">
-              Hvorfor velge oss?
+              {content.whyChooseUsSection.title}
             </h2>
           </div>
 
@@ -536,16 +531,7 @@ const Index = () => {
 
           <div className="bg-primary-foreground/10 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 max-w-4xl mx-auto">
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
-              {[
-                "Lokal fagbedrift innen ildsted og skorstein i Molde",
-                "Mange års erfaring",
-                "Sertifiserte montører",
-                "Komplette løsninger fra A-Å",
-                "Gratis befaring",
-                "Ekspertise på dårlig trekk og Exodraft røyksugere",
-                "Rehabilitering av pipe og stålpipeinstallasjon",
-                "Dokumentasjon og ferdigmelding alltid inkludert",
-              ].map((item) => (
+              {content.whyChooseUsSection.highlights.map((item) => (
                 <li key={item} className="flex items-center gap-2 md:gap-3 text-primary-foreground text-xs sm:text-sm md:text-base">
                   <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-primary-foreground/70 flex-shrink-0" />
                   <span>{item}</span>
@@ -561,13 +547,13 @@ const Index = () => {
         <div className="container-wide mb-8">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
-              Vårt arbeid
+              {content.gallerySection.eyebrow}
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
-              Galleri
+              {content.gallerySection.title}
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
-              Se eksempler på peiser, ovner og pipeinstallasjoner vi har utført.
+              {content.gallerySection.description}
             </p>
           </div>
         </div>
@@ -589,10 +575,10 @@ const Index = () => {
         <div className="container-wide mb-8">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-primary font-medium mb-3 tracking-wide uppercase text-sm">
-              Kundeomtaler
+              {content.testimonialsSection.eyebrow}
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
-              Hva kundene sier
+              {content.testimonialsSection.title}
             </h2>
           </div>
         </div>
@@ -636,19 +622,13 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-primary-foreground mb-6">
-                Kontakt & gratis befaring
+                {content.contactSection.title}
               </h2>
               <p className="text-xl text-primary-foreground/90 mb-4">
-                Vi tilbyr gratis befaring ved:
+                {content.contactSection.introText}
               </p>
               <ul className="space-y-3 mb-8">
-                {[
-                  "Piperehabilitering",
-                  "Montering av peis og vedovn",
-                  "Dårlig trekk i pipe",
-                  "Valg av riktig skorsteinsløsning",
-                  "Vurdering før kjøp av peis eller ovn",
-                ].map((item) => (
+                {content.contactSection.points.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-primary-foreground">
                     <CheckCircle className="h-5 w-5 text-primary" />
                     <span>{item}</span>
@@ -656,29 +636,29 @@ const Index = () => {
                 ))}
               </ul>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Kontakt oss i dag for en trygg og profesjonell løsning.
+                {content.contactSection.closingText}
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3 text-primary-foreground">
                   <Phone className="h-5 w-5" />
-                  <a href="tel:+4798844844" className="hover:text-primary transition-colors">
-                    +47 98 844 844
+                  <a href={`tel:${content.contactSection.phone.replace(/\s/g, "")}`} className="hover:text-primary transition-colors">
+                    {content.contactSection.phone}
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-primary-foreground">
                   <Mail className="h-5 w-5" />
-                  <a href="mailto:post@altiild.no" className="hover:text-primary transition-colors">
-                    post@altiild.no
+                  <a href={`mailto:${content.contactSection.email}`} className="hover:text-primary transition-colors">
+                    {content.contactSection.email}
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-primary-foreground">
                   <MapPin className="h-5 w-5" />
-                  <span>Molde, Møre og Romsdal</span>
+                  <span>{content.contactSection.location}</span>
                 </div>
               </div>
               <Button variant="hero" size="xl" className="animate-gentle-pulse !border-2 !border-white" asChild>
                 <Link to="/kontakt">
-                  Bestill gratis befaring
+                  {content.contactSection.buttonText}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

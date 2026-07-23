@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "title": "Skap varme og atmosfære i ditt hjem",
+    "subtitle": "Komplette løsninger for ildsted og skorstein i Møre og Romsdal",
+    "intro": "Hos oss får du mer enn bare produkter. Vi leverer helhetlige løsninger som gir trygghet, komfort og riktig varme i hjemmet ditt.",
+    "description": "Enten du har dårlig trekk i pipe, vurderer rehabilitering av pipe, har fått fyringsforbud, ønsker bedre varmeeffekt eller planlegger å montere en ny vedovn eller peisovn - vi finner den riktige løsningen for boligen din.",
+    "primaryButton": "Bestill gratis befaring",
+    "secondaryButton": "Se våre tjenester",
+    "tagline": "Montering • Piperehabilitering • Service • Dokumentasjon"
+  },
+  "servicesSection": {
+    "eyebrow": "Våre tjenester",
+    "title": "Alt du trenger for ildsted og skorstein",
+    "description": "Vi tilbyr både nye installasjoner og service på eksisterende ildsted og skorstein. Alle løsninger tilpasses boligen, trekkforholdene og gjeldende krav i Møre og Romsdal."
+  },
+  "solutionsSection": {
+    "eyebrow": "Én fagpartner hele veien",
+    "title": "Komplette løsninger fra A til Å",
+    "description": "Vi tar hele ansvaret - fra rådgivning til ferdig godkjent installasjon. Du slipper å koordinere flere leverandører; vi håndterer alt."
+  },
+  "documentationSection": {
+    "eyebrow": "Trygghet og godkjenning",
+    "title": "Dokumentasjon & myndighetskrav",
+    "paragraph1": "Arbeid på pipe og skorstein er ofte søknadspliktig. Dette gjelder piperehabilitering, ny stålpipe, bruk av stålrør i pipe og andre strukturelle endringer.",
+    "paragraph2": "Alt i Ild AS håndterer hele prosessen - dette gjør prosessen trygg og enkel:",
+    "points": [
+      "Vurdering av skorstein",
+      "Valg av riktig rehabiliteringsmetode",
+      "Komplett søknad til kommunen i Møre og Romsdal",
+      "Dokumentasjon underveis",
+      "Ferdigmelding direkte til brannvesen og kommune",
+      "Dokumentpakke til boligmappen"
+    ]
+  },
+  "whyChooseUsSection": {
+    "title": "Hvorfor velge oss?",
+    "highlights": [
+      "Lokal fagbedrift innen ildsted og skorstein i Molde",
+      "Mange års erfaring",
+      "Sertifiserte montører",
+      "Komplette løsninger fra A-Å",
+      "Gratis befaring",
+      "Ekspertise på dårlig trekk og Exodraft røyksugere",
+      "Rehabilitering av pipe og stålpipeinstallasjon",
+      "Dokumentasjon og ferdigmelding alltid inkludert"
+    ]
+  },
+  "gallerySection": {
+    "eyebrow": "Vårt arbeid",
+    "title": "Galleri",
+    "description": "Se eksempler på peiser, ovner og pipeinstallasjoner vi har utført."
+  },
+  "testimonialsSection": {
+    "eyebrow": "Kundeomtaler",
+    "title": "Hva kundene sier"
+  },
+  "contactSection": {
+    "title": "Kontakt & gratis befaring",
+    "introText": "Vi tilbyr gratis befaring ved:",
+    "points": [
+      "Piperehabilitering",
+      "Montering av peis og vedovn",
+      "Dårlig trekk i pipe",
+      "Valg av riktig skorsteinsløsning",
+      "Vurdering før kjøp av peis eller ovn"
+    ],
+    "closingText": "Kontakt oss i dag for en trygg og profesjonell løsning.",
+    "phone": "+47 98 844 844",
+    "email": "post@altiild.no",
+    "location": "Molde, Møre og Romsdal",
+    "buttonText": "Bestill gratis befaring"
+  }
+}
