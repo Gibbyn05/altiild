@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "eyebrow": "Kontakt oss",
+    "title": "Kontakt oss",
+    "description": "Du er alltid velkommen til å ta kontakt med oss - enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud."
+  },
+  "contactCards": {
+    "phone": {
+      "label": "Telefon",
+      "value": "+47 98 844 844"
+    },
+    "email": {
+      "label": "E-post",
+      "value": "post@altiild.no"
+    },
+    "address": {
+      "label": "Adresse",
+      "value": "Molde, Møre og Romsdal"
+    },
+    "orgNumber": {
+      "label": "Org.nr",
+      "value": "934 777 018"
+    }
+  },
+  "openingHours": {
+    "label": "Åpningstider:",
+    "value": "Man-fre 08:00-16:00",
+    "note": "Kveld og helg etter avtale",
+    "emergency": "Ring oss gjerne ved akutte problemer."
+  },
+  "sidebar": {
+    "title": "Hvorfor velge Alt i Ild?",
+    "description": "Med mange års erfaring er vi eksperter på ildsted og skorstein. Vi tilbyr gratis befaring og rådgivning i hele Møre og Romsdal.",
+    "benefits": [
+      "Sertifisert montør og kontrollør",
+      "Kvalifisert for søknadspliktig arbeid",
+      "Gratis og uforpliktende befaring",
+      "Garanti på alt arbeid",
+      "Eksperter på dårlig trekk"
+    ],
+    "serviceArea": {
+      "title": "Vårt serviceområde",
+      "description": "Vi betjener kunder i hele Møre og Romsdal:",
+      "areas": [
+        "Molde",
+        "Hustadvika",
+        "Aukra",
+        "Midsund",
+        "Rauma"
+      ]
+    },
+    "social": {
+      "title": "Følg oss",
+      "facebook": "Facebook",
+      "google": "Google"
+    }
+  },
+  "form": {
+    "eyebrow": "Gratis befaring",
+    "title": "Send oss en henvendelse",
+    "description": "Fyll ut skjemaet under, så tar vi kontakt innen 24 timer.",
+    "success": {
+      "title": "Takk for din henvendelse!",
+      "description": "Vi har mottatt meldingen din og vil ta kontakt så snart som mulig, vanligvis innen 24 timer.",
+      "button": "Send ny melding"
+    },
+    "nameLabel": "Navn",
+    "namePlaceholder": "Ditt fulle navn",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+47 123 45 678",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "din@epost.no",
+    "addressLabel": "Adresse",
+    "addressPlaceholder": "Gatenavn og nummer (f.eks. Storgata 15)",
+    "messageLabel": "Notat",
+    "messagePlaceholder": "Eventuell tilleggsinformasjon",
+    "imagesLabel": "Bilder (valgfritt)",
+    "imagesHelp": "Last opp bilder av din peis, skorstein eller prosjekt (maks 5 bilder, 10MB per bilde)",
+    "addImage": "Legg til",
+    "requiredNote": "Påkrevde felter",
+    "submitButton": "Bestill gratis befaring",
+    "submitting": "Sender..."
+  },
+  "cta": {
+    "title": "Vi kommer til deg",
+    "description": "Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt - fra vurdering til ferdig godkjent installasjon.",
+    "phoneButton": "Ring oss: +47 98 844 844",
+    "emailButton": "post@altiild.no"
+  }
+}

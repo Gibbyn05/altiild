@@ -15,90 +15,344 @@
       CMS.init({
         config: {
           backend: {
-            name: 'github',
-            repo: 'gibbyn05/altiild',
-            branch: 'main',
-            base_url: 'https://www.altiild.no',
-            auth_endpoint: 'api/auth'
+            name: "github",
+            repo: "gibbyn05/altiild",
+            branch: "main",
+            base_url: "https://www.altiild.no",
+            auth_endpoint: "api/auth"
           },
-          media_folder: 'public/uploads',
-          public_folder: '/uploads',
+          media_folder: "public/uploads",
+          public_folder: "/uploads",
           collections: [
             {
-              name: 'sider',
-              label: 'Sider',
-              label_singular: 'Side',
+              name: "sider",
+              label: "Sider",
+              label_singular: "Side",
               files: [
                 {
-                  name: 'forside',
-                  label: 'Forside',
-                  file: 'src/content/forside.json',
+                  name: "forside",
+                  label: "Forside",
+                  file: "src/content/forside.json",
                   fields: [
-                    {
-                      label: 'Toppseksjon (Hero)', name: 'hero', widget: 'object', fields: [
-                        { label: 'Overskrift', name: 'title', widget: 'string' },
-                        { label: 'Undertittel', name: 'subtitle', widget: 'string' },
-                        { label: 'Introtekst', name: 'intro', widget: 'text' },
-                        { label: 'Beskrivelse', name: 'description', widget: 'text' },
-                        { label: 'Knapp 1 (tekst)', name: 'primaryButton', widget: 'string' },
-                        { label: 'Knapp 2 (tekst)', name: 'secondaryButton', widget: 'string' },
-                        { label: 'Slagord nederst', name: 'tagline', widget: 'string' }
-                      ]
-                    },
-                    {
-                      label: 'Tjenester (overskrift)', name: 'servicesSection', widget: 'object', fields: [
-                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
-                        { label: 'Overskrift', name: 'title', widget: 'string' },
-                        { label: 'Beskrivelse', name: 'description', widget: 'text' }
-                      ]
-                    },
-                    {
-                      label: 'Komplette løsninger (overskrift)', name: 'solutionsSection', widget: 'object', fields: [
-                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
-                        { label: 'Overskrift', name: 'title', widget: 'string' },
-                        { label: 'Beskrivelse', name: 'description', widget: 'text' }
-                      ]
-                    },
-                    {
-                      label: 'Dokumentasjon-seksjon', name: 'documentationSection', widget: 'object', fields: [
-                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
-                        { label: 'Overskrift', name: 'title', widget: 'string' },
-                        { label: 'Avsnitt 1', name: 'paragraph1', widget: 'text' },
-                        { label: 'Avsnitt 2', name: 'paragraph2', widget: 'text' },
-                        { label: 'Punktliste', name: 'points', widget: 'list' }
-                      ]
-                    },
-                    {
-                      label: 'Hvorfor velge oss', name: 'whyChooseUsSection', widget: 'object', fields: [
-                        { label: 'Overskrift', name: 'title', widget: 'string' },
-                        { label: 'Punktliste', name: 'highlights', widget: 'list' }
-                      ]
-                    },
-                    {
-                      label: 'Galleri (overskrift)', name: 'gallerySection', widget: 'object', fields: [
-                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
-                        { label: 'Overskrift', name: 'title', widget: 'string' },
-                        { label: 'Beskrivelse', name: 'description', widget: 'text' }
-                      ]
-                    },
-                    {
-                      label: 'Kundeomtaler (overskrift)', name: 'testimonialsSection', widget: 'object', fields: [
-                        { label: 'Liten overskrift', name: 'eyebrow', widget: 'string' },
-                        { label: 'Overskrift', name: 'title', widget: 'string' }
-                      ]
-                    },
-                    {
-                      label: 'Kontakt-seksjon', name: 'contactSection', widget: 'object', fields: [
-                        { label: 'Overskrift', name: 'title', widget: 'string' },
-                        { label: 'Introtekst', name: 'introText', widget: 'string' },
-                        { label: 'Punktliste', name: 'points', widget: 'list' },
-                        { label: 'Avslutningstekst', name: 'closingText', widget: 'text' },
-                        { label: 'Telefon', name: 'phone', widget: 'string' },
-                        { label: 'E-post', name: 'email', widget: 'string' },
-                        { label: 'Sted', name: 'location', widget: 'string' },
-                        { label: 'Knapp (tekst)', name: 'buttonText', widget: 'string' }
-                      ]
-                    }
+                    { label: "Toppseksjon (Hero)", name: "hero", widget: "object", fields: [
+                      { label: "Overskrift", name: "title", widget: "string" },
+                      { label: "Undertittel", name: "subtitle", widget: "string" },
+                      { label: "Introtekst", name: "intro", widget: "text" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Knapp 1 (tekst)", name: "primaryButton", widget: "string" },
+                      { label: "Knapp 2 (tekst)", name: "secondaryButton", widget: "string" },
+                      { label: "Slagord nederst", name: "tagline", widget: "string" }
+                    ]},
+                    { label: "Tjenester (overskrift)", name: "servicesSection", widget: "object", fields: [
+                      { label: "Liten overskrift", name: "eyebrow", widget: "string" },
+                      { label: "Overskrift", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Komplette løsninger (overskrift)", name: "solutionsSection", widget: "object", fields: [
+                      { label: "Liten overskrift", name: "eyebrow", widget: "string" },
+                      { label: "Overskrift", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Dokumentasjon-seksjon", name: "documentationSection", widget: "object", fields: [
+                      { label: "Liten overskrift", name: "eyebrow", widget: "string" },
+                      { label: "Overskrift", name: "title", widget: "string" },
+                      { label: "Avsnitt 1", name: "paragraph1", widget: "text" },
+                      { label: "Avsnitt 2", name: "paragraph2", widget: "text" },
+                      { label: "Punktliste", name: "points", widget: "list" }
+                    ]},
+                    { label: "Hvorfor velge oss", name: "whyChooseUsSection", widget: "object", fields: [
+                      { label: "Overskrift", name: "title", widget: "string" },
+                      { label: "Punktliste", name: "highlights", widget: "list" }
+                    ]},
+                    { label: "Galleri (overskrift)", name: "gallerySection", widget: "object", fields: [
+                      { label: "Liten overskrift", name: "eyebrow", widget: "string" },
+                      { label: "Overskrift", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Kundeomtaler (overskrift)", name: "testimonialsSection", widget: "object", fields: [
+                      { label: "Liten overskrift", name: "eyebrow", widget: "string" },
+                      { label: "Overskrift", name: "title", widget: "string" }
+                    ]},
+                    { label: "Kontakt-seksjon", name: "contactSection", widget: "object", fields: [
+                      { label: "Overskrift", name: "title", widget: "string" },
+                      { label: "Introtekst", name: "introText", widget: "string" },
+                      { label: "Punktliste", name: "points", widget: "list" },
+                      { label: "Avslutningstekst", name: "closingText", widget: "text" },
+                      { label: "Telefon", name: "phone", widget: "string" },
+                      { label: "E-post", name: "email", widget: "string" },
+                      { label: "Sted", name: "location", widget: "string" },
+                      { label: "Knapp (tekst)", name: "buttonText", widget: "string" }
+                    ]}
+                  ]
+                },
+                {
+                  name: "om-oss",
+                  label: "Om oss",
+                  file: "src/content/om-oss.json",
+                  fields: [
+                    { label: "Hero", name: "hero", widget: "object", fields: [
+                      { label: "Etikett", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Hvem vi er", name: "whoWeAre", widget: "object", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Avsnitt 1", name: "paragraph1", widget: "text" },
+                      { label: "Avsnitt 2", name: "paragraph2", widget: "text" },
+                      { label: "Fagområder", name: "expertise", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } }
+                    ]},
+                    { label: "Fagkompetanse og sertifiseringer", name: "competenceAndCertifications", widget: "object", fields: [
+                      { label: "Fagkompetanse tittel", name: "competenceTitle", widget: "string" },
+                      { label: "Fagkompetanse ingress", name: "competenceIntro", widget: "text" },
+                      { label: "Spesialkompetanse", name: "specialCompetence", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } },
+                      { label: "Sertifiseringer tittel", name: "certificationsTitle", widget: "string" },
+                      { label: "Sertifiseringer ingress", name: "certificationsIntro", widget: "text" },
+                      { label: "Sertifiseringer", name: "certifications", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } },
+                      { label: "Sertifiseringer bunntekst", name: "certificationsFooter", widget: "text" }
+                    ]},
+                    { label: "Våre verdier", name: "valuesSection", widget: "object", fields: [
+                      { label: "Etikett", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Verdier", name: "values", widget: "list", fields: [
+                        { label: "Tittel", name: "title", widget: "string" },
+                        { label: "Beskrivelse", name: "description", widget: "text" }
+                      ]},
+                      { label: "Uthevet tekst", name: "callout", widget: "text" }
+                    ]},
+                    { label: "Arbeidsmetode", name: "workProcessSection", widget: "object", fields: [
+                      { label: "Etikett", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Steg", name: "steps", widget: "list", fields: [
+                        { label: "Stegnummer", name: "step", widget: "string" },
+                        { label: "Tittel", name: "title", widget: "string" },
+                        { label: "Beskrivelse", name: "desc", widget: "text" }
+                      ]}
+                    ]},
+                    { label: "Lokal forankring", name: "localSection", widget: "object", fields: [
+                      { label: "Etikett", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Avsnitt 1", name: "paragraph1", widget: "text" },
+                      { label: "Fordeler", name: "benefits", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } },
+                      { label: "Avsnitt 2", name: "paragraph2", widget: "text" },
+                      { label: "Områder", name: "areas", widget: "list", field: { label: "Område", name: "area", widget: "string" } },
+                      { label: "Avsnitt 3", name: "paragraph3", widget: "text" },
+                      { label: "Knappetekst", name: "buttonText", widget: "string" }
+                    ]}
+                  ]
+                },
+                {
+                  name: "tjenester",
+                  label: "Tjenester",
+                  file: "src/content/tjenester.json",
+                  fields: [
+                    { label: "Hero", name: "hero", widget: "object", fields: [
+                      { label: "Stikktittel", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Etikett for typiske prosjekter", name: "typicalProjectsLabel", widget: "string" },
+                    { label: "Knappetekst (tjenester)", name: "ctaButton", widget: "string" },
+                    { label: "Tjenester", name: "services", widget: "list", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Ekstra bilder", name: "extraImages", widget: "list", required: false, fields: [
+                        { label: "Alt-tekst", name: "alt", widget: "string" },
+                        { label: "Bildetekst", name: "caption", widget: "string", required: false }
+                      ]},
+                      { label: "Introtekst", name: "intro", widget: "string", required: false },
+                      { label: "Funksjoner", name: "features", widget: "list", required: false },
+                      { label: "Problemer", name: "problems", widget: "list", required: false },
+                      { label: "Årsaker", name: "causes", widget: "list", required: false },
+                      { label: "Introtekst løsninger", name: "solutionsIntro", widget: "string", required: false },
+                      { label: "Løsninger", name: "solutions", widget: "list", required: false },
+                      { label: "Egnet for", name: "suitableFor", widget: "list", required: false },
+                      { label: "Typiske prosjekter", name: "typicalProjects", widget: "list", required: false },
+                      { label: "Symptomer", name: "symptoms", widget: "list", required: false },
+                      { label: "Introtekst sjekk", name: "checkIntro", widget: "string", required: false },
+                      { label: "Sjekkpunkter", name: "checks", widget: "list", required: false },
+                      { label: "Service inngår", name: "services", widget: "list", required: false },
+                      { label: "Introtekst arbeid", name: "workIntro", widget: "string", required: false },
+                      { label: "Arbeid", name: "work", widget: "list", required: false },
+                      { label: "Inkluderer", name: "includes", widget: "list", required: false },
+                      { label: "Introtekst fordeler", name: "benefitsIntro", widget: "string", required: false },
+                      { label: "Fordeler", name: "benefits", widget: "list", required: false },
+                      { label: "Avslutning", name: "conclusion", widget: "text", required: false }
+                    ]},
+                    { label: "Prosess", name: "process", widget: "object", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Steg", name: "steps", widget: "list", fields: [
+                        { label: "Steg", name: "step", widget: "string" },
+                        { label: "Tittel", name: "title", widget: "string" },
+                        { label: "Beskrivelse", name: "desc", widget: "text" }
+                      ]}
+                    ]},
+                    { label: "Call to action", name: "cta", widget: "object", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Knappetekst", name: "button", widget: "string" }
+                    ]}
+                  ]
+                },
+                {
+                  name: "kontakt",
+                  label: "Kontakt",
+                  file: "src/content/kontakt.json",
+                  fields: [
+                    { label: "Hero", name: "hero", widget: "object", fields: [
+                      { label: "Stikktittel", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Kontaktkort", name: "contactCards", widget: "object", fields: [
+                      { label: "Telefon", name: "phone", widget: "object", fields: [
+                        { label: "Etikett", name: "label", widget: "string" },
+                        { label: "Verdi", name: "value", widget: "string" }
+                      ]},
+                      { label: "E-post", name: "email", widget: "object", fields: [
+                        { label: "Etikett", name: "label", widget: "string" },
+                        { label: "Verdi", name: "value", widget: "string" }
+                      ]},
+                      { label: "Adresse", name: "address", widget: "object", fields: [
+                        { label: "Etikett", name: "label", widget: "string" },
+                        { label: "Verdi", name: "value", widget: "string" }
+                      ]},
+                      { label: "Org.nr", name: "orgNumber", widget: "object", fields: [
+                        { label: "Etikett", name: "label", widget: "string" },
+                        { label: "Verdi", name: "value", widget: "string" }
+                      ]}
+                    ]},
+                    { label: "Åpningstider", name: "openingHours", widget: "object", fields: [
+                      { label: "Etikett", name: "label", widget: "string" },
+                      { label: "Verdi", name: "value", widget: "string" },
+                      { label: "Merknad", name: "note", widget: "string" },
+                      { label: "Akutt-melding", name: "emergency", widget: "string" }
+                    ]},
+                    { label: "Sidepanel", name: "sidebar", widget: "object", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Fordeler", name: "benefits", widget: "list", field: { label: "Fordel", name: "item", widget: "string" } },
+                      { label: "Serviceområde", name: "serviceArea", widget: "object", fields: [
+                        { label: "Tittel", name: "title", widget: "string" },
+                        { label: "Beskrivelse", name: "description", widget: "text" },
+                        { label: "Områder", name: "areas", widget: "list", field: { label: "Område", name: "item", widget: "string" } }
+                      ]},
+                      { label: "Sosiale medier", name: "social", widget: "object", fields: [
+                        { label: "Tittel", name: "title", widget: "string" },
+                        { label: "Facebook", name: "facebook", widget: "string" },
+                        { label: "Google", name: "google", widget: "string" }
+                      ]}
+                    ]},
+                    { label: "Skjema", name: "form", widget: "object", fields: [
+                      { label: "Stikktittel", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Bekreftelse", name: "success", widget: "object", fields: [
+                        { label: "Tittel", name: "title", widget: "string" },
+                        { label: "Beskrivelse", name: "description", widget: "text" },
+                        { label: "Knapp", name: "button", widget: "string" }
+                      ]},
+                      { label: "Etikett navn", name: "nameLabel", widget: "string" },
+                      { label: "Plassholder navn", name: "namePlaceholder", widget: "string" },
+                      { label: "Etikett telefon", name: "phoneLabel", widget: "string" },
+                      { label: "Plassholder telefon", name: "phonePlaceholder", widget: "string" },
+                      { label: "Etikett e-post", name: "emailLabel", widget: "string" },
+                      { label: "Plassholder e-post", name: "emailPlaceholder", widget: "string" },
+                      { label: "Etikett adresse", name: "addressLabel", widget: "string" },
+                      { label: "Plassholder adresse", name: "addressPlaceholder", widget: "string" },
+                      { label: "Etikett notat", name: "messageLabel", widget: "string" },
+                      { label: "Plassholder notat", name: "messagePlaceholder", widget: "string" },
+                      { label: "Etikett bilder", name: "imagesLabel", widget: "string" },
+                      { label: "Hjelpetekst bilder", name: "imagesHelp", widget: "text" },
+                      { label: "Legg til bilde", name: "addImage", widget: "string" },
+                      { label: "Påkrevd-merknad", name: "requiredNote", widget: "string" },
+                      { label: "Send-knapp", name: "submitButton", widget: "string" },
+                      { label: "Sender-tekst", name: "submitting", widget: "string" }
+                    ]},
+                    { label: "Bunnseksjon (CTA)", name: "cta", widget: "object", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Telefonknapp", name: "phoneButton", widget: "string" },
+                      { label: "E-postknapp", name: "emailButton", widget: "string" }
+                    ]}
+                  ]
+                },
+                {
+                  name: "galleri",
+                  label: "Galleri",
+                  file: "src/content/galleri.json",
+                  fields: [
+                    { label: "Hero", name: "hero", widget: "object", fields: [
+                      { label: "Stikktittel", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Introtekst", name: "intro", widget: "text" }
+                    ]},
+                    { label: "Karusell-seksjon", name: "carouselSection", widget: "object", fields: [
+                      { label: "Stikktittel", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" }
+                    ]},
+                    { label: "Før og etter-seksjon", name: "beforeAfterSection", widget: "object", fields: [
+                      { label: "Stikktittel", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Oppfordring (CTA)", name: "cta", widget: "object", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Knappetekst", name: "buttonText", widget: "string" }
+                    ]},
+                    { label: "Prosjekter", name: "projects", widget: "list", label_singular: "Prosjekt", summary: "{{fields.title}}", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Sted", name: "location", widget: "string" },
+                      { label: "Kategori", name: "category", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]}
+                  ]
+                },
+                {
+                  name: "dokumentasjon",
+                  label: "Dokumentasjon",
+                  file: "src/content/dokumentasjon.json",
+                  fields: [
+                    { label: "Hero", name: "hero", widget: "object", fields: [
+                      { label: "Eyebrow", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" }
+                    ]},
+                    { label: "Dokumentasjon under arbeidet", name: "duringWorkSection", widget: "object", fields: [
+                      { label: "Eyebrow", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Avsnitt 1", name: "paragraph1", widget: "text" },
+                      { label: "Liste-intro", name: "listIntro", widget: "string" },
+                      { label: "Punkter", name: "items", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } },
+                      { label: "Avsnitt 2", name: "paragraph2", widget: "text" }
+                    ]},
+                    { label: "Vår prosess", name: "processSection", widget: "object", fields: [
+                      { label: "Eyebrow", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Steg", name: "steps", widget: "list", fields: [
+                        { label: "Tittel", name: "title", widget: "string" },
+                        { label: "Beskrivelse", name: "description", widget: "text" }
+                      ]}
+                    ]},
+                    { label: "Hva dokumenterer vi", name: "whatWeDocumentSection", widget: "object", fields: [
+                      { label: "Kort-tittel", name: "cardTitle", widget: "string" },
+                      { label: "Kort-avsnitt", name: "cardParagraph", widget: "text" },
+                      { label: "Kort liste-intro", name: "cardListIntro", widget: "string" },
+                      { label: "Punkter", name: "items", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } },
+                      { label: "Kort-notat", name: "cardNote", widget: "text" },
+                      { label: "Eyebrow", name: "eyebrow", widget: "string" },
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Avsnitt 1", name: "paragraph1", widget: "text" },
+                      { label: "Avsnitt 2", name: "paragraph2", widget: "text" },
+                      { label: "Knappetekst", name: "buttonText", widget: "string" }
+                    ]},
+                    { label: "CTA", name: "cta", widget: "object", fields: [
+                      { label: "Tittel", name: "title", widget: "string" },
+                      { label: "Beskrivelse", name: "description", widget: "text" },
+                      { label: "Knappetekst", name: "buttonText", widget: "string" }
+                    ]}
                   ]
                 }
               ]

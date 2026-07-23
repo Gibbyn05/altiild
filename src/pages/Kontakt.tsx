@@ -20,26 +20,28 @@ import {
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
+import content from "@/content/kontakt.json";
+
 import heroImage from "@/assets/hero-fireplace.jpg";
 import stoveImage from "@/assets/stove-cozy.jpg";
 
 const contactInfo = [
   {
     icon: Phone,
-    label: "Telefon",
-    value: "+47 98 844 844",
+    label: content.contactCards.phone.label,
+    value: content.contactCards.phone.value,
     href: "tel:+4798844844",
   },
   {
     icon: Mail,
-    label: "E-post",
-    value: "post@altiild.no",
+    label: content.contactCards.email.label,
+    value: content.contactCards.email.value,
     href: "mailto:post@altiild.no",
   },
   {
     icon: MapPin,
-    label: "Adresse",
-    value: "Molde, Møre og Romsdal",
+    label: content.contactCards.address.label,
+    value: content.contactCards.address.value,
     href: null,
   },
 ];
@@ -55,13 +57,7 @@ const serviceOptions = [
   "Annet",
 ];
 
-const serviceAreas = [
-  "Molde",
-  "Hustadvika",
-  "Aukra", 
-  "Midsund",
-  "Rauma",
-];
+const serviceAreas = content.sidebar.serviceArea.areas;
 
 const Kontakt = () => {
   const [formData, setFormData] = useState({
@@ -272,13 +268,13 @@ const Kontakt = () => {
         <div className="container-wide relative z-10">
           <div className="max-w-2xl">
             <p className="text-primary font-medium mb-2 md:mb-4 tracking-wide uppercase text-xs sm:text-sm">
-              Kontakt oss
+              {content.hero.eyebrow}
             </p>
             <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-4 md:mb-6 leading-tight">
-              Kontakt oss
+              {content.hero.title}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
-              Du er alltid velkommen til å ta kontakt med oss - enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.
+              {content.hero.description}
             </p>
           </div>
         </div>
@@ -323,8 +319,8 @@ const Kontakt = () => {
                   <Shield className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide mb-0.5 md:mb-1">Org.nr</p>
-                  <p className="font-medium text-sm md:text-base text-foreground">934 777 018</p>
+                  <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide mb-0.5 md:mb-1">{content.contactCards.orgNumber.label}</p>
+                  <p className="font-medium text-sm md:text-base text-foreground">{content.contactCards.orgNumber.value}</p>
                 </div>
               </div>
             </div>
@@ -336,14 +332,14 @@ const Kontakt = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-8">
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 md:h-5 md:w-5 text-primary" />
-                  <span className="text-foreground font-medium text-sm md:text-base">Åpningstider:</span>
-                  <span className="text-muted-foreground text-sm md:text-base">Man-fre 08:00-16:00</span>
+                  <span className="text-foreground font-medium text-sm md:text-base">{content.openingHours.label}</span>
+                  <span className="text-muted-foreground text-sm md:text-base">{content.openingHours.value}</span>
                 </div>
                 <div className="hidden md:block w-px h-6 bg-border" />
-                <span className="text-muted-foreground text-xs md:text-sm">Kveld og helg etter avtale</span>
+                <span className="text-muted-foreground text-xs md:text-sm">{content.openingHours.note}</span>
               </div>
               <p className="text-primary font-medium text-sm md:text-base">
-                Ring oss gjerne ved akutte problemer.
+                {content.openingHours.emergency}
               </p>
             </div>
           </div>
@@ -358,22 +354,15 @@ const Kontakt = () => {
             <div className="lg:col-span-2 order-2 lg:order-1">
               <div className="lg:sticky lg:top-32">
                 <h2 className="font-display text-3xl font-semibold mb-4">
-                  Hvorfor velge Alt i Ild?
+                  {content.sidebar.title}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Med mange års erfaring er vi eksperter på ildsted og skorstein. 
-                  Vi tilbyr gratis befaring og rådgivning i hele Møre og Romsdal.
+                  {content.sidebar.description}
                 </p>
 
                 {/* Benefits */}
                 <div className="space-y-4 mb-10">
-                  {[
-                    "Sertifisert montør og kontrollør",
-                    "Kvalifisert for søknadspliktig arbeid",
-                    "Gratis og uforpliktende befaring",
-                    "Garanti på alt arbeid",
-                    "Eksperter på dårlig trekk",
-                  ].map((benefit) => (
+                  {content.sidebar.benefits.map((benefit) => (
                     <div key={benefit} className="flex items-center gap-3">
                       <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
                         <CheckCircle className="h-4 w-4 text-primary" />
@@ -387,10 +376,10 @@ const Kontakt = () => {
                 <div className="bg-muted rounded-xl p-6 mb-6">
                   <h3 className="font-display text-lg font-semibold mb-3 flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    Vårt serviceområde
+                    {content.sidebar.serviceArea.title}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Vi betjener kunder i hele Møre og Romsdal:
+                    {content.sidebar.serviceArea.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {serviceAreas.map((city) => (
@@ -407,7 +396,7 @@ const Kontakt = () => {
                 {/* Social Media */}
                 <div className="bg-muted rounded-xl p-6">
                   <h3 className="font-display text-lg font-semibold mb-4">
-                    Følg oss
+                    {content.sidebar.social.title}
                   </h3>
                   <div className="flex gap-4">
                     <a
@@ -417,7 +406,7 @@ const Kontakt = () => {
                       className="flex items-center gap-2 px-4 py-2 bg-background rounded-lg hover:bg-primary/10 transition-colors"
                     >
                       <Facebook className="h-5 w-5 text-primary" />
-                      <span className="text-sm font-medium">Facebook</span>
+                      <span className="text-sm font-medium">{content.sidebar.social.facebook}</span>
                     </a>
                     <a
                       href="https://maps.app.goo.gl/3T9BK5YwkqHvH2iA8"
@@ -426,7 +415,7 @@ const Kontakt = () => {
                       className="flex items-center gap-2 px-4 py-2 bg-background rounded-lg hover:bg-primary/10 transition-colors"
                     >
                       <MapPin className="h-5 w-5 text-primary" />
-                      <span className="text-sm font-medium">Google</span>
+                      <span className="text-sm font-medium">{content.sidebar.social.google}</span>
                     </a>
                   </div>
                 </div>
@@ -438,13 +427,13 @@ const Kontakt = () => {
               <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg border border-border/50">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-1 bg-primary rounded-full" />
-                  <span className="text-primary text-sm font-medium uppercase tracking-wide">Gratis befaring</span>
+                  <span className="text-primary text-sm font-medium uppercase tracking-wide">{content.form.eyebrow}</span>
                 </div>
                 <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
-                  Send oss en henvendelse
+                  {content.form.title}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Fyll ut skjemaet under, så tar vi kontakt innen 24 timer.
+                  {content.form.description}
                 </p>
 
                 {isSubmitted ? (
@@ -453,11 +442,10 @@ const Kontakt = () => {
                       <CheckCircle className="h-10 w-10 text-primary" />
                     </div>
                     <h3 className="font-display text-2xl font-semibold mb-2">
-                      Takk for din henvendelse!
+                      {content.form.success.title}
                     </h3>
                     <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                      Vi har mottatt meldingen din og vil ta kontakt så snart som mulig, 
-                      vanligvis innen 24 timer.
+                      {content.form.success.description}
                     </p>
                     <Button 
                       variant="outline" 
@@ -466,7 +454,7 @@ const Kontakt = () => {
                         setFormData({ name: "", email: "", phone: "", address: "", message: "" });
                       }}
                     >
-                      Send ny melding
+                      {content.form.success.button}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
@@ -475,7 +463,7 @@ const Kontakt = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium mb-2">
-                          Navn <span className="text-primary">*</span>
+                          {content.form.nameLabel} <span className="text-primary">*</span>
                         </label>
                         <Input
                           id="name"
@@ -483,13 +471,13 @@ const Kontakt = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          placeholder="Ditt fulle navn"
+                          placeholder={content.form.namePlaceholder}
                           className="h-12 bg-background border-border/50 focus:border-primary"
                         />
                       </div>
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                          Telefon <span className="text-primary">*</span>
+                          {content.form.phoneLabel} <span className="text-primary">*</span>
                         </label>
                         <Input
                           id="phone"
@@ -498,7 +486,7 @@ const Kontakt = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           required
-                          placeholder="+47 123 45 678"
+                          placeholder={content.form.phonePlaceholder}
                           className="h-12 bg-background border-border/50 focus:border-primary"
                         />
                       </div>
@@ -507,7 +495,7 @@ const Kontakt = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium mb-2">
-                          E-post
+                          {content.form.emailLabel}
                         </label>
                         <Input
                           id="email"
@@ -515,13 +503,13 @@ const Kontakt = () => {
                           type="email"
                           value={formData.email}
                           onChange={handleChange}
-                          placeholder="din@epost.no"
+                          placeholder={content.form.emailPlaceholder}
                           className="h-12 bg-background border-border/50 focus:border-primary"
                         />
                       </div>
                       <div>
                         <label htmlFor="address" className="block text-sm font-medium mb-2">
-                          Adresse
+                          {content.form.addressLabel}
                         </label>
                         <Input
                           id="address"
@@ -531,7 +519,7 @@ const Kontakt = () => {
                             handleChange(e);
                             if (addressError) setAddressError(null);
                           }}
-                          placeholder="Gatenavn og nummer (f.eks. Storgata 15)"
+                          placeholder={content.form.addressPlaceholder}
                           className={`h-12 bg-background border-border/50 focus:border-primary ${addressError ? 'border-destructive' : ''}`}
                         />
                         {addressError && (
@@ -542,14 +530,14 @@ const Kontakt = () => {
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Notat
+                        {content.form.messageLabel}
                       </label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Eventuell tilleggsinformasjon"
+                        placeholder={content.form.messagePlaceholder}
                         rows={4}
                         className="resize-none bg-background border-border/50 focus:border-primary"
                       />
@@ -558,10 +546,10 @@ const Kontakt = () => {
                     {/* Image upload */}
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Bilder (valgfritt)
+                        {content.form.imagesLabel}
                       </label>
                       <p className="text-xs text-muted-foreground mb-3">
-                        Last opp bilder av din peis, skorstein eller prosjekt (maks 5 bilder, 10MB per bilde)
+                        {content.form.imagesHelp}
                       </p>
                       
                       <input
@@ -598,7 +586,7 @@ const Kontakt = () => {
                             className="w-20 h-20 border-2 border-dashed border-border rounded-lg flex flex-col items-center justify-center gap-1 hover:border-primary hover:bg-primary/5 transition-colors"
                           >
                             <ImagePlus className="h-5 w-5 text-muted-foreground" />
-                            <span className="text-xs text-muted-foreground">Legg til</span>
+                            <span className="text-xs text-muted-foreground">{content.form.addImage}</span>
                           </button>
                         )}
                       </div>
@@ -606,7 +594,7 @@ const Kontakt = () => {
 
                     <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between pt-2">
                       <p className="text-xs text-muted-foreground">
-                        <span className="text-primary">*</span> Påkrevde felter
+                        <span className="text-primary">*</span> {content.form.requiredNote}
                       </p>
                       <Button 
                         type="submit" 
@@ -618,11 +606,11 @@ const Kontakt = () => {
                         {isSubmitting ? (
                           <>
                             <span className="animate-spin mr-2">⏳</span>
-                            Sender...
+                            {content.form.submitting}
                           </>
                         ) : (
                           <>
-                            Bestill gratis befaring
+                            {content.form.submitButton}
                             <Send className="ml-2 h-4 w-4" />
                           </>
                         )}
@@ -647,22 +635,22 @@ const Kontakt = () => {
         
         <div className="container-wide relative z-10 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground mb-6">
-            Vi kommer til deg
+            {content.cta.title}
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Gratis befaring i hele Møre og Romsdal. Vi tar oss av alt - fra vurdering til ferdig godkjent installasjon.
+            {content.cta.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
               <a href="tel:+4798844844">
                 <Phone className="mr-2 h-4 w-4" />
-                Ring oss: +47 98 844 844
+                {content.cta.phoneButton}
               </a>
             </Button>
             <Button variant="heroOutlineLight" size="lg" asChild>
               <a href="mailto:post@altiild.no">
                 <Mail className="mr-2 h-4 w-4" />
-                post@altiild.no
+                {content.cta.emailButton}
               </a>
             </Button>
           </div>
