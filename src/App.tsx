@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import globalSettings from "@/content/global.json";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
@@ -21,7 +23,22 @@ import TinaAdmin from "./pages/TinaAdmin";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  // Apply the favicon chosen in the CMS "Innstillinger" settings.
+  useEffect(() => {
+    if (!globalSettings.favicon) return;
+    const icons = document.querySelectorAll<HTMLLinkElement>("link[rel*='icon']");
+    if (icons.length) {
+      icons.forEach((el) => { el.href = globalSettings.favicon; });
+    } else {
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.href = globalSettings.favicon;
+      document.head.appendChild(link);
+    }
+  }, []);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <AuthProvider>
       <TooltipProvider>
@@ -54,6 +71,7 @@ const App = () => (
       </TooltipProvider>
     </AuthProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
