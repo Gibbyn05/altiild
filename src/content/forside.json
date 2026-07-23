@@ -52,21 +52,66 @@
     "title": "Galleri",
     "description": "Se eksempler på peiser, ovner og pipeinstallasjoner vi har utført.",
     "images": [
-      { "image": "/uploads/hvit-ovn.jpg", "alt": "Hvit frittstående peis" },
-      { "image": "/uploads/hvit-ovn-2.jpg", "alt": "Hvit hjørnepeis med treveis glass" },
-      { "image": "/uploads/funkis-ovn.jpg", "alt": "Funkis-peis i moderne hytte" },
-      { "image": "/uploads/ovn-solrik.jpg", "alt": "Vedovn i solrik hagestue" },
-      { "image": "/uploads/gallery-pipe-fjord.jpg", "alt": "Pipe med fjordutsikt og cruiseskip" },
-      { "image": "/uploads/tak-utside.jpg", "alt": "Takarbeid sett fra utsiden" },
-      { "image": "/uploads/tak-innside.jpg", "alt": "Hagestue med ovn sett innenfra" },
-      { "image": "/uploads/gallery-pipe-rehabilitering.jpg", "alt": "Piperehabilitering foringsrør ovenfra - Alt i Ild Molde" },
-      { "image": "/uploads/gallery-stalpipe-svart.jpg", "alt": "Isolert stålpipe veggmontert - Alt i Ild Molde" },
-      { "image": "/uploads/gallery-takstige-platetak.jpg", "alt": "Takstige montert på platetak - Alt i Ild" },
-      { "image": "/uploads/gallery-takstige-sno.jpg", "alt": "Takstige på snødekt tak - Alt i Ild" },
-      { "image": "/uploads/gallery-stalpipe-takstige.jpg", "alt": "Gjennomføring i tak med laser - stålpipe Alt i Ild Molde" },
-      { "image": "/uploads/gallery-takstige-pipe.jpg", "alt": "Takstige langs husvegg - Alt i Ild" },
-      { "image": "/uploads/gallery-stalpipe-platetak.jpg", "alt": "Stålpipe gjennom vinterhage - piperehabilitering Molde" },
-      { "image": "/uploads/gallery-stalpipe-feieplattform.jpg", "alt": "Utvendig stålpipe på hus - Alt i Ild Molde" }
+      {
+        "image": "/uploads/hvit-ovn.jpg",
+        "alt": "Hvit frittstående peis"
+      },
+      {
+        "image": "/uploads/hvit-ovn-2.jpg",
+        "alt": "Hvit hjørnepeis med treveis glass"
+      },
+      {
+        "image": "/uploads/funkis-ovn.jpg",
+        "alt": "Funkis-peis i moderne hytte"
+      },
+      {
+        "image": "/uploads/ovn-solrik.jpg",
+        "alt": "Vedovn i solrik hagestue"
+      },
+      {
+        "image": "/uploads/gallery-pipe-fjord.jpg",
+        "alt": "Pipe med fjordutsikt og cruiseskip"
+      },
+      {
+        "image": "/uploads/tak-utside.jpg",
+        "alt": "Takarbeid sett fra utsiden"
+      },
+      {
+        "image": "/uploads/tak-innside.jpg",
+        "alt": "Hagestue med ovn sett innenfra"
+      },
+      {
+        "image": "/uploads/gallery-pipe-rehabilitering.jpg",
+        "alt": "Piperehabilitering foringsrør ovenfra - Alt i Ild Molde"
+      },
+      {
+        "image": "/uploads/gallery-stalpipe-svart.jpg",
+        "alt": "Isolert stålpipe veggmontert - Alt i Ild Molde"
+      },
+      {
+        "image": "/uploads/gallery-takstige-platetak.jpg",
+        "alt": "Takstige montert på platetak - Alt i Ild"
+      },
+      {
+        "image": "/uploads/gallery-takstige-sno.jpg",
+        "alt": "Takstige på snødekt tak - Alt i Ild"
+      },
+      {
+        "image": "/uploads/gallery-stalpipe-takstige.jpg",
+        "alt": "Gjennomføring i tak med laser - stålpipe Alt i Ild Molde"
+      },
+      {
+        "image": "/uploads/gallery-takstige-pipe.jpg",
+        "alt": "Takstige langs husvegg - Alt i Ild"
+      },
+      {
+        "image": "/uploads/gallery-stalpipe-platetak.jpg",
+        "alt": "Stålpipe gjennom vinterhage - piperehabilitering Molde"
+      },
+      {
+        "image": "/uploads/gallery-stalpipe-feieplattform.jpg",
+        "alt": "Utvendig stålpipe på hus - Alt i Ild Molde"
+      }
     ]
   },
   "testimonialsSection": {
@@ -74,21 +119,22 @@
     "title": "Hva kundene sier"
   },
   "contactSection": {
-    "title": "Kontakt & gratis befaring",
-    "introText": "Vi tilbyr gratis befaring ved:",
+    "closingText": "Kontakt oss i dag for en trygg og profesjonell løsning.",
     "points": [
       "Piperehabilitering",
       "Montering av peis og vedovn",
       "Dårlig trekk i pipe",
       "Valg av riktig skorsteinsløsning",
-      "Vurdering før kjøp av peis eller ovn"
+      "Vurdering før kjøp av peis eller ovn",
+      "Hei"
     ],
-    "closingText": "Kontakt oss i dag for en trygg og profesjonell løsning.",
-    "phone": "+47 98 844 844",
-    "email": "post@altiild.no",
-    "location": "Molde, Møre og Romsdal",
-    "buttonText": "Bestill gratis befaring",
     "backgroundImage": "/uploads/pipe-tak.jpg",
-    "image": "/uploads/stove-cozy.jpg"
+    "phone": "+47 98 844 844",
+    "location": "Molde, Møre og Romsdal",
+    "title": "Kontakt & gratis befaring",
+    "introText": "Vi tilbyr gratis befaring ved:",
+    "image": "/uploads/stove-cozy.jpg",
+    "email": "post@altiild.no",
+    "buttonText": "Bestill gratis befaring"
   }
 }
