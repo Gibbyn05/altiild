@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Kontakt oss",
     "title": "Kontakt oss",
-    "description": "Du er alltid velkommen til å ta kontakt med oss - enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.",
+    "description": "Du er alltid velkommen til å ta kontakt med oss, enten du ønsker gratis befaring, har spørsmål om montering, piperehabilitering eller opplever akutte problemer som dårlig trekk, røyk i rommet, avvik fra brannvesenet eller fyringsforbud.",
     "image": "/uploads/hero-fireplace.jpg"
   },
   "contactCards": {
@@ -57,30 +57,30 @@
     }
   },
   "form": {
-    "eyebrow": "Gratis befaring",
-    "title": "Send oss en henvendelse",
-    "description": "Fyll ut skjemaet under, så tar vi kontakt innen 24 timer.",
+    "addressLabel": "Adresse",
     "success": {
       "title": "Takk for din henvendelse!",
       "description": "Vi har mottatt meldingen din og vil ta kontakt så snart som mulig, vanligvis innen 24 timer.",
       "button": "Send ny melding"
     },
-    "nameLabel": "Navn",
-    "namePlaceholder": "Ditt fulle navn",
-    "phoneLabel": "Telefon",
     "phonePlaceholder": "+47 123 45 678",
-    "emailLabel": "E-post",
-    "emailPlaceholder": "din@epost.no",
-    "addressLabel": "Adresse",
-    "addressPlaceholder": "Gatenavn og nummer (f.eks. Storgata 15)",
-    "messageLabel": "Notat",
+    "phoneLabel": "Telefon",
+    "submitting": "Sender...",
+    "namePlaceholder": "Ditt fulle navn",
+    "nameLabel": "Navn",
+    "eyebrow": "Gratis befaring",
+    "submitButton": "Bestill gratis befaring",
     "messagePlaceholder": "Eventuell tilleggsinformasjon",
-    "imagesLabel": "Bilder (valgfritt)",
+    "messageLabel": "Notat",
+    "requiredNote": "Påkrevde felter",
+    "emailPlaceholder": "din@epost.no",
+    "emailLabel": "E-post",
+    "title": "Send oss en henvendelse",
     "imagesHelp": "Last opp bilder av din peis, skorstein eller prosjekt (maks 5 bilder, 10MB per bilde)",
     "addImage": "Legg til",
-    "requiredNote": "Påkrevde felter",
-    "submitButton": "Bestill gratis befaring",
-    "submitting": "Sender..."
+    "imagesLabel": "Bilder (valgfritt)",
+    "description": "Fyll ut skjemaet under, så tar vi kontakt innen 24 timer.",
+    "addressPlaceholder": "Gatenavn og nummer (f.eks. Storgata 15)"
   },
   "cta": {
     "title": "Vi kommer til deg",
