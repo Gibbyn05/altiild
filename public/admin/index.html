@@ -60,11 +60,11 @@
                       { label: "Overskrift", name: "title", widget: "string" },
                       { label: "Avsnitt 1", name: "paragraph1", widget: "text" },
                       { label: "Avsnitt 2", name: "paragraph2", widget: "text" },
-                      { label: "Punktliste", name: "points", widget: "list" }
+                      { label: "Punktliste", name: "points", widget: "list", field: { name: "item", widget: "string" } }
                     ]},
                     { label: "Hvorfor velge oss", name: "whyChooseUsSection", widget: "object", fields: [
                       { label: "Overskrift", name: "title", widget: "string" },
-                      { label: "Punktliste", name: "highlights", widget: "list" }
+                      { label: "Punktliste", name: "highlights", widget: "list", field: { name: "item", widget: "string" } }
                     ]},
                     { label: "Galleri (overskrift)", name: "gallerySection", widget: "object", fields: [
                       { label: "Liten overskrift", name: "eyebrow", widget: "string" },
@@ -78,7 +78,7 @@
                     { label: "Kontakt-seksjon", name: "contactSection", widget: "object", fields: [
                       { label: "Overskrift", name: "title", widget: "string" },
                       { label: "Introtekst", name: "introText", widget: "string" },
-                      { label: "Punktliste", name: "points", widget: "list" },
+                      { label: "Punktliste", name: "points", widget: "list", field: { name: "item", widget: "string" } },
                       { label: "Avslutningstekst", name: "closingText", widget: "text" },
                       { label: "Telefon", name: "phone", widget: "string" },
                       { label: "E-post", name: "email", widget: "string" },
@@ -164,22 +164,22 @@
                         { label: "Bildetekst", name: "caption", widget: "string", required: false }
                       ]},
                       { label: "Introtekst", name: "intro", widget: "string", required: false },
-                      { label: "Funksjoner", name: "features", widget: "list", required: false },
-                      { label: "Problemer", name: "problems", widget: "list", required: false },
-                      { label: "Årsaker", name: "causes", widget: "list", required: false },
+                      { label: "Funksjoner", name: "features", widget: "list", required: false, field: { name: "item", widget: "string" } },
+                      { label: "Problemer", name: "problems", widget: "list", required: false, field: { name: "item", widget: "string" } },
+                      { label: "Årsaker", name: "causes", widget: "list", required: false, field: { name: "item", widget: "string" } },
                       { label: "Introtekst løsninger", name: "solutionsIntro", widget: "string", required: false },
-                      { label: "Løsninger", name: "solutions", widget: "list", required: false },
-                      { label: "Egnet for", name: "suitableFor", widget: "list", required: false },
-                      { label: "Typiske prosjekter", name: "typicalProjects", widget: "list", required: false },
-                      { label: "Symptomer", name: "symptoms", widget: "list", required: false },
+                      { label: "Løsninger", name: "solutions", widget: "list", required: false, field: { name: "item", widget: "string" } },
+                      { label: "Egnet for", name: "suitableFor", widget: "list", required: false, field: { name: "item", widget: "string" } },
+                      { label: "Typiske prosjekter", name: "typicalProjects", widget: "list", required: false, field: { name: "item", widget: "string" } },
+                      { label: "Symptomer", name: "symptoms", widget: "list", required: false, field: { name: "item", widget: "string" } },
                       { label: "Introtekst sjekk", name: "checkIntro", widget: "string", required: false },
-                      { label: "Sjekkpunkter", name: "checks", widget: "list", required: false },
-                      { label: "Service inngår", name: "services", widget: "list", required: false },
+                      { label: "Sjekkpunkter", name: "checks", widget: "list", required: false, field: { name: "item", widget: "string" } },
+                      { label: "Service inngår", name: "services", widget: "list", required: false, field: { name: "item", widget: "string" } },
                       { label: "Introtekst arbeid", name: "workIntro", widget: "string", required: false },
-                      { label: "Arbeid", name: "work", widget: "list", required: false },
-                      { label: "Inkluderer", name: "includes", widget: "list", required: false },
+                      { label: "Arbeid", name: "work", widget: "list", required: false, field: { name: "item", widget: "string" } },
+                      { label: "Inkluderer", name: "includes", widget: "list", required: false, field: { name: "item", widget: "string" } },
                       { label: "Introtekst fordeler", name: "benefitsIntro", widget: "string", required: false },
-                      { label: "Fordeler", name: "benefits", widget: "list", required: false },
+                      { label: "Fordeler", name: "benefits", widget: "list", required: false, field: { name: "item", widget: "string" } },
                       { label: "Avslutning", name: "conclusion", widget: "text", required: false }
                     ]},
                     { label: "Prosess", name: "process", widget: "object", fields: [
