@@ -8,52 +8,56 @@
   </head>
   <body>
     <script>
-      window.CMS_CONFIG = {
-        backend: {
-          name: 'github',
-          repo: 'gibbyn05/altiild',
-          branch: 'main',
-          auth_endpoint: 'api/auth'
-        },
-        media_folder: 'public/uploads',
-        public_folder: '/uploads',
-        collections: [
-          {
-            name: 'posts',
-            label: 'Blog Posts',
-            folder: 'content/posts',
-            create: true,
-            slug: '{{slug}}',
-            format: 'json',
-            fields: [
-              { label: 'Title', name: 'title', widget: 'string', required: true },
-              { label: 'Slug', name: 'slug', widget: 'string' },
-              { label: 'Description', name: 'description', widget: 'text' },
-              { label: 'Content', name: 'body', widget: 'markdown' },
-              { label: 'Featured Image', name: 'image', widget: 'image' },
-              { label: 'Author', name: 'author', widget: 'string' },
-              { label: 'Publish Date', name: 'publishedAt', widget: 'datetime' }
-            ]
-          },
-          {
-            name: 'pages',
-            label: 'Pages',
-            folder: 'content/pages',
-            create: true,
-            slug: '{{slug}}',
-            format: 'json',
-            fields: [
-              { label: 'Title', name: 'title', widget: 'string', required: true },
-              { label: 'Slug', name: 'slug', widget: 'string' },
-              { label: 'Description', name: 'description', widget: 'text' },
-              { label: 'Content', name: 'body', widget: 'markdown' },
-              { label: 'Hero Image', name: 'image', widget: 'image' },
-              { label: 'Publish Date', name: 'publishedAt', widget: 'datetime' }
-            ]
-          }
-        ]
-      };
+      window.CMS_MANUAL_INIT = true;
     </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'gibbyn05/altiild',
+            branch: 'main'
+          },
+          media_folder: 'public/uploads',
+          public_folder: '/uploads',
+          collections: [
+            {
+              name: 'posts',
+              label: 'Blogginnlegg',
+              folder: 'content/posts',
+              create: true,
+              slug: '{{slug}}',
+              format: 'json',
+              fields: [
+                { label: 'Tittel', name: 'title', widget: 'string', required: true },
+                { label: 'Slug', name: 'slug', widget: 'string' },
+                { label: 'Beskrivelse', name: 'description', widget: 'text' },
+                { label: 'Innhold', name: 'body', widget: 'markdown' },
+                { label: 'Bilde', name: 'image', widget: 'image', required: false },
+                { label: 'Forfatter', name: 'author', widget: 'string', required: false },
+                { label: 'Publiseringsdato', name: 'publishedAt', widget: 'datetime', required: false }
+              ]
+            },
+            {
+              name: 'pages',
+              label: 'Sider',
+              folder: 'content/pages',
+              create: true,
+              slug: '{{slug}}',
+              format: 'json',
+              fields: [
+                { label: 'Tittel', name: 'title', widget: 'string', required: true },
+                { label: 'Slug', name: 'slug', widget: 'string' },
+                { label: 'Beskrivelse', name: 'description', widget: 'text' },
+                { label: 'Innhold', name: 'body', widget: 'markdown' },
+                { label: 'Bilde', name: 'image', widget: 'image', required: false },
+                { label: 'Publiseringsdato', name: 'publishedAt', widget: 'datetime', required: false }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
   </body>
 </html>
