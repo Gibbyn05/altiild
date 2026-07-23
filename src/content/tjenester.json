@@ -1,0 +1,174 @@
+{
+  "hero": {
+    "eyebrow": "Våre tjenester",
+    "title": "Komplett tilbud for ildsted og skorstein",
+    "description": "Sertifisert for søknadspliktig arbeid på ildsteder og skorsteiner. Vi håndterer alt fra befaring til ferdig godkjent installasjon."
+  },
+  "typicalProjectsLabel": "Typiske prosjekter:",
+  "ctaButton": "Bestill gratis befaring",
+  "services": [
+    {
+      "title": "Montering av peis og ovn",
+      "description": "En trygg og riktig montert vedovn eller peisovn er avgjørende for både varmeeffekt og brannsikkerhet. Alt i Ild AS tilbyr fagmessig montering av ildsted i hele Møre og Romsdal - for både nye og eldre boliger.",
+      "intro": "Vi vurderer alltid:",
+      "features": [
+        "Trekkforhold i skorsteinen",
+        "Lufttilførsel i rommet",
+        "Riktig dimensjon på røykrør",
+        "Avstand til brennbart materiale",
+        "Gulvplate og brannsikring",
+        "Tilstand på eksisterende skorstein"
+      ],
+      "conclusion": "Målet er en installasjon som fungerer optimalt fra første fyring - uten røyk i rommet, dårlig trekk eller brannrisiko. Vi hjelper deg også med valg av riktig ildsted: moderne, rentbrennende ovner, klassiske vedovner, større peisinnsatser eller kompakte løsninger for mindre rom. Etter montering mottar du komplett dokumentasjon, og vi sender ferdigmelding til kommunen og brannvesenet på dine vegne."
+    },
+    {
+      "title": "Piperehabilitering",
+      "description": "En slitt eller skadet pipe kan føre til dårlig trekk, sotlukt, røyklekkasje, sprekkdannelser og i verste fall fyringsforbud. Alt i Ild AS er spesialister på piperehabilitering i Molde og hele Møre og Romsdal.",
+      "extraImages": [
+        { "alt": "stalpipe-utvendig" },
+        { "alt": "stalpipe-innvendig" }
+      ],
+      "intro": "Vanlige tegn på at pipe må rehabiliteres:",
+      "problems": [
+        "Røyk kommer ut i rommet",
+        "Dårlig trekk i pipe",
+        "Misfarging på mur / pipe",
+        "Avvik fra brannstasjonen",
+        "Kondens eller fukt i skorstein",
+        "Gammel teglpipe som smuldrer",
+        "Pipe som ikke er godkjent"
+      ],
+      "solutionsIntro": "Vi benytter riktige metoder basert på pipens tilstand:",
+      "solutions": [
+        "Stålrør i pipe - fleksibelt og trygt",
+        "Keramiske rør - svært holdbart og varmebestandig",
+        "Tetting og utbedring"
+      ],
+      "conclusion": "Rehabilitering av pipe er søknadspliktig arbeid. Vi håndterer hele prosessen: befaring og tilstandsvurdering, valg av metode, komplett søknad til kommunen, dokumentasjon underveis og ferdigmelding til brannvesen og kommune."
+    },
+    {
+      "title": "Montering av isolerte stålpiper",
+      "description": "Mangler boligen skorstein, eller ønsker du en fleksibel plassering av ildstedet? Da er isolert stålpipe ofte den beste løsningen.",
+      "extraImages": [
+        { "alt": "stalpipe-utvendig", "caption": "stalpipe-utvendig" },
+        { "alt": "stalpipe-innvendig", "caption": "stalpipe-innvendig" }
+      ],
+      "intro": "Fordeler med stålpipe:",
+      "suitableFor": [
+        "Rask installasjon",
+        "Fleksibel plassering av ildsted",
+        "Lav vekt - egnet for både nye og eldre bygg",
+        "Kan føres gjennom vegg eller tak",
+        "Minimalt inngrep i eksisterende konstruksjon",
+        "Svært brannsikkert"
+      ],
+      "typicalProjects": [
+        "Nyinstallasjon av vedovn i hus uten pipe",
+        "Utskifting av gammel pipe",
+        "Plassering av ovn i kjeller, tilbygg eller loft",
+        "Fritidsboliger og hytter"
+      ],
+      "conclusion": "Vi sørger for riktig dimensjonering, brannsikre løsninger og komplett dokumentasjon."
+    },
+    {
+      "title": "Inspeksjon & vurdering av pipe og ildsted",
+      "description": "Opplever du problemer med pipen eller ildstedet? Da er det tid for en profesjonell inspeksjon.",
+      "intro": "Opplever du problemer som:",
+      "symptoms": [
+        "Dårlig trekk",
+        "Røyk kommer inn i rommet",
+        "Sotlukt",
+        "Misfargede vegger",
+        "Høyt vedforbruk",
+        "Brannvesenet har gitt avvik"
+      ],
+      "checkIntro": "Dette sjekker vi:",
+      "checks": [
+        "Skorsteinsløp og tetthet",
+        "Røykrør og overgang",
+        "Brennkammer og pakninger",
+        "Pipehøyde og trekkforhold",
+        "Lufttilførsel i rommet",
+        "Eventuelle brannfarlige forhold"
+      ],
+      "conclusion": "Vi gir deg en tydelig rapport med anbefalt løsning - enten det gjelder mindre utbedringer, service eller full piperehabilitering."
+    },
+    {
+      "title": "Service & vedlikehold",
+      "description": "Regelmessig service sikrer trygg fyring, bedre varmeeffekt og mindre sot. Slitasje på deler er naturlig, og vedlikehold forhindrer større problemer som lekkasjer og dårlig trekk.",
+      "intro": "Hva inngår i service?",
+      "services": [
+        "Kontroll av røykrør og feste",
+        "Sjekk av pakninger",
+        "Kontroll av brennkammer",
+        "Vurdering av trekk og lufttilførsel",
+        "Sjekk for sprekkdannelser og misfarging"
+      ],
+      "workIntro": "Vi utfører:",
+      "work": [
+        "Pakningsskifte - viktig for korrekt forbrenning",
+        "Glassbytte - ved skadet eller slitt ovnsglass",
+        "Bytte av vermikulittplater - forbedrer forbrenning og varmeeffekt"
+      ],
+      "conclusion": "Dette gjør ildstedet ditt tryggere og mer effektivt."
+    },
+    {
+      "title": "Stige, taksikring & tilkomst til pipe",
+      "description": "Feiervesenet krever trygg og sikker tilkomst til pipe. Vi monterer løsninger som oppfyller alle krav til tilkomst, sikkerhet og vedlikehold.",
+      "intro": "Vi monterer:",
+      "includes": [
+        "Pipestige",
+        "Stigetrinn",
+        "Takstige",
+        "Pipeplattform / plattform for feiing",
+        "Sikringskroker"
+      ]
+    },
+    {
+      "title": "Dårlig trekk & røyksugere (Exodraft)",
+      "description": "Dårlig trekk i pipen er et av de vanligste problemene vi løser. Feil trekk kan føre til røyk i rommet, dårlig forbrenning, sotutslag og ubehagelig lukt - spesielt i moderne, tette boliger.",
+      "intro": "Vanlige årsaker til dårlig trekk:",
+      "causes": [
+        "Undertrykk i huset",
+        "Kald pipe",
+        "Fukt eller lekkasjer i skorstein",
+        "Feil dimensjon på pipe",
+        "Tette røykrør",
+        "Moderne bygg med lite naturlig ventilasjon",
+        "Lav pipehøyde",
+        "Feil montert ildsted"
+      ],
+      "solutionsIntro": "Løsninger vi tilbyr:",
+      "solutions": [
+        "Exodraft røyksuger - markedets beste løsning for varig trekkforbedring",
+        "Tilførsel av friskluft (luftventiler eller rør)",
+        "Justering av røykrør",
+        "Optimalisering av pipehøyde og tverrsnitt",
+        "Rehabilitering ved skader"
+      ],
+      "benefitsIntro": "En røyksuger gir:",
+      "benefits": [
+        "Stabilt og kraftig trekk i all slags vær",
+        "Tryggere og renere forbrenning",
+        "Enklere opptenning",
+        "Mindre røyk i rommet",
+        "Bedre varmeeffekt"
+      ]
+    }
+  ],
+  "process": {
+    "title": "Slik jobber vi",
+    "description": "En enkel og trygg prosess fra start til slutt.",
+    "steps": [
+      { "step": "01", "title": "Kontakt", "desc": "Ta kontakt for en uforpliktende prat om dine ønsker og behov." },
+      { "step": "02", "title": "Befaring", "desc": "Vi kommer hjem til deg for å vurdere muligheter og gi tilbud." },
+      { "step": "03", "title": "Installasjon", "desc": "Våre fagfolk utfører installasjonen profesjonelt og dokumentert." },
+      { "step": "04", "title": "Godkjenning", "desc": "Ferdigmelding og godkjent installasjon fra brannvesenet." }
+    ]
+  },
+  "cta": {
+    "title": "Klar for å komme i gang?",
+    "description": "Kontakt oss i dag for en gratis og uforpliktende befaring.",
+    "button": "Bestill gratis befaring"
+  }
+}
