@@ -28,163 +28,12 @@ import {
 
 import content from "@/content/forside.json";
 
-const services = [
-  {
-    icon: Flame,
-    title: "Montering av peis og ovn",
-    description: "Vi monterer peisovn, vedovn og innsats på en trygg og fagmessig måte. Vi sørger for riktig avstand til brennbart materiale, god lufttilførsel, riktig dimensjonert røykrør og stabilt trekk.",
-    features: [
-      "Sikker montering",
-      "Riktig lufttilførsel",
-      "Korrekt røykrør",
-      "Ferdigmelding og dokumentasjon",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Piperehabilitering",
-    description: "Har du en gammel teglsteinskorstein, sprekkdannelser, dårlig trekk eller pipe som ikke er godkjent? Vi utfører piperehabilitering med stålrør i pipe, keramiske rør eller andre fagløsninger.",
-    features: [
-      "Dårlig trekk i pipe",
-      "Fyringsforbud",
-      "Pipe ikke godkjent",
-      "Avvik fra brannvesenet",
-      "Lekkasjer eller kondens i skorstein",
-    ],
-  },
-  {
-    icon: Shield,
-    title: "Montering av stålpiper",
-    description: "Vi leverer og monterer isolert stålpipe - en fleksibel og trygg løsning når boligen mangler skorstein eller når ildstedet må plasseres annerledes.",
-    features: [
-      "Nybygg",
-      "Hytter",
-      "Eldre hus",
-    ],
-  },
-  {
-    icon: Eye,
-    title: "Inspeksjon av pipe og ildsted",
-    description: "Vi utfører inspeksjon ved problemer eller krav om kontroll etter avvik.",
-    features: [
-      "Røyk i rommet",
-      "Sotlukt",
-      "Misfarging på pipe",
-      "Dårlig trekk",
-      "Problemer med fyring",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Service & vedlikehold",
-    description: "God service og vedlikehold er avgjørende for sikker og effektiv fyring. Mange problemer oppstår fordi pakninger, glass eller vermikulittplater i brennkammeret er slitt.",
-    features: [
-      "Pakningsskifte for bedre forbrenning",
-      "Glassbytte ved sprekk eller slitasje",
-      "Bytte av vermikulitt røykfordelerplate",
-    ],
-  },
-];
+// Ikoner beholdes i koden og kobles til tekst fra JSON via rekkefølge
+const serviceIcons = [Flame, Wrench, Shield, Eye, Wrench];
 
-const processSteps = [
-  { 
-    icon: ClipboardCheck, 
-    step: "01", 
-    title: "Planlegging & rådgivning", 
-    desc: "Vi vurderer hvilken vedovn eller peis som passer best, hvilken skorsteinsløsning som kreves, behov for friskluft, ventilasjon eller røyksuger, om pipe må rehabiliteres og risiko for avvik ved kontroll." 
-  },
-  { 
-    icon: Truck, 
-    step: "02", 
-    title: "Levering", 
-    desc: "Vi leverer røykrør, ovner, stålpipe, stålrør, keramiske rør og Exodraft røyksugere - alt som trengs for en komplett installasjon." 
-  },
-  { 
-    icon: Wrench, 
-    step: "03", 
-    title: "Montering", 
-    desc: "Sertifiserte montører utfører jobben i henhold til TEK17, produsentens krav og lokale forskrifter." 
-  },
-  { 
-    icon: FileCheck, 
-    step: "04", 
-    title: "Dokumentasjon underveis", 
-    desc: "Vi dokumenterer alt arbeid: bilder, målinger, teknisk beskrivelse og kontrollpunkter. Dokumentasjonen sendes til kommune og brannvesen ved behov." 
-  },
-  { 
-    icon: Shield, 
-    step: "05", 
-    title: "Sluttkontroll & ferdigdokumentasjon", 
-    desc: "Vi utfører sluttkontroll, sender ferdigmelding til brannvesenet og du får komplett dokumentasjon for boligmappen." 
-  },
-];
+const stepIcons = [ClipboardCheck, Truck, Wrench, FileCheck, Shield];
 
-const whyChooseUs = [
-  { icon: MapPin, text: "Lokal fagbedrift i Molde" },
-  { icon: Users, text: "Mange års erfaring" },
-  { icon: Award, text: "Sertifiserte montører" },
-  { icon: CheckCircle, text: "Komplette løsninger A-Å" },
-  { icon: Search, text: "Gratis befaring" },
-  { icon: ThermometerSun, text: "Eksperter på dårlig trekk & Exodraft" },
-];
-
-const testimonials = [
-  {
-    name: "Anette Lien",
-    source: "Google",
-    text: "Bedre enn bestilt! Alt i Ild leverer håndverk på et nivå som imponerer. Lars ga oss gode og treffsikre råd, la en klar plan som ble utført ryddig og strukturert.",
-  },
-  {
-    name: "Ida K. Johansen",
-    source: "Google",
-    text: "Vi er kjempefornøyde med arbeidet fra Lars. Han kom på gratis befaring samme dag, tok seg god tid til å finne en god løsning. Anbefaler på det sterkeste!",
-  },
-  {
-    name: "Cornelia Fischer",
-    source: "Google",
-    text: "Lars ga oss gode råd helt fra starten av. Han jobbet veldig rent og profesjonelt. Anbefales på det sterkeste!",
-  },
-  {
-    name: "Cato Stranden Bergseth",
-    source: "Google",
-    text: "Alt i Ild AS leverte en svært god opplevelse ved montering av ny Contura-peis. De håndterte utfordringer profesjonelt.",
-  },
-  {
-    name: "Christian D",
-    source: "Google",
-    text: "Konkurransedyktig på pris, hurtig, god kommunikasjon og en mann som brenner for faget. Meget godt fornøyd!",
-  },
-  {
-    name: "Kjetil Avset",
-    source: "Facebook",
-    text: "Lars yter service og er fleksibel. Utrolig hyggelig kar å ha med å gjøre. Ingenting å si på arbeidet, tip top!",
-  },
-  {
-    name: "Arne Gussiås",
-    source: "Google",
-    text: "Arbeidet ble gjennomført med svært bra kvalitet, effektivt og ryddig! Kan trygt anbefale Alt i Ild!",
-  },
-  {
-    name: "Arne Enge Jeremiassen",
-    source: "Facebook",
-    text: "Fikk montert ny stålpipe i hytte på fjellet. Meget god oppfølging og alt har gått på skinner. Anbefaler på det sterkeste.",
-  },
-  {
-    name: "Svein Jarle Garseth",
-    source: "Google",
-    text: "Lars Klemm monterte nytt ildsted med pipe på vårt sommerhus. Veldig ryddig utført, og god informasjon underveis.",
-  },
-  {
-    name: "Trond Haukebø",
-    source: "Google",
-    text: "Alt er nå kontrollert og godkjent av Brannvesenet. Profesjonelt og effektivt utført. Meget fornøyd!",
-  },
-  {
-    name: "Roar Markussen",
-    source: "Facebook",
-    text: "Dette er yrkesfaglig perfeksjonisme på sitt beste. Service langt utover det vanlige. Anbefales sterkt!",
-  },
-];
+const whyIcons = [MapPin, Users, Award, CheckCircle, Search, ThermometerSun];
 
 const GalleryCarousel = () => {
   const [emblaRef] = useEmblaCarousel(
@@ -221,7 +70,7 @@ const TestimonialsCarousel = () => {
   return (
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex gap-4 px-4 md:px-8">
-        {testimonials.map((review, index) => (
+        {content.testimonialsSection.reviews.map((review, index) => (
           <div
             key={index}
             className="flex-none w-[280px] md:w-[320px] bg-background ring-foreground/10 rounded-xl border border-transparent p-4 ring-1"
@@ -330,13 +179,15 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {services.map((service) => (
+            {content.servicesSection.items.map((service, i) => {
+              const Icon = serviceIcons[i] ?? Flame;
+              return (
               <div
                 key={service.title}
                 className="bg-card rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 hover-lift border border-border/50"
               >
                 <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center mb-3 md:mb-4">
-                  <service.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                  <Icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <h3 className="font-display text-lg md:text-xl font-semibold mb-2">
                   {service.title}
@@ -353,7 +204,8 @@ const Index = () => {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="text-center mt-8 md:mt-10">
@@ -383,10 +235,12 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4">
-            {processSteps.map((item, index) => (
+            {content.solutionsSection.steps.map((item, index) => {
+              const Icon = stepIcons[index] ?? ClipboardCheck;
+              return (
               <div key={item.step} className="text-center relative flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
-                  <item.icon className="h-6 w-6 md:h-7 md:w-7" />
+                  <Icon className="h-6 w-6 md:h-7 md:w-7" />
                 </div>
                 <div className="text-primary font-bold text-xs md:text-sm mb-1 md:mb-2">{item.step}</div>
                 <h3 className="font-display text-base md:text-lg font-semibold mb-1 md:mb-2">
@@ -395,11 +249,12 @@ const Index = () => {
                 <p className="text-muted-foreground text-xs md:text-sm">
                   {item.desc}
                 </p>
-                {index < processSteps.length - 1 && (
+                {index < content.solutionsSection.steps.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-primary/20" />
                 )}
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -468,16 +323,19 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8 md:mb-12">
-            {whyChooseUs.map((item) => (
+            {content.whyChooseUsSection.reasons.map((item, index) => {
+              const Icon = whyIcons[index] ?? MapPin;
+              return (
               <div key={item.text} className="text-center">
                 <div className="inline-flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary-foreground/10 mb-2 md:mb-4">
-                  <item.icon className="h-4 w-4 md:h-6 md:w-6 text-primary-foreground" />
+                  <Icon className="h-4 w-4 md:h-6 md:w-6 text-primary-foreground" />
                 </div>
                 <p className="text-primary-foreground font-medium text-xs md:text-sm">
                   {item.text}
                 </p>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="bg-primary-foreground/10 rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 max-w-4xl mx-auto">

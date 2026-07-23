@@ -120,6 +120,37 @@
                   "name": "description",
                   "widget": "text",
                   "required": false
+                },
+                {
+                  "label": "Tjeneste-kort",
+                  "name": "items",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "description",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "Punkter",
+                      "name": "features",
+                      "widget": "list",
+                      "required": false,
+                      "field": {
+                        "label": "Punkt",
+                        "name": "feature",
+                        "widget": "string"
+                      }
+                    }
+                  ]
                 }
               ]
             },
@@ -146,6 +177,32 @@
                   "name": "description",
                   "widget": "text",
                   "required": false
+                },
+                {
+                  "label": "Steg",
+                  "name": "steps",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Steg-nummer",
+                      "name": "step",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Tittel",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Beskrivelse",
+                      "name": "desc",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
                 }
               ]
             },
@@ -218,6 +275,20 @@
                     "widget": "string"
                   },
                   "required": false
+                },
+                {
+                  "label": "Grunner (med ikon)",
+                  "name": "reasons",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Tekst",
+                      "name": "text",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
                 }
               ]
             },
@@ -284,6 +355,32 @@
                   "name": "title",
                   "widget": "string",
                   "required": false
+                },
+                {
+                  "label": "Kundeomtaler",
+                  "name": "reviews",
+                  "widget": "list",
+                  "required": false,
+                  "fields": [
+                    {
+                      "label": "Navn",
+                      "name": "name",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Kilde",
+                      "name": "source",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "Omtale",
+                      "name": "text",
+                      "widget": "text",
+                      "required": false
+                    }
+                  ]
                 }
               ]
             },
