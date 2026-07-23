@@ -6,6 +6,8 @@ import SEO from "@/components/SEO";
 import { ArrowRight, X } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
+import content from "@/content/galleri.json";
+
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -44,168 +46,34 @@ import afterFireplace from "@/assets/after-fireplace.jpg";
 import beforeStove from "@/assets/before-stove.jpg";
 import afterStove from "@/assets/after-stove.jpg";
 
-const projects = [
-  {
-    id: 2,
-    image: hvitOvn2,
-    title: "Hvit hjørnepeis med glass",
-    location: "Molde",
-    category: "Peis",
-    description: "Moderne hvit peis med treveis glass som gir utsikt til flammene fra flere vinkler.",
-  },
-  {
-    id: 3,
-    image: hvitOvn,
-    title: "Hvit frittstående peis",
-    location: "Ålesund",
-    category: "Peis",
-    description: "Stilren hvit peis med hjørneglassløsning, perfekt plassert i overgangen mellom rom.",
-  },
-  {
-    id: 4,
-    image: ovnSolrik,
-    title: "Vedovn i hagestue",
-    location: "Kristiansund",
-    category: "Ovn",
-    description: "Klassisk vedovn installert i lys hagestue med panoramautsikt og naturlige omgivelser.",
-  },
-  {
-    id: 5,
-    image: pipeTak,
-    title: "Piperehabilitering",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Profesjonell pipearbeid på tak med ny pipehatt og beslag, med utsikt mot Molde by.",
-  },
-  {
-    id: 8,
-    image: galleryModernPeis,
-    title: "Modern hjørnepeis med panorama",
-    location: "Molde",
-    category: "Peis",
-    description: "Stilfull grå hjørnepeis med tresiders glass, integrert i moderne stue med utsikt over byen.",
-  },
-  {
-    id: 9,
-    image: galleryPipeSol,
-    title: "Pipehatt på hytte",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Stålpipe med pipehatt montert på hytte - Alt i Ild Molde.",
-  },
-  {
-    id: 11,
-    image: galleryPipeFjord,
-    title: "Stålpipe med fjordutsikt",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Blankt stålpipehode montert på tak med spektakulær utsikt over fjorden og fjellene.",
-  },
-  {
-    id: 12,
-    image: galleryOvnGra,
-    title: "Moderne vedovn med grå vegg",
-    location: "Molde",
-    category: "Ovn",
-    description: "Stilren svart vedovn på glassplate, montert mot grå pusset vegg i lys stue.",
-  },
-  {
-    id: 13,
-    image: galleryPipeUtvendig,
-    title: "Pipehatt på tak",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Svart pipehatt og beslag montert på tak - Alt i Ild Molde.",
-  },
-  {
-    id: 14,
-    image: galleryOvnSvart,
-    title: "Svart vedovn i stue",
-    location: "Molde",
-    category: "Ovn",
-    description: "Elegant svart vedovn på glassplate mellom store vinduer med vinterutsikt.",
-  },
-  {
-    id: 15,
-    image: galleryPipeRehab,
-    title: "Piperehabilitering - foringsrør",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Piperehabilitering med keramiske foringsrør sett ovenfra - Alt i Ild Molde.",
-  },
-  {
-    id: 16,
-    image: galleryStalpipeSvart,
-    title: "Isolert stålpipe veggmontert",
-    location: "Molde",
-    category: "Installasjon",
-    description: "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt - Alt i Ild Molde.",
-  },
-  {
-    id: 17,
-    image: galleryTakstigePlatetak,
-    title: "Takstige på platetak",
-    location: "Møre og Romsdal",
-    category: "Taksikring",
-    description: "Takstige montert på platetak for trygg tilkomst til pipe for feiing.",
-  },
-  {
-    id: 18,
-    image: galleryTakstigeSno,
-    title: "Takstige og pipe vinterstid",
-    location: "Møre og Romsdal",
-    category: "Taksikring",
-    description: "Takstige og pipe på snødekt platetak med stålpipe og feieplattform.",
-  },
-  {
-    id: 19,
-    image: galleryStalpipeTakstige,
-    title: "Gjennomføring i tak - stålpipe",
-    location: "Møre og Romsdal",
-    category: "Installasjon",
-    description: "Gjennomføring av stålpipe i tak med lasermåling - Alt i Ild Molde.",
-  },
-  {
-    id: 20,
-    image: galleryTakstigePipe,
-    title: "Takstige langs husvegg",
-    location: "Møre og Romsdal",
-    category: "Taksikring",
-    description: "Takstige montert langs husvegg for tilkomst til pipe og tak.",
-  },
-  {
-    id: 21,
-    image: galleryStalpipePlatetak,
-    title: "Stålpipe gjennom vinterhage",
-    location: "Møre og Romsdal",
-    category: "Installasjon",
-    description: "Isolert stålpipe montert gjennom vinterhage med pipehatt - Alt i Ild Molde.",
-  },
-  {
-    id: 22,
-    image: galleryStalpipeFeieplattform,
-    title: "Utvendig stålpipe på hus",
-    location: "Møre og Romsdal",
-    category: "Installasjon",
-    description: "Utvendig isolert stålpipe montert på moderne hus - Alt i Ild Molde.",
-  },
-  {
-    id: 23,
-    image: takInnside,
-    title: "Hagestue med ovn",
-    location: "Møre og Romsdal",
-    category: "Ovn",
-    description: "Vedovn installert i moderne hagestue med glasstak og utsikt.",
-  },
-  {
-    id: 24,
-    image: takUtside,
-    title: "Takarbeid utvendig",
-    location: "Møre og Romsdal",
-    category: "Installasjon",
-    description: "Takarbeid og pipegjennomføring sett fra utsiden.",
-  },
+// Image imports and stable ids stay in code; text comes from galleri.json (by index)
+const projectMeta = [
+  { id: 2, image: hvitOvn2 },
+  { id: 3, image: hvitOvn },
+  { id: 4, image: ovnSolrik },
+  { id: 5, image: pipeTak },
+  { id: 8, image: galleryModernPeis },
+  { id: 9, image: galleryPipeSol },
+  { id: 11, image: galleryPipeFjord },
+  { id: 12, image: galleryOvnGra },
+  { id: 13, image: galleryPipeUtvendig },
+  { id: 14, image: galleryOvnSvart },
+  { id: 15, image: galleryPipeRehab },
+  { id: 16, image: galleryStalpipeSvart },
+  { id: 17, image: galleryTakstigePlatetak },
+  { id: 18, image: galleryTakstigeSno },
+  { id: 19, image: galleryStalpipeTakstige },
+  { id: 20, image: galleryTakstigePipe },
+  { id: 21, image: galleryStalpipePlatetak },
+  { id: 22, image: galleryStalpipeFeieplattform },
+  { id: 23, image: takInnside },
+  { id: 24, image: takUtside },
 ];
+
+const projects = projectMeta.map((meta, index) => ({
+  ...meta,
+  ...content.projects[index],
+}));
 
 const GalleryCarousel = ({ 
   projects: carouselProjects, 
@@ -283,14 +151,13 @@ const Galleri = () => {
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
-              Galleri
+              {content.hero.eyebrow}
             </p>
             <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 md:mb-6 text-primary-foreground">
-              Våre prosjekter
+              {content.hero.title}
             </h1>
             <p className="text-primary-foreground/90 text-base sm:text-lg md:text-xl leading-relaxed">
-              Bli inspirert av et utvalg av våre tidligere installasjoner. 
-              Hver peis og ovn er unik, tilpasset kundens ønsker og bolig.
+              {content.hero.intro}
             </p>
           </div>
         </div>
@@ -301,10 +168,10 @@ const Galleri = () => {
         <div className="container-wide mb-6 md:mb-8">
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
-              Utvalgte prosjekter
+              {content.carouselSection.eyebrow}
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
-              Se hva vi har skapt
+              {content.carouselSection.title}
             </h2>
           </div>
         </div>
@@ -321,13 +188,13 @@ const Galleri = () => {
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
             <p className="text-primary font-medium mb-2 md:mb-3 tracking-wide uppercase text-xs sm:text-sm">
-              Før og etter
+              {content.beforeAfterSection.eyebrow}
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
-              Se transformasjonen
+              {content.beforeAfterSection.title}
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-4">
-              Dra for å se forskjellen før og etter våre installasjoner.
+              {content.beforeAfterSection.description}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -378,14 +245,14 @@ const Galleri = () => {
       <section className="py-10 sm:py-16 md:py-20 lg:py-28 bg-muted">
         <div className="container-narrow text-center px-6">
           <h2 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6">
-            Liker du det du ser?
+            {content.cta.title}
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-6 md:mb-8">
-            Vi kan skape noe like flott for deg. Kontakt oss for en uforpliktende prat.
+            {content.cta.description}
           </p>
           <Button variant="default" size="lg" className="text-sm md:text-base" asChild>
             <Link to="/kontakt">
-              Kontakt oss
+              {content.cta.buttonText}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

@@ -1,0 +1,143 @@
+{
+  "hero": {
+    "eyebrow": "Galleri",
+    "title": "Våre prosjekter",
+    "intro": "Bli inspirert av et utvalg av våre tidligere installasjoner. Hver peis og ovn er unik, tilpasset kundens ønsker og bolig."
+  },
+  "carouselSection": {
+    "eyebrow": "Utvalgte prosjekter",
+    "title": "Se hva vi har skapt"
+  },
+  "beforeAfterSection": {
+    "eyebrow": "Før og etter",
+    "title": "Se transformasjonen",
+    "description": "Dra for å se forskjellen før og etter våre installasjoner."
+  },
+  "cta": {
+    "title": "Liker du det du ser?",
+    "description": "Vi kan skape noe like flott for deg. Kontakt oss for en uforpliktende prat.",
+    "buttonText": "Kontakt oss"
+  },
+  "projects": [
+    {
+      "title": "Hvit hjørnepeis med glass",
+      "location": "Molde",
+      "category": "Peis",
+      "description": "Moderne hvit peis med treveis glass som gir utsikt til flammene fra flere vinkler."
+    },
+    {
+      "title": "Hvit frittstående peis",
+      "location": "Ålesund",
+      "category": "Peis",
+      "description": "Stilren hvit peis med hjørneglassløsning, perfekt plassert i overgangen mellom rom."
+    },
+    {
+      "title": "Vedovn i hagestue",
+      "location": "Kristiansund",
+      "category": "Ovn",
+      "description": "Klassisk vedovn installert i lys hagestue med panoramautsikt og naturlige omgivelser."
+    },
+    {
+      "title": "Piperehabilitering",
+      "location": "Molde",
+      "category": "Installasjon",
+      "description": "Profesjonell pipearbeid på tak med ny pipehatt og beslag, med utsikt mot Molde by."
+    },
+    {
+      "title": "Modern hjørnepeis med panorama",
+      "location": "Molde",
+      "category": "Peis",
+      "description": "Stilfull grå hjørnepeis med tresiders glass, integrert i moderne stue med utsikt over byen."
+    },
+    {
+      "title": "Pipehatt på hytte",
+      "location": "Molde",
+      "category": "Installasjon",
+      "description": "Stålpipe med pipehatt montert på hytte - Alt i Ild Molde."
+    },
+    {
+      "title": "Stålpipe med fjordutsikt",
+      "location": "Molde",
+      "category": "Installasjon",
+      "description": "Blankt stålpipehode montert på tak med spektakulær utsikt over fjorden og fjellene."
+    },
+    {
+      "title": "Moderne vedovn med grå vegg",
+      "location": "Molde",
+      "category": "Ovn",
+      "description": "Stilren svart vedovn på glassplate, montert mot grå pusset vegg i lys stue."
+    },
+    {
+      "title": "Pipehatt på tak",
+      "location": "Molde",
+      "category": "Installasjon",
+      "description": "Svart pipehatt og beslag montert på tak - Alt i Ild Molde."
+    },
+    {
+      "title": "Svart vedovn i stue",
+      "location": "Molde",
+      "category": "Ovn",
+      "description": "Elegant svart vedovn på glassplate mellom store vinduer med vinterutsikt."
+    },
+    {
+      "title": "Piperehabilitering - foringsrør",
+      "location": "Molde",
+      "category": "Installasjon",
+      "description": "Piperehabilitering med keramiske foringsrør sett ovenfra - Alt i Ild Molde."
+    },
+    {
+      "title": "Isolert stålpipe veggmontert",
+      "location": "Molde",
+      "category": "Installasjon",
+      "description": "Isolert stålpipe veggmontert på hvitt hus med fjellutsikt - Alt i Ild Molde."
+    },
+    {
+      "title": "Takstige på platetak",
+      "location": "Møre og Romsdal",
+      "category": "Taksikring",
+      "description": "Takstige montert på platetak for trygg tilkomst til pipe for feiing."
+    },
+    {
+      "title": "Takstige og pipe vinterstid",
+      "location": "Møre og Romsdal",
+      "category": "Taksikring",
+      "description": "Takstige og pipe på snødekt platetak med stålpipe og feieplattform."
+    },
+    {
+      "title": "Gjennomføring i tak - stålpipe",
+      "location": "Møre og Romsdal",
+      "category": "Installasjon",
+      "description": "Gjennomføring av stålpipe i tak med lasermåling - Alt i Ild Molde."
+    },
+    {
+      "title": "Takstige langs husvegg",
+      "location": "Møre og Romsdal",
+      "category": "Taksikring",
+      "description": "Takstige montert langs husvegg for tilkomst til pipe og tak."
+    },
+    {
+      "title": "Stålpipe gjennom vinterhage",
+      "location": "Møre og Romsdal",
+      "category": "Installasjon",
+      "description": "Isolert stålpipe montert gjennom vinterhage med pipehatt - Alt i Ild Molde."
+    },
+    {
+      "title": "Utvendig stålpipe på hus",
+      "location": "Møre og Romsdal",
+      "category": "Installasjon",
+      "description": "Utvendig isolert stålpipe montert på moderne hus - Alt i Ild Molde."
+    },
+    {
+      "title": "Hagestue med ovn",
+      "location": "Møre og Romsdal",
+      "category": "Ovn",
+      "description": "Vedovn installert i moderne hagestue med glasstak og utsikt."
+    },
+    {
+      "title": "Takarbeid utvendig",
+      "location": "Møre og Romsdal",
+      "category": "Installasjon",
+      "description": "Takarbeid og pipegjennomføring sett fra utsiden."
+    }
+  ]
+}

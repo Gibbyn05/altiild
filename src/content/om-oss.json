@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "eyebrow": "Om Alt i Ild",
+    "title": "Hvem vi er - erfaring, fagkompetanse & sertifiseringer",
+    "description": "Alt i Ild AS er en lokal fagbedrift i Molde, spesialisert på ildsted, skorstein og piperehabilitering i hele Møre og Romsdal."
+  },
+  "whoWeAre": {
+    "title": "Erfaring og fagkompetanse",
+    "paragraph1": "Vi leverer ikke bare produkter - vi leverer løsninger som er trygge, dokumenterte og teknisk riktige for både nye og eldre boliger.",
+    "paragraph2": "Vår bakgrunn består av mange års erfaring innen:",
+    "expertise": [
+      "Piperehabilitering og rehabilitering av teglsteinskorsteiner",
+      "Montering av ildsted (vedovn, peisovn, innsats)",
+      "Installasjon av isolert stålpipe og komplette skorsteinsløsninger",
+      "Inspeksjon, vurdering og feilsøking på skorsteiner og røykrør",
+      "Problemløsning ved dårlig trekk eller feil lufttilførsel",
+      "Håndtering av avvik fra brannvesenet",
+      "Optimalisering av forbrenning og varmeeffekt"
+    ]
+  },
+  "competenceAndCertifications": {
+    "competenceTitle": "Fagkompetanse",
+    "competenceIntro": "Vi har spesialkompetanse innen:",
+    "specialCompetence": [
+      "Exodraft røyksugere og tekniske trekkforbedringer",
+      "Materialvalg for piperehabilitering (stålrør i pipe, keramiske rør, osv.)",
+      "Dokumentasjon i henhold til brannforskrifter og TEK17"
+    ],
+    "certificationsTitle": "Sertifiseringer & godkjenninger",
+    "certificationsIntro": "Vårt arbeid utføres av sertifiserte montører, med nødvendig godkjenning for:",
+    "certifications": [
+      "Montering av ildsted",
+      "Skorsteinsarbeid",
+      "Piperehabilitering",
+      "Dokumentasjon til kommune, brannvesen og boligmappen"
+    ],
+    "certificationsFooter": "Vi legger stor vekt på faglig kvalitet og kontinuerlig utvikling - slik at du som kunde alltid får en løsning som er både trygg og fremtidsrettet."
+  },
+  "valuesSection": {
+    "eyebrow": "Våre verdier",
+    "title": "Vårt arbeid bygger på fem kjerneverdier",
+    "values": [
+      {
+        "title": "Trygghet",
+        "description": "Alt utføres i henhold til gjeldende krav og forskrifter."
+      },
+      {
+        "title": "Kvalitet",
+        "description": "Nøyaktig håndverk og teknisk riktige løsninger."
+      },
+      {
+        "title": "Ryddighet",
+        "description": "Vi jobber effektivt og rent - både inne og ute."
+      },
+      {
+        "title": "Lokal tilstedeværelse",
+        "description": "Vi kjenner Molde og Møre og Romsdal."
+      },
+      {
+        "title": "Ærlighet",
+        "description": "Vi anbefaler kun løsninger som faktisk passer din bolig."
+      },
+      {
+        "title": "Faglig utvikling",
+        "description": "Vi holder oss oppdatert på nye krav og løsninger."
+      }
+    ],
+    "callout": "Vi er ikke butikk. Vi er fagfolk som gir ærlige råd basert på boligens behov - ikke hva som står på lager."
+  },
+  "workProcessSection": {
+    "eyebrow": "Slik jobber vi",
+    "title": "Vår arbeidsmetode",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Før-befaring & kartlegging",
+        "desc": "Vi undersøker pipe, ildsted, lufttilførsel og byggets forhold. Ved piperehabilitering vurderer vi sprekkdannelser, tetthet, trekkproblemer og brannrisiko."
+      },
+      {
+        "step": "02",
+        "title": "Gjennomgang av løsning med kunde",
+        "desc": "Vi forklarer hva som trengs og hvorfor - i klart språk. Du får forslag til riktige materialer, metoder og eventuelle alternativer."
+      },
+      {
+        "step": "03",
+        "title": "Fagmessig og trygg utførelse",
+        "desc": "Alt arbeid utføres av sertifiserte fagfolk, uansett om det gjelder montering av vedovn eller peisovn, piperehabilitering, stålpipemontering eller bytte av røykrør."
+      },
+      {
+        "step": "04",
+        "title": "Dokumentasjon underveis",
+        "desc": "Vi tar bilder, målinger og registrerer alle kontrollpunkter. Dette sikrer sporbarhet og enkel godkjenning."
+      },
+      {
+        "step": "05",
+        "title": "Sluttkontroll & ferdigmelding",
+        "desc": "Når arbeidet er ferdig, gjennomfører vi sluttkontroll og sender ferdigmelding til kommune og brannvesen."
+      }
+    ]
+  },
+  "localSection": {
+    "eyebrow": "Lokal forankring",
+    "title": "Molde & Møre og Romsdal",
+    "paragraph1": "Alt i Ild AS er lokalt forankret i Molde, og vi kjenner forholdene i Møre og Romsdal - både når det gjelder klima, byggetradisjoner og kommunale krav. Dette gjør oss ekstra godt rustet til å levere løsninger som:",
+    "benefits": [
+      "Gir optimalt trekk i kystklima",
+      "Følger lokale forskrifter og praksis hos feiervesenet",
+      "Tar hensyn til eldre murverk og tradisjonelle teglsteinsskorsteiner",
+      "Sikrer korrekt godkjenning ved kommunal søknadsplikt"
+    ],
+    "paragraph2": "Vi samarbeider med lokale aktører, og vi er vant til å jobbe i:",
+    "areas": ["Molde", "Hustadvika", "Aukra", "Midsund", "Rauma"],
+    "paragraph3": "For deg betyr dette rask respons, gode vurderinger og en leverandør som kjenner lokale forhold og myndighetskrav.",
+    "buttonText": "Bestill gratis befaring"
+  }
+}
